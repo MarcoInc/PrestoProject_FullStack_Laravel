@@ -31,7 +31,7 @@
   <div class="mb-3">
     @foreach ($locations as $location)
     <div class="form-check">
-      <input class="form-check-input" type="radio" wire:model="location_id"  id="{{$location->id}}">
+      <input class="form-check-input" type="radio" wire:model="location_id"  name="location_id"  id="{{$location->id}}" value="{{$location->id}}">
       <label class="form-check-label" for="{{$location->id}}">
         {{$location->name}}
       </label>
