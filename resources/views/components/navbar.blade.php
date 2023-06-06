@@ -41,7 +41,7 @@
         
         
         
-        <ul class="dropdown-menu rounded-1 w-100 transition" aria-labelledby="navbarDropdown">
+        <ul class="dropdown-menu rounded-1 w-100" aria-labelledby="navbarDropdown">
             @auth
             <form method='POST' action="{{ route('logout') }}">
                 @csrf
