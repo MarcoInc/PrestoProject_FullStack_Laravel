@@ -40,7 +40,6 @@ class CreateForm extends Component{
     ];
 
     public function store(){
-
         $this->user_id=Auth::user()->id;
        
         $this->validate();
