@@ -41,8 +41,17 @@
     @endforeach
   </div>
   
-  
- 
+   <!--DA VEDERE SE SI PREFERISCE SELECT O RADIO BTN-->
+  <div class="mb-3">
+    
+      <label class="form-check-label" for="location_id">Località</label>
+      <select wire:model="location_id" id="location_id" class="form-control">
+        @foreach ($locations as $location)
+          <option value="{{$location->id}}">{{$location->name}}</option>
+        @endforeach
+      </select>
+  </div>
+
 
 
 
