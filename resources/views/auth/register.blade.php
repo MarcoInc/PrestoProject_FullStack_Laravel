@@ -1,7 +1,7 @@
 <x-layout docTitle="Register" title="Registrati">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
+    <div class="container formRegister">
+        <div class="row justify-content-center">
+            <div class="col-6">
                 <form method="POST" action={{ route('register') }}>
                     @csrf
 
@@ -31,10 +31,14 @@
                             class="form-control  @error('password_confirmation') is-invalid @enderror" id="password">
                     </div>
 
-                    <button type="submit" class="btn btn-danger fs-5">Registrati</button>
+                    <button type="submit" class="btn fs-5 btn text-white">Registrati</button>
                 </form>
             </div>
         </div>
+    </div>
+
+    <div class="vh-100">
+<p>ciao</p>
     </div>
 
 </x-layout>

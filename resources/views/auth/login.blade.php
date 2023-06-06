@@ -1,7 +1,7 @@
 <x-layout docTitle="Login" title="Accesso">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-6">
                 <form method="POST" action={{route('login')}}>
                     @csrf
             
