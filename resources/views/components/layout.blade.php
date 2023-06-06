@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{$title}}</title>
     @livewireStyles
-    
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css'])
 
 </head>
 <body>
@@ -15,5 +14,6 @@
     {{$slot}}
 
     @livewireScripts
+    @vite(['resources/js/app.js'])
 </body>
 </html>
