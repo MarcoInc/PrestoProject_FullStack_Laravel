@@ -40,18 +40,14 @@ font-family: 'Syne', sans-serif;
 .carosel-custom{
     position: relative;
     inset: 0;
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-position: top;
     overflow: hidden;
     z-index: 1;
     transition-duration: 0.4s;
   
 }
 
-.carousel-item{
-  background-color: white;
-
-}
 
 .overShadow{
     position: absolute;
@@ -60,3 +56,10 @@ font-family: 'Syne', sans-serif;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     z-index: 1000;
   }
+
+.foto1{
+  width: 100%;
+  
+
+  
+}

@@ -1,19 +1,18 @@
 <x-layout title='Homepage'>
 
-     <!-- section testi + carosel -->
+     <!-- carosel -->
   <section>
-    
         <div class="overShadow"></div>
         <div id="carouselExampleInterval" class="carousel slide carosel-custom" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active vh-100" data-bs-interval="10000">
-              <img src="/media/" class="d-block img1" alt="foto1">
+              <img class="foto1 img-fluid d-block w-100" src="/media/foto1.jpg"  alt="foto1">
             </div>
             <div class="carousel-item vh-100" data-bs-interval="2000">
-              <img src="/media/" class="d-block w-100" alt="foto2">
+              <img src="/media/foto2.jpg" class="d-block w-100" alt="foto2">
             </div>
             <div class="carousel-item vh-100">
-              <img src="/media/" class="d-block w-100" alt="foto3">
+              <img src="/media/foto3.jpg" class="d-block w-100" alt="foto3">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -27,5 +26,10 @@
         </div>
       </section>
 
+
+
+      <section class="vh-100">
+        <h1>ciao</h1>
+      </section>
 
 </x-layout>
