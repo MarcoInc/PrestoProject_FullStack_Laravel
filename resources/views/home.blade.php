@@ -1,30 +1,30 @@
 <x-layout title='Homepage'>
   
   <!-- carosel -->
-  <section class="position-relative">
-    <div class="overShadow"></div>
-    <div id="carouselExampleIndicators" class="carousel slide carosel-custom" data-bs-ride="carousel">
-     
-      <div class="carousel-inner">
-        <div class="carousel-item active vh-100" data-bs-interval="10000">
-          <img class="foto1 img-fluid d-block w-100" src="/media/foto1.jpg"  alt="foto1">
-        </div>
-        <div class="carousel-item vh-100" data-bs-interval="2000">
-          <img src="/media/foto2.jpg" class="d-block w-100" alt="foto2">
-        </div>
-        <div class="carousel-item vh-100">
-          <img src="/media/foto3.jpg" class="d-block w-100 foto3" alt="foto3">
+  <x-carousel></x-carousel>
+  
+  <div class="container-fluid">
+    <div class="row vh-50 justify-content-around">
+      @foreach ($guest_houses as $house)
+      <div class="col-3">
+        <div class="card">
+          <img src="https://picsum.photos/200" class="card-img-top img-fluid" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{$house->place}}</h5>
+            <p class="card-text">{{$house->description}}</p>
+            <div class="d-flex">
+              <p>Luogo:</p>
+              <p class="card-text">&nbsp;{{$house->location->name}}</p>
+            </div>
+            <a href="#" class="btn btn-info">Detail</a>
+            <p class="card-footer">Pubblicato il: {{$house->created_at->format('d/m/Y')}}</p>
+            <p class="card-footer">Pubblicato da: {{$house->user->name}}</p>
+          </div>
         </div>
       </div>
+      @endforeach
     </div>
-    <div class="carousel-indicators btnCarousel d-flex align-items-center position-absolute bottom-0">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-  </section>
-  
-  
+  </div>
   
   
   
