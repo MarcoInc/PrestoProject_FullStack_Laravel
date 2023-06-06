@@ -41,17 +41,17 @@
         
         
         
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <ul class="dropdown-menu rounded-1 w-100 transition" aria-labelledby="navbarDropdown">
             @auth
             <form method='POST' action="{{ route('logout') }}">
                 @csrf
-                <li class="bg-dark">
-                    <button class="dropdown-item fs-5">Logout</button>
+                <li>
+                    <button class="dropdown-item fs-5 hoverLog">Logout</button>
                 </li>
             </form>
             @else
-            <li class=""><a class="dropdown-item fs-5" href="{{ route('register') }}">Registrati</a></li>
-            <li class=""><a class="dropdown-item fs-5" href="{{ route('login') }}">Login</a></li>
+            <li><a class="dropdown-item fs-5 hoverLog" href="{{ route('register') }}">Registrati</a></li>
+            <li><a class="dropdown-item fs-5 hoverLog" href="{{ route('login') }}">Login</a></li>
             @endauth
         </ul>
     </li>

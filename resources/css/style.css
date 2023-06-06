@@ -61,3 +61,7 @@ font-family: 'Syne', sans-serif;
     bottom: 1px;
     
 }
+
+.hoverLog:hover{
+    color: var(--DarkRed);
+}
