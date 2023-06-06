@@ -62,6 +62,20 @@ font-family: 'Syne', sans-serif;
     
 }
 
+.formRegister{
+    margin-top:100px;
+}
+
+.btn{
+    background-color: black;
+    border-radius:50px
+   }
+
+ .btn:hover{
+    color:white;
+    background-color: var(--DarkRed)
+    }
+
 .hoverLog:hover{
     color: var(--DarkRed);
 }
