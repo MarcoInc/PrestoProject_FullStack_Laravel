@@ -1,4 +1,4 @@
-<form wire:submit.prevent="" enctype="multipart/form-data">
+<form wire:submit.prevent="store" enctype="multipart/form-data">
   @if(session('message'))
   <div>
     <p class="alert alert-warning">{{session('message')}}</p> 
