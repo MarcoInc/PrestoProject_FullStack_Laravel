@@ -17,42 +17,44 @@
             
             @auth
             <li class="nav-item ">
-                <a class="nav-link text-white fs-5" href="{{route('create')}}">Aggiungi articolo</a>
+                <a class="nav-link text-white fs-5" href="{{route('create')}}">Aggiungi articolo |</a>
             </li>
             @endauth
             <li class="nav-item ">
-                <a class="nav-link text-white fs-5" href="">Tutti gli articoli</a>
+                <a class="nav-link text-white fs-5" href="">Tutti gli articoli |</a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link text-white fs-5" href="">Contattaci</a>
             </li>
             
         </ul>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown d-flex align-items-center">
             <a class="nav-link dropdown-toggle text-white fs-5" href="#" id="navbarDropdown" role="button"
             data-bs-toggle="dropdown" aria-expanded="false">
             @auth
             Benvenuto {{ Auth::user()->name }}
             @else
             Benvenuto utente
+            @endauth 
+        </a>
+        
+        
+        
+        
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            @auth
+            <form method='POST' action="{{ route('logout') }}">
+                @csrf
+                <li>
+                    <button class="dropdown-item fs-5">Logout</button>
+                </li>
+            </form>
+            @else
+            <li><a class="dropdown-item fs-5" href="{{ route('register') }}">Registrati</a></li>
+            <li><a class="dropdown-item fs-5" href="{{ route('login') }}">Login</a></li>
             @endauth
-            
-        </a> 
-    
-    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        @auth
-        <form method='POST' action="{{ route('logout') }}">
-            @csrf
-            <li>
-                <button class="dropdown-item fs-5">Logout</button>
-            </li>
-        </form>
-        @else
-        <li><a class="dropdown-item fs-5" href="{{ route('register') }}">Registrati</a></li>
-        <li><a class="dropdown-item fs-5" href="{{ route('login') }}">Login</a></li>
-        @endauth
-    </ul>
-</li>
+        </ul>
+    </li>
 </div>
 </div>
 </nav>
