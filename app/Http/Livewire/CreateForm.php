@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 
+
 class CreateForm extends Component{
     public $place, $price, $description, $beds;
     // public $img;
@@ -16,9 +17,9 @@ class CreateForm extends Component{
     
     protected $rules = [
         'place'=> 'required|min:1|max:30',
-        'price'=> 'required|number',
+        'price'=> 'required|numeric',
         'description'=> 'required|min:10|max:1000',
-        'beds'=> 'required|number'
+        'beds'=> 'required|numeric'
 
     //     // 'img' => 'required|image|max:2048'
     ];
@@ -36,26 +37,25 @@ class CreateForm extends Component{
     ];
 
     public function store(){
-        // $this->validate();
+        $this->validate();
                 
         $guest_houses = Auth::user()->guest_houses()->create([
-            "place"=> $this-> place,
-            "beds"=> $this-> beds,
-            "price"=> $this-> price,
-            "description"=> $this-> description,
+            "place"=> $this->place,
+            "beds"=> $this->beds,
+            "price"=> $this->price,
+            "description"=> $this->description,
 
             // "img"=> $this->img->store('public/media'),
         ]);
-
         // $shoe->genres()->attach($this->genre_id);
         // $shoe->colors()->attach($this->color_id);
         $this->reset();
-        session()->flash('message','Scarpa caricata correttamente');
+        session()->flash('message','Prodotto caricato correttamente');
     }
         
-        // public function updated($propertyName){
-            //     $this->validateOnly($propertyName);
-            // }
+        public function updated($propertyName){
+            $this->validateOnly($propertyName);
+        }
             public function render(){
                 return view('livewire.create-form');
                 // return view('livewire.show-form', ['colors'=> Color::all(),'genres'=> Genre::all()]);

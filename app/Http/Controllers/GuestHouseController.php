@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\GuestHouse;
 use Illuminate\Http\Request;
 
-class GuestHouseController extends Controller
-{
+class GuestHouseController extends Controller{
+    public function __construct(){
+        $this->middleware('auth')->except('index');
+    }
     /**
      * Display a listing of the resource.
      */
