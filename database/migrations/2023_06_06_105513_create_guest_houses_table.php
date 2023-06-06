@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('guest_houses', function (Blueprint $table) {
             $table->id();
             $table->string('place');
-            $table->unsignedBigInteger('beds');
+            $table->integer('beds');
             $table->float('price',8,2);
             $table->text('description');
 
@@ -28,7 +28,7 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    
+
     public function down(): void{
         Schema::table('guest_houses', function (Blueprint $table) {
             $table->dropForeign(['user_id']);

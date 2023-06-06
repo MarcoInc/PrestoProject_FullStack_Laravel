@@ -68,10 +68,8 @@
         </label>
       </div>
       @endforeach  
-      
-      
-      
     </div>
   </div>--}}
+            
   <button type="submit" class="btn btn-primary">Crea annuncio</button>
 </form>
