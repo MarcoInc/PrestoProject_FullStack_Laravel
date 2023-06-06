@@ -10,7 +10,10 @@ PRESTO CODEVENGERS:
    https://www.booking.com/
 
 [PALETTE-COLORI]:
-//
+ DarkRed: #910000;
+ SemiDarkRed: #BD1212;
+ LightRed: #C10000;
+ 
 
 [FONT]:
 //
