@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 
 class CreateForm extends Component{
-    public $place, $price, $description, $beds;
+    public $place, $price, $description, $beds, $place_id, $user_id, $guest_houses;
     // public $img;
     // public $genre_id =[];
     // public $color_id=[];
@@ -19,7 +19,8 @@ class CreateForm extends Component{
         'place'=> 'required|min:1|max:30',
         'price'=> 'required|numeric',
         'description'=> 'required|min:10|max:1000',
-        'beds'=> 'required|numeric'
+        'beds'=> 'required|numeric',
+        'user_id'=> 'required'
 
     //     // 'img' => 'required|image|max:2048'
     ];
@@ -37,6 +38,7 @@ class CreateForm extends Component{
     ];
 
     public function store(){
+        $this->user_id=Auth::user()->id;
         $this->validate();
                 
         $guest_houses = Auth::user()->guest_houses()->create([
@@ -47,7 +49,7 @@ class CreateForm extends Component{
 
             // "img"=> $this->img->store('public/media'),
         ]);
-        $guest_houses->places()->attach($this->place_id);
+        //$guest_houses->place()->attach($this->place_id);
         // $place->colors()->attach($this->color_id);
         $this->reset();
         session()->flash('message','Prodotto caricato correttamente');
