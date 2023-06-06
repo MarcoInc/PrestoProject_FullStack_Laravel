@@ -62,7 +62,7 @@ class CreateForm extends Component{
             $this->validateOnly($propertyName);
         }
             public function render(){
-                return view('livewire.create-form');
+                return view('livewire.create-form', ['locations'=> Location::all()]);
                 // return view('livewire.show-form', ['colors'=> Color::all(),'genres'=> Genre::all()]);
             }
         }
