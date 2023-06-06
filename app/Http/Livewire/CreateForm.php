@@ -47,8 +47,8 @@ class CreateForm extends Component{
 
             // "img"=> $this->img->store('public/media'),
         ]);
-        // $shoe->genres()->attach($this->genre_id);
-        // $shoe->colors()->attach($this->color_id);
+        $guest_houses->places()->attach($this->place_id);
+        // $place->colors()->attach($this->color_id);
         $this->reset();
         session()->flash('message','Prodotto caricato correttamente');
     }
