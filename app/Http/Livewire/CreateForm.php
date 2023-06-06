@@ -2,12 +2,14 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\GuestHouse;
+use App\Models\Location;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
 
 
 class CreateForm extends Component{
-    public $place, $price, $description, $beds, $place_id, $user_id, $guest_houses;
+    public $place, $price, $description, $beds, $location_id, $user_id, $guest_houses;
     // public $img;
     // public $genre_id =[];
     // public $color_id=[];
@@ -39,6 +41,7 @@ class CreateForm extends Component{
 
     public function store(){
         $this->user_id=Auth::user()->id;
+       
         $this->validate();
                 
         $guest_houses = Auth::user()->guest_houses()->create([
@@ -46,11 +49,12 @@ class CreateForm extends Component{
             "beds"=> $this->beds,
             "price"=> $this->price,
             "description"=> $this->description,
+            "location_id"=>$this->location_id
+            
 
             // "img"=> $this->img->store('public/media'),
         ]);
-        //$guest_houses->place()->attach($this->place_id);
-        // $place->colors()->attach($this->color_id);
+   
         $this->reset();
         session()->flash('message','Prodotto caricato correttamente');
     }
