@@ -54,7 +54,6 @@ class CreateForm extends Component{
 
             // "img"=> $this->img->store('public/media'),
         ]);
-   
         $this->reset();
         session()->flash('message','Prodotto caricato correttamente');
     }
