@@ -45,13 +45,13 @@
             @auth
             <form method='POST' action="{{ route('logout') }}">
                 @csrf
-                <li>
+                <li class="bg-dark">
                     <button class="dropdown-item fs-5">Logout</button>
                 </li>
             </form>
             @else
-            <li><a class="dropdown-item fs-5" href="{{ route('register') }}">Registrati</a></li>
-            <li><a class="dropdown-item fs-5" href="{{ route('login') }}">Login</a></li>
+            <li class=""><a class="dropdown-item fs-5" href="{{ route('register') }}">Registrati</a></li>
+            <li class=""><a class="dropdown-item fs-5" href="{{ route('login') }}">Login</a></li>
             @endauth
         </ul>
     </li>

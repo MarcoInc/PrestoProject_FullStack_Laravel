@@ -49,7 +49,7 @@ class CreateForm extends Component{
 
             // "img"=> $this->img->store('public/media'),
         ]);
-        //$guest_houses->place()->attach($this->place_id);
+        // $guest_houses->place()->attach($this->place_id);
         // $place->colors()->attach($this->color_id);
         $this->reset();
         session()->flash('message','Prodotto caricato correttamente');
