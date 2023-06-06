@@ -28,11 +28,10 @@ class CreateForm extends Component{
     ];
 
     protected $messages = [
-        '*.required'=> 'Campo richiesto',
-        '*.min'=> 'Inserisci almeno un carattere',
-        'place.max'=> 'Massimo 30 caratteri',
+        '*.required'=> 'Il campo :attribute è obbligatorio',
+        'place.max'=> 'Il campo :attribute dev\'essere al massimo di 30 caratteri',
         '*.number'=> 'Solo numeri consentiti',
-        'description.min'=> 'Inserisci almeno 10 caratteri',
+        'description.min'=> 'La :attribute dev\'essere almeno di 10 caratteri',
         'description.max'=> 'Massimo 1000 caratteri'
 
     //     // 'img.required' => ' il file deve essere un obbligatorio.',
