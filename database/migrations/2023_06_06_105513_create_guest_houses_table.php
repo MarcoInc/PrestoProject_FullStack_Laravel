@@ -18,6 +18,8 @@ return new class extends Migration
             $table->float('price',8,2);
             $table->text('description');
 
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users');
 
             $table->timestamps();
         });
@@ -26,8 +28,11 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down(): void
-    {
-        Schema::dropIfExists('guest_houses');
+    
+    public function down(): void{
+        Schema::table('guest_houses', function (Blueprint $table) {
+            $table->dropForeign(['user_id']);
+            $table->dropColumn('user_id');
+        });
     }
 };

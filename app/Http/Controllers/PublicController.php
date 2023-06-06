@@ -10,9 +10,7 @@ class PublicController extends Controller{
         //TODO altre funzioni middleware
         $this->middleware('auth')->except('home');
     }
-    public function create() {
-        return view('product.create');
-    }
+    
 
     
     public function home() {

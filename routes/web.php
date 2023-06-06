@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GuestHouseController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 
@@ -16,4 +17,4 @@ use App\Http\Controllers\PublicController;
 
 Route::get('/', [PublicController::class , 'home'])->name('home');
 
-Route::get('/crea-articolo', [PublicController::class , 'create'])->name('create');
+Route::get('/crea-articolo', [GuestHouseController::class , 'create'])->name('create');

@@ -2,11 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class GuestHouse extends Model
 {
     use HasFactory;
     protected $fillable=['place','beds','price','description'];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
