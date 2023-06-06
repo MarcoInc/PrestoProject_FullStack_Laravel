@@ -29,6 +29,7 @@
   </div>
   
   <div class="mb-3">
+    <p>Seleziona la località:</p>
     @foreach ($locations as $location)
     <div class="form-check">
       <input class="form-check-input" type="radio" wire:model="location_id"  name="location_id"  id="{{$location->id}}" value="{{$location->id}}">

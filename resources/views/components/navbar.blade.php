@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light w-100">
+<nav class="navbar navbar-expand-lg navbar-light w-100 mb-5">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{route('home')}}"><img class="logo" src="/media/LogoW.png" alt="Logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
