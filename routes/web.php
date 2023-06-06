@@ -15,3 +15,5 @@ use App\Http\Controllers\PublicController;
 */
 
 Route::get('/', [PublicController::class , 'home'])->name('home');
+
+Route::get('/crea-articolo', [PublicController::class , 'create'])->name('create');
