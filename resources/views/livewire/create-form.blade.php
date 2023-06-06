@@ -67,11 +67,11 @@
           {{$genre->genre}}
         </label>
       </div>
-      @endforeach  --}}
+      @endforeach  
       
       
       
     </div>
-  </div>
+  </div>--}}
   <button type="submit" class="btn btn-primary">Crea annuncio</button>
 </form>
