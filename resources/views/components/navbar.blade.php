@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light w-100">
+<nav class="navbar navbar-expand-lg navbar-light w-100 mb-5">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{route('home')}}"><img class="logo" src="/media/LogoW.png" alt="Logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -41,17 +41,17 @@
         
         
         
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <ul class="dropdown-menu rounded-1 w-100" aria-labelledby="navbarDropdown">
             @auth
             <form method='POST' action="{{ route('logout') }}">
                 @csrf
                 <li>
-                    <button class="dropdown-item fs-5">Logout</button>
+                    <button class="dropdown-item fs-5 hoverLog">Logout</button>
                 </li>
             </form>
             @else
-            <li><a class="dropdown-item fs-5" href="{{ route('register') }}">Registrati</a></li>
-            <li><a class="dropdown-item fs-5" href="{{ route('login') }}">Login</a></li>
+            <li><a class="dropdown-item fs-5 hoverLog" href="{{ route('register') }}">Registrati</a></li>
+            <li><a class="dropdown-item fs-5 hoverLog" href="{{ route('login') }}">Login</a></li>
             @endauth
         </ul>
     </li>

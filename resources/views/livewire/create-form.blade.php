@@ -29,12 +29,26 @@
   </div>
   
   <div class="mb-3">
+    <p>Seleziona la località:</p>
+    @foreach ($locations as $location)
+    <div class="form-check">
+      <input class="form-check-input" type="radio" wire:model="location_id"  name="location_id"  id="{{$location->id}}" value="{{$location->id}}">
+      <label class="form-check-label" for="{{$location->id}}">
+        {{$location->name}}
+      </label>
+    </div>
+    @endforeach
+  </div>
+  
+  <div class="mb-3">
     <label for="beds" class="form-label">Posti letto</label>
     <input placeholder="Quante persone può ospitare?" wire:model.lazy="beds" type="number" step="1" class="form-control @error('beds') is-invalid  @enderror" id="beds">
     @error('beds')
     <p>{{$message}}</p>
     @enderror 
   </div>
+  
+  
   
   
   
@@ -70,6 +84,6 @@
       @endforeach  
     </div>
   </div>--}}
-            
+  
   <button type="submit" class="btn btn-primary">Crea annuncio</button>
 </form>

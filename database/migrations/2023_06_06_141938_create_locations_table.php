@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Place;
+use App\Models\Location;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,16 +12,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('places', function (Blueprint $table) {
+        Schema::create('locations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->timestamps();
             
         });
-        $places = ['Mare', 'Montagna', 'Lago', 'Citta', 'Neve', 'Deserto', 'Campagna'];
-        foreach($places as $place){
-            Place::create([
-                'name' => $place
+        $locations = ['Mare', 'Montagna', 'Lago', 'Citta', 'Neve', 'Deserto', 'Campagna'];
+        foreach($locations as $location){
+            Location::create([
+                'name' => $location
             ]);
         }
     }
@@ -34,6 +34,6 @@ return new class extends Migration
     public function down(): void
     {
 
-        Schema::dropIfExists('places');
+        Schema::dropIfExists('locations');
     }
 };

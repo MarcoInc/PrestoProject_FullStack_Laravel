@@ -15,7 +15,7 @@ class GuestHouse extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function place(){
-        return $this->belongsTo(Place::class);
+    public function location(){
+        return $this->belongsTo(Location::class);
     }
 }
