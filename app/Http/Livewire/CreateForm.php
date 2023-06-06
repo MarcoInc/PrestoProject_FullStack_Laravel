@@ -14,7 +14,7 @@ class CreateForm extends Component{
     //use WithFileUploads;
 
     protected $rules = [
-        'place'=> 'required|min:1|max:30',
+        'place'=> 'required|min:5|max:30',
         'price'=> 'required|number',
         'description'=> 'required|min:10|max:1000',
         'beds'=> 'required|number'
@@ -23,8 +23,8 @@ class CreateForm extends Component{
     ];
 
     protected $messages = [
-        '*.required'=> 'Campo richiesto',
-        '*.min'=> 'Inserisci almeno un carattere',
+        '*.required'=> 'Campo obbligatorio',
+        '*.min'=> 'Inserisci almeno cinque caratteri',
         'place.max'=> 'Massimo 30 caratteri',
         '*.number'=> 'Solo numeri consentiti',
         'description.min'=> 'Inserisci almeno 10 caratteri',
