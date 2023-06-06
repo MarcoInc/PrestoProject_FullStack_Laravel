@@ -9,9 +9,7 @@ use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
+   
     public function register(): void
     {
         //
@@ -22,10 +20,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        //Condizione che permette di passare a tutte le viste la categoria Locations
         if (Schema::hasTable('locations')) {
             app()->singleton('locations', function () {
                 return Location::all();
             });
         }
-    }
+    } 
 }

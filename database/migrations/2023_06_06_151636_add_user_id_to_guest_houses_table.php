@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::table('guest_houses', function (Blueprint $table) {
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            //onDelete: se l'utente si cancella, vengono a cascata eliminati i suoi articoli.
         });
     }
 
