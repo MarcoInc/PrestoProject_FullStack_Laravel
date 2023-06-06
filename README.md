@@ -1,22 +1,19 @@
 PRESTO CODEVENGERS:
 
+[TEMA]:
+  Sistema di prenotazione apparatamenti/camere
+//Tipo Airbnb
+//Tipo Booking
 
+[LINK-ISPIRAZIONE-LATO-FRONT]:
+   https://www.airbnb.it/
+   https://www.booking.com/
 
+[PALETTE-COLORI]:
+//
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[FONT]:
+//
 
 
 ACCEPTANCE CRITERIA:
@@ -26,7 +23,30 @@ ACCEPTANCE CRITERIA:
 - Solo gli utenti loggati possono inserire un annuncio [AUTH]
 
 RELAZIONI
-- 10 Categorie dell'annuncio pre-compilate [CATEGORIE]
+- 10 Categorie dell'annuncio pre-compilate [CATEGORIE]:
+ Tipologia luogo:
+   /Mare
+   /Lago
+   /Montagna
+   /Neve
+   /Deserto
+   /Città
+
+Tipologia di app:
+   /Appartamento
+   /Villa
+   /Hotel
+   /Camping
+   /Agriturismo
+   
+Contesto->opzionale(cosa fare):
+  /Sport: sci, trekking, canottaggio
+  /Parco giochi
+  /Arte e cultura
+  /Ristorazione
+  /Spa
+
+
 - La relazione tra Categoria e Annuncio è  1 a N []
 - La relazione tra Utente e Annuncio è 1 a N []
 
