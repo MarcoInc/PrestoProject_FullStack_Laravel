@@ -21,7 +21,7 @@ class CreateForm extends Component{
         'beds'=> 'required|number'
 
     //     // 'img' => 'required|image|max:2048'
-    // ];
+    ];
 
     protected $messages = [
         '*.required'=> 'Campo richiesto',
@@ -33,7 +33,7 @@ class CreateForm extends Component{
 
     //     // 'img.required' => ' il file deve essere un obbligatorio.',
     //     // 'img.image' => 'il  file deve essere un immagine.'
-    // ];
+    ];
 
     public function store(){
         // $this->validate();
