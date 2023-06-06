@@ -13,24 +13,23 @@ class CreateForm extends Component{
 
     //per caricare i file
     //use WithFileUploads;
-    
 
-    // protected $rules = [
-    //     'place'=> 'required|min:1|max:30',
-    //     'price'=> 'required|number',
-    //     'description'=> 'required|min:10|max:1000',
-    //     'beds'=> 'required|number'
+    protected $rules = [
+        'place'=> 'required|min:1|max:30',
+        'price'=> 'required|number',
+        'description'=> 'required|min:10|max:1000',
+        'beds'=> 'required|number'
 
     //     // 'img' => 'required|image|max:2048'
     // ];
 
-    // protected $messages = [
-    //     '*.required'=> 'Campo richiesto',
-    //     '*.min'=> 'Inserisci almeno un carattere',
-    //     '*.number'=> 'Solo numeri consentiti',
-    //     'place.max'=> 'Massimo 30 caratteri',
-    //     'description.min'=> 'Inserisci almeno 10 caratteri',
-    //     'description.max'=> 'Massimo 1000 caratteri'
+    protected $messages = [
+        '*.required'=> 'Campo richiesto',
+        '*.min'=> 'Inserisci almeno un carattere',
+        'place.max'=> 'Massimo 30 caratteri',
+        '*.number'=> 'Solo numeri consentiti',
+        'description.min'=> 'Inserisci almeno 10 caratteri',
+        'description.max'=> 'Massimo 1000 caratteri'
 
     //     // 'img.required' => ' il file deve essere un obbligatorio.',
     //     // 'img.image' => 'il  file deve essere un immagine.'
