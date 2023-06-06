@@ -40,6 +40,7 @@ class CreateForm extends Component{
     ];
 
     public function store(){
+
         $this->user_id=Auth::user()->id;
        
         $this->validate();
@@ -50,8 +51,6 @@ class CreateForm extends Component{
             "price"=> $this->price,
             "description"=> $this->description,
             "location_id"=>$this->location_id
-            
-
             // "img"=> $this->img->store('public/media'),
         ]);
         $this->reset();
