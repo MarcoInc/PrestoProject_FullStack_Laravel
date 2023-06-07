@@ -2,29 +2,29 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\GuestHouse;
-use App\Models\Location;
 use Livewire\Component;
+use App\Models\Location;
+use App\Models\GuestHouse;
+use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 
 
 class CreateForm extends Component{
-    public $place, $price, $description, $beds, $location_id, $user_id, $guest_houses;
-    // public $img;
+    public $place, $price, $description, $beds, $location_id, $user_id, $guest_houses,$img;
     // public $genre_id =[];
     // public $color_id=[];
     
     //per caricare i file
-    //use WithFileUploads;
+    use WithFileUploads;
     
     protected $rules = [
         'place'=> 'required|min:1|max:30',
         'price'=> 'required|numeric',
         'description'=> 'required|min:10|max:1000',
         'beds'=> 'required|numeric',
-        'user_id'=> 'required'
-
-    //     // 'img' => 'required|image|max:2048'
+        'user_id'=> 'required',
+        'location_id' => 'required',
+        'img' => 'required|image'
     ];
 
     protected $messages = [
@@ -33,10 +33,9 @@ class CreateForm extends Component{
         'place.max'=> 'Il campo dev\'essere al massimo di 30 caratteri',
         '*.number'=> 'Solo numeri consentiti',
         'description.min'=> 'La descrizione dev\'essere almeno di 10 caratteri',
-        'description.max'=> 'Massimo 1000 caratteri'
-
-    //     // 'img.required' => ' il file deve essere un obbligatorio.',
-    //     // 'img.image' => 'il  file deve essere un immagine.'
+        'description.max'=> 'Massimo 1000 caratteri',
+        'img.requided' => 'Caricare file',
+        'img.image' => 'File immagine richiesto'
     ];
 
     public function store(){
@@ -49,8 +48,9 @@ class CreateForm extends Component{
             "beds"=> $this->beds,
             "price"=> $this->price,
             "description"=> $this->description,
-            "location_id"=>$this->location_id
-            // "img"=> $this->img->store('public/media'),
+            "location_id"=>$this->location_id,
+
+            "img"=> $this->img->store('public/media')
         ]);
         $this->reset();
         session()->flash('message','Prodotto caricato correttamente');
