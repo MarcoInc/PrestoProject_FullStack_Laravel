@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\GuestHouse;
+use App\Models\Location;
 use Illuminate\Http\Request;
 
 class GuestHouseController extends Controller{
@@ -43,12 +44,9 @@ class GuestHouseController extends Controller{
         return view('product.show', compact('house'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(GuestHouse $guestHouse)
-    {
-        //
+    public function edit(GuestHouse $house){
+        $locations = Location::all();
+        return view('product.edit', compact('house','locations'));
     }
 
     /**
