@@ -17,6 +17,7 @@ use App\Http\Controllers\PublicController;
 
 Route::get('/', [PublicController::class , 'home'])->name('home');
 
+//Articoli
 Route::get('/crea-articolo', [GuestHouseController::class , 'create'])->name('create');
 Route::get('/all/articles', [PublicController::class, 'index'])->name('index');
 Route::get('/detail/{id}', [GuestHouseController::class, 'show'])->name('show');

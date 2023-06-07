@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('guest_houses', function (Blueprint $table) {
             $table->string('img')->default('public/media/default.jpg');
+            
         });
     }
 
