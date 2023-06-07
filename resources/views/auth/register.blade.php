@@ -32,7 +32,7 @@
                             class="form-control  @error('password_confirmation') is-invalid @enderror" id="password">
                     </div>
 
-                    <button type="submit" class="btn mt-4 fs-5 btn text-white">Registrati</button>
+                    <button type="submit" class="btnForm mt-4 fs-5 btn text-white">Registrati</button>
                 </form>
             </div>
         </div>

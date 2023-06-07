@@ -70,11 +70,11 @@ font-family: 'Syne', sans-serif;
 .btnForm{
     background-color: black;
     border-radius:50px
-   }
+}
 
  .btnForm:hover{
     color:white;
-    background-color: var(--DarkRed)
+    background-color: var(--DarkRed);
     }
 
 .hoverLog:hover{
