@@ -34,7 +34,7 @@ class CreateForm extends Component{
         '*.number'=> 'Solo numeri consentiti',
         'description.min'=> 'La descrizione dev\'essere almeno di 10 caratteri',
         'description.max'=> 'Massimo 1000 caratteri',
-        'img.requided' => 'Caricare file',
+        'img.required' => 'Caricare file',
         'img.image' => 'File immagine richiesto'
     ];
 

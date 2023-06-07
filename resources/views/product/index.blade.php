@@ -3,10 +3,10 @@
     <div class="container">
         <div class="row">
             @foreach ($guest_houses as $house)
+
             <div class="col-3">
                 <div class="card" style="width: 18rem;">
-                    {{-- <img src="..." class="card-img-top" alt="..."> --}}
-                    
+                    <img src="{{Storage::url($house->img)}}" class="card-img-top" alt="..."> 
                     <div class="card-body">
                         <h5 class="card-title">{{$house->place}}</h5>
                         <p class="card-text">Location: {{$house->location->name}}</p>

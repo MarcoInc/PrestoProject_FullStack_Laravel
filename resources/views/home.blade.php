@@ -6,9 +6,10 @@
   <div class="container-fluid">
     <div class="row vh-50 justify-content-around">
       @foreach ($guest_houses as $house)
+      
       <div class="col-3">
         <div class="card">
-          <img src="https://picsum.photos/200" class="card-img-top img-fluid" alt="...">
+          <img src="{{$house->img}}" class="card-img-top img-fluid" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{$house->place}}</h5>
             <p class="card-text">{{$house->description}}</p>
