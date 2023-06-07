@@ -19,3 +19,7 @@ Route::get('/', [PublicController::class , 'home'])->name('home');
 
 Route::get('/crea-articolo', [GuestHouseController::class , 'create'])->name('create');
 Route::get('/all/articles', [PublicController::class, 'index'])->name('index');
+Route::get('/detail/{id}', [GuestHouseController::class, 'show'])->name('show');
+Route::delete('/delete/{house}',[GuestHouseController::class,'destroy'])->name('delete');
+Route::get('/modifica/{house}',[GuestHouseController::class,'edit'])->name('edit');
+
