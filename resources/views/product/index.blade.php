@@ -6,12 +6,14 @@
                 <div class="row justify-content-evenly">
                     @foreach ($locations as $location)
                     <div class="col-1">
-                        <div id="{{$location->id}}" class="card">
-                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                                <p><i class="fa-solid fa-water my-3 fs-5"></i></p>
-                                <p class="card-text mb-3 fs-5">{{$location->name}}</p>
+                        <a href="{{route('categoryShow', compact('location'))}}">
+                            <div id="{{$location->id}}" class="card">
+                                <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                    <p><i class="fa-solid fa-water my-3 fs-5"></i></p>
+                                    <p class="card-text mb-3 fs-5">{{$location->name}}</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     @endforeach
                 </div>
@@ -37,6 +39,7 @@
                 </div>
             </div>  
             @endforeach
+            <!--Si lega al paginator per creare link di piu pagine (AppServiceProvider)-->
             {{$guest_houses->links()}}
         </div>
     </div>

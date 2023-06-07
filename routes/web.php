@@ -24,3 +24,5 @@ Route::get('/detail/{id}', [GuestHouseController::class, 'show'])->name('show');
 Route::delete('/delete/{house}',[GuestHouseController::class,'destroy'])->name('delete');
 Route::get('/modifica/{house}',[GuestHouseController::class,'edit'])->name('edit');
 
+
+Route::get('/category-show/{location}', [PublicController::class, 'categoryShow'])->name('categoryShow');
