@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::table('guest_houses', function (Blueprint $table) {
             $table->unsignedBigInteger('location_id')->nullable();
-            $table->foreign('location_id')->references('id')->on('locations');
-        });
+            $table->foreign('location_id')->references('id')->on('locations')->onDelete('SET NULL');
+        });  //onDelete SET NULL definisce che prodotti caricati precedentemente possono essere    null  quindi non dare errore nella relazione
     }
 
     /**
