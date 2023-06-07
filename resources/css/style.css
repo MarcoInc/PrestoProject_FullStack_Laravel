@@ -10,8 +10,8 @@ font-family: 'Syne', sans-serif;
 
 :root {
     --DarkRed: rgb(11, 5, 55);
-    --SemiDarkRed: rgb(0,0,155);
-    --LightRed: rgb(0, 91, 196);
+    --SemiDarkRed: rgb(0, 138, 172);
+    --LightRed: rgb(18,109,118);
     --white: rgb(238, 237, 237);
     --black: rgb(28, 28, 28);
     --mainFont: 'Syne', sans-serif;
@@ -129,9 +129,13 @@ a {
     text-decoration: none;
 }
 
+.borderCategory{
+    transition: 0.4s;
+    color: rgb(0, 138, 172);
+}
 
-  .borderCategory:hover{
+.borderCategory:hover{
     
     
     
-  }
+}
