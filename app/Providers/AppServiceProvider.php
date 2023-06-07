@@ -28,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
             });
         }
 
+        //I paginator servono per non far rompere il sistema di bootstrap nell'impaginazione degli articoli
         Paginator::useBootstrapFive();
         Paginator::useBootstrapFour();
     } 
