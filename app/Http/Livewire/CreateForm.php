@@ -28,11 +28,11 @@ class CreateForm extends Component{
     ];
 
     protected $messages = [
-        '*.required'=> 'Campo richiesto',
-        '*.min'=> 'Inserisci almeno un carattere',
-        'place.max'=> 'Massimo 30 caratteri',
+        // :attribute per richiamare il nome dell'attributo
+        '*.required'=> 'Il campo è obbligatorio',
+        'place.max'=> 'Il campo dev\'essere al massimo di 30 caratteri',
         '*.number'=> 'Solo numeri consentiti',
-        'description.min'=> 'Inserisci almeno 10 caratteri',
+        'description.min'=> 'La descrizione dev\'essere almeno di 10 caratteri',
         'description.max'=> 'Massimo 1000 caratteri'
 
     //     // 'img.required' => ' il file deve essere un obbligatorio.',
@@ -50,8 +50,6 @@ class CreateForm extends Component{
             "price"=> $this->price,
             "description"=> $this->description,
             "location_id"=>$this->location_id
-            
-
             // "img"=> $this->img->store('public/media'),
         ]);
         $this->reset();

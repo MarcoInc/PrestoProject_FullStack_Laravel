@@ -67,12 +67,12 @@ font-family: 'Syne', sans-serif;
     
 }
 
-.btn{
+.btnForm{
     background-color: black;
     border-radius:50px
    }
 
- .btn:hover{
+ .btnForm:hover{
     color:white;
     background-color: var(--DarkRed)
     }

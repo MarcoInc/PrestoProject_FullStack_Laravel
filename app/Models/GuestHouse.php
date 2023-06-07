@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class GuestHouse extends Model
 {
     use HasFactory;
-    protected $fillable=['place','beds','price','description'];
+    protected $fillable=['place','beds','price','description','location_id'];
 
     public function user(){
         return $this->belongsTo(User::class);
