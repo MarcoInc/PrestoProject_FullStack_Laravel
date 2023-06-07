@@ -9,9 +9,9 @@ font-family: 'Syne', sans-serif;
 */
 
 :root {
-    --DarkRed: rgb(145, 0, 0);
-    --SemiDarkRed: rgb(189, 18, 18);
-    --LightRed: rgb(193, 0, 0);
+    --DarkRed: rgb(11, 5, 55);
+    --SemiDarkRed: rgb(0,0,155);
+    --LightRed: rgb(0, 91, 196);
     --white: rgb(238, 237, 237);
     --black: rgb(28, 28, 28);
     --mainFont: 'Syne', sans-serif;
@@ -77,12 +77,12 @@ font-family: 'Syne', sans-serif;
 .btnForm:hover{
     background-color: var(--DarkRed);
     color:white;
-    }
-    
+}
+
 
 
 .hoverLog:hover{
-    color: var(--DarkRed);
+    color: var(--LightRed);
 }
 
 input{
@@ -108,30 +108,31 @@ input{
 /* footer */
 .textColor{
     color: rgba(255, 255, 255, 0.6);
-  }
-  
-  .textColor:hover{
+}
+
+.textColor:hover{
     color: var(--LightRed);
     transition: 0.5;
-  }
+}
 
-    footer {
-      color: white;
-      background: black;
-
-      background-size: cover;
-      font-size: 14px;
-      padding: 80px 80px 0px;
-      height: 65vh;
-  }
-
-  a {
-  text-decoration: none;
-  }
-
-
-  .borderCategory:hover{
+footer {
+    color: white;
+    background: black;
     
-    
-    
-  }
+    background-size: cover;
+    font-size: 14px;
+    padding: 80px 80px 0px;
+    height: 65vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+.borderCategory{
+    transition: 0.4s;
+}
+
+.borderCategory.hovered {
+   color: rgba(0, 0, 159, 0.836);
+}

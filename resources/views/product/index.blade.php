@@ -7,9 +7,9 @@
                     @foreach ($locations as $location)
                     <div class="col-1">
                         <a href="{{route('categoryShow', compact('location'))}}">
-                            <div id="{{$location->id}}" class="card border-0 borderCategory">
+                            <div onmouseover="changeBorderColor(this)" onmouseout="resetBorderColor(this)" id="{{$location->id}}" class="borderCategory card border-0 ">
                                 <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                                    <p><i class="fa-solid {{$icons[$loop->index]}} fs-4"></i></p>
+                                    <div class=""><i class="fa-solid  {{$icons[$loop->index]}} fs-3"></i></div>
                                     <p class="card-text mb-3 fs-5">{{$location->name}}</p>
                                 </div>
                             </div>
@@ -43,9 +43,15 @@
             {{$guest_houses->links()}}
         </div>
     </div>
-
+    
     <script>
-      
-
+        function changeBorderColor(element) {
+            element.classList.add('hovered');
+        }
+        
+        function resetBorderColor(element) {
+            element.classList.remove('hovered');
+        }
+        
     </script>
 </x-layout>
