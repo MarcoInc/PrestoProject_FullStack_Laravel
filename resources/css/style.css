@@ -63,7 +63,8 @@ font-family: 'Syne', sans-serif;
 }
 
 .formRegister{
-    margin-top:100px;
+    background-image: url('/public/media/bgRegister.jpg');
+    padding:70px;
     
 }
 
@@ -72,10 +73,12 @@ font-family: 'Syne', sans-serif;
     border-radius:50px
 }
 
- .btnForm:hover{
+.btnForm:hover{
     color:white;
     background-color: var(--DarkRed);
     }
+    
+
 
 .hoverLog:hover{
     color: var(--DarkRed);
