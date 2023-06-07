@@ -4,7 +4,7 @@
     <div class="footer-content position-relative">
       <div class="row h-100 justify-content-between">
         <div class="col-12 col-lg-4 col-md-3">
-          <h3>Codevengers</h3>
+          <h3>Contattataci</h3>
           <p class="pt-3 py-3">
             Via Lemani, 96 <br>
             BA 70132, ITA <br>
@@ -21,7 +21,7 @@
           <!-- footer links column-->
           
            <div class="col-12 col-md-3">
-             <h4 >Link Utili</h4>
+             <h4>Link Utili</h4>
              <ul>
                <li><a href="http://127.0.0.1:5501/index.html" class="textColor">Home</a></li>
                <li><a href="#" class="textColor">Chi Siamo</a></li>
