@@ -70,12 +70,13 @@ font-family: 'Syne', sans-serif;
 
 .btnForm{
     background-color: black;
-    border-radius:50px
+    border-radius:50px;
+    color:white;
 }
 
 .btnForm:hover{
-    color:white;
     background-color: var(--DarkRed);
+    color:white;
     }
     
 
@@ -88,3 +89,18 @@ input{
     box-shadow: 2px 0px 6px rgba(170, 9, 9, 0.2);
 }
 
+
+
+.bgLogin{
+    background-image: url('/public/media/bgLogin.jpg');
+}
+
+.btnLogin{
+    background-color: white;
+    border-radius:50px;
+    color:black;
+}
+
+.register{
+    color:var(--LightRed);
+}
