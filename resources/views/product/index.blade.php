@@ -10,7 +10,16 @@
                     <div class="card-body">
                         <h5 class="card-title">{{$house->place}}</h5>
                         <p class="card-text">Location: {{$house->location->name}}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="{{route('show', ['id'=>$house->id])}}" class="btn btn-primary">Dettaglio</a>
+                        @if(Auth::id()==$house->user_id)
+                            <a href="{{ route('edit',compact('house')) }}" class="btn btn-warning">Modifica</a>
+                            <form method=POST action={{route('delete',compact('house'))}}>
+                                @csrf
+                                @method('delete')
+                                <button class="btn btn-danger">Elimina</button>
+                            </form>
+                        @endif
+                        
                     </div>
                 </div>
             </div>  

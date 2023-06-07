@@ -36,9 +36,11 @@ class GuestHouseController extends Controller{
     /**
      * Display the specified resource.
      */
-    public function show(GuestHouse $guestHouse)
+    public function show($id)
     {
-        //
+
+        $house = GuestHouse::findOrFail($id);
+        return view('product.show', compact('house'));
     }
 
     /**
