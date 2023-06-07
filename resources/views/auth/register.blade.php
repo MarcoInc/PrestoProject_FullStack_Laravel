@@ -1,4 +1,5 @@
 <x-layout docTitle="Register" title="Registrati">
+
     <div class="container formRegister">
         <div class="row justify-content-center">
             <div class="col-6">
@@ -7,11 +8,11 @@
 
                     <div class="mb-3 pt-4">
                         <label for="user" class="form-label fs-5">Nome</label>
-                        <input name='name' type="text" class="form-control @error('name') is-invalid @enderror"
+                        <input name='name' type="text" class="form-control  @error('name') is-invalid @enderror"
                             id="user" aria-describedby="emailHelp" value={{ old('name') }}>
                     </div>
 
-                    <div class="mb-3">
+                    <div class="mb-3 my-4">
                         <label for="email" class="form-label fs-5">Indirizzo email</label>
                         <input name='email' type="email" class="form-control @error('email') is-invalid @enderror"
                             id="email" aria-describedby="emailHelp " value={{ old('email') }}>
@@ -19,7 +20,7 @@
                             <p>{{ $message }}</p>
                         @enderror
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 mb-4">
                         <label for="password" class="form-label fs-5">Password</label>
                         <input name='password' type="password"
                             class="form-control @error('password') is-invalid @enderror" id="password">
@@ -31,7 +32,7 @@
                             class="form-control  @error('password_confirmation') is-invalid @enderror" id="password">
                     </div>
 
-                    <button type="submit" class="btn fs-5 btn text-white">Registrati</button>
+                    <button type="submit" class="btn mt-4 fs-5 btn text-white">Registrati</button>
                 </form>
             </div>
         </div>
