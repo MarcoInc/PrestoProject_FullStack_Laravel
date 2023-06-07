@@ -21,7 +21,7 @@
             </li>
             @endauth
             <li class="nav-item ">
-                <a class="nav-link text-white fs-5" href="">Tutti gli articoli |</a>
+                <a class="nav-link text-white fs-5" href="{{route('index')}}">Tutti gli articoli |</a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link text-white fs-5" href="">Contattaci</a>
