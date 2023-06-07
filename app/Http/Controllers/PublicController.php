@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\GuestHouse;
+use App\Models\Location;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller{
@@ -18,8 +19,13 @@ class PublicController extends Controller{
     }
     
     public function index(){
-        $guest_houses = GuestHouse::all();
-        return view('product.index', compact('guest_houses'));
+        $guest_houses = GuestHouse::paginate(4); //La funzione paginate mi permette di mostrare nella pagina solo un tot di articoli
+        $locations = Location::all();
+        return view('product.index', compact('guest_houses', 'locations'));
+    }
+
+    public function categoryShow(Location $location){
+        return view('product.category-show', compact('location'));
     }
     
 }
