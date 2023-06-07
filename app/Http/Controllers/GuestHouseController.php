@@ -60,8 +60,9 @@ class GuestHouseController extends Controller{
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(GuestHouse $guestHouse)
+    public function destroy(GuestHouse $house)
     {
-        //
+        $house->delete();
+        return redirect(route('show'))->with('message', 'prodotto eliminato correttamente');
     }
 }
