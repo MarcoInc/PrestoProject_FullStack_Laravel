@@ -24,5 +24,6 @@
     
     @livewireScripts
     @vite(['resources/js/app.js'])
+    <x-footer></x-footer>
 </body>
 </html>
