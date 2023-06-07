@@ -41,6 +41,7 @@
   <div class="mb-3">
     <label class="form-check-label" for="location_id">Località</label>
     <select wire:model="location_id" id="location_id" class="form-control @error('location_id') is-invalid  @enderror">
+      <option value="">Scegli la località</option>
       @foreach ($locations as $location)
       <option value="{{$location->id}}">{{$location->name}}</option>
       @endforeach

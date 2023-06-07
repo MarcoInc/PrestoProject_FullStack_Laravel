@@ -15,10 +15,12 @@ return new class extends Migration
         Schema::create('locations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+           
             $table->timestamps();
             
         });
         $locations = ['Mare','Montagna','Lago','Citta','Neve','Deserto','Campagna'];
+        
         foreach($locations as $location){
             Location::create([
                 'name' => $location
