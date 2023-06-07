@@ -27,6 +27,7 @@ font-family: 'Syne', sans-serif;
     
 }
 
+
 .navbar {
     background-color: var(--black);
     
@@ -129,9 +130,16 @@ a {
     text-decoration: none;
 }
 
+.a:hover{
+    color:var(--LightRed);
+}
 
-  .borderCategory:hover{
-    
-    
-    
-  }
+
+.icons-footer:hover{
+    color:var(--LightRed);
+}
+
+.hr{
+    border-bottom: 2px solid var(--LightRed);
+    width:200px;
+}

@@ -8,23 +8,24 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-                <a class="nav-link active text-white fs-5" aria-current="page" href="{{route('home')}}">Home |</a>
+                <a class="nav-link active text-white fs-5" aria-current="page" href="{{route('home')}}"> <div class="a"> Home | </div> </a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link text-white fs-5" href="">About |</a>
+                <a class="nav-link text-white fs-5" href=""> <div class="a"> About | </div> </a>
             </li>
             
             
             @auth
             <li class="nav-item ">
-                <a class="nav-link text-white fs-5" href="{{route('create')}}">Aggiungi articolo |</a>
+                <a class="nav-link text-white fs-5" href="{{route('create')}}"> <div class="a"> 
+                    Aggiungi articolo | </div> </a> 
             </li>
             @endauth
             <li class="nav-item ">
-                <a class="nav-link text-white fs-5" href="{{route('index')}}">Tutti gli articoli |</a>
+                <a class="nav-link text-white fs-5" href="{{route('index')}}"> <div class="a"> Tutti gli articoli | </div> </a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link text-white fs-5" href="">Contattaci</a>
+                <a class="nav-link text-white fs-5" href=""> <div class="a">  Contattaci </div> </a>
             </li>
             
         </ul>

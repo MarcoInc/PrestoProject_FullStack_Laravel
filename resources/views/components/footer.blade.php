@@ -4,24 +4,25 @@
     <div class="footer-content position-relative">
       <div class="row h-100 justify-content-between">
         <div class="col-12 col-lg-4 col-md-3">
-          <h3>Contattataci</h3>
+          <h3 class="hr">Contattataci</h3>
           <p class="pt-3 py-3">
+           <i class="fa-solid fa-location-dot"></i>
             Via Lemani, 96 <br>
             BA 70132, ITA <br>
-           <p><strong>Phone:</strong> +1 5589 55488 55<br>
+            <p> <strong>Phone:</strong> +1 5589 55488 55<br>
             <strong>Email:</strong> codevengers@example.com<br>
            </p>
               <p> 
-                <i class="fa-brands icons-footer fa-facebook"></i>
-                 <i class="fa-brands icons-footer fa-instagram"></i> 
-                <i class="fa-brands icons-footer fa-linkedin"></i>
+                <i class="fa-brands icons-footer fa-facebook fs-1"></i>
+                 <i class="fa-brands icons-footer fa-instagram fs-1 mx-5"></i> 
+                <i class="fa-brands icons-footer fa-linkedin fs-1"></i>
               </p>
           </p>
         </div>
           <!-- footer links column-->
           
            <div class="col-12 col-md-3">
-             <h4>Link Utili</h4>
+             <h4 class="hr">Link Utili</h4>
              <ul>
                <li><a href="http://127.0.0.1:5501/index.html" class="textColor">Home</a></li>
                <li><a href="#" class="textColor">Chi Siamo</a></li>
@@ -32,7 +33,7 @@
             </div>
            
           <div class="col-12 col-md-3">
-            <h4>I nostri servizi</h4>
+            <h4 class="hr">I nostri servizi</h4>
             <ul>
               <li><a href="#" class="textColor">Web Design</a></li>
               <li><a href="#" class="textColor">Web Development</a></li>
@@ -54,7 +55,9 @@
               <!-- You can delete the links only if you purchased the pro version. -->
               <!-- Licensing information: https://bootstrapmade.com/license/ -->
               <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
-              Designed by <a href="https://bootstrapmade.com/">Minenna M. Emanuela , Scotto di Luzio Ida Alessandra, Cherubini Sabrina, Sotera Marco, Di Pietro Riccardo</a> Distributed by <a href="https://www.facebook.com/emanuelaminenna.smm/">OrEmConsulting</a>
+              Designed by <a href="https://github.com/Manumi93">Minenna M. Emanuela</a> <a href="https://github.com/alessandraScotto">
+              Scotto di Luzio Ida Alessandra</a> <a href="https://github.com/SabrinaCherubini"> Cherubini Sabrina </a> 
+              <a href="https://github.com/MarcoInc">Sotera Marco</a> <a href="https://github.com/RiccardoDipietro?tab=repositories">Dipietro Riccardo</a> Distributed by Codevenegers</a>
             </div>
           </div>
         </div>

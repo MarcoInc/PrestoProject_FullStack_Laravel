@@ -1,7 +1,7 @@
 <x-layout docTitle="Register" title="Registrati">
 
     <div class="container-fluid formRegister">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center vh-100">
             <div class="col-6">
                 <form method="POST" action={{ route('register') }}>
                     @csrf
