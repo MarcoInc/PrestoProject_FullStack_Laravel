@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\GuestHouse;
+use App\Models\Location;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller{
@@ -18,8 +19,9 @@ class PublicController extends Controller{
     }
     
     public function index(){
-        $guest_houses = GuestHouse::all();
-        return view('product.index', compact('guest_houses'));
+        $guest_houses = GuestHouse::paginate(3);
+        $locations = Location::all();
+        return view('product.index', compact('guest_houses', 'locations'));
     }
     
 }

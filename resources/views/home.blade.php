@@ -4,12 +4,12 @@
   <x-carousel></x-carousel>
   
   <div class="container-fluid">
-    <div class="row vh-50 justify-content-around">
+    <div class="row justify-content-around pt-4">
       @foreach ($guest_houses as $house)
       
       <div class="col-3">
         <div class="card">
-          <img src="{{$house->img}}" class="card-img-top img-fluid" alt="...">
+          <img src="{{Storage::url($house->img)}}" class="card-img-top img-fluid imgHome" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{$house->place}}</h5>
             <p class="card-text">{{$house->description}}</p>
