@@ -220,12 +220,12 @@ footer {
 }
 
 
-/*Swiper carousel - Homepage*/
+/* /Swiper carousel - Homepage/ */
 
 .swiper {
     width: 100%;
     height: 100%;
-  
+
 }
 
 .swiper-slide {
@@ -251,6 +251,21 @@ footer {
     color: var(--primaryColor);
 }
 
+
+/* /Fine Swiper carousel - Homepage/
+
+/Homepage/ */
+.borderCardHome{
+    border-bottom: 1px solid var(--primaryColor);
+    padding-bottom: 20px;
+}
+
+.borderRowHome{
+    border-top: solid 2px var(--primaryColor);
+    border-bottom: solid 2px var(--primaryColor);
+    transition: 1s;
+
+}
 
 /*Fine Swiper carousel - Homepage*/
 
