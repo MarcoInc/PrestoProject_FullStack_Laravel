@@ -38,8 +38,4 @@
         </div>
     </div>
 
-    <div class="vh-100">
-<p>ciao</p>
-    </div>
-
 </x-layout>
