@@ -112,12 +112,15 @@ input{
 
 /* footer */
 .textColor{
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--white);
+    transition: 0.5;
+
+
 }
 
 .textColor:hover{
     color: var(--primaryColor);
-    transition: 0.5;
+    
 }
 
 footer {
@@ -253,6 +256,7 @@ footer {
     border-top: solid 2px var(--primaryColor);
     border-bottom: solid 2px var(--primaryColor);
     transition: 1s;
+   
 
 }
 

@@ -24,22 +24,22 @@
            <div class="col-12 col-md-3">
              <h4 class="hr">Link Utili</h4>
              <ul>
-               <li><a href="http://127.0.0.1:5501/index.html" class="textColor">Home</a></li>
-               <li><a href="#" class="textColor">Chi Siamo</a></li>
-               <li><a href="#" class="textColor">Servizi</a></li>
-               <li><a href="#" class="textColor">Termini di servizio</a></li>
-               <li><a href="#" class="textColor">Privacy Policy</a></li>
+               <li><a href="#" class="btn textColor fs-5">Home</a></li>
+               <li><a href="#" class="btn textColor">Chi Siamo</a></li>
+               <li><a href="#" class="btn textColor">Servizi</a></li>
+               <li><a href="#" class="btn textColor">Termini di servizio</a></li>
+               <li><a href="#" class="btn textColor">Privacy Policy</a></li>
              </ul>
             </div>
            
           <div class="col-12 col-md-3">
             <h4 class="hr">I nostri servizi</h4>
-            <ul>
-              <li><a href="#" class="textColor">Web Design</a></li>
-              <li><a href="#" class="textColor">Web Development</a></li>
-              <li><a href="#" class="textColor">Product Management</a></li>
-              <li><a href="#" class="textColor">Marketing</a></li>
-              <li><a href="#" class="textColor">Graphic Design</a></li>
+            <ul class="list-group">
+              <li class="list-group-item"><a href="#" class="btn textColor">Web Design</a></li>
+              <li><a href="#" class="btn textColor">Web Development</a></li>
+              <li><a href="#" class="btn textColor">Product Management</a></li>
+              <li><a href="#" class="btn textColor">Marketing</a></li>
+              <li><a href="#" class="btn textColor">Graphic Design</a></li>
             </ul>
           </div>
       </div> 

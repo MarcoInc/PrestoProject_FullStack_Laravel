@@ -4,11 +4,11 @@
   <x-carousel></x-carousel>
   
   <div class="container-fluid p-0">
-    <div  id="scrollAnnunci" class="mt-0 pt-0 position-sticky sticky-top borderRowHome">
+    <div  id="scrollAnnunci" class="row me-0 mt-0 pt-0 position-sticky sticky-top borderRowHome">
       @livewire('category-bar')
     </div>
 
-    <div class="row justify-content-around pt-4">
+    <div class="row justify-content-center pt-4 pe-0 me-0">
       <!-- Swiper -->
       <div class="col-10">
         <div class="swiper">
