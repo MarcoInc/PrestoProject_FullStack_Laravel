@@ -50,6 +50,9 @@ font-family: 'Syne', sans-serif;
 }
 
 
+
+
+
 .overShadow{
     position: absolute;
     width: 100% ;
@@ -70,6 +73,8 @@ font-family: 'Syne', sans-serif;
 .formRegister{
     background-image: url('/public/media/bgRegister.jpg');
     padding:70px;
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
 
@@ -98,6 +103,8 @@ input{
 
 .bgLogin{
     background-image: url('/public/media/bgLogin.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .btnLogin{
@@ -212,6 +219,8 @@ footer {
     list-style: none;
 }
 
+<<<<<<< HEAD
+=======
 /*Swiper carousel - Homepage*/
 
 .swiper {
