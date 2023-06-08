@@ -24,7 +24,7 @@
                   </div>
                   
                   <div class="d-flex">
-                    <p class="mainColor fs-5">Luogo:</p>
+                    <p class="mainColor fs-5">Location:</p>
                     <p class="card-text fs-5">&nbsp;{{$house->location->name}}</p>
                   </div>
                   <div class="d-flex">
