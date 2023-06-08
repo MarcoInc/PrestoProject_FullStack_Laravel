@@ -25,6 +25,10 @@ font-family: 'Syne', sans-serif;
     color: rgb(18,109,118);
 }
 
+.secColor{
+    color:  rgb(0, 138, 172);
+}
+
 .logo {
     height: 100px;
     width: 100px;
@@ -125,19 +129,22 @@ input{
 
 }
 
+.copyright, .credits{
+    letter-spacing: 0.1rem;
+}
+
 .textColor:hover{
     color: var(--primaryColor);
     
 }
 
+.borderFooter{
+    border-right: 1px solid var(--primaryColor);
+}
+
 footer {
     color: white;
-    background: black;
     
-    background-size: cover;
-    font-size: 15px;
-    padding: 80px 80px 0px;
-    height: 65vh;
 }
 
 
@@ -149,6 +156,9 @@ footer {
     color:var(--primaryColor);
 }
 
+.icons-footer{
+    transition: 0.4s;
+}
 
 .icons-footer:hover{
     color:var(--primaryColor);
@@ -281,5 +291,25 @@ footer {
     transition: 1s;
    
 
+}
+
+.hCard{
+    position:relative;
+}
+
+[data-image]{
+  background-size:cover;
+  background-position: center;
+}
+
+.cardBg{
+    height: 200px;
+    border-bottom: 1px solid var(--primaryColor);
+
+}
+
+.cardBorder{
+    border: 1px solid var(--primaryColor);
+    
 }
 

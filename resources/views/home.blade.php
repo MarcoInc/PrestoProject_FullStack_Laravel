@@ -8,11 +8,13 @@
       @livewire('category-bar')
     </div>
 
-    <div class="row justify-content-center pt-4 pe-0 me-0">
+    <div class="row justify-content-center pt-5 pe-0 me-0">
+      
       <!-- Swiper -->
       <div class="col-10">
         <div class="swiper">
           <div class="swiper-wrapper">
+            
             @foreach ($guest_houses as $house)
             <div class="swiper-slide">
               <div class="w-100 h-75 " >
@@ -49,10 +51,10 @@
             
           </div>
           
+          
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>
-          
           
           
         </div>

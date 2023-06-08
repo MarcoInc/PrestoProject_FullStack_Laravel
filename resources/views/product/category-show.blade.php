@@ -1,8 +1,10 @@
 <x-layout title="Categorie">
     <div class="container">
-
         
-
+        <div class="row">
+            @livewire('category-bar')
+        </div>
+        
         <div class="row">
             <div class="col-12">
                 <h2>Esplora la categoria: {{$location->name}}</h2>
