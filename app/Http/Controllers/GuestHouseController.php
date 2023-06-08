@@ -63,6 +63,6 @@ class GuestHouseController extends Controller{
     public function destroy(GuestHouse $house)
     {
         $house->delete();
-        return redirect(route('show'))->with('message', 'prodotto eliminato correttamente');
+        return redirect(route('index'))->with('message', 'prodotto eliminato correttamente');
     }
 }

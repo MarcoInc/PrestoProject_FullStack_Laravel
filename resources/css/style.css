@@ -10,8 +10,8 @@ font-family: 'Syne', sans-serif;
 
 :root {
     --DarkRed: rgb(11, 5, 55);
-    --SemiDarkRed: rgb(0,0,155);
-    --LightRed: rgb(0, 91, 196);
+    --SemiDarkRed: rgb(0, 138, 172);
+    --LightRed: rgb(18,109,118);
     --white: rgb(238, 237, 237);
     --black: rgb(28, 28, 28);
     --mainFont: 'Syne', sans-serif;
@@ -142,4 +142,54 @@ a {
 .hr{
     border-bottom: 2px solid var(--LightRed);
     width:200px;
+}
+.borderCategory{
+    transition: 0.4s;
+    color: rgb(18,109,118);
+    border: 0;
+    border-radius: 1;
+}
+
+.borderCategory:hover{
+    
+    scale: 1.1;
+    border-left: solid 1px rgb(18,109,118);
+    border-right: solid 1px rgb(18,109,118);
+
+}
+
+.btnCard{
+    border-radius: 0;
+    transition: 0.4s;
+}
+
+.btnCard:hover{
+    border-bottom: 1px solid var(--LightRed);
+
+}
+
+.pagination {
+    --bs-pagination-padding-x: 0.75rem;
+    --bs-pagination-padding-y: 0.375rem;
+    --bs-pagination-font-size: 1rem;
+    --bs-pagination-color: #0dbdfd;
+    --bs-pagination-bg: var(--bs-body-bg);
+    --bs-pagination-border-width: var(--bs-border-width);
+    --bs-pagination-border-color: var(--bs-border-color);
+    --bs-pagination-border-radius: var(--bs-border-radius);
+    --bs-pagination-hover-color: var(--bs-link-hover-color);
+    --bs-pagination-hover-bg: var(--bs-tertiary-bg);
+    --bs-pagination-hover-border-color: var(--bs-border-color);
+    --bs-pagination-focus-color: var(--bs-link-hover-color);
+    --bs-pagination-focus-bg: var(--bs-secondary-bg);
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    --bs-pagination-active-color: #fff;
+    --bs-pagination-active-bg: #fd0d0d;
+    --bs-pagination-active-border-color: #0d6efd;
+    --bs-pagination-disabled-color: var(--bs-secondary-color);
+    --bs-pagination-disabled-bg: var(--bs-secondary-bg);
+    --bs-pagination-disabled-border-color: var(--bs-border-color);
+    display: flex;
+    padding-left: 0;
+    list-style: none;
 }
