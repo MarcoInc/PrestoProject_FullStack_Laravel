@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class GuestHouseController extends Controller{
     public function __construct(){
-        $this->middleware('auth')->except('index');
+        $this->middleware('auth')->except('index', 'show');
     }
     /**
      * Display a listing of the resource.
@@ -41,7 +41,9 @@ class GuestHouseController extends Controller{
     {
 
         $house = GuestHouse::findOrFail($id);
-        return view('product.show', compact('house'));
+        $locations=Location::all();
+        $icons = ['fa-water', 'fa-mountain','fa-fish-fins', 'fa-tree-city', 'fa-snowflake','fa-sun-plant-wilt', 'fa-horse-head'];
+        return view('product.show', compact('house', 'locations', 'icons'));
     }
 
     public function edit(GuestHouse $house){

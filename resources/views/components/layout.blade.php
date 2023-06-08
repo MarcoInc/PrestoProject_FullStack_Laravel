@@ -13,7 +13,12 @@
     <link href="resources/css/app.css" rel="stylesheet">
     {{-- Icon Awesome--}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
+    <!--Swiper-->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     @livewireStyles
     @vite(['resources/css/app.css'])
     
@@ -22,8 +27,13 @@
     <x-navbar/>
     {{$slot}}
     
+    <!--Swiper JS-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+ 
+    
     @livewireScripts
     @vite(['resources/js/app.js'])
+    
     <x-footer></x-footer>
 </body>
 </html>

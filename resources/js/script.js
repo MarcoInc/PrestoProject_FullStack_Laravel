@@ -1,4 +1,20 @@
-import './bootstrap';
-import 'bootstrap/dist/js/bootstrap';
+let swiper = new Swiper(".swiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
 
-import './script';
+let hearts = document.querySelectorAll('.bi-suit-heart');
+hearts.forEach((el) => {
+    el.addEventListener('click', () => {
+     el.classList.toggle('bi-suit-heart');
+     el.classList.toggle('bi-suit-heart-fill');
+    })
+})
