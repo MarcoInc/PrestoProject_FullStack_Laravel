@@ -1,24 +1,18 @@
 PRESTO CODEVENGERS:
 
-[TEMA]:
-  Sistema di prenotazione apparatamenti/camere
-//Tipo Airbnb
-//Tipo Booking
-
-[LINK-ISPIRAZIONE-LATO-FRONT]:
-   https://www.airbnb.it/
-   https://www.booking.com/
+[EXTRA-PERSONALE]:
+-Aggiungere relazione tra like-post-utente;   
 
 
 RELAZIONI
-- 10 Categorie dell'annuncio pre-compilate [CATEGORIE]:
- Tipologia luogo:
+<!-- - 10 Categorie dell'annuncio pre-compilate [CATEGORIE]:
+ Tipologia luogo: [OK]
    /Mare
    /Lago
    /Montagna
    /Neve
    /Deserto
-   /Città
+   /Città -->
 
 Tipologia di app:
    /Appartamento

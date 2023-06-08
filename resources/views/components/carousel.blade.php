@@ -1,9 +1,15 @@
 <section class="position-relative">
 
-   <div class="overShadow">
+  
 
+    <div class="overShadow d-flex justify-content-center align-items-center">
+        <div class="chevronHome text-white position-absolute text-center">
+            <p class="fs-3">Articoli più recenti</p>
+            <a class="text-white" href="#scrollAnnunci">
+                <i class="fa-solid fa-circle-chevron-down fa-bounce fs-3"></i>
+            </a>
+        </div>
     </div>
-
     <div id="carouselExampleIndicators" class="carousel slide carosel-custom" data-bs-ride="carousel">
 
         <div class="carousel-inner">

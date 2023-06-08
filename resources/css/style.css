@@ -9,9 +9,9 @@ font-family: 'Syne', sans-serif;
 */
 
 :root {
-    --DarkRed: rgb(11, 5, 55);
-    --SemiDarkRed: rgb(0, 138, 172);
-    --LightRed: rgb(18,109,118);
+    --primaryColor: rgb(18,109,118);
+    --secondaryColor: rgb(0, 138, 172);
+    
     --white: rgb(238, 237, 237);
     --black: rgb(28, 28, 28);
     --mainFont: 'Syne', sans-serif;
@@ -22,7 +22,7 @@ font-family: 'Syne', sans-serif;
 }
 
 .mainColor{
- color: rgb(18,109,118);
+    color: rgb(18,109,118);
 }
 
 .logo {
@@ -85,14 +85,14 @@ font-family: 'Syne', sans-serif;
 }
 
 .btnForm:hover{
-    background-color: var(--DarkRed);
+    background-color: var(--primaryColor);
     color:white;
 }
 
 
 
 .hoverLog:hover{
-    color: var(--LightRed);
+    color: var(--primaryColor);
 }
 
 input{
@@ -114,7 +114,7 @@ input{
 }
 
 .register{
-    color:var(--LightRed);
+    color:var(--primaryColor);
 }
 
 /* footer */
@@ -123,7 +123,7 @@ input{
 }
 
 .textColor:hover{
-    color: var(--LightRed);
+    color: var(--primaryColor);
     transition: 0.5;
 }
 
@@ -137,21 +137,22 @@ footer {
     height: 65vh;
 }
 
-a {
+
+.a {
     text-decoration: none;
 }
 
 .a:hover{
-    color:var(--LightRed);
+    color:var(--primaryColor);
 }
 
 
 .icons-footer:hover{
-    color:var(--LightRed);
+    color:var(--primaryColor);
 }
 
 .hr{
-    border-bottom: 2px solid var(--LightRed);
+    border-bottom: 2px solid var(--primaryColor);
     width:200px;
 }
 .borderCategory{
@@ -166,7 +167,7 @@ a {
     scale: 1.1;
     border-left: solid 1px rgb(18,109,118);
     border-right: solid 1px rgb(18,109,118);
-
+    
 }
 
 .btnCard{
@@ -182,10 +183,10 @@ a {
 }
 
 .cardSize{
-  
+    
     height: 100px !important;
     width: 100px !important;
-
+    
 }
 
 .pagination {
@@ -215,3 +216,56 @@ a {
     list-style: none;
 }
 
+<<<<<<< HEAD
+=======
+/*Swiper carousel - Homepage*/
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: 60%;
+
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination{
+    display: none;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--primaryColor);
+}
+
+
+/*Fine Swiper carousel - Homepage*/
+
+/*Homepage*/
+.borderCardHome{
+    border-bottom: 1px solid var(--primaryColor);
+    padding-bottom: 20px;
+}
+
+.borderRowHome{
+    border-top: solid 2px var(--primaryColor);
+    border-bottom: solid 2px var(--primaryColor);
+    transition: 1s;
+
+}
+
+.chevronHome{
+    
+}
+>>>>>>> 7e155621a7fc57fc648934efa538a168b29100dd
