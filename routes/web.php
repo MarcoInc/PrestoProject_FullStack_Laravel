@@ -29,9 +29,9 @@ Route::get('/modifica/{house}',[GuestHouseController::class,'edit'])->name('edit
 Route::get('/category-show/{location}', [PublicController::class, 'categoryShow'])->name('categoryShow');
 
 //Revisore
-Route::get('/revisor/index', [RevisorController::class, 'revisorIndex'])->name('revisorIndex');
-Route::patch('/revisor/accept/{house_toCheck}', [RevisorController::class, 'acceptAnnuncio'])->name('revisor.accept');
-Route::patch('/revisor/reject/{house_toCheck}', [RevisorController::class, 'rejectAnnuncio'])->name('revisor.reject');
+Route::get('/revisor/index', [RevisorController::class, 'revisorIndex'])->middleware('isRevisor')->name('revisorIndex');
+Route::patch('/revisor/accept/{house_toCheck}', [RevisorController::class, 'acceptAnnuncio'])->middleware('isRevisor')->name('revisor.accept');
+Route::patch('/revisor/reject/{house_toCheck}', [RevisorController::class, 'rejectAnnuncio'])->middleware('isRevisor')->name('revisor.reject');
 
 
 

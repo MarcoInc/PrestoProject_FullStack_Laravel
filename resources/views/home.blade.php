@@ -1,5 +1,5 @@
 <x-layout title='Homepage'>
-  
+  <h1>{{ session('access.denied') ? session('access.denied') : '' }} </h1>
   <!-- carosel -->
   <x-carousel></x-carousel>
   
