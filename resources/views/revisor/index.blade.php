@@ -15,7 +15,7 @@
 
                             <img src="{{ Storage::url($house_toCheck->img) }}" alt="{{ $house_toCheck->name }}">
 
-                            @if (Auth::id() == $house_toCheck->user_id)
+                            @if ($house_toCheck)
                                 <form method=POST action={{ route('revisor.accept', ['house_toCheck'=>$house_toCheck] )}}>
                                     @csrf
                                     @method('patch')

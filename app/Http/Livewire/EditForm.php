@@ -50,7 +50,8 @@ class EditForm extends Component
             'beds' => $this->beds,
             'description' => $this->description,
             'price' => $this->price,
-            'location_id' => $this->location_id
+            'location_id' => $this->location_id,
+            'is_accepted'=> null
 
         ]);
         // if($this->house->img){
@@ -58,9 +59,8 @@ class EditForm extends Component
         //     'img'=>$this->house->file('img')->store('public/media')
         //     ]);
         // }
-            $this->house->location()->sync($this->location_id);
         
-        return redirect(route('product.index'))->with('message', 'prodotto modificato correttamente');
+        return redirect(route('index'))->with('editOk', 'Modifiche applicate! Attendi una revisione');
     }
 
 

@@ -3,6 +3,11 @@
     <div class="container-fluid">
         
         @livewire('category-bar', compact('locations'))
+        @if(session('editOk'))
+            <div>
+                <p class="alert alert-warning mt-3 text-center"> {{session('editOk')}} </p> 
+            </div>
+        @endif
         
         <div class="row justify-content-center">
             <div class="col-12">

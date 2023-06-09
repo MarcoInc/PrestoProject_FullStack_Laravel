@@ -56,13 +56,13 @@
 
     <img src="{{Storage::url($house->img)}}" class="card-img-top" alt="..."> 
 
-    <div class="mb-3">
+    {{-- <div class="mb-3">
         <label for="img" class="form-label">Aggiungi immagine</label>
         <input class="form-control @error('img') is-invalid @enderror" wire:model.lazy="img" type="file" id="img">
         @error('img')
           <p>{{$message}}</p>
         @enderror 
-      </div>
+      </div> --}}
 
-    <button type="submit" class="btn btn-primary">Crea annuncio</button>
+    <button type="submit" class="btn btn-primary">Modifica annuncio</button>
   </form>
