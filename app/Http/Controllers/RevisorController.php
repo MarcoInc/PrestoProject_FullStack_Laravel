@@ -12,12 +12,12 @@ class RevisorController extends Controller{
         return view('revisor.index', compact('house_toCheck'));
     }
 
-    public function acceptAnnuncio(GuestHouse $house){
-        $house->setAccepted(true);
+    public function acceptAnnuncio(GuestHouse $house_toCheck){
+        $house_toCheck->setAccepted(true);
         return redirect()->back()->with('message','Articolo approvato');
     }
-    public function rejectAnnuncio(GuestHouse $house){
-        $house->setAccepted(false);
+    public function rejectAnnuncio(GuestHouse $house_toCheck){
+        $house_toCheck->setAccepted(false);
         return redirect()->back()->with('message','Articolo non approvato');
     }
     
