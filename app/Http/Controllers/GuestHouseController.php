@@ -10,18 +10,7 @@ class GuestHouseController extends Controller{
     public function __construct(){
         $this->middleware('auth')->except('index', 'show');
     }
-    /**
-     * Display a listing of the resource.
-     */
-    public function index(){
 
-        $guest_houses=GuestHouse::all();
-        return view('index',compact('guest_houses'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create() {
         return view('product.create');
     }
@@ -67,4 +56,9 @@ class GuestHouseController extends Controller{
         $house->delete();
         return redirect(route('index'))->with('message', 'prodotto eliminato correttamente');
     }
+
+ 
+
+   
+    
 }
