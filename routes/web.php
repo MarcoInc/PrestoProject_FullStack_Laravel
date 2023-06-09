@@ -3,6 +3,7 @@
 use App\Http\Controllers\GuestHouseController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\RevisorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,11 @@ Route::get('/modifica/{house}',[GuestHouseController::class,'edit'])->name('edit
 
 
 Route::get('/category-show/{location}', [PublicController::class, 'categoryShow'])->name('categoryShow');
+
+//Revisore
+Route::get('/revisor/index', [RevisorController::class, 'revisorIndex'])->name('revisorIndex');
+Route::patch('/revisor/accept/{house_toCheck}', [RevisorController::class, 'acceptAnnuncio'])->name('revisor.accept');
+Route::patch('/revisor/reject/{house_toCheck}', [RevisorController::class, 'rejectAnnuncio'])->name('revisor.reject');
+
+
+
