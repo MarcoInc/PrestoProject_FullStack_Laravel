@@ -49,7 +49,6 @@ class CreateForm extends Component{
             "price"=> $this->price,
             "description"=> $this->description,
             "location_id"=>$this->location_id,
-
             "img"=> $this->img->store('public/media')
         ]);
         $this->reset();

@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('guest_houses', function (Blueprint $table) {
-            $table->boolean('is_accepted')->nullable();
+            $table->boolean('is_accepted');
         });
     }
 
@@ -22,7 +22,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('guest_houses', function (Blueprint $table) {
-            //
+            $table->dropColumn('is_accepted');
+
         });
     }
 };

@@ -10,6 +10,9 @@
                             <h2>{{ $house_toCheck->place }}</h2>
                             <h3>Posti letto : {{ $house_toCheck->beds }}</h3>
                             <h2>Prezzo a notte : {{ $house_toCheck->price }}</h2>
+                            <h2>Creato il: {{ $house_toCheck->created_at }} da {{ $house_toCheck->user->name}} ({{$house_toCheck->user->email}})</h2>
+                            <h2>Descrizione: {{ $house_toCheck->description }}</h2>
+
                             <img src="{{ Storage::url($house_toCheck->img) }}" alt="{{ $house_toCheck->name }}">
 
                             @if (Auth::id() == $house_toCheck->user_id)
