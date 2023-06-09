@@ -33,13 +33,9 @@
       </div>
       
       <div class="col-12 col-md-3">
-        <h5 class="hr text-uppercase mt-3 text-md-start text-center">I nostri servizi</h5>
+        <h5 class="hr text-uppercase mt-3 text-md-start text-center"> Lavora con noi</h5>
         <ul class="list-group list-unstyled text-md-start text-center">
-          <li class="list-item"><a href="#" class="btn textColor fs-5">Web Design</a></li>
-          <li class="list-item"><a href="#" class="btn textColor fs-5">Web Development</a></li>
-          <li class="list-item"><a href="#" class="btn textColor fs-5">Product Management</a></li>
-          <li class="list-item"><a href="#" class="btn textColor fs-5">Marketing</a></li>
-          <li class="list-item"><a href="#" class="btn textColor fs-5">Graphic Design</a></li>
+          <li class="list-item"><a href="" class="btn textColor fs-5">Registrati e clicca qui!</a></li>
         </ul>
       </div>
     </div> 
