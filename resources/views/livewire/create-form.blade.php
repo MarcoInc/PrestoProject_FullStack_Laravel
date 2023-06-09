@@ -1,8 +1,8 @@
 <form wire:submit.prevent="store" enctype="multipart/form-data">
   @if(session('message'))
-  <div>
-    <p class="alert alert-warning">{{session('message')}}</p> 
-  </div>
+    <div>
+      <p class="alert alert-warning">{{session('message')}}</p> 
+    </div>
   @endif
   <div class="mb-3">
     <label for="place" class="form-label">Luogo</label>

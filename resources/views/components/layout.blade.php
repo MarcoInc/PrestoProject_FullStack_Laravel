@@ -25,6 +25,11 @@
 </head>
 <body>
     <x-navbar/>
+    @if(session('messageBecomeRevisor'))
+      <div>
+        <p class="alert alert-warning">{{session('messageBecomeRevisor')}}</p> 
+      </div>
+    @endif
     {{$slot}}
     
     <!--Swiper JS-->

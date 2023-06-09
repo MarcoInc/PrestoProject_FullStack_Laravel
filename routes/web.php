@@ -33,5 +33,8 @@ Route::get('/revisor/index', [RevisorController::class, 'revisorIndex'])->middle
 Route::patch('/revisor/accept/{house_toCheck}', [RevisorController::class, 'acceptAnnuncio'])->middleware('isRevisor')->name('revisor.accept');
 Route::patch('/revisor/reject/{house_toCheck}', [RevisorController::class, 'rejectAnnuncio'])->middleware('isRevisor')->name('revisor.reject');
 
+Route::get('/become/revisor', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
+Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
 
 

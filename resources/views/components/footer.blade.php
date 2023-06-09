@@ -33,10 +33,18 @@
       </div>
       
       <div class="col-12 col-md-3">
-        <h5 class="hr text-uppercase mt-3 text-md-start text-center"> Lavora con noi</h5>
-        <ul class="list-group list-unstyled text-md-start text-center">
-          <li class="list-item"><a href="" class="btn textColor fs-5">Registrati e clicca qui!</a></li>
-        </ul>
+        @auth
+          @if (Auth::user()->is_revisor==false)
+            <h6 class="hr text-uppercase mt-3 text-md-start text-center">Vuoi diventare un nostro revisore?</h6>
+            <ul class="list-group list-unstyled text-md-start text-center">
+              <li class="list-item"><a href="{{route('become.revisor')}}" class="btn textColor fs-5">Inviaci la tua candidatura!</a></li>
+            </ul>
+          @endif
+        @else
+        Benvenuto utente
+        @endauth
+
+        
       </div>
     </div> 
     
