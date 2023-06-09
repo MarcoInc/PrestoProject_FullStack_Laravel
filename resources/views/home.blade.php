@@ -6,7 +6,7 @@
   </div>
   @endif
   <!-- carosel -->
-  <x-carousel></x-carousel>
+  <x-carousel/>
   
   <div class="container-fluid p-0">
     <div  id="scrollAnnunci" class="row me-0 mt-0 pt-0 position-sticky sticky-top borderRowHome">

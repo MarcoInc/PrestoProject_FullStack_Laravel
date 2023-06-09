@@ -11,7 +11,8 @@ class PublicController extends Controller{
  
     public function home() {
         
-        $guest_houses = GuestHouse::orderBy('created_at', 'desc')->take(5)->get();
+        $guest_houses = GuestHouse::where('is_accepted',true) 
+                                    ->orderBy('created_at', 'desc')->take(5)->get();
         //dd($guest_houses);
         return view('home', compact('guest_houses'));
         
