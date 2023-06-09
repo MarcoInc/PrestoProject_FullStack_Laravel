@@ -1,5 +1,10 @@
 <x-layout title='Homepage'>
-  <h1>{{ session('access.denied') ? session('access.denied') : '' }} </h1>
+  {{-- midlleware revisore --}}
+  @if(session('access.denied'))
+  <div>
+    <p class="alert alert-warning mt-3 text-center"> {{session('access.denied')}} </p> 
+  </div>
+  @endif
   <!-- carosel -->
   <x-carousel></x-carousel>
   
