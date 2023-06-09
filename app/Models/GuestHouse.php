@@ -27,6 +27,7 @@ class GuestHouse extends Model
     //setta il proprio valore di is_accepted
     public function setAccepted(bool $value){
         $this->is_accepted=$value; //in base al valore passato
+
         $this->save();
         return true;
     }

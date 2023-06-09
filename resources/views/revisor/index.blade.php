@@ -16,16 +16,16 @@
                             <img src="{{ Storage::url($house_toCheck->img) }}" alt="{{ $house_toCheck->name }}">
 
                             @if (Auth::id() == $house_toCheck->user_id)
-                                <form method=POST action={{ route('revisor.accept', compact('house_toCheck')) }}>
+                                <form method=POST action={{ route('revisor.accept', ['house_toCheck'=>$house_toCheck] )}}>
                                     @csrf
                                     @method('patch')
-                                    <button class="btn btn-info">Accetta annuncio</button>
+                                    <button class="btn btn-info" type='submit'>Accetta annuncio</button>
                                 </form>
 
-                                <form method=POST action={{ route('revisor.reject', compact('house_toCheck')) }}>
+                                <form method=POST action={{ route('revisor.reject', ['house_toCheck'=>$house_toCheck]) }}>
                                     @csrf
                                     @method('patch')
-                                    <button class="btn btn-danger">Rifiuta annuncio</button>
+                                    <button class="btn btn-danger" type='submit'>Rifiuta annuncio</button>
                                 </form>
                             @endif
                         @endif
