@@ -313,3 +313,11 @@ footer {
     
 }
 
+/*Btn accetta e rifiuta articolo*/
+.form-accept, .form-reject{
+    transition: 0.4s;
+}
+
+.form-accept:hover, .form-reject:hover{
+   scale: 1.1;
+}

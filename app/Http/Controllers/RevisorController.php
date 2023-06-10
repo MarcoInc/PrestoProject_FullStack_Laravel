@@ -25,7 +25,7 @@ class RevisorController extends Controller{
 
     public function revisorIndex(){
         // restituiscimi il primo is_accepted=null
-        $house_toCheck=GuestHouse::where('is_accepted',null)->first();
+        $house_toCheck=GuestHouse::where('is_accepted',null)->orderBy('created_at', 'asc')->get();
         return view('revisor.index', compact('house_toCheck'));
     }
 
