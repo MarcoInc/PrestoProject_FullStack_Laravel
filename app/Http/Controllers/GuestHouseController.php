@@ -57,8 +57,7 @@ class GuestHouseController extends Controller{
         return redirect(route('index'))->with('message', 'prodotto eliminato correttamente');
     }
 
- 
 
-   
+
     
 }

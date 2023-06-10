@@ -4,6 +4,7 @@ use App\Http\Controllers\GuestHouseController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
+use App\Models\GuestHouse;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,5 +37,6 @@ Route::patch('/revisor/reject/{house_toCheck}', [RevisorController::class, 'reje
 Route::get('/become/revisor', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
+Route::get('/ricerca/house', [PublicController::class, 'searchHouse'])->name('product.search');
 
 
