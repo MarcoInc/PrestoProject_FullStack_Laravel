@@ -13,6 +13,21 @@ class GuestHouse extends Model
     use Searchable;
     protected $fillable=['place','beds','price','description','location_id','img','is_accepted'];
 
+
+    public function toSearchableArray()
+    {
+        $location = $this->location;
+        $array = [
+            'id' => $this->id,
+            'place' => $this->place,
+            'description' => $this->description,
+            'location' => $location,
+        ];
+        return $array;
+    
+    }
+
+
     public function user(){
         return $this->belongsTo(User::class);
     }
@@ -34,17 +49,6 @@ class GuestHouse extends Model
         return true;
     }
     
-    public function toSearchableArray()
-    {
-        $location = $this->category;
-        $array = [
-            'id' => $this->id,
-            'place' => $this->place,
-            'description' => $this->description,
-            'location' => $location,
-        ];
-        return $array;
-    
-    }
+
     
 }

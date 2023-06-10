@@ -37,6 +37,7 @@ class PublicController extends Controller{
     
     public function searchHouse (Request $request){
         $guest_houses = GuestHouse::search($request->searched)->where('is_accepted', true)->paginate(6);
-        return view('product.index', compact('guest_houses'));
+        $locations = Location::all();
+        return view('product.index', compact('guest_houses','locations'));
     }
 }

@@ -22,11 +22,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //Condizione che permette di passare a tutte le viste la categoria Locations
-        if (Schema::hasTable('locations')) {
-            app()->singleton('locations', function () {
-                return Location::all();
-            });
-        }
+        // if (Schema::hasTable('locations')) {
+        //     View::share('locations', Location::all());
+        // }
 
         //I paginator servono per non far rompere il sistema di bootstrap nell'impaginazione degli articoli
         Paginator::useBootstrapFive();
