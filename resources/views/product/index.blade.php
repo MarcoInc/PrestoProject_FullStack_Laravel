@@ -12,6 +12,9 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="row justify-content-md-center ">
+                    <div class="col-12">
+                        <h4 class="text-center p-4 borderIndexh3">Scopri le migliori offerte per la tua vacanza da sogno</h4>
+                    </div>
                     @forelse ($guest_houses as $house)
                     <div class="col-12 hCard col-md-6 col-lg-3 mx-3 my-3">
                         <div class="card h-100 cardBorder" >
