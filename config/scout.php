@@ -1,5 +1,10 @@
 <?php
 
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Facades\Storage;
+
+>>>>>>> 0d6dd13ce25726ce119cc6fe40f80080d8525b15
 return [
 
     /*
@@ -116,6 +121,22 @@ return [
         'secret' => env('ALGOLIA_SECRET', ''),
     ],
 
+<<<<<<< HEAD
+=======
+
+    'tntsearch' => [
+        'storage' => storage_path(),
+        'fuzziness' => env('TNTSEARCH_FUZZINESS', true),
+        'fuzzy' => [
+            'prefix_lenght' => 2,
+            'max_expansion' => 50,
+            'distance' => 2
+        ],
+        'asYouType' => false,
+        "searchBoolean" => env('TNTSEARCH_BOOLEAN', false),
+        'maxDocs' => env('TNTSEARCH_MAX_DOCS',500),
+    ],
+>>>>>>> 0d6dd13ce25726ce119cc6fe40f80080d8525b15
     /*
     |--------------------------------------------------------------------------
     | Meilisearch Configuration

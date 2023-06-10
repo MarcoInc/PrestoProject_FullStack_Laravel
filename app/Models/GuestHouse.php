@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Laravel\Scout\Searchable;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -9,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class GuestHouse extends Model
 {
     use HasFactory;
+    use Searchable;
     protected $fillable=['place','beds','price','description','location_id','img','is_accepted'];
 
     public function user(){
@@ -32,5 +34,17 @@ class GuestHouse extends Model
         return true;
     }
     
+    public function toSearchableArray()
+    {
+        $location = $this->category;
+        $array = [
+            'id' => $this->id,
+            'place' => $this->place,
+            'description' => $this->description,
+            'location' => $location,
+        ];
+        return $array;
+    
+    }
     
 }

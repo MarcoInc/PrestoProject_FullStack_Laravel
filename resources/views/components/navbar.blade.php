@@ -40,6 +40,11 @@
                 </li>
             </ul>
 
+            <form class="d-flex" action="{{route('product.search')}}" method="GET" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="searched">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+
             <li class="nav-item dropdown d-flex align-items-center">
                 <a class="nav-link dropdown-toggle text-white fs-5" href="#" id="navbarDropdown" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
