@@ -34,7 +34,7 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link text-white fs-5" href="">
+                    <a class="nav-link text-white fs-5" href="{{route('contattaci')}}">
                         <div class="btnNav"> Contattaci </div>
                     </a>
                 </li>
@@ -46,17 +46,25 @@
             </form>
             
             <li class="nav-item dropdown d-flex align-items-center">
-                <a class="nav-link dropdown-toggle text-white fs-5" href="#" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle text-white fs-5 position-relative" href="#" id="navbarDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 @auth
+
                 Benvenuto {{ Auth::user()->name }}  @if (Auth::user()->is_revisor) (Revisore) @endif
+                    @if(App\Models\GuestHouse::toBeRevisonedCounter()>0)
+                        <span class="position-absolute top-0 end-0 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+                    @endif
                 @else
                 Benvenuto utente
                 @endauth
             </a>
-            
+                
+
             <ul class="dropdown-menu rounded-1 w-100" aria-labelledby="navbarDropdown">
                 @auth
+                <li>
+                    <a href="{{route('profilo')}}"class="dropdown-item fs-5 hoverLog">Profilo</a>
+                </li>
                 <li>
                     <a href="" onclick="event.preventDefault();getElementById('form-logout').submit();"
                     class="dropdown-item fs-5 hoverLog">Logout</a>
