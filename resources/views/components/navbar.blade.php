@@ -50,10 +50,14 @@
                 data-bs-toggle="dropdown" aria-expanded="false">
                 @auth
 
-                Benvenuto {{ Auth::user()->name }}  @if (Auth::user()->is_revisor) (Revisore) @endif
-                    @if(App\Models\GuestHouse::toBeRevisonedCounter()>0)
+                Benvenuto {{ Auth::user()->name }}  
+                @if (Auth::user()->is_revisor) 
+                    (Revisore) 
+                  @if(App\Models\GuestHouse::toBeRevisonedCounter()>0)
                         <span class="position-absolute top-0 end-0 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
                     @endif
+                @endif
+                  
                 @else
                 Benvenuto utente
                 @endauth
