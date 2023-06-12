@@ -11,8 +11,8 @@
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between">
                                         <h5 class="card-title fw-bold">{{ $house->place }}</h5>
-                                        <p class="btnLike" href=""><i
-                                                class=" bi bi-suit-heart fs-5 mainColor"></i></p>
+                                        {{-- <p class="btnLike" href=""><i
+                                                class=" bi bi-suit-heart fs-5 mainColor"></i></p> --}}
                                     </div>
                                     @if($house->is_accepted === 0)
                                         <h5> <span class="badge bg-danger">Non approvato</span></h5>

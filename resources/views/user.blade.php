@@ -1,8 +1,10 @@
 <x-layout title="Profilo di {{$name}}">
     <div class="container">
         <div class="row justify-content-center">
+           
             <div class="col-12">
                 <div class="row justify-content-md-center ">
+                    <h2>Pagina di {{$name}}</h2>
                         @forelse ($houses as $house)
                         <div class="col-12 hCard col-md-6 col-lg-3 mx-3 my-3">
                             <div class="card h-100 cardBorder">
@@ -11,8 +13,8 @@
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between">
                                         <h5 class="card-title fw-bold">{{ $house->place }}</h5>
-                                        <p class="btnLike" href=""><i
-                                                class=" bi bi-suit-heart fs-5 mainColor"></i></p>
+                                        {{-- <p class="btnLike" href=""><i
+                                                class=" bi bi-suit-heart fs-5 mainColor"></i></p> --}}
                                     </div>
 
                                 <p class="card-text fs-5">
@@ -54,7 +56,7 @@
                         </div>
                     @empty
                         <div class="col-12">
-                            <p>Non sono ancora presenti annunci</p>
+                            <h3>{{$name}} non ha ancora pubblicato annunci</h3>
                         </div>
                     @endforelse
                         </div>

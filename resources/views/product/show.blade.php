@@ -10,8 +10,8 @@
                 <p><strong>Publicato da:</strong> 
                     <a href="{{ route('userProfile', ['id' => $house->user->id]) }}"
                     class="btn btn-info">
-                    </i>{{ $house->user->name }}
-                </a></p>
+                    </i>{{ $house->user->name }}</a>
+                </p>
 
 
                 

@@ -23,7 +23,7 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="card-title fw-bold">{{$house->place}}</h5>
-                                    <p class="btnLike" href=""><i class=" bi bi-suit-heart fs-5 mainColor"></i></p>
+                                    {{-- <p class="btnLike" href=""><i class=" bi bi-suit-heart fs-5 mainColor"></i></p> --}}
                                 </div>
                                 <p class="card-text fs-5"> <span class="fw-semibold">
                                     <i class="bi bi-house-heart-fill me-1 mainColor"></i>Location: </span>{{$house->location->name}}</p>
