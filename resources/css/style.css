@@ -338,3 +338,16 @@ footer {
 .form-accept:hover, .form-reject:hover{
    scale: 1.1;
 }
+
+/*Pagina revisore*/
+.borderRevisor{
+    border-bottom: 1px solid #126d76;
+}
+
+.transition{
+    transition: 0.4s;
+}
+
+.btnRevisor:hover{
+    scale: 1.1;
+}
