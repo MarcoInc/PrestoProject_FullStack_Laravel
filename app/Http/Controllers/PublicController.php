@@ -49,7 +49,7 @@ class PublicController extends Controller{
 
     public function profilo(){
         //crea un array delle sole Song in cui user_id è uguale all'id dell'Utente e le ordina in base al titolo ascendente
-        $houses=GuestHouse::where('user_id',Auth::id())->orderBy('created_at','ASC')->get();
+        $houses=GuestHouse::where('user_id',Auth::id())->orderBy('updated_at','desc')->get();
         return view('profilo',compact('houses'));
 
     }

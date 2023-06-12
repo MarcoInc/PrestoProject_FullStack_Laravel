@@ -4,8 +4,8 @@ namespace App\Providers;
 
 use App\Models\Location;
 use Illuminate\Pagination\Paginator;
-use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -22,9 +22,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //Condizione che permette di passare a tutte le viste la categoria Locations
-        // if (Schema::hasTable('locations')) {
-        //     View::share('locations', Location::all());
-        // }
+        if (Schema::hasTable('locations')) {
+            View::share('locations', Location::all());
+        }
 
         //I paginator servono per non far rompere il sistema di bootstrap nell'impaginazione degli articoli
         Paginator::useBootstrapFive();

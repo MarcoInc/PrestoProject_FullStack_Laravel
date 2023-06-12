@@ -1,18 +1,29 @@
 <x-layout title='Homepage'>
   {{-- midlleware revisore --}}
   @if(session('access.denied'))
-    <div>
-      <p class="alert alert-warning mt-3 text-center"> {{session('access.denied')}} </p> 
-    </div>
+  <div>
+    <p class="alert alert-warning mt-3 text-center"> {{session('access.denied')}} </p> 
+  </div>
   @endif
-
+  
   @if(session('messageRevisorOK'))
-    <div>
-      <p class="alert alert-warning mt-3 text-center"> {{session('messageRevisorOK')}} </p> 
-    </div>
+  <div>
+    <p class="alert alert-warning mt-3 text-center"> {{session('messageRevisorOK')}} </p> 
+  </div>
+  @endif
+  
+  @if(session('messageNotFound'))
+  <div>
+    <p class="alert alert-warning mt-3 text-center"> {{session('messageNotFound')}} </p> 
+  </div>
   @endif
 
-
+  @if(session('messageRevisor'))
+  <div>
+    <p class="alert alert-warning mt-3 text-center"> {{session('messageRevisor')}} </p> 
+  </div>
+  @endif
+  
   
   <!-- carosel -->
   <x-carousel/>
@@ -21,7 +32,7 @@
     <div  id="scrollAnnunci" class="row me-0 mt-0 pt-0 position-sticky sticky-top borderRowHome">
       @livewire('category-bar')
     </div>
-
+    
     <div class="row justify-content-center pt-5 pe-0 me-0">
       
       <!-- Swiper -->

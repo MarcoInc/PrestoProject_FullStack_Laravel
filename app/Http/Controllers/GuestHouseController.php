@@ -29,7 +29,7 @@ class GuestHouseController extends Controller{
      */
     public function show($id){
         $house = GuestHouse::findOrFail($id);
-        if(Auth::user()->name==$house->user->name && $house->is_accepted==null){
+        if(Auth::user() && Auth::user()->name==$house->user->name && $house->is_accepted==null){
             $locations=Location::all();
             $icons = ['fa-water', 'fa-mountain','fa-fish-fins', 'fa-tree-city', 'fa-snowflake','fa-sun-plant-wilt', 'fa-horse-head'];
             return view('product.show', compact('house', 'locations', 'icons'));
@@ -40,10 +40,11 @@ class GuestHouseController extends Controller{
             return view('product.show', compact('house', 'locations', 'icons'));
         }
         else{
+
             $guest_houses = GuestHouse::where('is_accepted',true) 
             ->orderBy('created_at', 'desc')->take(5)->get();
             //dd($guest_houses);
-            return view('home', compact('guest_houses'));
+            return redirect(route('home'), compact('guest_houses'))->with('messageNotFound', 'Articolo non trovato');
         }
 
     }
