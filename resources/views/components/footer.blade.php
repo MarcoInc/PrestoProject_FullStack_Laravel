@@ -7,8 +7,8 @@
         <h4 class="hr text-uppercase text-md-start text-center">Contattataci</h4>
         <p class="pt-3 py-3 fs-5">
           <i class="fa-solid fa-location-dot"></i>
-          Via Lemani, 96 <br>
-          BA 70132, ITA <br>
+          Via Che non c'è, 0 <br>
+          ABC 123456, IT <br>
           <p> <strong>Phone:</strong> +1 5589 55488 55<br>
             <strong>Email:</strong> codevengers@example.com<br>
           </p>
@@ -25,10 +25,10 @@
         <h5 class="hr text-uppercase mt-3 text-md-start text-center">Link Utili</h5>
         <ul class="list-unstyled text-md-start text-center">
           <li class="list-item"><a href="#" class="btn textColor fs-5">Home</a></li>
-          <li class="list-item"><a href="#" class="btn textColor fs-5">Chi Siamo</a></li>
-          <li class="list-item"><a href="#" class="btn textColor fs-5">Servizi</a></li>
-          <li class="list-item"><a href="#" class="btn textColor fs-5">Termini di servizio</a></li>
-          <li class="list-item"><a href="#" class="btn textColor fs-5">Privacy Policy</a></li>
+          {{-- <li class="list-item"><a href="#" class="btn textColor fs-5">Chi Siamo</a></li> --}}
+          <li class="list-item"><a href="{{route('services')}}" class="btn textColor fs-5">Servizi</a></li>
+          <li class="list-item"><a href="{{route('terms')}}" class="btn textColor fs-5">Termini di servizio</a></li>
+          <li class="list-item"><a href="{{route('privacy')}}" class="btn textColor fs-5">Privacy Policy</a></li>
         </ul>
       </div>
       

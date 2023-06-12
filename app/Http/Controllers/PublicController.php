@@ -9,16 +9,19 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class PublicController extends Controller{
-
- 
     public function home() {
-        
         $guest_houses = GuestHouse::where('is_accepted',true) 
                                     ->orderBy('created_at', 'desc')->take(5)->get();
-        //dd($guest_houses);
-        return view('home', compact('guest_houses'));
-        
-      
+        return view('home', compact('guest_houses'));      
+    }
+    public function terms() {
+        return view('terms.terms');
+    }
+    public function privacy() {
+        return view('terms.privacy');
+    }
+    public function services() {
+        return view('terms.services');
     }
     
     public function index(){
