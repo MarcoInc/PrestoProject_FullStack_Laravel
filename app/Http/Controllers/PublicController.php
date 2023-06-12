@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\GuestHouse;
 use App\Models\Location;
+use App\Models\GuestHouse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PublicController extends Controller{
 
@@ -39,5 +40,17 @@ class PublicController extends Controller{
         $guest_houses = GuestHouse::search($request->searched)->where('is_accepted', true)->paginate(6);
         $locations = Location::all();
         return view('product.index', compact('guest_houses','locations'));
+    }
+
+    public function contactUs(){
+
+        return view('mail.contact-us');
+    }
+
+    public function profilo(){
+        //crea un array delle sole Song in cui user_id è uguale all'id dell'Utente e le ordina in base al titolo ascendente
+        $houses=GuestHouse::where('user_id',Auth::id())->orderBy('created_at','ASC')->get();
+        return view('profilo',compact('houses'));
+
     }
 }

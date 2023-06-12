@@ -37,6 +37,13 @@ Route::patch('/revisor/reject/{house_toCheck}', [RevisorController::class, 'reje
 Route::get('/become/revisor', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
+//Email
+Route::get('/contattaci', [PublicController::class, 'contactUs'])->name('contattaci');
+
+//Ricerca
 Route::get('/ricerca/house', [PublicController::class, 'searchHouse'])->name('product.search');
+
+//Profilo
+Route::get('/profilo', [PublicController::class, 'profilo'])->name('profilo');
 
 
