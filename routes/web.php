@@ -18,6 +18,12 @@ use App\Models\GuestHouse;
 */
 
 Route::get('/', [PublicController::class , 'home'])->name('home');
+Route::get('/terms', [PublicController::class , 'terms'])->name('terms');
+Route::get('/privacy', [PublicController::class , 'privacy'])->name('privacy');
+Route::get('/services', [PublicController::class , 'services'])->name('services');
+
+
+
 
 //Articoli
 Route::get('/crea-articolo', [GuestHouseController::class , 'create'])->name('create');
