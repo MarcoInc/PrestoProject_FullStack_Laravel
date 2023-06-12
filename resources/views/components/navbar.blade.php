@@ -45,7 +45,7 @@
                 <button class="btn btnSearch me-1 mainColor" type="submit"><i class="fa-solid fa-magnifying-glass mainColor"></i></button>
             </form>
             
-            <li class="nav-item dropdown d-flex align-items-center">
+            <ul class="nav-item dropdown d-flex align-items-center">
                 <a class="nav-link dropdown-toggle text-white fs-5" href="#" id="navbarDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 @auth
@@ -74,19 +74,22 @@
                 {{-- verifica che l'utente loggato sia un revisore --}}
                 @if (Auth::user()->is_revisor)
                 <li class="nav-item ">
-                    <a class="nav-link text-white fs-5">
+                    <li class="nav-link text-white fs-5">
                         <li>                                                  
                             <a class="dropdown-item fs-5 hoverLog" href="{{route('revisorIndex')}}">Pagina revisore 
                                 {{-- contatore annunci non revisionati definito nel Model --}}
-                                ({{ App\Models\GuestHouse::toBeRevisonedCounter()}})</a>
-                            </li>
-                        </a>
+                                 ({{ App\Models\GuestHouse::toBeRevisonedCounter()}})
+                            </a> 
+                            
+                        </li>
+
+                       
                     </li>
                     @endif
                     @endauth
-                </ul>
+                </li>
                 
-            </li>
+            </ul>
             
         </div>
     </div>

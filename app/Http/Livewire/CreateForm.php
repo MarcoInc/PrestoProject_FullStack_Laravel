@@ -26,7 +26,7 @@ class CreateForm extends Component{
         'location_id' => 'required',
         'img' => 'required|image'
     ];
-
+    
     protected $messages = [
         // :attribute per richiamare il nome dell'attributo
         '*.required'=> 'Il campo è obbligatorio',
@@ -37,12 +37,12 @@ class CreateForm extends Component{
         'img.required' => 'Caricare file',
         'img.image' => 'File immagine richiesto'
     ];
-
+    
     public function store(){
         $this->user_id=Auth::user()->id;
-       
+        
         $this->validate();
-                
+        
         $guest_houses = Auth::user()->guest_houses()->create([
             "place"=> $this->place,
             "beds"=> $this->beds,
@@ -54,13 +54,20 @@ class CreateForm extends Component{
         $this->reset();
         session()->flash('message','Prodotto caricato correttamente');
     }
-        
-        public function updated($propertyName){
-            $this->validateOnly($propertyName);
-        }
-            public function render(){
-                return view('livewire.create-form', ['locations'=> Location::all()]);
-                // return view('livewire.show-form', ['colors'=> Color::all(),'genres'=> Genre::all()]);
-            }
-        }
-        
+    
+    public $value;
+    
+    public function refreshData()
+    {
+        $this->value = GuestHouse::where('is_accepted', null)->count();
+    }
+    
+    
+    public function updated($propertyName){
+        $this->validateOnly($propertyName);
+    }
+    public function render(){
+        return view('livewire.create-form', ['locations'=> Location::all()]);
+        // return view('livewire.show-form', ['colors'=> Color::all(),'genres'=> Genre::all()]);
+    }
+}
