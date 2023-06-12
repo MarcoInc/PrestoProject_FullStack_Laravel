@@ -32,7 +32,11 @@
                                 @foreach ($house_toCheck as $house)
                                 <tr>
                                     {{-- <td>{{$house->id}}</td> --}}
-                                    <th class="text-center" scope="row">{{$house->user->name}}</th>
+                                    <th class="text-center" scope="row">
+                                        <a href="{{ route('userProfile', ['id' => $house->user->id]) }}"
+                                        class="btn btn-info">
+                                        </i>{{ $house->user->name }}
+                                    </th>
                                     <td class="text-center">{{$house->place}}</td>
                                     <td class="text-center">{{$house->price}}&euro;/notte</td>
                                     <td class="text-center">{{$house->description}}</td>

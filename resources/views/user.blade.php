@@ -1,22 +1,9 @@
-<x-layout title="Tutti gli articoli">
-
-    <div class="container-fluid">
-
-        @livewire('category-bar', compact('locations'))
-        @if (session('editOk'))
-            <div>
-                <p class="alert alert-warning mt-3 text-center"> {{ session('editOk') }} </p>
-            </div>
-        @endif
-
+<x-layout title="Profilo di {{$name}}">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="row justify-content-md-center ">
-                    <div class="col-12">
-                        <h4 class="text-center p-4 borderIndexh3">Scopri le migliori offerte per la tua vacanza da sogno
-                        </h4>
-                    </div>
-                    @forelse ($guest_houses as $house)
+                        @forelse ($houses as $house)
                         <div class="col-12 hCard col-md-6 col-lg-3 mx-3 my-3">
                             <div class="card h-100 cardBorder">
                                 {{-- <img src="{{Storage::url($house->img)}}" class="card-img-top h-100" alt="Immagine annuncio">  --}}
@@ -27,6 +14,7 @@
                                         <p class="btnLike" href=""><i
                                                 class=" bi bi-suit-heart fs-5 mainColor"></i></p>
                                     </div>
+
                                 <p class="card-text fs-5">
                                     <span class="fw-semibold">
                                         <i class="bi bi-house-heart-fill me-1 mainColor"></i>Location:
@@ -35,14 +23,6 @@
                                     <i class="bi bi-currency-euro me-0 pe-0 mainColor"></i>Prezzo:
                                     </span>{{ $house->price }}/notte
                                 </p>
-                                <p class="card-text fs-5"><span class="fw-semibold fs-5">
-                                    <i class="fa-solid fs-6 fa-user me-0 pe-0 mainColor"></i>Pubblicato da:
-                                    <a href="{{ route('userProfile', ['id' => $house->user->id])}}"
-                                        class="btn btn-light"></i>{{ $house->user->name }}</a>    
-                                </p>
-                             
-
-
 
                                 <div class="d-flex justify-content-between">
                                     <span class="d-flex align-items-center flex-md-row flex-column">
@@ -77,11 +57,13 @@
                             <p>Non sono ancora presenti annunci</p>
                         </div>
                     @endforelse
+                        </div>
+                    </div>
                 </div>
             </div>
-    <!--Si lega al paginator per creare link di piu pagine (AppServiceProvider)-->
-            {{ $guest_houses->links() }}
         </div>
-    </div>
+        
     <x-script-card />
+        
 </x-layout>
+    

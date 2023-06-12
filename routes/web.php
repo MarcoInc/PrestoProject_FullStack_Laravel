@@ -51,4 +51,7 @@ Route::get('/ricerca/house', [PublicController::class, 'searchHouse'])->name('pr
 //Profilo
 Route::get('/profilo', [PublicController::class, 'profilo'])->name('profilo');
 
+Route::get('/user/{id}', [PublicController::class, 'userProfile'])->name('userProfile');
+
+
 

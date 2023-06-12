@@ -46,10 +46,17 @@
                                         </td>
 
                                        
-                                        <th class="text-center" scope="row">{{ $house->user->name }}</th>
+                                        <th class="text-center" scope="row">
+                                            <a href="{{ route('userProfile', ['id' => $house->user->id]) }}"
+                                            class="btn btn-info">
+                                            </i>{{ $house->user->name }}
+                                        </a>
+                                        
+                                        
+                                        </th>
 
                                         <td class="text-center">
-                                            <p class='bg-success'>Creato il </p>
+                                            <p class='bg-success text-white'>Creato il </p>
                                             
                                             {{ $house->created_at }}
                                             @if ($house->created_at < $house->updated_at)

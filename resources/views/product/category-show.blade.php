@@ -29,6 +29,12 @@
                                     <i class="bi bi-house-heart-fill me-1 mainColor"></i>Location: </span>{{$house->location->name}}</p>
                                 <p class="card-text fs-5"><span class="fw-semibold fs-5">
                                     <i class="bi bi-currency-euro me-0 pe-0 mainColor"></i>Prezzo: </span>{{$house->price}}/notte</p>
+                                <p class="card-text fs-5"><span class="fw-semibold fs-5">
+                                    <i class="fa-solid fs-6 fa-user me-0 pe-0 mainColor"></i>Pubblicato da:
+                                    <a href="{{ route('userProfile', ['id' => $house->user->id])}}"
+                                        class="btn btn-light"></i>{{ $house->user->name }}</a>    
+                                </p>
+
                                 <div class="d-flex justify-content-between">
                                     <span class="d-flex align-items-center flex-md-row flex-column">
                                         <a href="{{route('show', ['id'=>$house->id])}}" class="p-0 btn btnCard fs-5 text-center">
