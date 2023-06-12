@@ -36,6 +36,11 @@ class RevisorController extends Controller{
         // $house_toCheck->push($this->findLast());
         return view('revisor.index', compact('house_toCheck'));
     }
+
+    public function history(){
+        $houses = GuestHouse::where('is_accepted', '!=', null)->orderBy('updated_at', 'desc')->get();
+        return view('revisor.history', compact('houses'));
+    }
     
     public function acceptAnnuncio(GuestHouse $house_toCheck){
         $house_toCheck->setAccepted(true);
@@ -44,6 +49,13 @@ class RevisorController extends Controller{
     public function rejectAnnuncio(GuestHouse $house_toCheck){
         $house_toCheck->setAccepted(false);
         return redirect()->back()->with('message','Articolo non approvato');
+    }
+
+    public function resetRevision(GuestHouse $house){
+        $house->is_accepted=null;
+        $house->save();
+
+        return redirect()->back()->with('message','Mandato in revisione');
     }
     
     // public function findLast(){

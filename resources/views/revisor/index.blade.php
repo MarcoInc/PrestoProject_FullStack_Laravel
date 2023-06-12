@@ -61,15 +61,7 @@
                                             @method('patch')
                                         </form>
                                         
-                                        {{-- @if ({{ App\Models\RevisorController::findLast()->id==$house->id}})
-                                        <a onclick="event.preventDefault();getElementById('form-reject').submit()" class="btn btn-info form-reject" type='submit'><i class="fa-solid fa-square-xmark text-danger"></i>Annulla modifiche</a>
-                                        <form id="form-reject" class="d-none" method='GET' action=''>
-                                            @csrf
-                                            
-                                        </form>
-                                        
-                                        @endif --}}
-                                        
+                                                                        
                                         
                                     </td>
                                 </tr>

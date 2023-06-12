@@ -88,15 +88,20 @@
                 <li class="nav-item ">
                     <li class="nav-link text-white fs-5">
                         <li>                                                  
-                            <a class="dropdown-item fs-5 hoverLog" href="{{route('revisorIndex')}}">Pagina revisore 
+                            <a class="dropdown-item fs-5 hoverLog" href="{{route('revisorIndex')}}">Da approvare
                                 {{-- contatore annunci non revisionati definito nel Model --}}
-                                 ({{ App\Models\GuestHouse::toBeRevisonedCounter()}})
+                                ({{ App\Models\GuestHouse::toBeRevisonedCounter()}})
                             </a> 
-                            
                         </li>
-
-                       
                     </li>
+
+                    <li class="nav-link text-white fs-5">
+                        <li>                                                  
+                            <a class="dropdown-item fs-5 hoverLog" href="{{route('revisor.history')}}">Storico revisioni 
+                            </a> 
+                        </li>
+                    </li>
+
                     @endif
                     @endauth
                 </li>
