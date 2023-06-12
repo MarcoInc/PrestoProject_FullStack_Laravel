@@ -36,7 +36,7 @@ class GuestHouseController extends Controller{
             return view('product.show', compact('house', 'locations', 'icons'));
         }
         //revisore vede tutto
-        else if(Auth::user()->is_revisor==1){
+        else if(Auth::user() && Auth::user()->is_revisor==1){
             $locations=Location::all();
             $icons = ['fa-water', 'fa-mountain','fa-fish-fins', 'fa-tree-city', 'fa-snowflake','fa-sun-plant-wilt', 'fa-horse-head'];
             return view('product.show', compact('house', 'locations', 'icons'));

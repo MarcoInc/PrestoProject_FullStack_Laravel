@@ -13,11 +13,11 @@
                 </a>
             </li>
             
-            <li class="nav-item ">
+            {{-- <li class="nav-item ">
                 <a class="nav-link text-white fs-5" href="">
                     <div class="btnNav"> About |</div>
                 </a>
-            </li>
+            </li> --}}
             
             @auth
             <li class="nav-item ">
