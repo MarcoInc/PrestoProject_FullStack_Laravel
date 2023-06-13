@@ -26,7 +26,6 @@
         'toRevisor' => 'Da revisionare',
         'history' => 'Storico revisioni',
         'latestArticles' => 'Articoli più recenti',
-        'profilo' => 'Profilo',
 
         //Mail Become Revisor 
         'requestRevisor' => 'Richiesta revisore',
@@ -34,24 +33,23 @@
 
         //Category Show
         'explorerCategory' => 'Esplora la categoria',
-        'publishBy' => 'Pubblicato da',
-        'deleteArticle' => 'Elimina',
         'noneArticleCategory'=> 'Non sono presenti annunci per questa categoria',
 
         //Index
         'dreamWithUs' => 'Scopri le migliori offerte per la tua vacanza da sogno',
-        'ui.noneArticle' => 'Non sono ancora presenti annunci',
-        'revisor'=>'revisore',
+        'noneArticle' => 'Non sono ancora presenti annunci',
 
         //History Revisor
-        'ui.viewArticleRevisor'=> 'Articolo completo',
-        'ui.createDate'=> 'Creato',
-        'ui.editDate'=> 'Modificato',
-        'ui.statusRevision'=> 'Stato',
-        'ui.revisionAccepted'=> 'Approvato',
-        'ui.revisionRejected'=>  'Non approvatoAzione',
-        'ui.revisionReset'=> 'Manda in revisione',
-        //Create-form
+        'viewArticleRevisor'=> 'Articolo completo',
+        'createDate'=> 'Creato il ',
+        'editDate'=> 'Modificato il ',
+        'statusRevision'=> 'Stato',
+        'revisionAccepted'=> 'Approvato',
+        'revisionRejected'=>  'Non approvato',
+        'revisionReset'=> 'Manda in revisione',
+        'actionRevision' => 'Azione',
+
+        //Create-form ed Edit-form
         'place' => 'Luogo',
         'description' => 'Descrizione',
         'addImage' => 'Aggiungi immagine',
@@ -63,12 +61,9 @@
         'whereIsIt' => 'Dove si trova?',
         'smallDescription' => 'Breve descrizione dell\'abitazione..',
         'howManyPeople' => 'Quante persone potrà ospitare?',
-        //Fine Create-form
+        //Fine Create-form ed Edit-form
 
-        //Edit-form
-        'editArticle' => 'Modifica annuncio',
-        //Fine edit
-
+       
         //Mail
         'nameAndSurname' => 'Nome e Cognome',
         'mailToSend' => 'Messaggio che desideri inviare:',
@@ -77,18 +72,21 @@
 
 
         //Registrazione
-        'userName' => 'nome',
+        'userName' => 'Nome',
         'email' => 'Indirizzo email',
         'confirmPassword' => 'Conferma Password',
         'registerButton' => 'Registrati',
         'notRegister' => 'Non sei ancora Registrato?',
 
         //Ricorrenti
-        'price' => 'prezzo',
-        'night' => 'notte',
+        'price' => 'Prezzo',
+        'night' => 'Notte',
         'detail' => 'Dettaglio',
         'publishAt' => 'Pubblicato il',
-        
+        'publishBy' => 'Pubblicato da',
+        'deleteArticle' => 'Elimina',
+        'editArticle' => 'Modifica annuncio',
+
         //Cards User
         'notApproved' => 'Non approvato',
         'inApprovation' => 'In corso di approvazione',
@@ -112,41 +110,6 @@
         'allRightsReserved'=>'Diritti Riservati',
         'distributed'=> 'Distribuito da',
 
-        //Registrazione
-        'userName' => 'nome',
-        'email' => 'Indirizzo email',
-        'confirmPassword' => 'Conferma Password',
-        'registerButton' => 'Registrati',
-        'notRegister' => 'Non sei ancora Registrato?',
-
-        //Ricorrenti
-        'price' => 'prezzo',
-        'night' => 'notte',
-        'detail' => 'Dettaglio',
-        'publishAt' => 'Pubblicato il',
-        
-        //Cards User
-        'notApproved' => 'Non approvato',
-        'inApprovation' => 'In corso di approvazione',
-
-        //Profile
-        'notYetAnnouncements' => 'Non sono ancora presenti annunci',
-        'notYetAnnouncementsPublished' => 'Non ha ancora pubblicato annunci',
-
-        //footer
-
-        'contacts'=>'Contattaci',
-        'phone'=> 'Telefono',
-        'homeFooter'=>'Home',
-        'usefulLinksFooter'=>'Link Utili',
-        'servicesFooter'=>'Servizi',
-        'termsOfService'=>'Termini di servizio',
-        'privacyPolicy'=>'Privacy',
-        'resources'=>'Risorse',
-        'wouldIsArevisorFooter?'=>'Vuoi diventare un nostro revisore?',
-        'sendYourCandidature'=>'Inviaci la tua candidatura!',
-        'allRightsReserved'=>'Diritti Riservati',
-        'distributed'=> 'Distribuito da'
 
     ];
 
