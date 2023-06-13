@@ -68,7 +68,7 @@
     <div class="footer-legal text-center mt-3">
       <div class="row justify-content-center">
         <div class="copyright fs-6">
-          © Copyright <strong><span>Codevengers</span></strong>. All Rights Reserved.
+          © Copyright <strong><span>Codevengers</span></strong> {{__('ui.AllRightsReserved')}}
         </div>
         <div class="credits">
           Designed by <a class="text-decoration-none secColor" href="https://github.com/Manumi93">Minenna M. Emanuela</a><span class="text-white">,</span> <a class="text-decoration-none secColor" href="https://github.com/alessandraScotto">

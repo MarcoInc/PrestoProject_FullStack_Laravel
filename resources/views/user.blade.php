@@ -22,20 +22,20 @@
                                         <i class="bi bi-house-heart-fill me-1 mainColor"></i>Location:
                                     </span>{{ $house->location->name }}</p>
                                 <p class="card-text fs-5"><span class="fw-semibold fs-5">
-                                    <i class="bi bi-currency-euro me-0 pe-0 mainColor"></i>Prezzo:
-                                    </span>{{ $house->price }}/notte
+                                    <i class="bi bi-currency-euro me-0 pe-0 mainColor"></i>{{__('ui.price')}}:
+                                    </span>{{ $house->price }}/{{__('ui.night')}}
                                 </p>
 
                                 <div class="d-flex justify-content-between">
                                     <span class="d-flex align-items-center flex-md-row flex-column">
                                         <a href="{{ route('show', ['id' => $house->id]) }}"
                                                 class="p-0 btn btnCard fs-5 text-center">
-                                        <i class="bi bi-chevron-compact-right mainColor"></i>Dettaglio
+                                        <i class="bi bi-chevron-compact-right mainColor"></i>{{__('ui.detail')}}
                                         </a>
                                         @if (Auth::id() == $house->user_id)
                                             <a href="{{ route('edit', compact('house')) }}"
                                                 class="ms-1 p-0 btn btnCard fs-5 text-center">
-                                                <i class="bi bi-chevron-compact-right mainColor"></i>Modifica
+                                                <i class="bi bi-chevron-compact-right mainColor"></i>{{__('ui.edit')}}
                                             </a>
                                     </span>
                                             <span class="d-flex align-items-center">
@@ -56,7 +56,7 @@
                         </div>
                     @empty
                         <div class="col-12">
-                            <h3>{{$name}} non ha ancora pubblicato annunci</h3>
+                            <h3>{{$name}} {{__('ui.notYetAnnouncements')}}</h3>
                         </div>
                     @endforelse
                         </div>

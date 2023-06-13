@@ -60,14 +60,14 @@
 
                 {{__('ui.welcome')}} {{ Auth::user()->name }}  
                 @if (Auth::user()->is_revisor) 
-                    ({{route('product.revisor')}}) 
+                    ({{route('ui.revisor')}}) 
                 @if(App\Models\GuestHouse::toBeRevisonedCounter()>0)
                         <span class="position-absolute top-0 end-0 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
                     @endif
                 @endif
             
                 @else
-                Benvenuto utente
+                    ({{route('ui.welcomeUser')}})                
                 @endauth
             </a>
                 
@@ -75,7 +75,8 @@
             <ul class="dropdown-menu rounded-1 w-100" aria-labelledby="navbarDropdown">
                 @auth
                 <li>
-                    <a href="{{route('profilo')}}"class="dropdown-item fs-5 hoverLog">Profilo</a>
+                    <a href="{{route('profilo')}}"class="dropdown-item fs-5 hoverLog">({{route('ui.profile')}})                
+                    </a>
                 </li>
                 <li>
                     <a href="" onclick="event.preventDefault();getElementById('form-logout').submit();"
@@ -85,8 +86,9 @@
                     @csrf
                 </form>
                 @else
-                <li><a class="dropdown-item fs-5 hoverLog" href="{{ route('register') }}">Registrati</a></li>
-                <li><a class="dropdown-item fs-5 hoverLog" href="{{ route('login') }}">Login</a></li>
+                <li><a class="dropdown-item fs-5 hoverLog" href="{{ route('register') }}">({{route('ui.register')}})                
+                </a></li>
+                <li><a class="dropdown-item fs-5 hoverLog" href="{{ route('login') }}">({{route('ui.login')}})</a></li>
                 @endauth
                 
                 {{-- verifica che l'utente sia loggato --}}
@@ -96,7 +98,7 @@
                 <li class="nav-item ">
                     <li class="nav-link text-white fs-5">
                         <li>                                                  
-                            <a class="dropdown-item fs-5 hoverLog" href="{{route('revisorIndex')}}">Da approvare
+                            <a class="dropdown-item fs-5 hoverLog" href="{{route('revisorIndex')}}">({{route('ui.toRevisor')}})
                                 {{-- contatore annunci non revisionati definito nel Model --}}
                                 ({{ App\Models\GuestHouse::toBeRevisonedCounter()}})
                             </a> 
@@ -105,7 +107,7 @@
 
                     <li class="nav-link text-white fs-5">
                         <li>                                                  
-                            <a class="dropdown-item fs-5 hoverLog" href="{{route('revisor.history')}}">Storico revisioni 
+                            <a class="dropdown-item fs-5 hoverLog" href="{{route('revisor.history')}}">({{route('ui.history')}}) 
                             </a> 
                         </li>
                     </li>
