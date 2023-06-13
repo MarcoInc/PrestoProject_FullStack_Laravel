@@ -20,28 +20,36 @@
             </li> --}}
             
             @auth
-            <li class="nav-item ">
-                <a class="nav-link text-white fs-5" href="{{ route('create') }}">
-                    <div class="btnNav">
-                        Aggiungi articolo |</div>
+                <li class="nav-item ">
+                    <a class="nav-link text-white fs-5" href="{{ route('create') }}">
+                        <div class="btnNav">{{__('ui.addProduct')}} |</div>
                     </a>
                 </li>
                 @endauth
                 
                 <li class="nav-item ">
                     <a class="nav-link text-white fs-5" href="{{ route('index') }}">
-                        <div class="btnNav"> Tutti gli articoli | </div>
+                        <div class="btnNav"> {{__('ui.allArticles')}} | </div>
                     </a>
                 </li>
                 <li class="nav-item ">
                     <a class="nav-link text-white fs-5" href="{{route('contattaci')}}">
-                        <div class="btnNav"> Contattaci </div>
+                        <div class="btnNav"> {{__('ui.contactUs')}} </div>
                     </a>
+                </li>
+                <li class="nav-item ">
+                    <x-_locale lang='it'/>
+                </li>
+                <li class="nav-item ">
+                    <x-_locale lang='en'/>
+                </li>
+                <li class="nav-item ">
+                    <x-_locale lang='es'/>
                 </li>
             </ul>
             
             <form class="d-flex" action="{{route('product.search')}}" method="GET" role="search">
-                <input class="form-control me-1" type="search" placeholder="Cerca il tuo b&b" aria-label="Search" name="searched">
+                <input class="form-control me-1" type="search" placeholder="{{__('ui.searchBar')}}" aria-label="Search" name="searched">
                 <button class="btn btnSearch me-1 mainColor" type="submit"><i class="fa-solid fa-magnifying-glass mainColor"></i></button>
             </form>
             
@@ -50,9 +58,9 @@
                 data-bs-toggle="dropdown" aria-expanded="false">
                 @auth
 
-                Benvenuto {{ Auth::user()->name }}  
+                {{__('ui.welcome')}} {{ Auth::user()->name }}  
                 @if (Auth::user()->is_revisor) 
-                    (Revisore) 
+                    ({{route('product.revisor')}}) 
                 @if(App\Models\GuestHouse::toBeRevisonedCounter()>0)
                         <span class="position-absolute top-0 end-0 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
                     @endif

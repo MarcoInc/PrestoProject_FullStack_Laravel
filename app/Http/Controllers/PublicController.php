@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Location;
 use App\Models\GuestHouse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 
 class PublicController extends Controller{
@@ -61,5 +62,12 @@ class PublicController extends Controller{
         $houses=GuestHouse::where('user_id',$id)->where('is_accepted',true)->orderBy('updated_at','desc')->get();
         $name = User::findOrFail($id)->name;
         return view('user',compact('houses','name'));
+    }
+
+    public function setLanguage($lang){
+        session()->put('locale',$lang);
+        
+
+        return redirect()->back();
     }
 }

@@ -17,12 +17,11 @@ use App\Models\GuestHouse;
 |
 */
 
+//Pagine normali
 Route::get('/', [PublicController::class , 'home'])->name('home');
 Route::get('/terms', [PublicController::class , 'terms'])->name('terms');
 Route::get('/privacy', [PublicController::class , 'privacy'])->name('privacy');
 Route::get('/services', [PublicController::class , 'services'])->name('services');
-
-
 
 
 //Articoli
@@ -43,8 +42,6 @@ Route::patch('/revisor/reject/{house_toCheck}', [RevisorController::class, 'reje
 Route::get('/revisor/history/', [RevisorController::class, 'history'])->middleware('isRevisor')->name('revisor.history');
 Route::patch('/revisor/history/reset/{house}', [RevisorController::class, 'resetRevision'])->middleware('isRevisor')->name('revisor.resetRevision');
 
-
-
 Route::get('/become/revisor', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
@@ -57,7 +54,12 @@ Route::get('/ricerca/house', [PublicController::class, 'searchHouse'])->name('pr
 //Profilo
 Route::get('/profilo', [PublicController::class, 'profilo'])->name('profilo');
 
+//Utenti
 Route::get('/user/{id}', [PublicController::class, 'userProfile'])->name('userProfile');
+
+//Lingua
+Route::post('/language/{lang}', [PublicController::class, 'setLanguage'])->name('setLanguage');
+
 
 
 
