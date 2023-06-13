@@ -14,7 +14,7 @@
   
   <div class="mb-3">
     <label for="description" class="form-label">{{__('ui.description')}}</label>
-    <textarea placeholder="{{__('ui.place')}}" class="form-control @error('description') is-invalid @enderror" wire:model.debounce.500ms="description" id="description" cols="30" rows="10"></textarea>
+    <textarea placeholder="{{__('ui.smallDescription')}}" class="form-control @error('description') is-invalid @enderror" wire:model.debounce.500ms="description" id="description" cols="30" rows="10"></textarea>
     @error('description')
       <p>{{$message}}</p>
     @enderror 

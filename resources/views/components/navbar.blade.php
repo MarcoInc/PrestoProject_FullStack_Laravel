@@ -60,7 +60,7 @@
 
                 {{__('ui.welcome')}} {{ Auth::user()->name }}  
                 @if (Auth::user()->is_revisor) 
-                    ({{route('product.revisor')}}) 
+                    {{-- ({{route('product.revisor')}})  --}}
                 @if(App\Models\GuestHouse::toBeRevisonedCounter()>0)
                         <span class="position-absolute top-0 end-0 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
                     @endif
