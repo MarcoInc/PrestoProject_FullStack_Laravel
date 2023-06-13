@@ -67,7 +67,7 @@
                 @endif
             
                 @else
-                    ({{route('ui.welcomeUser')}})                
+                    ({{__('ui.welcomeUser')}})                
                 @endauth
             </a>
                 

@@ -1,4 +1,4 @@
-<x-layout title="{{route('ui.editArticleTitle')}}">
+<x-layout title="{{__('ui.editArticleTitle')}}">
 
 <div class="container">
     <div class="row">
