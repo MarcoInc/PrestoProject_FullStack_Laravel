@@ -4,18 +4,18 @@
   <div class="container-fluid footer-content position-relative">
     <div class="row justify-content-around">
       <div class="col-12 col-md-3 borderRight">
-        <h4 class="text-uppercase text-md-start text-center">Contattataci</h4>
+        <h4 class="text-uppercase text-md-start text-center">{{__('ui.ContactUs')}}</h4>
         <div class=" fs-5">
           <i class="fa-solid fa-location-dot fs-6"></i>
           <p class="fs-6">
-            Via Che non c'è, 0 
+            {{__('ui.AddressFooter')}}, 0 
             ABC 123456, IT 
           </p>
           <p class="fs-6"> 
-            <strong>Phone:</strong> +1 5589 55488 55
+            <strong>{{__('ui.Phone')}}:</strong> +1 5589 55488 55
           </p>
           <p class="fs-6">
-            <strong>Email:</strong> codevengers@example.com
+            <strong>{{__('ui.email')}}:</strong> codevengers@example.com
           </p>
           <div class="mt-5"> 
             <i class="fa-brands icons-footer fa-facebook fs-2"></i>
@@ -27,18 +27,18 @@
       <!-- footer links column-->
       
       <div class="col-12 col-md-2">
-        <h5 class="text-uppercase borderBottom mt-3 text-md-start text-center">Link Utili</h5>
+        <h5 class="text-uppercase borderBottom mt-3 text-md-start text-center">{{__('ui.UsefulLinks')}}</h5>
         <ul class="list-unstyled text-md-start text-center">
-          <li class="list-item"><a href="#" class="btn textColor fs-5">Home</a></li>
+          <li class="list-item"><a href="#" class="btn textColor fs-5">{{__('ui.home')}}</a></li>
           {{-- <li class="list-item"><a href="#" class="btn textColor fs-5">Chi Siamo</a></li> --}}
-          <li class="list-item"><a href="{{route('services')}}" class="btn textColor fs-5">Servizi</a></li>
-          <li class="list-item"><a href="{{route('terms')}}" class="btn textColor fs-5">Termini di servizio</a></li>
-          <li class="list-item"><a href="{{route('privacy')}}" class="btn textColor fs-5">Privacy Policy</a></li>
+          <li class="list-item"><a href="{{route('services')}}" class="btn textColor fs-5"></a>{{__('ui.Services')}}</li>
+          <li class="list-item"><a href="{{route('terms')}}" class="btn textColor fs-5"></a>{{__('ui.TermsOfService')}}</li>
+          <li class="list-item"><a href="{{route('privacy')}}" class="btn textColor fs-5">{{__('ui.PrivacyPolicy')}}</a></li>
         </ul>
       </div>
       
       <div class="col-12 col-md-2">
-        <h5 class="text-uppercase borderBottom mt-3 text-md-start text-center">Risorse</h5>
+        <h5 class="text-uppercase borderBottom mt-3 text-md-start text-center">{{__('ui.Resources')}}</h5>
         <ul class="list-unstyled text-md-start text-center">
           <li class="list-item"><a href="" class="btn textColor fs-5">HTML - CSS</a></li>
           <li class="list-item"><a href="" class="btn textColor fs-5">JavaScript</a></li>
@@ -53,9 +53,9 @@
       @auth
       @if (Auth::user()->is_revisor==false)
       <div class="col-12 col-md-2">
-        <h5 class="fs-5 borderBottom text-uppercase mt-3 text-center">Vuoi diventare un nostro revisore?</h5>
+        <h5 class="fs-5 borderBottom text-uppercase mt-3 text-center">{{__('ui.WouldIsArevisor?')}}</h5>
         <ul class="list-group list-unstyled">
-          <li class="list-item "><a href="{{route('become.revisor')}}" class="btn textColor text-center fs-5">Inviaci la tua candidatura!</a></li>
+          <li class="list-item "><a href="{{route('become.revisor')}}" class="btn textColor text-center fs-5">{{__('ui.SendYourCandidature')}}</a></li>
         </ul>
         @endif
         @else
