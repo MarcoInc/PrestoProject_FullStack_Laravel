@@ -1,4 +1,4 @@
-<x-layout docTitle="Login" title="{{__('access')}}">
+<x-layout docTitle="Login" title="{{__('loginTitle')}}">
     {{-- icona login --}}
     
     <div class="container-fluid pb-5 bgLogin">

@@ -30,10 +30,4 @@ Contesto->opzionale(cosa fare):
 
 
 
-<<<<<<< HEAD
  
-=======
-
-
-   
->>>>>>> 0e67efadbbded4284530605dd686665ae864b887

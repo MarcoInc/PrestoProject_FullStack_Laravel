@@ -35,7 +35,7 @@
                                         @if (Auth::id() == $house->user_id)
                                             <a href="{{ route('edit', compact('house')) }}"
                                                 class="ms-1 p-0 btn btnCard fs-5 text-center">
-                                                <i class="bi bi-chevron-compact-right mainColor"></i>{{__('ui.edit')}}
+                                                <i class="bi bi-chevron-compact-right mainColor"></i>{{__('ui.editArticle')}}
                                             </a>
                                     </span>
                                             <span class="d-flex align-items-center">
@@ -56,7 +56,7 @@
                         </div>
                     @empty
                         <div class="col-12">
-                            <h3>{{$name}} {{__('ui.notYetAnnouncements')}}</h3>
+                            <h3>{{$name}} {{__('ui.notYetAnnouncementsPublished')}}</h3>
                         </div>
                     @endforelse
                         </div>
