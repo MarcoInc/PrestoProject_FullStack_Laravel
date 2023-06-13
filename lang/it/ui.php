@@ -71,7 +71,7 @@
         //Mail
         'nameAndSurname' => 'Nome e Cognome',
         'mailToSend' => 'Messaggio che desideri inviare:',
-        'sendMail' => 'Invia messaggio'
+        'sendMail' => 'Invia messaggio',
         //EndMail
 
 
@@ -109,7 +109,7 @@
         'wouldIsArevisorFooter?'=>'Vuoi diventare un nostro revisore?',
         'sendYourCandidature'=>'Inviaci la tua candidatura!',
         'allRightsReserved'=>'Diritti Riservati',
-        'distributed'=> 'Distribuito da'
+        'distributed'=> 'Distribuito da',
 
         //Registrazione
         'userName' => 'nome',
