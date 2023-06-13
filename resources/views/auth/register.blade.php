@@ -1,4 +1,4 @@
-<x-layout docTitle="Register" title="{{__('register')}}">
+<x-layout docTitle="Register" title="Registrati">
 
     <div class="container-fluid formRegister">
         <div class="row justify-content-center vh-100">

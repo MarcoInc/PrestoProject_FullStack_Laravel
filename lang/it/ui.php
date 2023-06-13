@@ -3,6 +3,7 @@
     return [
 
         //Title Page
+        'homeTitle' => 'home',
         'requestRevisorTitle' => 'Richiesta revisor',
         'createArticleTitle' => 'Crea articolo',
         'editArticleTitle' => 'Modifica prodotto',

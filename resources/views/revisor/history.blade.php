@@ -1,4 +1,4 @@
-<x-layout title="{{__('ui.historyIndexRevisorTitle')}}">
+<x-layout title="Storico revisioni">
     
     <div class="container">
         <div class="row justify-content-center">

@@ -1,4 +1,4 @@
-<x-layout title="{{__('ui.editArticleTitle')}}">
+<x-layout title="Modifica annuncio">
 
 <div class="container">
     <div class="row">
