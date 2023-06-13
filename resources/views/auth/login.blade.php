@@ -11,7 +11,7 @@
                     @csrf
                     
                     <div class="mb-3 pt-4 text-white">
-                        <label for="email" class="form-label fs-5">Indirizzo email</label>
+                        <label for="email" class="form-label fs-5">{{__('ui.email')}}</label>
                         <input name='email' type="email" class="form-control" id="email" aria-describedby="emailHelp">
                     </div>
                     
@@ -21,7 +21,7 @@
                     </div>   
                     
                     <button type="submit" class="btn btnLogin fs-5 mb-2">Login</button>
-                    <p class="pt-3 fs-5 register">Non sei ancora registrato?</p> <a class='btn btnForm fs-5' href="{{route('register')}}">Registrati</a>
+                    <p class="pt-3 fs-5 register">{{__('notRegister?')}}</p> <a class='btn btnForm fs-5' href="{{route('register')}}">Registrati</a>
                 </form>
             </div>
             
