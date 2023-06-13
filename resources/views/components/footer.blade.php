@@ -8,14 +8,14 @@
         <div class=" fs-5">
           <i class="fa-solid fa-location-dot fs-6"></i>
           <p class="fs-6">
-            Via Che non c'è, 0 
+            {{__('ui.AddressFooter')}}, 0 
             ABC 123456, IT 
           </p>
           <p class="fs-6"> 
             <strong>{{__('ui.phone')}}:</strong> +1 5589 55488 55
           </p>
           <p class="fs-6">
-            <strong>Email:</strong> codevengers@example.com
+            <strong>{{__('ui.email')}}:</strong> codevengers@example.com
           </p>
           <div class="mt-5"> 
             <i class="fa-brands icons-footer fa-facebook fs-2"></i>
