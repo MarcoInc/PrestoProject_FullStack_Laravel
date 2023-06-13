@@ -1,8 +1,6 @@
-<div class="row bg-white">
-    <div class="col-12">
-        <div class="row justify-content-around py-2">
+        <div class="rowScrollX bg-white d-block d-md-flex justify-content-md-around">
             @foreach ($locations as $location)
-            <div class="col-1">
+            <div class=" colScrollX">
                 <a class="text-decoration-none" href="{{route('categoryShow', compact('location'))}}">
                     <div class="borderCategory card "
                         onmouseover="changeBorderColor(this)" onmouseout="resetBorderColor(this)" id="{{$location->id}}" >
@@ -15,5 +13,3 @@
             </div>
             @endforeach
         </div>
-    </div>
-</div>

@@ -1,5 +1,5 @@
 <section class="position-relative">
-    <div class="overShadow d-flex justify-content-center align-items-center">
+    <div class="overShadow d-none d-md-flex justify-content-center align-items-center">
         <div class="chevronHome text-white position-absolute text-center">
             <p class="fs-3">Articoli più recenti</p>
             <a class="text-white" href="#scrollAnnunci">
@@ -9,7 +9,7 @@
     </div>
     <div id="carouselExampleIndicators" class="carousel slide carosel-custom" data-bs-ride="carousel">
         
-        <div class="carousel-inner">
+        <div class="carousel-inner vh-100">
             <div class="carousel-item active vh-100" data-bs-interval="10000">
                 <img class="foto1 img-fluid d-block w-100" src="/media/foto1.jpg"  alt="foto1">
             </div>
