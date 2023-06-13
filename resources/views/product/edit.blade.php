@@ -1,4 +1,4 @@
-<x-layout title="Modifica prodotto">
+<x-layout title="{{route('ui.editArticleTitle')}}">
 
 <div class="container">
     <div class="row">

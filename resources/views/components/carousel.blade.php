@@ -1,7 +1,7 @@
 <section class="position-relative">
     <div class="overShadow d-none d-md-flex justify-content-center align-items-center">
         <div class="chevronHome text-white position-absolute text-center">
-            <p class="fs-3">Articoli più recenti</p>
+            <p class="fs-3">({{route('ui.latestArticles')}})  </p>
             <a class="text-white" href="#scrollAnnunci">
                 <i class="fa-solid fa-circle-chevron-down fa-bounce fs-3"></i>
             </a>
