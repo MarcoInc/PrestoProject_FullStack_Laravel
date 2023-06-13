@@ -67,7 +67,7 @@
                 @endif
             
                 @else
-                Benvenuto utente
+                    ({{route('ui.welcomeUser')}})                
                 @endauth
             </a>
                 
@@ -75,7 +75,8 @@
             <ul class="dropdown-menu rounded-1 w-100" aria-labelledby="navbarDropdown">
                 @auth
                 <li>
-                    <a href="{{route('profilo')}}"class="dropdown-item fs-5 hoverLog">Profilo</a>
+                    <a href="{{route('profilo')}}"class="dropdown-item fs-5 hoverLog">{{__('ui.profilo')}}                
+                    </a>
                 </li>
                 <li>
                     <a href="" onclick="event.preventDefault();getElementById('form-logout').submit();"
@@ -85,8 +86,9 @@
                     @csrf
                 </form>
                 @else
-                <li><a class="dropdown-item fs-5 hoverLog" href="{{ route('register') }}">Registrati</a></li>
-                <li><a class="dropdown-item fs-5 hoverLog" href="{{ route('login') }}">Login</a></li>
+                <li><a class="dropdown-item fs-5 hoverLog" href="{{ route('register') }}">{{__('ui.register')}}                
+                </a></li>
+                <li><a class="dropdown-item fs-5 hoverLog" href="{{ route('login') }}">{{__('ui.login')}}</a></li>
                 @endauth
                 
                 {{-- verifica che l'utente sia loggato --}}
@@ -96,7 +98,7 @@
                 <li class="nav-item ">
                     <li class="nav-link text-white fs-5">
                         <li>                                                  
-                            <a class="dropdown-item fs-5 hoverLog" href="{{route('revisorIndex')}}">Da approvare
+                            <a class="dropdown-item fs-5 hoverLog" href="{{route('revisorIndex')}}">{{__('ui.toRevisor')}}
                                 {{-- contatore annunci non revisionati definito nel Model --}}
                                 ({{ App\Models\GuestHouse::toBeRevisonedCounter()}})
                             </a> 
@@ -105,7 +107,7 @@
 
                     <li class="nav-link text-white fs-5">
                         <li>                                                  
-                            <a class="dropdown-item fs-5 hoverLog" href="{{route('revisor.history')}}">Storico revisioni 
+                            <a class="dropdown-item fs-5 hoverLog" href="{{route('revisor.history')}}">{{__('ui.history')}} 
                             </a> 
                         </li>
                     </li>
