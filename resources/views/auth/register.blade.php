@@ -7,7 +7,7 @@
                     @csrf
 
                     <div class="mb-3 pt-4 text-white">
-                        <label for="user" class="form-label fs-5">{{__('ui.name')}}</label>
+                        <label for="user" class="form-label fs-5">{{__('ui.userName')}}</label>
                         <input name='name' type="text" class="form-control  @error('name') is-invalid @enderror"
                             id="user" aria-describedby="emailHelp" value={{ old('name') }}>
                     </div>
@@ -27,12 +27,12 @@
                     </div>
 
                     <div class="mb-3 text-white">
-                        <label for="password" class="form-label fs-5">{{__('ui.confPass')}}</label>
+                        <label for="password" class="form-label fs-5">{{__('ui.confirmPassword')}}</label>
                         <input name='password_confirmation' type="password"
                             class="form-control  @error('password_confirmation') is-invalid @enderror" id="password">
                     </div>
 
-                    <button type="submit" class="btnForm mt-4 fs-5 btn text-white">{{__('ui.register')}}</button>
+                    <button type="submit" class="btnForm mt-4 fs-5 btn text-white">{{__('ui.registerButton')}}</button>
                 </form>
             </div>
         </div>

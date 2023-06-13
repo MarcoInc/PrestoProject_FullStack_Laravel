@@ -1,6 +1,16 @@
 <?php
 
     return [
+
+        //Title Page
+        'requestRevisorTitle' => 'Richiesta revisor',
+        'createArticleTitle' => 'Crea articolo',
+        'editArticleTitle' => 'Modifica prodotto',
+        'allArticleTitle' => 'Tutti gli articoli',
+        'historyIndexRevisorTitle' => 'Storico revisioni',
+        'ui.historyIndexRevisorTitle' => 'Azione',
+        'loginTitle' => 'Accedi',
+
         //navbar
         'addProduct'=>'Aggiungi prodotto',
         'allArticles'=>'Tutti gli articoli',
@@ -17,10 +27,7 @@
         'latestArticles' => 'Articoli più recenti',
 
         //Mail Become Revisor 
-        'requestRevisorTitle' => 'Richiesta revisor',
         'requestRevisor' => 'Richiesta revisore',
-        'userName' =>'Nome utente',
-        'email' => 'Email',
         'requestRevisorButton' => 'Invia richiesta',
 
         //Category Show
@@ -29,25 +36,53 @@
         'deleteArticle' => 'Elimina',
         'noneArticleCategory'=> 'Non sono presenti annunci per questa categoria',
 
-        //Create article
-        'createArticleTitle' => 'Crea articolo',
-
         //Index
-        'editArticleTitle' => 'Modifica prodotto',
-        'allArticleTitle' => 'Tutti gli articoli',
         'dreamWithUs' => 'Scopri le migliori offerte per la tua vacanza da sogno',
-        'ui.noneArticle' => 'Non sono ancora presenti annunci',
 
         //History Revisor
-        'historyIndexRevisorTitle' => 'Storico revisioni',
         'ui.viewArticleRevisor'=> 'Articolo completo',
         'ui.createDate'=> 'Creato',
         'ui.editDate'=> 'Modificato',
         'ui.statusRevision'=> 'Stato',
-        'ui.historyIndexRevisorTitle' => 'Azione',
         'ui.revisionAccepted'=> 'Approvato',
         'ui.revisionRejected'=>  'Non approvatoAzione',
         'ui.revisionReset'=> 'Manda in revisione',
+
+        //Registrazione
+        'userName' => 'nome',
+        'email' => 'Indirizzo email',
+        'confirmPassword' => 'Conferma Password',
+        'registerButton' => 'Registrati',
+        'notRegister' => 'Non sei ancora Registrato?',
+
+        //Ricorrenti
+        'price' => 'prezzo',
+        'night' => 'notte',
+        'detail' => 'Dettaglio',
+        'publishAt' => 'Pubblicato il',
+        
+        //Cards User
+        'notApproved' => 'Non approvato',
+        'inApprovation' => 'In corso di approvazione',
+
+        //Profile
+        'notYetAnnouncements' => 'Non sono ancora presenti annunci',
+        'notYetAnnouncementsPublished' => 'Non ha ancora pubblicato annunci',
+
+        //footer
+
+        'contacts'=>'Contattaci',
+        'phone'=> 'Telefono',
+        'homeFooter'=>'Home',
+        'usefulLinksFooter'=>'Link Utili',
+        'servicesFooter'=>'Servizi',
+        'termsOfService'=>'Termini di servizio',
+        'privacyPolicy'=>'Privacy',
+        'resources'=>'Risorse',
+        'wouldIsArevisorFooter?'=>'Vuoi diventare un nostro revisore?',
+        'sendYourCandidature'=>'Inviaci la tua candidatura!',
+        'allRightsReserved'=>'Diritti Riservati',
+        'distributed'=> 'Distribuito da'
 
     ];
 
