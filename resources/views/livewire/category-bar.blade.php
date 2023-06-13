@@ -1,4 +1,4 @@
-        <div class="rowScrollX d-block d-md-flex justify-content-md-around">
+        <div class="rowScrollX bg-white d-block d-md-flex justify-content-md-around">
             @foreach ($locations as $location)
             <div class=" colScrollX">
                 <a class="text-decoration-none" href="{{route('categoryShow', compact('location'))}}">

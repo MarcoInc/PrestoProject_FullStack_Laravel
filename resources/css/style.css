@@ -150,8 +150,13 @@ input{
     
 }
 
-.borderFooter{
+.borderBottom{
+    border-bottom: 1px solid var(--primaryColor);
+}
+
+.borderRight{
     border-right: 1px solid var(--primaryColor);
+
 }
 
 footer {
