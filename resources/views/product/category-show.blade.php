@@ -7,7 +7,7 @@
         
         <div class="row">
             <div class="col-12">
-                <h2>({{route('ui.explorerCategory')}}): {{$location->name}}</h2>
+                <h2>{{__('ui.explorerCategory')}}: {{$location->name}}</h2>
             </div>
         </div>
     </div>
@@ -26,11 +26,11 @@
                                     {{-- <p class="btnLike" href=""><i class=" bi bi-suit-heart fs-5 mainColor"></i></p> --}}
                                 </div>
                                 <p class="card-text fs-5"> <span class="fw-semibold">
-                                    <i class="bi bi-house-heart-fill me-1 mainColor"></i>{{route('ui.location')}}: </span>{{$house->location->name}}</p>
+                                    <i class="bi bi-house-heart-fill me-1 mainColor"></i>{{__('ui.location')}}: </span>{{$house->location->name}}</p>
                                 <p class="card-text fs-5"><span class="fw-semibold fs-5">
-                                    <i class="bi bi-currency-euro me-0 pe-0 mainColor"></i>{{route('ui.price')}}: </span>{{$house->price}}/({{route('ui.priceNight')}})</p>
+                                    <i class="bi bi-currency-euro me-0 pe-0 mainColor"></i>{{__('ui.price')}}: </span>{{$house->price}}/{{__('ui.priceNight')}}</p>
                                 <p class="card-text fs-5"><span class="fw-semibold fs-5">
-                                    <i class="fa-solid fs-6 fa-user me-0 pe-0 mainColor"></i>{{route('ui.publishBy')}}:
+                                    <i class="fa-solid fs-6 fa-user me-0 pe-0 mainColor"></i>{{__('ui.publishBy')}}:
                                     <a href="{{ route('userProfile', ['id' => $house->user->id])}}"
                                         class="btn btn-light"></i>{{ $house->user->name }}</a>    
                                 </p>
@@ -38,10 +38,10 @@
                                 <div class="d-flex justify-content-between">
                                     <span class="d-flex align-items-center flex-md-row flex-column">
                                         <a href="{{route('show', ['id'=>$house->id])}}" class="p-0 btn btnCard fs-5 text-center">
-                                            <i class="bi bi-chevron-compact-right mainColor"></i>{{route('ui.deleteArticle')}}</a>
+                                            <i class="bi bi-chevron-compact-right mainColor"></i>{{__('ui.deleteArticle')}}</a>
                                         @if(Auth::id()==$house->user_id)
                                         <a href="{{ route('edit',compact('house')) }}" class="ms-1 p-0 btn btnCard fs-5 text-center">
-                                            <i class="bi bi-chevron-compact-right mainColor"></i>{{route('ui.editArticle')}}</a>
+                                            <i class="bi bi-chevron-compact-right mainColor"></i>{{__('ui.editArticle')}}</a>
                                     </span>
                                     <span class="d-flex align-items-center">
                                         <a onclick="event.preventDefault();getElementById('form-delete').submit();" class="btn btnCard fs-5 fw-semibold">
@@ -59,7 +59,7 @@
                     </div>
                     @empty
                     <div class="col-12">
-                        <p>({{route('ui.noneArticleCategory')}})</p>
+                        <p>{{__('ui.noneArticleCategory')}}</p>
                     </div>
                     @endforelse
                 </div>

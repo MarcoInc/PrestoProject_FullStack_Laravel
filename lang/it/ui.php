@@ -38,8 +38,19 @@
         'allArticleTitle' => 'Tutti gli articoli',
         'dreamWithUs' => 'Scopri le migliori offerte per la tua vacanza da sogno',
         'ui.noneArticle' => 'Non sono ancora presenti annunci',
+        'ui.noneArticle' => 'Non sono ancora presenti annunci',
         'revisor'=>'revisore',
 
+        //History Revisor
+        'historyIndexRevisorTitle' => 'Storico revisioni',
+        'ui.viewArticleRevisor'=> 'Articolo completo',
+        'ui.createDate'=> 'Creato',
+        'ui.editDate'=> 'Modificato',
+        'ui.statusRevision'=> 'Stato',
+        'ui.historyIndexRevisorTitle' => 'Azione',
+        'ui.revisionAccepted'=> 'Approvato',
+        'ui.revisionRejected'=>  'Non approvatoAzione',
+        'ui.revisionReset'=> 'Manda in revisione',
         //Create-form
         'place' => 'Luogo',
         'description' => 'Descrizione',
