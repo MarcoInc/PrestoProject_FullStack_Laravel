@@ -55,15 +55,15 @@
                     <p class="card-text fs-5">&nbsp;{{$house->location->name}}</p>
                   </div>
                   <div class="d-flex">
-                    <p class="fs-5 card-text mainColor">Prezzo:</p>
-                    <p class="card-text">{{$house->price}}&euro;/notte</p>
+                    <p class="fs-5 card-text mainColor">{{__('price')}}:</p>
+                    <p class="card-text">{{$house->price}}&euro;/{{__('night')}}</p>
                   </div>
                   <div class=" d-flex justify-content-between align-items-center w-100">
                     <!--Detail-->
-                    <a href="{{route('show', ['id'=>$house->id])}}" class="p-0 btn btnCard fs-5 text-center"><i class="bi bi-chevron-compact-right mainColor"></i>Dettaglio</a>
+                    <a href="{{route('show', ['id'=>$house->id])}}" class="p-0 btn btnCard fs-5 text-center"><i class="bi bi-chevron-compact-right mainColor"></i>{{__('detail')}}</a>
                     <!--End Detail-->
                     
-                    <p class="card-footer fs-5 mb-0"><span class="me-1"><i class="bi bi-calendar-check mainColor"></i></span>Pubblicato il: {{$house->created_at->format('d/m/Y')}}</p>
+                    <p class="card-footer fs-5 mb-0"><span class="me-1"><i class="bi bi-calendar-check mainColor"></i></span>{{__('publishAt')}}: {{$house->created_at->format('d/m/Y')}}</p>
                     <!--
                       <p class="card-footer">Pubblicato da: {{$house->user->name}}</p>
                     -->

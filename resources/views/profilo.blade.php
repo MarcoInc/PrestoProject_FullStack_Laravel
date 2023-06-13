@@ -15,9 +15,9 @@
                                                 class=" bi bi-suit-heart fs-5 mainColor"></i></p> --}}
                                     </div>
                                     @if($house->is_accepted === 0)
-                                        <h5> <span class="badge bg-danger">Non approvato</span></h5>
+                                        <h5> <span class="badge bg-danger">{{__('ui.notApproved')}}</span></h5>
                                     @elseif($house->is_accepted === null)
-                                        <h5> <span class="badge bg-warning">Approvazione in corso</span></h5>
+                                        <h5> <span class="badge bg-warning">{{__('ui.inApprovation')}}</span></h5>
                                     @endif
 
                                 <p class="card-text fs-5">
@@ -25,20 +25,20 @@
                                         <i class="bi bi-house-heart-fill me-1 mainColor"></i>Location:
                                     </span>{{ $house->location->name }}</p>
                                 <p class="card-text fs-5"><span class="fw-semibold fs-5">
-                                    <i class="bi bi-currency-euro me-0 pe-0 mainColor"></i>Prezzo:
-                                    </span>{{ $house->price }}/notte
+                                    <i class="bi bi-currency-euro me-0 pe-0 mainColor"></i>{{__('ui.price')}}:
+                                    </span>{{ $house->price }}/{{__('ui.night')}}
                                 </p>
 
                                 <div class="d-flex justify-content-between">
                                     <span class="d-flex align-items-center flex-md-row flex-column">
                                         <a href="{{ route('show', ['id' => $house->id]) }}"
                                                 class="p-0 btn btnCard fs-5 text-center">
-                                        <i class="bi bi-chevron-compact-right mainColor"></i>Dettaglio
+                                        <i class="bi bi-chevron-compact-right mainColor"></i>{{__('ui.detail')}}
                                         </a>
                                         @if (Auth::id() == $house->user_id)
                                             <a href="{{ route('edit', compact('house')) }}"
                                                 class="ms-1 p-0 btn btnCard fs-5 text-center">
-                                                <i class="bi bi-chevron-compact-right mainColor"></i>Modifica
+                                                <i class="bi bi-chevron-compact-right mainColor"></i>{{__('ui.edit')}}
                                             </a>
                                     </span>
                                             <span class="d-flex align-items-center">
@@ -59,7 +59,7 @@
                         </div>
                     @empty
                         <div class="col-12">
-                            <p>Non sono ancora presenti annunci</p>
+                            <p>{{__('ui.notAnnouncements')}}</p>
                         </div>
                     @endforelse
                         </div>

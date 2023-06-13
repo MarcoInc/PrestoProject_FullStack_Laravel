@@ -1,4 +1,4 @@
-<x-layout docTitle="Login" title="Accesso">
+<x-layout docTitle="Login" title="{{__('access')}}">
     {{-- icona login --}}
     
     <div class="container-fluid pb-5 bgLogin">
@@ -21,7 +21,7 @@
                     </div>   
                     
                     <button type="submit" class="btn btnLogin fs-5 mb-2">Login</button>
-                    <p class="pt-3 fs-5 register">{{__('notRegister?')}}</p> <a class='btn btnForm fs-5' href="{{route('register')}}">Registrati</a>
+                    <p class="pt-3 fs-5 register">{{__('notRegister?')}}</p> <a class='btn btnForm fs-5' href="{{route('register')}}">{{__('register')}}</a>
                 </form>
             </div>
             
