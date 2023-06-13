@@ -1,4 +1,4 @@
-<x-layout title="Storico revisioni">
+<x-layout title="{{route('ui.historyIndexRevisorTitle')}}">
     
     <div class="container">
         <div class="row justify-content-center">
@@ -20,13 +20,12 @@
                             <thead class="bg-light">
                                 <tr class="borderRevisor table-success">
                                     {{-- <th scope="col">ID</th> --}}
-                                    <th class="text-center" scope="col">Articolo completo</th>
-                                    <th class="text-center" scope="col">Pubblicato da</th>
-                                    <th class="text-center" scope="col">Creato</th>
-                                    <th class="text-center" scope="col">Modificato</th>
-                                    <th class="text-center" scope="col">Stato</th>
-
-                                    <th class="text-center" scope="col">Azione</th>
+                                    <th class="text-center" scope="col">{{route('ui.viewArticleRevisor')}}</th>
+                                    <th class="text-center" scope="col">{{route('ui.publishBy')}}</th>
+                                    <th class="text-center" scope="col">{{route('ui.createDate')}}</th>
+                                    <th class="text-center" scope="col">{{route('ui.editDate')}}</th>
+                                    <th class="text-center" scope="col">{{route('ui.statusRevision')}}</th>
+                                    <th class="text-center" scope="col">{{route('ui.actionRevision')}}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -77,9 +76,9 @@
 
                                     <td class="text-center borderRevisor">
                                         @if($house->is_accepted === 0)
-                                        <h5> <span class="badge bg-danger">Non approvato</span></h5>
+                                        <h5> <span class="badge bg-danger">{{route('ui.revisionRejected')}}</span></h5>
                                         @elseif($house->is_accepted === 1)
-                                        <h5> <span class="badge bg-success">Approvato</span></h5>
+                                        <h5> <span class="badge bg-success">{{route('ui.revisionAccepted')}}</span></h5>
                                         @endif
                                     </td>
 
@@ -87,8 +86,7 @@
                                         
                                         <a onclick="event.preventDefault();getElementById('form-resetRevision').submit()"
                                         class="btn form-reject fs-6" type='submit'>
-                                        <i class="fa-solid fa-arrow-rotate-left mainColor"></i> Manda in
-                                        revisione</a>
+                                        <i class="fa-solid fa-arrow-rotate-left mainColor"></i>{{route('ui.revisionReset')}}</a>
                                         <form id="form-resetRevision" class="d-none" method=POST action={{ route('revisor.resetRevision', compact('house'))}}>
                                             @csrf
                                             @method('patch')
