@@ -41,11 +41,11 @@
           <div class="swiper-wrapper">
             
             @foreach ($guest_houses as $house)
-            <div class="swiper-slide">
-              <div class="w-100 h-75" >
-                <img src="{{Storage::url($house->img)}}" class="card-img-top img-fluid" alt="Immagine annuncio">
+            <div class="swiper-slide mb-2">
+              <div class=" bg-light p-2 mx-2">
+                <img src="{{Storage::url($house->img)}}" class="card-img-top img-fluid imgCustom" alt="Immagine annuncio">
                 
-                <div class="card-body borderCardHome position-relative">
+                <div class="card-body  borderCardHome">
                   <div class="text-start py-3">
                     <h5 class="card-title fs-5 fw-semibold text-uppercase">{{$house->place}}</h5>
                   </div>

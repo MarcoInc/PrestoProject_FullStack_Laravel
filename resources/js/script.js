@@ -1,5 +1,20 @@
+
+
+let widthViewPort = window.innerWidth;
+
 let swiper = new Swiper(".swiper", {
-    slidesPerView: 3,
+    
+    
+    
+
+    slidesPerView: 1,
+    
+    breakpoints:{
+        720:{
+            slidesPerView: 3,
+        }
+    },
+
     spaceBetween: 30,
     pagination: {
         el: ".swiper-pagination",
@@ -18,3 +33,5 @@ hearts.forEach((el) => {
      el.classList.toggle('bi-suit-heart-fill');
     })
 })
+
+console.log(swiper);
