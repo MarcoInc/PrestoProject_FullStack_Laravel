@@ -42,8 +42,8 @@
             
             @foreach ($guest_houses as $house)
             <div class="swiper-slide">
-              <div class="w-100 h-75 " >
-                <img src="{{Storage::url($house->img)}}" class="card-img-top img-fluid imgHome" alt="...">
+              <div class="w-100 h-75" >
+                <img src="{{Storage::url($house->img)}}" class="card-img-top img-fluid" alt="Immagine annuncio">
                 
                 <div class="card-body borderCardHome position-relative">
                   <div class="text-start py-3">
@@ -51,12 +51,12 @@
                   </div>
                   
                   <div class="d-flex">
-                    <p class="mainColor fs-5">Location:</p>
+                    <p class="card-text mainColor fs-5">Location:</p>
                     <p class="card-text fs-5">&nbsp;{{$house->location->name}}</p>
                   </div>
                   <div class="d-flex">
-                    <p class="fs-5 mainColor">Prezzo:</p>
-                    <p>{{$house->price}}&euro;/notte</p>
+                    <p class="fs-5 card-text mainColor">Prezzo:</p>
+                    <p class="card-text">{{$house->price}}&euro;/notte</p>
                   </div>
                   <div class=" d-flex justify-content-between align-items-center w-100">
                     <!--Detail-->
