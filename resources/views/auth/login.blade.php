@@ -1,4 +1,4 @@
-<x-layout docTitle="Login" title="Login">
+<x-layout docTitle="Login" title="{{__('ui.loginTitle')}}">
     {{-- icona login --}}
     
     <div class="container-fluid pb-5 bgLogin">

@@ -1,11 +1,11 @@
-<x-layout title="Storico revisioni">
+<x-layout title="{{__('ui.historyIndexRevisorTitle')}}">
     
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="row">
                     <div class="col-10">
-                        <h2 class="py-4">{{ $houses ? 'Storico annunci revisionati' : 'Nessun annucio revisionato' }}</h2>
+                        <h2 class="py-4">{{ $houses ? __('ui.toReview') : __('ui.noneReview') }}</h2>
                     </div>
                     {{-- <h2>{{ $house_toCheck->place }}</h2>
                     <h3>Posti letto : {{ $house_toCheck->beds }}</h3>
@@ -20,7 +20,7 @@
                             <thead class="bg-light">
                                 <tr class="borderRevisor table-success">
                                     {{-- <th scope="col">ID</th> --}}
-                                    <th class="text-center" scope="col">{{__('ui.viewArticleRevisor')}}</th>
+                                    <th class="text-center" scope="col">{{__('ui.viewArticleName')}}</th>
                                     <th class="text-center" scope="col">{{__('ui.publishBy')}}</th>
                                     <th class="text-center" scope="col">{{__('ui.createDate')}}</th>
                                     <th class="text-center" scope="col">{{__('ui.editDate')}}</th>

@@ -1,10 +1,10 @@
-<x-layout title="Profilo di {{$name}}">
+<x-layout title="{{__('ui.profileTitle')}} {{$name}}">
     <div class="container">
         <div class="row justify-content-center">
            
             <div class="col-12">
                 <div class="row justify-content-md-center ">
-                    <h2>Pagina di {{$name}}</h2>
+                    <h2>{{__('ui.pageOf')}} {{$name}}</h2>
                         @forelse ($houses as $house)
                         <div class="col-12 hCard col-md-6 col-lg-3 mx-3 my-3">
                             <div class="card h-100 cardBorder">

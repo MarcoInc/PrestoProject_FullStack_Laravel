@@ -1,4 +1,4 @@
-<x-layout title="Categorie">
+<x-layout title="{{__('ui.categoriesTitle')}}">
     <div class="container">
         
         <div class="row">

@@ -1,4 +1,4 @@
-<x-layout title="Termini di servizio">
+<x-layout title="{{__('ui.termServiceTitle')}}">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">

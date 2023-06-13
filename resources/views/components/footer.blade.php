@@ -8,7 +8,7 @@
         <div class=" fs-5">
           <i class="fa-solid fa-location-dot fs-6"></i>
           <p class="fs-6">
-            {{__('ui.AddressFooter')}}, 0 
+            {{__('ui.AddressFooter')}} <br>Via che non c'è 123,
             ABC 123456, IT 
           </p>
           <p class="fs-6"> 

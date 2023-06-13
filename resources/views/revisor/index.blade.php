@@ -1,11 +1,11 @@
-<x-layout title="Pagina revisore">
+<x-layout title="{{__('ui.historyIndexRevisorTitle')}}">
     
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="row">
                     <div class="col-12">
-                        <h1>{{ $house_toCheck ? 'Annunci da revisionare' : 'Nessun annucio da revisionare' }}</h1>
+                        <h1>{{ $house_toCheck ? __('ui.toReview') : __('ui.noneReview') }}</h1>
                         @if(App\Models\GuestHouse::toBeRevisonedCounter()>0)
                         {{-- <h2>{{ $house_toCheck->place }}</h2>
                         <h3>Posti letto : {{ $house_toCheck->beds }}</h3>
@@ -90,7 +90,7 @@
                             @endif  --}}
                             @else
                             <div class="col-12">
-                                <p>Nulla da revisionare</p>
+                                <p>{{__('ui.noneReview')}}</p>
                             </div>
                             @endif 
                         </div>

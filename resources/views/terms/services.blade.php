@@ -1,4 +1,4 @@
-<x-layout title="Servizi">
+<x-layout title="{{__('ui.services')}}">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">

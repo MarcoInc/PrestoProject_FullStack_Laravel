@@ -1,18 +1,32 @@
 <?php
 
     return [
+        //Ricorrenti
+        'price' => 'Prezzo',
+        'night' => 'Notte',
+        'detail' => 'Dettaglio',
+        'publishAt' => 'Pubblicato il',
+        'publishBy' => 'Pubblicato da',
+        'deleteArticle' => 'Elimina',
+        'editArticle' => 'Modifica annuncio',
 
         //Title Page
-        'homeTitle' => 'home',
+        'homeTitle' => 'Pagina principale',
         'requestRevisorTitle' => 'Richiesta revisor',
         'createArticleTitle' => 'Crea articolo',
         'editArticleTitle' => 'Modifica prodotto',
         'allArticleTitle' => 'Tutti gli articoli',
         'historyIndexRevisorTitle' => 'Storico revisioni',
-        'ui.historyIndexRevisorTitle' => 'Azione',
         'loginTitle' => 'Accedi',
+        'profileTitle' =>'Profilo di ',
+        'registerTitle'=>'Registrazione',
+        'categoriesTite'=>'Categorie',
+        'revisorPageTitle'=>'Pagina del revisore',
+        'privacyTitle'=>'Privacy',
+        'termServiceTitle'=>'Termini di servizio',
+        'service'=>'Servizi',
 
-        //navbar
+        //Navbar
         'addProduct'=>'Aggiungi prodotto',
         'allArticles'=>'Tutti gli articoli',
         'contactUs'=> 'Contattaci',
@@ -40,7 +54,7 @@
         'noneArticle' => 'Non sono ancora presenti annunci',
 
         //History Revisor
-        'viewArticleRevisor'=> 'Articolo completo',
+        'viewArticleRevisor'=> 'Titolo articolo',
         'createDate'=> 'Creato il ',
         'editDate'=> 'Modificato il ',
         'statusRevision'=> 'Stato',
@@ -48,6 +62,8 @@
         'revisionRejected'=>  'Non approvato',
         'revisionReset'=> 'Manda in revisione',
         'actionRevision' => 'Azione',
+        'toReview' => 'Da revisionare',
+        'noneReview' => 'Non ci sono annunci da revisionare',
 
         //Create-form ed Edit-form
         'place' => 'Luogo',
@@ -61,31 +77,18 @@
         'whereIsIt' => 'Dove si trova?',
         'smallDescription' => 'Breve descrizione dell\'abitazione..',
         'howManyPeople' => 'Quante persone potrà ospitare?',
-        //Fine Create-form ed Edit-form
-
        
         //Mail
         'nameAndSurname' => 'Nome e Cognome',
         'mailToSend' => 'Messaggio che desideri inviare:',
         'sendMail' => 'Invia messaggio',
-        //EndMail
-
 
         //Registrazione
         'userName' => 'Nome',
         'email' => 'Indirizzo email',
         'confirmPassword' => 'Conferma Password',
         'registerButton' => 'Registrati',
-        'notRegister' => 'Non sei ancora Registrato?',
-
-        //Ricorrenti
-        'price' => 'Prezzo',
-        'night' => 'Notte',
-        'detail' => 'Dettaglio',
-        'publishAt' => 'Pubblicato il',
-        'publishBy' => 'Pubblicato da',
-        'deleteArticle' => 'Elimina',
-        'editArticle' => 'Modifica annuncio',
+        'notRegister' => 'Non sei ancora Registrato?',        
 
         //Cards User
         'notApproved' => 'Non approvato',
@@ -94,9 +97,9 @@
         //Profile
         'notYetAnnouncements' => 'Non sono ancora presenti annunci',
         'notYetAnnouncementsPublished' => 'Non ha ancora pubblicato annunci',
+        'pageOf'=>'Pagina di ',
 
-        //footer
-
+        //Footer
         'contacts'=>'Contattaci',
         'phone'=> 'Telefono',
         'homeFooter'=>'Home',
@@ -105,12 +108,11 @@
         'termsOfService'=>'Termini di servizio',
         'privacyPolicy'=>'Privacy',
         'resources'=>'Risorse',
-        'wouldIsArevisorFooter?'=>'Vuoi diventare un nostro revisore?',
+        'wouldIsArevisorFooter'=>'Vuoi diventare un nostro revisore?',
         'sendYourCandidature'=>'Inviaci la tua candidatura!',
         'allRightsReserved'=>'Diritti Riservati',
         'distributed'=> 'Distribuito da',
-
-
+        'AddressFooter' => 'Dove trovarci? '
     ];
 
 

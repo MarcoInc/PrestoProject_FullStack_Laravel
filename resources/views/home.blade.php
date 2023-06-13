@@ -1,4 +1,4 @@
-<x-layout title='Homepage'>
+<x-layout title="{{__('ui.homeTitle')}}">
   {{-- midlleware revisore --}}
   @if(session('access.denied'))
   <div>
@@ -60,10 +60,10 @@
                   </div>
                   <div class=" d-flex justify-content-between align-items-center w-100">
                     <!--Detail-->
-                    <a href="{{route('show', ['id'=>$house->id])}}" class="p-0 btn btnCard fs-5 text-center"><i class="bi bi-chevron-compact-right mainColor"></i>{{__('detail')}}</a>
+                    <a href="{{route('show', ['id'=>$house->id])}}" class="p-0 btn btnCard fs-5 text-center"><i class="bi bi-chevron-compact-right mainColor"></i>{{__('ui.detail')}}</a>
                     <!--End Detail-->
                     
-                    <p class="card-footer fs-5 mb-0"><span class="me-1"><i class="bi bi-calendar-check mainColor"></i></span>{{__('publishAt')}}: {{$house->created_at->format('d/m/Y')}}</p>
+                    <p class="card-footer fs-5 mb-0"><span class="me-1"><i class="bi bi-calendar-check mainColor"></i></span>{{__('ui.publishAt')}}: {{$house->created_at->format('d/m/Y')}}</p>
                     <!--
                       <p class="card-footer">Pubblicato da: {{$house->user->name}}</p>
                     -->

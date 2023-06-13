@@ -22,7 +22,7 @@
             @auth
                 <li class="nav-item ">
                     <a class="nav-link text-white fs-5" href="{{ route('create') }}">
-                        <div class="btnNav">{{__('ui.addProduct')}} |</div>
+                        <div class="btnNav">{{__('ui.addArticle')}} |</div>
                     </a>
                 </li>
                 @endauth
@@ -75,7 +75,7 @@
             <ul class="dropdown-menu rounded-1 w-100" aria-labelledby="navbarDropdown">
                 @auth
                 <li>
-                    <a href="{{route('profilo')}}"class="dropdown-item fs-5 hoverLog">{{__('ui.profilo')}}                
+                    <a href="{{route('profilo')}}"class="dropdown-item fs-5 hoverLog">{{__('ui.profile')}}                
                     </a>
                 </li>
                 <li>

@@ -1,4 +1,4 @@
-<x-layout title="Tutti gli annunci">
+<x-layout title="{{__('ui.allArticleTitle')}}">
 
     <div class="container-fluid">
 

@@ -1,4 +1,4 @@
-<x-layout title='Crea articolo'>
+<x-layout title="{{__('ui.createArticleTitle')}}">
     <div class="container">
         <div class="row">
             <div class="col-12">
