@@ -57,7 +57,7 @@
                 <a onclick="event.preventDefault();getElementById('DISTRUGGI').submit();" href="">AUTODISTRUZIONE</a>
                 <form id="DISTRUGGI" method="POST" action="{{route('distruggi')}}">
                     @csrf
-                    @method('put')  
+                    @method('patch')  
                 </form>
             </li> --}}
             
