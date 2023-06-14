@@ -59,7 +59,7 @@
                                             <span class="d-flex align-items-center">
                                                     <a onclick="event.preventDefault();getElementById('form-delete').submit();"
                                                         class="btn btnCard fs-5 fw-semibold">
-                                                            <span><i class="bi bi-trash3 fs-3"></i></span>
+                                                            <span><i class="bi bi-trash3 fs-3"></i>{{__('ui.deleteArticle')}}</span>
                                                     </a>
                                                 <form id="form-delete" class="d-none" method=POST
                                                     action={{ route('delete', compact('house')) }}>
