@@ -65,9 +65,9 @@
                 <a class="nav-link dropdown-toggle text-white fs-5" href="#" id="navbarDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 @auth
-
-                {{__('ui.welcome')}} {{ Auth::user()->name }} ({{__('ui.revisor')}}) 
+                {{__('ui.welcome')}} {{ Auth::user()->name }} 
                 @if (Auth::user()->is_revisor) 
+                ({{__('ui.revisor')}}) 
                     {{-- ({{route('product.revisor')}})  --}}
                 @if(App\Models\GuestHouse::toBeRevisonedCounter()>0)
                         <span class="position-absolute top-0 end-0 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
