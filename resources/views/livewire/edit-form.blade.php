@@ -77,8 +77,14 @@
     @enderror 
   </div>
   
-  
-  {{-- <img src="{{Storage::url($image->path)}}" class="card-img-top" alt="...">  --}}
+  <div class="row">
+    @foreach ($house->images as $image)
+        <div class="col-2">
+          <img src="{{Storage::url($image->path)}}" class="card-img-top" alt="..."> 
+
+        </div>
+    @endforeach
+  </div>
   
   {{-- <div class="mb-3">
     <label for="img" class="form-label">Aggiungi immagine</label>
