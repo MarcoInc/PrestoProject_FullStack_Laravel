@@ -68,17 +68,17 @@ class CreateForm extends Component{
         $this->user_id=Auth::user()->id;
         $this->validate();
             
-        $this->guest_house = Location::find($this->location)->guest_houses()->create($this->validate());
+        $this->guest_houses = Location::find($this->location_id)->guest_houses()->create($this->validate());
             
         if(count($this->images)){
             foreach ($this->images as $image) {
-                $this->guest_house->images()->create(['path' => $image->store('images', 'public')]);
+                $this->guest_houses->images()->create(['path' => $image->store('images', 'public')]);
             }
         }
-            
-        $this->guest_house->user()->associate(Auth::user());
-            
-        $this->guest_house->save();
+        
+        //Alternativa per associazione user_id ad articolo 
+        // $this->guest_houses->user()->associate(Auth::user());
+        // $this->guest_houses->save();
             
         session()->flash('message', 'Prodotto caricato correttamente');
             
