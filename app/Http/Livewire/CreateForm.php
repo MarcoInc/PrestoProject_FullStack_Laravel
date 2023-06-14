@@ -9,8 +9,7 @@ use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 
 
-class CreateForm extends Component
-{
+class CreateForm extends Component{
     public $place, $price, $description, $beds, $location_id, $user_id, $guest_houses, $img;
     public $images = [];
     public $temporary_images;
@@ -54,16 +53,13 @@ class CreateForm extends Component
                 foreach ($this->temporary_images as $image){
                     $this->images[] = $image;
                 }
-            }
-            
-        }
+        }   
     }   
         
-    public function removeImage($key)
-    {   
+    public function removeImage($key){   
         if(in_array($key, array_keys($this->images))){
                 unset($this->images[$key]);
-            }
+        }
     }
         
         
@@ -74,11 +70,11 @@ class CreateForm extends Component
             
         $this->guest_house = Location::find($this->location)->guest_houses()->create($this->validate());
             
-            if(count($this->images)){
-                foreach ($this->images as $image) {
-                    $this->guest_house->images()->create(['path' => $image->store('images', 'public')]);
-                }
+        if(count($this->images)){
+            foreach ($this->images as $image) {
+                $this->guest_house->images()->create(['path' => $image->store('images', 'public')]);
             }
+        }
             
         $this->guest_house->user()->associate(Auth::user());
             
@@ -97,7 +93,6 @@ class CreateForm extends Component
     public function render(){
             return view('livewire.create-form', ['locations'=> Location::all()]);
             // return view('livewire.show-form', ['colors'=> Color::all(),'genres'=> Genre::all()]);
-    }
-        
+    }  
 }        
     
