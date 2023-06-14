@@ -34,4 +34,3 @@ hearts.forEach((el) => {
     })
 })
 
-console.log(swiper);
