@@ -89,38 +89,31 @@ class CreateForm extends Component
         
         $this->reset();
         
-        // $guest_houses = Auth::user()->guest_houses()->create([
-            //     "place" => $this->place,
-            //     "beds" => $this->beds,
-            //     "price" => $this->price,
-            //     "description" => $this->description,
-            //     "location_id" => $this->location_id,
-            //     "img" => $this->img->store('public/media')
-            // ])};
-            
-            
-            
-            
-        }
         
-        public function cleanForm()
-        {
-            $this->place = '';
-            $this->beds = '';
-            $this->price = '';
-            $this->description= '';
-            $this->image = '';
-            $this->images = [];
-            $this->temporary_images = [];
-            
-        }
         
-        public function updated($propertyName){
-            $this->validateOnly($propertyName);
-        }
-        public function render(){
-            return view('livewire.create-form', ['locations'=> Location::all()]);
-            // return view('livewire.show-form', ['colors'=> Color::all(),'genres'=> Genre::all()]);
-        }
+        
+        
+        
     }
-}        
+    
+    public function cleanForm()
+    {
+        $this->place = '';
+        $this->beds = '';
+        $this->price = '';
+        $this->description= '';
+        $this->image = '';
+        $this->images = [];
+        $this->temporary_images = [];
+        
+    }
+    
+    public function updated($propertyName){
+        $this->validateOnly($propertyName);
+    }
+    public function render(){
+        return view('livewire.create-form', ['locations'=> Location::all()]);
+        // return view('livewire.show-form', ['colors'=> Color::all(),'genres'=> Genre::all()]);
+    }
+}
+     
