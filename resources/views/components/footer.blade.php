@@ -29,10 +29,10 @@
       <div class="col-12 col-md-2">
         <h5 class="text-uppercase borderBottom mt-3 text-md-start text-center">{{__('ui.usefulLinksFooter')}}</h5>
         <ul class="list-unstyled text-md-start text-center">
-          <li class="list-item"><a href="#" class="btn textColor fs-5">{{__('ui.usefulLinks')}}</a></li>
+          <li class="list-item"><a href="#" class="btn textColor fs-5">{{__('ui.homeFooter')}}</a></li>
           {{-- <li class="list-item"><a href="#" class="btn textColor fs-5">Chi Siamo</a></li> --}}
           <li class="list-item"><a href="{{route('services')}}" class="btn textColor fs-5">{{__('ui.servicesFooter')}}</a></li>
-          <li class="list-item"><a href="{{route('terms')}}" class="btn textColor fs-5"></a>{{__('ui.termsOfService')}}</li>
+          <li class="list-item"><a href="{{route('terms')}}" class="btn textColor fs-5">{{__('ui.termsOfService')}}</a></li>
           <li class="list-item"><a href="{{route('privacy')}}" class="btn textColor fs-5">{{__('ui.privacyPolicy')}}</a></li>
         </ul>
       </div>

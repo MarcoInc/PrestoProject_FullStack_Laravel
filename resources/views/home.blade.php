@@ -51,11 +51,11 @@
                   </div>
                   
                   <div class="d-flex">
-                    <p class="card-text mainColor fs-5">Location:</p>
+                    <p class="card-text mainColor fs-5">{{__('ui.location')}}:</p>
                     <p class="card-text fs-5">&nbsp;{{$house->location->name}}</p>
                   </div>
                   <div class="d-flex">
-                    <p class="fs-5 card-text mainColor">{{__('price')}}:</p>
+                    <p class="fs-5 card-text mainColor">{{__('ui.price')}}:</p>
                     <p class="card-text">{{$house->price}}&euro;/{{__('night')}}</p>
                   </div>
                   <div class=" d-flex justify-content-between align-items-center w-100">

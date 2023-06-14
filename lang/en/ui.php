@@ -27,7 +27,7 @@
         'service'=>'Services',
 
         //Navbar
-        'addArticle'=>'Add article',
+        'addProduct'=>'Add article',
         'allArticles'=>'All articles',
         'contactUs'=> 'Contact us',
         'searchBar'=> 'Find a B&B',
@@ -39,7 +39,7 @@
         'login' => 'Login',
         'toRevisor' => 'To review',
         'history' => 'Storico review',
-        'latestArticles' => 'Recent articles',
+        'latestArticles' => 'The latest articles',
 
         //Mail Become Revisor 
         'requestRevisor' => 'Request to be a revisor',

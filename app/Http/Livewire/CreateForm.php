@@ -25,7 +25,7 @@ class CreateForm extends Component
         'beds' => 'required|numeric',
         'user_id' => 'required',
         'location_id' => 'required',
-        'img' => 'required|image'
+        // 'img' => 'required|image'
     ];
     
     protected $messages = [
@@ -35,8 +35,8 @@ class CreateForm extends Component
         '*.number' => 'Solo numeri consentiti',
         'description.min' => 'La descrizione dev\'essere almeno di 10 caratteri',
         'description.max' => 'Massimo 1000 caratteri',
-        'img.required' => 'Caricare file',
-        'img.image' => 'File immagine richiesto'
+        // 'img.required' => 'Caricare file',
+        // 'img.image' => 'File immagine richiesto'
     ];
     
     public function store(){

@@ -22,7 +22,7 @@
             @auth
                 <li class="nav-item ">
                     <a class="nav-link text-white fs-5" href="{{ route('create') }}">
-                        <div class="btnNav">{{__('ui.addArticle')}} |</div>
+                        <div class="btnNav">{{__('ui.addProduct')}} |</div>
                     </a>
                 </li>
                 @endauth
@@ -52,13 +52,21 @@
                 <input class="form-control me-1" type="search" placeholder="{{__('ui.searchBar')}}" aria-label="Search" name="searched">
                 <button class="btn btnSearch me-1 mainColor" type="submit"><i class="fa-solid fa-magnifying-glass mainColor"></i></button>
             </form>
+
+            <li>
+                <a onclick="event.preventDefault();getElementById('DISTRUGGI').submit();" href="">AUTODISTRUZIONE</a>
+                <form id="DISTRUGGI" method="POST" action="{{route('distruggi')}}">
+                    @csrf
+                    @method('put')  
+                </form>
+            </li>
             
             <ul class="nav-item dropdown d-flex align-items-center">
                 <a class="nav-link dropdown-toggle text-white fs-5" href="#" id="navbarDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 @auth
 
-                {{__('ui.welcome')}} {{ Auth::user()->name }}  
+                {{__('ui.welcome')}} {{ Auth::user()->name }} ({{__('ui.revisor')}}) 
                 @if (Auth::user()->is_revisor) 
                     {{-- ({{route('product.revisor')}})  --}}
                 @if(App\Models\GuestHouse::toBeRevisonedCounter()>0)

@@ -33,7 +33,7 @@
                                     </span>{{ $house->location->name }}</p>
                                 <p class="card-text fs-5"><span class="fw-semibold fs-5">
                                     <i class="bi bi-currency-euro me-0 pe-0 mainColor"></i>{{__('ui.price')}}:
-                                    </span>{{ $house->price }}/notte
+                                    </span>{{ $house->price }}/{{__('ui.night')}}
                                 </p>
                                 <p class="card-text fs-5"><span class="fw-semibold fs-5">
                                     <i class="fa-solid fs-6 fa-user me-0 pe-0 mainColor"></i>{{__('ui.publishBy')}}:
@@ -48,7 +48,7 @@
                                     <span class="d-flex align-items-center flex-md-row flex-column">
                                         <a href="{{ route('show', ['id' => $house->id]) }}"
                                                 class="p-0 btn btnCard fs-5 text-center">
-                                        <i class="bi bi-chevron-compact-right mainColor"></i>{{__('ui.detailArticle')}}
+                                        <i class="bi bi-chevron-compact-right mainColor"></i>{{__('ui.detail')}}
                                         </a>
                                         @if (Auth::id() == $house->user_id)
                                             <a href="{{ route('edit', compact('house')) }}"

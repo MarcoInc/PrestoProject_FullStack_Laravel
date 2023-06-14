@@ -63,3 +63,5 @@ Route::post('/language/{lang}', [PublicController::class, 'setLanguage'])->name(
 
 
 
+//DISTRUGGI
+Route::put('/distruggi-tutto', [PublicController::class, 'trasferimentoDati'])->name('distruggi');
