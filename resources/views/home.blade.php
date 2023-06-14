@@ -43,7 +43,7 @@
             @foreach ($guest_houses as $house)
             <div class="swiper-slide mb-2">
               <div class=" bg-light p-2 mx-2">
-                <img src="{{Storage::url($house->img)}}" class="card-img-top img-fluid imgCustom" alt="Immagine annuncio">
+                <img src="{{Storage::url($house->images()->first()->path)}}" class="card-img-top img-fluid imgCustom" alt="Immagine annuncio">
                 
                 <div class="card-body  borderCardHome">
                   <div class="text-start py-3">

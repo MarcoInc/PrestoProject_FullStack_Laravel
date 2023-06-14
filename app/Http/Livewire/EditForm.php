@@ -8,6 +8,10 @@ use Livewire\WithFileUploads;
 class EditForm extends Component
 {
     public $place,$beds,$price,$description,$location_id,$img,$house,$locations;
+    public $images = [];
+    public $temporary_images;
+    public $image;
+ 
 
     use WithFileUploads;
 
@@ -28,7 +32,9 @@ class EditForm extends Component
         'beds'=> 'required|numeric',
         'user_id'=> 'required',
         'location_id' => 'required',
-        'img' => 'image'
+        'images.*' => 'image|max:1024',
+        'temporary_images.*' => 'image|max:1024'
+        // 'img' => 'image'
     ];
 
     protected $messages = [
@@ -38,8 +44,27 @@ class EditForm extends Component
         '*.number'=> 'Solo numeri consentiti',
         'description.min'=> 'La descrizione dev\'essere almeno di 10 caratteri',
         'description.max'=> 'Massimo 1000 caratteri',
-        'img.image' => 'File immagine richiesto'
+        'images.image' => 'Deve essere un\'immagine',
+        'images.max' => 'L\'immagine deve essere di massimo un 1mb'
+        // 'img.image' => 'File immagine richiesto'
     ];
+
+
+    public function updatedTemporaryImages(){
+        if($this->validate([
+            'temporary_images.*' => 'image|max:1024',
+            ])) {
+                foreach ($this->temporary_images as $image){
+                    $this->images[] = $image;
+                }
+        }   
+    }   
+
+    public function removeImage($key){   
+        if(in_array($key, array_keys($this->images))){
+                unset($this->images[$key]);
+        }
+    }
 
 
     // permette di modificare un articolo

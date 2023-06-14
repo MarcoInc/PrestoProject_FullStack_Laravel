@@ -49,7 +49,7 @@
                                         @endif
                                     </td>
                                     
-                                    <td class="text-center"><img class="img-fluid" src="{{ Storage::url($house->img) }}" alt="{{ $house->name }}"></td>
+                                    <td class="text-center"><img class="img-fluid" src="{{Storage::url($house->images()->first()->path)}}" alt="{{ $house->name }}"></td>
                                     
                                     <td class="text-center text-uppercase">
                                         

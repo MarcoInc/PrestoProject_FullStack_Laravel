@@ -19,8 +19,8 @@
                     @forelse ($guest_houses as $house)
                         <div class="col-12 hCard col-md-6 col-lg-3 mx-3 my-3">
                             <div class="card h-100 cardBorder">
-                                {{-- <img src="{{Storage::url($house->img)}}" class="card-img-top h-100" alt="Immagine annuncio">  --}}
-                                <div class="cardBg" data-image="{{ Storage::url($house->img) }}"></div>
+                                {{-- <img src="{{Storage::url($image->path)}}" class="card-img-top h-100" alt="Immagine annuncio">  --}}
+                                <div class="cardBg" data-image="{{ Storage::url($house->images()->first()->path) }}"></div>
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between">
                                         <h5 class="card-title fw-bold">{{ $house->place }}</h5>
