@@ -20,7 +20,7 @@
     @enderror 
   </div>
   
-  <div class="mb-3">
+  {{-- <div class="mb-3">
     <label for="images">Carica Immmagine</label>
     <input id="images" wire:model='temporary_images' type="file" name='images' multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="IMMAGINI">
     @error('temporary_images.*')
@@ -42,7 +42,7 @@
       </div>
     </div>
   </div>
-  @endif
+  @endif --}}
   
   <div class="mb-3">
     <label for="price" class="form-label">{{__('ui.priceNight')}}</label>
@@ -77,7 +77,7 @@
     @enderror 
   </div>
   
-  <div class="row">
+  {{-- <div class="row">
     @foreach ($house->images as $image)
         <div class="col-2">
           <img src="{{Storage::url($image->path)}}" class="card-img-top" alt="..."> 
@@ -85,7 +85,7 @@
         </div>
     @endforeach
   </div>
-  
+   --}}
   {{-- <div class="mb-3">
     <label for="img" class="form-label">Aggiungi immagine</label>
     <input class="form-control @error('img') is-invalid @enderror" wire:model.lazy="img" type="file" id="img">
