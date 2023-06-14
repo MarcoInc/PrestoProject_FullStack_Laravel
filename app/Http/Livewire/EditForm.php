@@ -77,13 +77,19 @@ class EditForm extends Component
             'price' => $this->price,
             'location_id' => $this->location_id,
             'is_accepted'=> null
-
+            
         ]);
         // if($this->house->img){
         //     $this->house->update([
         //     'img'=>$this->house->file('img')->store('public/media')
         //     ]);
         // }
+
+        if(count($this->images)){
+            foreach ($this->images as $image) {
+                $this->house->images()->create(['path' => $image->store('images', 'public')]);
+            }
+        }
         
         return redirect(route('index'))->with('editOk', 'Modifiche applicate! Attendi una revisione');
     }
