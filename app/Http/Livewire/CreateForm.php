@@ -57,46 +57,47 @@ class CreateForm extends Component
             }
             
         }
-    }
-    
+    }   
+        
     public function removeImage($key)
-    {
+    {   
         if(in_array($key, array_keys($this->images))){
-            unset($this->images[$key]);
-        }
+                unset($this->images[$key]);
+            }
     }
-    
-    
-    
+        
+        
+        
     public function store(){
         $this->user_id=Auth::user()->id;
-        
         $this->validate();
-        
+            
         $this->guest_house = Location::find($this->location)->guest_houses()->create($this->validate());
-        
-        if(count($this->images)){
-            foreach ($this->images as $image) {
-                $this->guest_house->images()->create(['path' => $image->store('images', 'public')]);
+            
+            if(count($this->images)){
+                foreach ($this->images as $image) {
+                    $this->guest_house->images()->create(['path' => $image->store('images', 'public')]);
+                }
             }
-        }
-        
+            
         $this->guest_house->user()->associate(Auth::user());
-        
+            
         $this->guest_house->save();
-        
+            
         session()->flash('message', 'Prodotto caricato correttamente');
+            
+        $this->reset(); 
+    }
         
-        $this->reset();
-    }    
-    
-    
+        
+        
     public function updated($propertyName){
-        $this->validateOnly($propertyName);
+            $this->validateOnly($propertyName);
     }
     public function render(){
-        return view('livewire.create-form', ['locations'=> Location::all()]);
-        // return view('livewire.show-form', ['colors'=> Color::all(),'genres'=> Genre::all()]);
+            return view('livewire.create-form', ['locations'=> Location::all()]);
+            // return view('livewire.show-form', ['colors'=> Color::all(),'genres'=> Genre::all()]);
     }
-    
+        
 }        
+    
