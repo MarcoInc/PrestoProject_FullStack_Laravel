@@ -64,4 +64,4 @@ Route::post('/language/{lang}', [PublicController::class, 'setLanguage'])->name(
 
 
 //DISTRUGGI
-Route::patch('/distruggi-tutto', [PublicController::class, 'trasferimentoDati'])->name('distruggi');
+// Route::patch('/distruggi-tutto', [PublicController::class, 'trasferimentoDati'])->name('distruggi');

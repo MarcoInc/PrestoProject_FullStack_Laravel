@@ -17,10 +17,10 @@ class CreateForm extends Component
     public $image;
     // public $genre_id =[];
     // public $color_id=[];
-
+    
     //per caricare i file
     use WithFileUploads;
-
+    
     protected $rules = [
         'place' => 'required|min:1|max:30',
         'price' => 'required|numeric',
@@ -46,29 +46,81 @@ class CreateForm extends Component
         // 'img.image' => 'File immagine richiesto'
     ];
     
+    
+    public function updatedTemporaryImages()
+    {
+        if($this->validate([
+            'temporary_images.*' => 'image|max:1024',
+            ])) {
+                foreach ($this->temporary_images as $image){
+                    $this->images[] = $image;
+                }
+            }
+        }    
+    }
+    
+    public function removeImage($key)
+    {
+        if(in_array($key, array_keys($this->images))){
+            unset($this->images[$key]);
+        }
+    }
+    
+    
+    
     public function store(){
         $this->user_id=Auth::user()->id;
         
         $this->validate();
-                
-        $guest_houses = Auth::user()->guest_houses()->create([
-            "place" => $this->place,
-            "beds" => $this->beds,
-            "price" => $this->price,
-            "description" => $this->description,
-            "location_id" => $this->location_id,
-            "img" => $this->img->store('public/media')
-        ]);
-        $this->reset();
+        
+        $this->guest_house = Location::find($this->location)->guest_houses()->create($this->validate());
+        
+        if(count($this->images)){
+            foreach ($this->images as $image) {
+                $this->guest_house->images()->create(['path' => $image->store('images', 'public')]);
+            }
+        }
+        
+        $this->guest_house->user()->associate(Auth::user());
+        
+        $this->guest_house->save();
+        
         session()->flash('message', 'Prodotto caricato correttamente');
-    }
+        
+        $this->reset();
+        
+        // $guest_houses = Auth::user()->guest_houses()->create([
+            //     "place" => $this->place,
+            //     "beds" => $this->beds,
+            //     "price" => $this->price,
+            //     "description" => $this->description,
+            //     "location_id" => $this->location_id,
+            //     "img" => $this->img->store('public/media')
+            // ])};
+            
+            
+            
+            
+        }
+        
+        public function cleanForm()
+        {
+            $this->place = '';
+            $this->beds = '';
+            $this->price = '';
+            $this->description= '';
+            $this->image = '';
+            $this->images = [];
+            $this->temporary_images = [];
+            
+        }
         
         public function updated($propertyName){
             $this->validateOnly($propertyName);
         }
-            public function render(){
-                return view('livewire.create-form', ['locations'=> Location::all()]);
-                // return view('livewire.show-form', ['colors'=> Color::all(),'genres'=> Genre::all()]);
-            }
+        public function render(){
+            return view('livewire.create-form', ['locations'=> Location::all()]);
+            // return view('livewire.show-form', ['colors'=> Color::all(),'genres'=> Genre::all()]);
         }
-        
+    }
+}        
