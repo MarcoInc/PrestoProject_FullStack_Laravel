@@ -41,9 +41,6 @@
                                     <a href="{{ route('userProfile', ['id' => $house->user->id])}}"
                                         class="btn btn-light"></i>{{ $house->user->name }}</a>    
                                 </p>
-                             
-
-
 
                                 <div class="d-flex justify-content-between">
                                     <span class="d-flex align-items-center flex-md-row flex-column">
