@@ -9,8 +9,7 @@ use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
 
 
-class CreateForm extends Component
-{
+class CreateForm extends Component{
     public $place, $price, $description, $beds, $location_id, $user_id, $guest_houses, $img;
     public $images = [];
     public $temporary_images;
@@ -47,16 +46,15 @@ class CreateForm extends Component
     ];
     
     
-    public function updatedTemporaryImages()
-    {
+    public function updatedTemporaryImages(){
         if($this->validate([
             'temporary_images.*' => 'image|max:1024',
             ])) {
                 foreach ($this->temporary_images as $image){
                     $this->images[] = $image;
                 }
-            }
-        }    
+        }
+    
     }
     
     public function removeImage($key)
@@ -91,6 +89,7 @@ class CreateForm extends Component
         
         
         
+<<<<<<< HEAD
         
         
         
@@ -117,3 +116,14 @@ class CreateForm extends Component
     }
 }
      
+=======
+        public function updated($propertyName){
+            $this->validateOnly($propertyName);
+        }
+        public function render(){
+            return view('livewire.create-form', ['locations'=> Location::all()]);
+            // return view('livewire.show-form', ['colors'=> Color::all(),'genres'=> Genre::all()]);
+        }
+    
+}        
+>>>>>>> 69956b99b2e31c215020a20a74115ea6f0e1d367
