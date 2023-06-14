@@ -72,19 +72,19 @@ class PublicController extends Controller{
     }
     
     
-    public function  trasferimentoDati(){
-        $products = GuestHouse::all();
-        foreach ($products as $product) {
-            $images = $product->images()->get();
-            $product->images()->delete();
-            foreach ($images as $image) {
-                $product->images()->create([
-                    'img' => $image->image,
-                    'guest_house_id' => $product->id,
-                ]);
-            }
-        }
+    // public function  trasferimentoDati(){
+    //     $products = GuestHouse::all();
+    //     foreach ($products as $product) {
+    //         $images = $product->images()->get();
+    //         $product->images()->delete();
+    //         foreach ($images as $image) {
+    //             $product->images()->create([
+    //                 'img' => $image->image,
+    //                 'guest_house_id' => $product->id,
+    //             ]);
+    //         }
+    //     }
 
-        return redirect(route('home'));
-    }
+    //     return redirect(route('home'));
+    // }
 }

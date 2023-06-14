@@ -20,12 +20,16 @@
     @enderror 
   </div>
   
-  <div class="mb-3">
+  {{-- <div class="mb-3">
     <label for="img" class="form-label">{{__('ui.addImage')}}</label>
     <input class="form-control @error('img') is-invalid @enderror" wire:model.lazy="img" type="file" id="img">
     @error('img')
     <p>{{$message}}</p>
     @enderror 
+  </div> --}}
+
+  <div class="mb-3">
+    <input type="file">
   </div>
   
   <div class="mb-3">

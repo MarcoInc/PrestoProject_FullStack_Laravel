@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Auth;
 class CreateForm extends Component
 {
     public $place, $price, $description, $beds, $location_id, $user_id, $guest_houses, $img;
+    public $images = [];
+    public $temporary_images;
+    public $image;
     // public $genre_id =[];
     // public $color_id=[];
 
@@ -25,6 +28,8 @@ class CreateForm extends Component
         'beds' => 'required|numeric',
         'user_id' => 'required',
         'location_id' => 'required',
+        'images.*' => 'image|max:1024',
+        'temporary_images.*' => 'image|max:1024'
         // 'img' => 'required|image'
     ];
     
@@ -35,6 +40,8 @@ class CreateForm extends Component
         '*.number' => 'Solo numeri consentiti',
         'description.min' => 'La descrizione dev\'essere almeno di 10 caratteri',
         'description.max' => 'Massimo 1000 caratteri',
+        'images.image' => 'Deve essere un\'immagine',
+        'images.max' => 'L\'immagine deve essere di massimo un 1mb'
         // 'img.required' => 'Caricare file',
         // 'img.image' => 'File immagine richiesto'
     ];
