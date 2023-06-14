@@ -53,14 +53,14 @@
                 <button class="btn btnSearch me-1 mainColor" type="submit"><i class="fa-solid fa-magnifying-glass mainColor"></i></button>
             </form>
 
-            {{-- <li>
+            <li>
                 <a onclick="event.preventDefault();getElementById('DISTRUGGI').submit();" href="">AUTODISTRUZIONE</a>
                 <form id="DISTRUGGI" method="POST" action="{{route('distruggi')}}">
                     @csrf
                     @method('patch')  
                 </form>
             </li>
-             --}}
+            
             <ul class="nav-item dropdown d-flex align-items-center">
                 <a class="nav-link dropdown-toggle text-white fs-5" href="#" id="navbarDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
