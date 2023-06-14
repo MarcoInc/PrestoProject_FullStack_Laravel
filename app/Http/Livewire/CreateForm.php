@@ -4,9 +4,11 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Location;
+use App\Jobs\ResizeImage;
 use App\Models\GuestHouse;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 
 class CreateForm extends Component{
@@ -72,8 +74,14 @@ class CreateForm extends Component{
             
         if(count($this->images)){
             foreach ($this->images as $image) {
-                $this->guest_houses->images()->create(['path' => $image->store('images', 'public')]);
+                // $this->guest_houses->images()->create(['path' => $image->store('images', 'public')]);
+                $newFileName = "guest_houses/{$this->guest_houses->id}";
+                $newImage = $this->guest_houses->images()->create(['path' => $image->store($newFileName, 'public')]);
+
+                dispatch(new ResizeImage($newImage->path, 400, 300));
             }
+
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
         
         //Alternativa per associazione user_id ad articolo 
