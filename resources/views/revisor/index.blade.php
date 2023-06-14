@@ -52,7 +52,6 @@
                                     <td class="text-center">
 
                                 {{-- scegliere una delle due --}}
-
                                         {{-- <div class="cardBg" data-image="{{Storage::url($house->images()->first()->path)}}"></div> --}}
                                         {{-- <img class="img-fluid" src="{{Storage::url($house->images()->first()->path)}}" alt="{{ $house->name }}"></td> --}}
                                     <td class="text-center text-uppercase">
