@@ -8,7 +8,9 @@
         'publishAt' => 'Pubblicato il',
         'publishBy' => 'Pubblicato da',
         'deleteArticle' => 'Elimina',
-        'editArticle' => 'Modifica annuncio',
+        'editArticle' => 'Modifica',
+        'close' => 'Chiudi',
+        'categoriesTitle' => 'Articoli per categoria',
 
         //Title Page
         'homeTitle' => 'Pagina principale',

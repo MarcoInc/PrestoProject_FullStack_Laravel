@@ -3,8 +3,8 @@
 namespace App\Jobs;
 
 use Spatie\Image\Image;
-use Illuminate\Bus\Queueable;
 use Spatie\Image\Manipulations;
+use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;

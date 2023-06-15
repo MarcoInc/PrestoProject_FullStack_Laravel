@@ -31,7 +31,7 @@ class CreateForm extends Component{
         'location_id' => 'required',
         'images.*' => 'image|max:1024',
         'temporary_images.*' => 'image|max:1024'
-        // 'img' => 'required|image'
+        
     ];
     
     protected $messages = [
@@ -42,9 +42,9 @@ class CreateForm extends Component{
         'description.min' => 'La descrizione dev\'essere almeno di 10 caratteri',
         'description.max' => 'Massimo 1000 caratteri',
         'images.image' => 'Deve essere un\'immagine',
-        'images.max' => 'L\'immagine deve essere di massimo un 1mb'
-        // 'img.required' => 'Caricare file',
-        // 'img.image' => 'File immagine richiesto'
+        'images.max' => 'L\'immagine deve essere di massimo un 1mb',
+        'temporary_images.image' => 'Deve essere un\'immagine',
+        'temporary_images.max' => 'L\'immagine deve essere di massimo un 1mb'
     ];
     
     
@@ -55,52 +55,52 @@ class CreateForm extends Component{
                 foreach ($this->temporary_images as $image){
                     $this->images[] = $image;
                 }
+            }   
         }   
-    }   
         
-    public function removeImage($key){   
-        if(in_array($key, array_keys($this->images))){
+        public function removeImage($key){   
+            if(in_array($key, array_keys($this->images))){
                 unset($this->images[$key]);
-        }
-    }
-        
-        
-        
-    public function store(){
-        $this->user_id=Auth::user()->id;
-        $this->validate();
-            
-        $this->guest_houses = Location::find($this->location_id)->guest_houses()->create($this->validate());
-            
-        if(count($this->images)){
-            foreach ($this->images as $image) {
-                // $this->guest_houses->images()->create(['path' => $image->store('images', 'public')]);
-                $newFileName = "guest_houses/{$this->guest_houses->id}";
-                $newImage = $this->guest_houses->images()->create(['path' => $image->store($newFileName, 'public')]);
-
-                dispatch(new ResizeImage($newImage->path, 400, 300));
             }
-
-            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
         
-        //Alternativa per associazione user_id ad articolo 
-        // $this->guest_houses->user()->associate(Auth::user());
-        // $this->guest_houses->save();
+        
+        
+        public function store(){
+            $this->user_id=Auth::user()->id;
+            $this->validate();
             
-        session()->flash('message', 'Prodotto caricato correttamente');
+            $this->guest_houses = Location::find($this->location_id)->guest_houses()->create($this->validate());
             
-        $this->reset(); 
-    }
+            if(count($this->images)){
+                foreach ($this->images as $image) {
+                    // $this->guest_houses->images()->create(['path' => $image->store('images', 'public')]);
+                    $newFileName = "guest_houses/{$this->guest_houses->id}";
+                    $newImage = $this->guest_houses->images()->create(['path' => $image->store($newFileName, 'public')]);
+                    
+                    dispatch(new ResizeImage($newImage->path, 400, 300));
+                }
+                
+                File::deleteDirectory(storage_path('/app/livewire-tmp'));
+            }
+            
+            //Alternativa per associazione user_id ad articolo 
+            // $this->guest_houses->user()->associate(Auth::user());
+            // $this->guest_houses->save();
+            
+            session()->flash('message', 'Prodotto caricato correttamente');
+            
+            $this->reset(); 
+        }
         
         
         
-    public function updated($propertyName){
+        public function updated($propertyName){
             $this->validateOnly($propertyName);
-    }
-    public function render(){
+        }
+        public function render(){
             return view('livewire.create-form', ['locations'=> Location::all()]);
             // return view('livewire.show-form', ['colors'=> Color::all(),'genres'=> Genre::all()]);
-    }  
-}        
+        }  
+    }        
     

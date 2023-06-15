@@ -17,7 +17,7 @@
     <p class="alert alert-warning mt-3 text-center"> {{session('messageNotFound')}} </p> 
   </div>
   @endif
-
+  
   @if(session('messageRevisor'))
   <div>
     <p class="alert alert-warning mt-3 text-center"> {{session('messageRevisor')}} </p> 
@@ -44,7 +44,33 @@
             <div class="swiper-slide mb-2">
               <div class=" bg-light p-2 mx-2">
                 
-                <img src="{{$house->images()->first()->getUrl(400,300)}}" class="card-img-top imgCustom" alt="">
+                
+{{--                 
+                <div id="" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    
+                    @foreach ($house->images as $image)
+                    <div class="carousel-item @if($loop->first)active @endif" data-bs-interval="5000">
+                      <img src="{{$image->getUrl(400,300)}}" alt="Immagini">
+                    </div>
+                    
+                    @endforeach
+                    
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#pippo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#pippo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div> --}}
+                
+                
+                
+                
+                <img src="{{$house->images()->first()->getUrl(400,300)}}" class="card-img-top" alt="">
                 
                 <div class="card-body  borderCardHome">
                   <div class="text-start py-3">

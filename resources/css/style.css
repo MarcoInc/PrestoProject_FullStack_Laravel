@@ -41,6 +41,9 @@ font-family: 'Syne', sans-serif;
     
 }
 
+.scale:hover {
+    scale: 1.1;
+}
 
 
 /* carosello */
@@ -336,8 +339,14 @@ footer {
     transition: 0.4s;
 }
 
-.form-accept:hover, .form-reject:hover{
+.form-accept:hover {
     scale: 1.1;
+    border: #126d76 1px solid;
+}
+
+.form-reject:hover {
+    scale: 1.1;
+    border: 1px solid rgb(220,53,69);
 }
 
 /*Pagina revisore*/
@@ -357,6 +366,7 @@ footer {
     height: 400px;
     width: 100%;
 }
+
 
 
 
@@ -399,4 +409,37 @@ footer {
     width: 200px;
     background-position: center;
     background-size: cover;
+}
+
+
+.vhCustom{
+    height: 70vh;
+}
+
+.borderCustom{
+    border: 2px solid rgb(0, 138, 172);
+    background-color: rgba(18, 110, 118, 0.591);
+}
+
+.btnCustom{
+   transition: 0.4s;
+   background-color:rgb(255, 255, 255) ;  
+   color: var(--primaryColor);
+}
+
+.btnCustom:hover{
+    scale: 1.1;
+    color: white;
+    border-bottom: 2px solid white;
+    border-radius: 0;
+}
+
+.sizeTd{
+    width: 400px;
+    height: 300px;
+}
+
+.modalCustom{
+    background-color: #ff0000a0;
+    color: white;
 }
