@@ -1,11 +1,11 @@
 <x-layout title="{{__('ui.historyIndexRevisorTitle')}}">
     
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center vh-100">
             <div class="col-12">
                 <div class="row">
                     <div class="col-12">
-                        <h1>{{ $house_toCheck ? __('ui.toReview') : __('ui.noneReview') }}</h1>
+                        <h1 class="py-4">{{ $house_toCheck ? __('ui.toReview') : __('ui.noneReview') }}</h1>
                         @if(App\Models\GuestHouse::toBeRevisonedCounter()>0)
                         {{-- <h2>{{ $house_toCheck->place }}</h2>
                         <h3>Posti letto : {{ $house_toCheck->beds }}</h3>
@@ -19,7 +19,7 @@
                             <thead>
                                 <tr>
                                     {{-- <th scope="col">ID</th> --}}
-                                    <th class="text-center" scope="col">Pubblicato da</th>
+                                    <th class="text-center" scope="col">Utente</th>
                                     <th class="text-center" scope="col">Luogo</th>
                                     <th class="text-center" scope="col">Prezzo</th>
                                     <th class="text-center" scope="col">Descrizione</th>
@@ -53,7 +53,7 @@
 
                                 {{-- scegliere una delle due --}}
                                         {{-- <div class="cardBg" data-image="{{Storage::url($house->images()->first()->path)}}"></div> --}}
-                                        <img class="img-fluid" src="{{Storage::url($house->images()->first()->path)}}" alt="{{ $house->name }}"></td>
+                                        {{-- <img class="img-fluid" src="{{Storage::url($house->images()->first()->path)}}" alt="{{ $house->name }}"></td> --}}
                                     <td class="text-center text-uppercase">
                                         
                                         <a onclick="event.preventDefault();getElementById('form-accept').submit()" class="btn form-accept" type='submit'><i class="fa-solid fa-square-check mainColor"></i></i> Accetta</a>
