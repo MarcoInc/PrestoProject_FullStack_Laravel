@@ -2,6 +2,10 @@
 
 namespace App\Http\Livewire;
 
+use App\Jobs\GoogleVisionLabelImage;
+use App\Jobs\GoogleVisionSafeSearch;
+use App\Jobs\RemoveFaces;
+
 use Livewire\Component;
 use App\Models\Location;
 use App\Jobs\ResizeImage;
@@ -77,8 +81,13 @@ class CreateForm extends Component{
                     // $this->guest_houses->images()->create(['path' => $image->store('images', 'public')]);
                     $newFileName = "guest_houses/{$this->guest_houses->id}";
                     $newImage = $this->guest_houses->images()->create(['path' => $image->store($newFileName, 'public')]);
-                    
-                    dispatch(new ResizeImage($newImage->path, 400, 300));
+
+                    RemoveFaces::withChain([
+                        new ResizeImage($newImage->path, 400, 300),
+                        new GoogleVisionSafeSearch($newImage->id),
+                        new GoogleVisionLabelImage($newImage->id),
+                    ])->dispatch($newImage->id);
+
                 }
                 
                 File::deleteDirectory(storage_path('/app/livewire-tmp'));

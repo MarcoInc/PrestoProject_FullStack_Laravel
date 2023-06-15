@@ -11,9 +11,12 @@ class Image extends Model
     use HasFactory;
 
     protected $fillable = ['path'];
+    //dati label dal DB sono sotto forma testuale
+    protected $casts=[
+        'labels'=>'array' //converte il testo in un array
+    ];
 
-    public function guest_house()
-    {
+    public function guest_house(){
         return $this->belongsTo(GuestHouse::class);
     }
 
