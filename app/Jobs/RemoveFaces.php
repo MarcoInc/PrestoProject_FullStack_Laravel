@@ -71,11 +71,11 @@ class RemoveFaces implements ShouldQueue{
             ->watermarkWidth($w,Manipulations::UNIT_PIXELS)
             ->watermarkHeight($h,Manipulations::UNIT_PIXELS)
             ->watermarkFit(Manipulations::FIT_STRETCH);
-
-        $image->save($srcPath);
+        
+        $image->save($srcPath); //salva l'immagine editata con il watermark
         }
 
-        $imageAnnotator->close();
+    $imageAnnotator->close(); //chiude il collegamento con Google
 
     }
 }
