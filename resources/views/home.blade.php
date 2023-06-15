@@ -36,7 +36,7 @@
     <div class="row justify-content-center pt-5 pe-0 me-0">
       
       <!-- Swiper -->
-      {{-- <div class="col-10">
+      <div class="col-10">
         <div class="swiper">
           <div class="swiper-wrapper">
             
@@ -85,7 +85,7 @@
           
         </div>
         
-      </div> --}}
+      </div>
       
       
     </div>

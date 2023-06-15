@@ -43,6 +43,7 @@ class PublicController extends Controller
 
     public function categoryShow(Location $location)
     {
+
         $icons = ['fa-water', 'fa-mountain', 'fa-fish-fins', 'fa-tree-city', 'fa-snowflake', 'fa-sun-plant-wilt', 'fa-horse-head'];
 
         return view('product.category-show', compact('location', 'icons'));
@@ -84,27 +85,27 @@ class PublicController extends Controller
     }
 
 
-    public function  trasferimentoDati()
-    {
-        $products = GuestHouse::all();
-        foreach ($products as $product) {
-            $images = $product->images()->get();
-            if ($images->isEmpty()) {
-                $product->images()->create([
-                    'path' => $product->img,
-                    'guest_house_id' => $product->id,
-                ]);
-            } else {
-                $product->images()->delete();
-                foreach ($images as $image) {
-                    $product->images()->create([
-                        'path' => $image->image,
-                        'guest_house_id' => $product->id,
-                    ]);
-                }
-            }
-        }
+    // public function  trasferimentoDati()
+    // {
+    //     $products = GuestHouse::all();
+    //     foreach ($products as $product) {
+    //         $images = $product->images()->get();
+    //         if ($images->isEmpty()) {
+    //             $product->images()->create([
+    //                 'path' => $product->img,
+    //                 'guest_house_id' => $product->id,
+    //             ]);
+    //         } else {
+    //             $product->images()->delete();
+    //             foreach ($images as $image) {
+    //                 $product->images()->create([
+    //                     'path' => $image->image,
+    //                     'guest_house_id' => $product->id,
+    //                 ]);
+    //             }
+    //         }
+    //     }
 
-        return redirect(route('home'));
-    }
+    //     return redirect(route('home'));
+    // }
 }

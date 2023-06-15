@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     @empty
-                    <div class="col-12">
+                    <div class="col-12 vh-75">
                         <p>{{__('ui.noneArticleCategory')}}</p>
                     </div>
                     @endforelse
@@ -66,7 +66,7 @@
             </div>
         </div>
     </div>
-    {{ $guest_houses->links() }}
+    {{-- {{ $guest_houses->links() }} --}}
     
     {{-- JS per img di background --}}
     <x-script-card/>
