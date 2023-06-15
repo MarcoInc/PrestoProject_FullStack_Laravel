@@ -11,7 +11,7 @@ class GuestHouse extends Model
 {
     use HasFactory;
     use Searchable;
-    protected $fillable=['place','beds','price','description','location_id','img','is_accepted','user_id'];
+    protected $fillable=['place','beds','price','description','location_id','is_accepted','user_id'];
 
 
     public function toSearchableArray()

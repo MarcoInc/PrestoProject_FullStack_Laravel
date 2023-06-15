@@ -38,14 +38,15 @@ class PublicController extends Controller
 
         $locations = Location::all();
         $icons = ['fa-water', 'fa-mountain', 'fa-fish-fins', 'fa-tree-city', 'fa-snowflake', 'fa-sun-plant-wilt', 'fa-horse-head'];
+        
+        //dd($guest_houses);
+
         return view('product.index', compact('guest_houses', 'locations', 'icons'));
     }
 
-    public function categoryShow(Location $location)
-    {
-
+    public function categoryShow(Location $location){
         $icons = ['fa-water', 'fa-mountain', 'fa-fish-fins', 'fa-tree-city', 'fa-snowflake', 'fa-sun-plant-wilt', 'fa-horse-head'];
-
+        
         return view('product.category-show', compact('location', 'icons'));
     }
 

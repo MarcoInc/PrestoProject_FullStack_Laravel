@@ -66,8 +66,8 @@
             </div>
         </div>
     </div>
-    {{-- {{ $guest_houses->links() }} --}}
     
+    {{-- {{ $guest_houses->links() }} --}}
     {{-- JS per img di background --}}
     <x-script-card/>
 </x-layout>

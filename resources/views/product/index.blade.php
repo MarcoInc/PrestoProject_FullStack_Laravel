@@ -19,6 +19,8 @@
                     @forelse ($guest_houses as $house)
                         <div class="col-12 hCard col-md-6 col-lg-3 mx-3 my-3">
                             <div class="card h-100 cardBorder">
+                                {{-- @dd(Storage::url($house->images()->first()->path)) --}}
+
                                 {{-- <img src="{{Storage::url($image->path)}}" class="card-img-top h-100" alt="Immagine annuncio">  --}}
                                 <div class="cardBg" data-image="{{ Storage::url($house->images()->first()->path) }}"></div>
                                 {{-- <img src="{{$house->images()->first()->getUrl(400,300)}}" class="card-img-top imgCustom" alt=""> --}}
@@ -41,9 +43,6 @@
                                     <a href="{{ route('userProfile', ['id' => $house->user->id])}}"
                                         class="btn btn-light"></i>{{ $house->user->name }}</a>    
                                 </p>
-                             
-
-
 
                                 <div class="d-flex justify-content-between">
                                     <span class="d-flex align-items-center flex-md-row flex-column">
@@ -60,7 +59,7 @@
                                             <span class="d-flex align-items-center">
                                                     <a onclick="event.preventDefault();getElementById('form-delete').submit();"
                                                         class="btn btnCard fs-5 fw-semibold">
-                                                            <span><i class="bi bi-trash3 fs-3"></i></span>
+                                                            <span><i class="bi bi-trash3 fs-3"></i>{{__('ui.deleteArticle')}}</span>
                                                     </a>
                                                 <form id="form-delete" class="d-none" method=POST
                                                     action={{ route('delete', compact('house')) }}>

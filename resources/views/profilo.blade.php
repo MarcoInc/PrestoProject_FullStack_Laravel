@@ -6,8 +6,10 @@
                         @forelse ($houses as $house)
                         <div class="col-12 hCard col-md-6 col-lg-3 mx-3 my-3">
                             <div class="card h-100 cardBorder">
+
                                 {{-- <img src="{{Storage::url($image->path)}}" class="card-img-top h-100" alt="Immagine annuncio">  --}}
-                                <div class="cardBg" data-image="{{ Storage::url($house->img) }}"></div>
+                            {{-- togliere il commento --}}
+                                <div class="cardBg" data-image="{{Storage::url($house->images()->first()->path)}}"></div>
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between">
                                         <h5 class="card-title fw-bold">{{ $house->place }}</h5>
@@ -44,7 +46,7 @@
                                             <span class="d-flex align-items-center">
                                                     <a onclick="event.preventDefault();getElementById('form-delete').submit();"
                                                         class="btn btnCard fs-5 fw-semibold">
-                                                            <span><i class="bi bi-trash3 fs-3"></i></span>
+                                                            <span><i class="bi bi-trash3 fs-3"></i>{{__('ui.deleteArticle')}}</span>
                                                     </a>
                                                 <form id="form-delete" class="d-none" method=POST
                                                     action={{ route('delete', compact('house')) }}>
