@@ -83,14 +83,19 @@ class CreateForm extends Component{
                     $newFileName = "guest_houses/{$this->guest_houses->id}";
                     $newImage = $this->guest_houses->images()->create(['path' => $image->store($newFileName, 'public')]);
 
-                    RemoveFaces::withChain([
+                    // RemoveFaces::withChain([
+                    //     new ResizeImage($newImage->path, 400, 300),
+                    //     new GoogleVisionSafeSearch($newImage->id),
+                    //     new GoogleVisionLabelImage($newImage->id),
+                    //     new AddWatermark($newImage->id)
+                    // ])->dispatch($newImage->id);                   
+
+                    AddWatermark::withChain([
+                        new RemoveFaces($newImage->id),
                         new ResizeImage($newImage->path, 400, 300),
-                        new AddWatermark($newImage->id), //TODO SISTEMARE
                         new GoogleVisionSafeSearch($newImage->id),
                         new GoogleVisionLabelImage($newImage->id),
-                    ])->dispatch($newImage->id);
-                    
-                    
+                    ])->dispatch($newImage->id);       
 
                 }
                 
