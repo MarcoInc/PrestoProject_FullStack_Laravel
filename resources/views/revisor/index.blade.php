@@ -62,8 +62,34 @@
                                                 @foreach ($house->images as $image)
                                                 <div class="carousel-item @if($loop->first)active @endif" data-bs-interval="5000">
                                                     <img src="{{$image->getUrl(400,300)}}" class="" alt="Immagini">
-                                                </div>
-                                                
+
+                                                    {{-- mostra safe search --}}
+                                                    <div class='col-md-3'>
+                                                        <div class='card-body'>
+                                                            <h5 class='tc-accent'>REVISIONE</h5>
+                                                            <p>NSFW: <span class="{{$image->adult}}"></span></p>
+                                                            <p>Volgarità: <span class='{{$image->spoof}}'></span></p>
+                                                            <p>Medicina: <span class='{{$image->medical}}'></span></p>
+                                                            <p>Violenza: <span class='{{$image->violence}}'></span></p>
+                                                            <p>Razzismo: <span class='{{$image->racy}}'></span></p>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    {{-- mostra i tag/labels --}}
+                                                    @if ($image->labels)
+                                                        <div class='col-md-3'>
+                                                        <div class='card-body'>
+                                                            <h5 class='tc-accent'>TAGS</h5>
+                                                            @foreach ($image->labels as $label)
+                                                                    <p class="d-inline">
+                                                                        - {{ $label }}
+                                                                    </p>
+                                                                @endforeach
+                                                            </div>
+                                                        </div>
+                                                    @endif
+                                                    
+                                                    
                                                 @endforeach
                                                 
                                             </div>
