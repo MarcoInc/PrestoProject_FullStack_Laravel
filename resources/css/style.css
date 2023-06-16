@@ -89,11 +89,16 @@ font-family: 'Syne', sans-serif;
 }
 
 .formRegister{
-    background-image: url('/public/media/bgRegister.jpg');
-    padding:70px;
-    background-repeat: no-repeat;
+    background-image: url('/public/media/bgReg4.jpg');
+    background-position: bottom;
     background-size: cover;
     
+    
+}
+
+.bgRegister{
+    background: rgba(0, 0, 0, 0.532);
+    padding: 15px;
 }
 
 .btnForm{
@@ -121,7 +126,7 @@ input{
 
 .bgLogin{
     /* background-image: url('/public/media/bgLogin.jpg'); */
-    background:rgba(18, 110, 118, 0.79);
+    background:rgba(18, 110, 118, 0.612);
 
     
 }
@@ -448,3 +453,11 @@ footer {
     background-color: #ff0000a0;
     color: white;
 }
+
+/*Dropdown delle lingue*/
+.dropdown-toggle::after {
+ 
+    color: white;
+
+}
+

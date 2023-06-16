@@ -1,12 +1,16 @@
 <x-layout docTitle="Register" title="{{__('ui.registerTitle')}}">
     
     <div class="container-fluid formRegister">
-        <div class="row justify-content-center vh-100">
-            <div class="col-6">
+        <div class="row justify-content-center vh-100 align-items-center">
+            <div class="col-5 bgRegister">
                 <form method="POST" action={{ route('register') }}>
                     @csrf
+                    <div class="w-100 text-center">
+                        <h3 class="text-white pt-4">Registrati</h3>
+                    </div>
                     
                     <div class="mb-3 pt-4 text-white">
+                        <hr class="text-white">
                         <label for="user" class="form-label fs-5">{{__('ui.userName')}}</label>
                         <input name='name' type="text" class="form-control  @error('name') is-invalid @enderror"
                         id="user" aria-describedby="emailHelp" value={{ old('name') }}>
@@ -41,7 +45,10 @@
                         @enderror
                     </div>
                     
-                    <button type="submit" class="btnForm mt-4 fs-5 btn text-white">{{__('ui.registerButton')}}</button>
+                    <div class="w-100 text-center">
+                        <button type="submit" class="btnForm mt-4 fs-5 btn ">{{__('ui.registerButton')}}</button>
+
+                    </div>
                 </form>
             </div>
         </div>

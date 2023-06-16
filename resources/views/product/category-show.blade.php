@@ -36,25 +36,32 @@
                                             </p>
                                             
                                             <div class="d-flex justify-content-between">
-                                                <span class="d-flex align-items-center flex-md-row flex-column">
+                                                <div class="d-flex align-items-center flex-md-row flex-column">
                                                     @if(Auth::id()==$house->user_id)
                                                     <a href="{{route('show', ['id'=>$house->id])}}" class="p-0 btn btnCard fs-5 text-center">
-                                                        <i class="bi bi-chevron-compact-right mainColor"></i>{{__('ui.deleteArticle')}}</a>
+                                                        
                                                         <a href="{{ route('edit',compact('house')) }}" class="ms-1 p-0 btn btnCard fs-5 text-center">
                                                             <i class="bi bi-chevron-compact-right mainColor"></i>{{__('ui.editArticle')}}</a>
-                                                        </span>
-                                                        <span class="d-flex align-items-center">
-                                                            <a onclick="event.preventDefault();getElementById('form-delete').submit();" class="btn btnCard fs-5 fw-semibold">
-                                                                <span><i class="bi bi-trash3 fs-3"></i></span></a>
-                                                                <form id="form-delete" class="d-none" method=POST action={{route('delete',compact('house'))}}>
-                                                                    @csrf
-                                                                    @method('delete')
-                                                                </form>
-                                                                @endif
-                                                            </span>
                                                         </div>
+                                                        <span class="d-flex align-items-center">
+                                                            
+                                                            <!-- Button trigger modal -->
+                                                            <a type="button" class="btn btnCard" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                                <i class="bi bi-trash3 mainColor fs-4"></i>
+                                                            </a>
+                                                            
+                                                            
+                                                            
+                                                            <form id="form-delete" class="d-none" method=POST action={{route('delete',compact('house'))}}>
+                                                                @csrf
+                                                                @method('delete')
+                                                            </form>
+                                                            
+                                                            
+                                                        </span>
                                                         
                                                     </div>
+                                                    @endif
                                                 </div>
                                             </div>
                                             @empty
@@ -65,6 +72,29 @@
                                                 </div>
                                             </div>
                                             @endforelse
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog ">
+                                    <div class="modal-content rounded-1">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Elimina articolo <i class="fa-solid text-danger fa-triangle-exclamation"></i></h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body modalCustom">
+                                            <p class="fs-5">L'annuncio non potrà essere recuperato. Sei sicuro di volerlo eliminare?</p>
+                                        </div>
+                                        
+                                        <div class="modal-footer">
+                                            <a type="button" class="btn btnCard mainColor fs-6 text-uppercase fw-semibold" data-bs-dismiss="modal">{{__('ui.close')}}</a>
+                                            <a onclick="event.preventDefault();getElementById('form-delete').submit();"
+                                            class="btn btnCard text-danger rounded-1 fs-6 text-uppercase fw-semibold">
+                                            <span>{{__('ui.deleteArticle')}}
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

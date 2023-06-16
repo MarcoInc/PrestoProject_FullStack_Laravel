@@ -21,6 +21,7 @@
                                     {{-- <th scope="col">ID</th> --}}
                                     <th class="text-center" scope="col"><i class="bi bi-person-lines-fill mainColor"></i></th>
                                     <th class="text-center" scope="col">Immagini</th>
+                                    <th class="text-center" scope="col">Sicurezza</th>
                                     <th class="text-center" scope="col">Descrizione</th>
                                     
                                     <th class="text-center" scope="col">Accetta/Rifiuta</th>
@@ -62,36 +63,9 @@
                                                 @foreach ($house->images as $image)
                                                 <div class="carousel-item @if($loop->first)active @endif" data-bs-interval="5000">
                                                     <img src="{{$image->getUrl(400,300)}}" class="" alt="Immagini">
-
-                                                    {{-- mostra safe search --}}
-                                                    <div class='col-md-3'>
-                                                        <div class='card-body'>
-                                                            <h5 class='tc-accent'>REVISIONE</h5>
-                                                            <p>NSFW: <span class="{{$image->adult}}"></span></p>
-                                                            <p>Volgarità: <span class='{{$image->spoof}}'></span></p>
-                                                            <p>Medicina: <span class='{{$image->medical}}'></span></p>
-                                                            <p>Violenza: <span class='{{$image->violence}}'></span></p>
-                                                            <p>Razzismo: <span class='{{$image->racy}}'></span></p>
-                                                        </div>
-                                                    </div>
                                                     
-                                                    {{-- mostra i tag/labels --}}
-                                                    @if ($image->labels)
-                                                        <div class='col-md-3'>
-                                                        <div class='card-body'>
-                                                            <h5 class='tc-accent'>TAGS</h5>
-                                                            @foreach ($image->labels as $label)
-                                                                    <p class="d-inline">
-                                                                        - {{ $label }}
-                                                                    </p>
-                                                                @endforeach
-                                                            </div>
-                                                        </div>
-                                                    @endif
-                                                    
-                                                    
+                                                </div>
                                                 @endforeach
-                                                
                                             </div>
                                             <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel" data-bs-slide="prev">
                                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -106,8 +80,24 @@
                                         {{-- scegliere una delle due --}}
                                         {{-- <div class="cardBg" data-image="{{Storage::url($house->images()->first()->path)}}"></div> --}}
                                         {{-- <img class="img-fluid" src="{{Storage::url($house->images()->first()->path)}}" alt="{{ $house->name }}"> --}}
+                                    </td>  
+                                    
+                                    
+                                    <td class="align-middle text-start">
+                                        {{-- mostra safe search --}}
+                                        
+                                        <p class="m-0">NSFW:</p> <span class="{{$image->adult}}"></span>
+                                        <p class="m-0 mt-2">Volgarità:</p> <span class='{{$image->spoof}}'></span>
+                                        <p class="m-0 mt-2">Medicina:</p> <span class='{{$image->medical}}'></span>
+                                        <p class="m-0 mt-2">Violenza:</p> <span class='{{$image->violence}}'></span>
+                                        <p class="m-0 mt-2">Razzismo:</p> <span class='{{$image->racy}}'></span>
+                                        
+                                        
+                                        
                                     </td>
-                                    <td class=" align-middle text-center">
+                                    
+                                    
+                                    <td class=" align-middle text-center p-5">
                                         <p class="text-center fw-semibold text-uppercase mainColor">
                                             {{$house->place}}
                                         </p>
@@ -117,6 +107,24 @@
                                         <p class="pt-4">
                                             <span class="fw-semibold mainColor">{{__('ui.price')}}:</span> {{$house->price}}&euro;/notte
                                         </p>
+                                        
+                                        {{-- mostra i tag/labels --}}
+                                        @if ($image->labels)
+                                        <p class="text-center fw-semibold text-uppercase mainColor mb-1">Tag</p>
+                                        @foreach ($image->labels as $key => $label)
+                                        @if($key < 6)
+                                        <span class="p-1">
+                                            {{ $label }}
+                                            @if ($key < 5 && $key < count($image->labels) - 1)
+                                            ,
+                                            @else
+                                            .
+                                            @endif
+                                        </span>
+                                        @endif
+                                        @endforeach
+                                        
+                                        @endif
                                         
                                     </td>
                                     
@@ -187,7 +195,7 @@
     </div>
     
     
-    <script>
+    {{-- <script>
         function changeBorderColor(element) {
             element.classList.add('hovered');
         }
@@ -204,5 +212,5 @@
                 card.style.backgroundImage = "url('" + imgUrl + "')";
             });
         });
-    </script>
+    </script> --}}
 </x-layout>
