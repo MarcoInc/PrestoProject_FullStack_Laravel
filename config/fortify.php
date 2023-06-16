@@ -4,7 +4,7 @@ use App\Providers\RouteServiceProvider;
 use Laravel\Fortify\Features;
 
 return [
-
+    
     /*
     |--------------------------------------------------------------------------
     | Fortify Guard
@@ -15,9 +15,9 @@ return [
     | guards that is already present in your "auth" configuration file.
     |
     */
-
+    
     'guard' => 'web',
-
+    
     /*
     |--------------------------------------------------------------------------
     | Fortify Password Broker
@@ -28,9 +28,9 @@ return [
     | of your password brokers setup in your "auth" configuration file.
     |
     */
-
+    
     'passwords' => 'users',
-
+    
     /*
     |--------------------------------------------------------------------------
     | Username / Email
@@ -45,11 +45,11 @@ return [
     | another name for the field you may define it below as needed.
     |
     */
-
+    
     'username' => 'email',
-
+    
     'email' => 'email',
-
+    
     /*
     |--------------------------------------------------------------------------
     | Home Path
@@ -60,9 +60,9 @@ return [
     | and the user is authenticated. You are free to change this value.
     |
     */
-
+    
     'home' => RouteServiceProvider::HOME,
-
+    
     /*
     |--------------------------------------------------------------------------
     | Fortify Routes Prefix / Subdomain
@@ -73,11 +73,11 @@ return [
     | subdomain under which all of the Fortify routes will be available.
     |
     */
-
+    
     'prefix' => '',
-
+    
     'domain' => null,
-
+    
     /*
     |--------------------------------------------------------------------------
     | Fortify Routes Middleware
@@ -88,9 +88,9 @@ return [
     | these middleware but typically this provided default is preferred.
     |
     */
-
+    
     'middleware' => ['web'],
-
+    
     /*
     |--------------------------------------------------------------------------
     | Rate Limiting
@@ -101,12 +101,12 @@ return [
     | specify a custom rate limiter to call then you may specify it here.
     |
     */
-
+    
     'limiters' => [
         'login' => 'login',
         'two-factor' => 'two-factor',
     ],
-
+    
     /*
     |--------------------------------------------------------------------------
     | Register View Routes
@@ -117,9 +117,9 @@ return [
     | especially true if you're writing a custom single-page application.
     |
     */
-
+    
     'views' => true,
-
+    
     /*
     |--------------------------------------------------------------------------
     | Features
@@ -130,8 +130,22 @@ return [
     | these features or you can even remove all of these if you need to.
     |
     */
-
+    
     'features' => [
+       
+         
+        'validation' => [
+            'email' => [
+                'required' => ('Il campo email è obbligatorio.'),
+                'email' => ('Il campo email deve essere un indirizzo email valido.'),
+            ],
+            'password' => [
+                'required' => ('Il campo password è obbligatorio.'),
+                'confirmed' => ('La password e la conferma password non corrispondono.'),
+                'min' => ('La password deve essere lunga almeno :min caratteri.'),
+            ],
+        ],
+
         Features::registration(),
         Features::resetPasswords(),
         // Features::emailVerification(),
@@ -142,6 +156,8 @@ return [
             'confirmPassword' => true,
             // 'window' => 0,
         ]),
+        
+       
     ],
-
+    
 ];

@@ -97,14 +97,14 @@ font-family: 'Syne', sans-serif;
 }
 
 .btnForm{
-    background-color: black;
-    border-radius:50px;
+    background-color: var(--primaryColor);
+    transition: 0.4s;
     color:white;
 }
 
 .btnForm:hover{
-    background-color: var(--primaryColor);
-    color:white;
+    background-color: white;
+    color:var(--primaryColor);
 }
 
 
@@ -121,15 +121,20 @@ input{
 
 .bgLogin{
     /* background-image: url('/public/media/bgLogin.jpg'); */
-    background: linear-gradient(45deg, rgb(16, 111, 117), rgb(226, 226, 226));
-    background-repeat: no-repeat;
-    background-size: cover;
+    background:rgba(18, 110, 118, 0.79);
+
+    
 }
 
 .btnLogin{
-    background-color: white;
-    border-radius:50px;
-    color:black;
+    border: #126d76 2px solid;
+    color: white;
+    transition: 0.4s;
+}
+
+.btnLogin:hover{
+    background-color: var(--primaryColor);
+    color:white;
 }
 
 .register{
