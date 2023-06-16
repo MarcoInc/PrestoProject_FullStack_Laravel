@@ -1,11 +1,13 @@
 <x-layout title="{{$house->place}} - {{$house->location->name}}">
     <div class="container">
         @livewire('category-bar', compact('locations'))
+       
+       
         <div class="row justify-content-center justify-content-md-around align-items-center p-3 my-5 shadow">
             <div class="col-md-5 col-12">
                 <h2 class="borderCardHome pb-0">{{$house->place}}</h2>
                 <p><strong>{{__('ui.bedsPlace')}}:</strong> {{$house->beds}}</p>
-                <p><strong>{{__('ui.price')}}:</strong> {{$house->price}}/notte</p>
+                <p><strong>{{__('ui.price')}}:</strong> {{$house->price}}/{{__('ui.night')}}</p>
                 <p><strong>{{__('ui.description')}}:</strong> {{$house->description}}</p>
                 <p><strong>{{__('ui.publishBy')}}:</strong> 
                     <a href="{{ route('userProfile', ['id' => $house->user->id]) }}"
@@ -79,7 +81,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body modalCustom">
-                    <p class="fs-5">L'annuncio non potrà essere recuperato. Sei sicuro di volerlo eliminare?</p>
+                    <p class="fs-5"> {{__('ui.areYouSure?')}}</p>
                 </div>
                 
                 <div class="modal-footer">

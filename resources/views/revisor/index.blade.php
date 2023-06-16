@@ -20,11 +20,11 @@
                                 <tr>
                                     {{-- <th scope="col">ID</th> --}}
                                     <th class="text-center" scope="col"><i class="bi bi-person-lines-fill mainColor"></i></th>
-                                    <th class="text-center" scope="col">Immagini</th>
+                                    <th class="text-center" scope="col">{{__('ui.Immagini')}}</th>
                                     {{-- <th class="text-center" scope="col">Sicurezza</th> --}}
-                                    <th class="text-center" scope="col">Descrizione</th>
+                                    <th class="text-center" scope="col">{{__('ui.description')}}</th>
                                     
-                                    <th class="text-center" scope="col">Accetta/Rifiuta</th>
+                                    <th class="text-center" scope="col">{{__('ui.Accetta')}}/{{__('ui.Rifiuta')}}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -40,14 +40,14 @@
                                             
                                         </a>
                                         <div>
-                                            <p class="fw-semibold mainColor">Creato il:</p>
+                                            <p class="fw-semibold mainColor">{{__('ui.createDate')}}:</p>
                                             <p class="fw-normal">
                                                 {{$house->created_at->format('d/m/Y H:i')}}
                                             </p>
                                         </div>
                                         @if($house->created_at < $house->updated_at)
                                         <hr>
-                                        <p class='mainColor bg-white rounded-2 borderCustom fw-semibold'>Modificato il:</p>
+                                        <p class='mainColor bg-white rounded-2 borderCustom fw-semibold'>{{__('ui.editDate')}}:</p>
                                         <p class="fw-normal">
                                             {{$house->updated_at->format('d/m/Y H:i')}}
                                         </p>
@@ -57,25 +57,25 @@
                                     </th>
                                     <td class="text-center align-middle sizeTd">
                                         
-                                        <div id="{{$house->images->first()->id}}" class="carousel slide" data-bs-ride="carousel">
+                                        <div id="{{$house->id}}" class="carousel slide" data-bs-ride="carousel">
                                             <div class="carousel-inner">
                                                 
                                                 @foreach ($house->images as $image)
                                                 <div class="carousel-item  @if($loop->first)active @endif" >
                                                     
                                                     <div class="row justify-content-between">
-                                                        <div class="col-12">
+                                                        <div class="col-12 py-2">
                                                             <img src="{{$image->getUrl(400,300)}}" class="" alt="Immagini">
                                                             
                                                         </div>
                                                     </div>
                                                     <div class="row align-items-center justify-content-center">
-                                                        <div class="col-4 d-flex align-items-center bg-light w-100">
+                                                        <div class="col-4 d-flex align-items-center  w-100">
                                                             <p class="m-0">NSFW:</p> <span class="{{$image->adult}} me-1"></span>
-                                                            <p class="m-0">Volgarità:</p> <span class='{{$image->spoof}} me-1'></span>
-                                                            <p class="m-0">Medicina:</p> <span class='{{$image->medical}} me-1'></span>
-                                                            <p class="m-0">Violenza:</p> <span class='{{$image->violence}} me-1'></span>
-                                                            <p class="m-0">Razzismo:</p> <span class='{{$image->racy}}'></span>
+                                                            <p class="m-0">{{__('ui.Volgarità')}}:</p> <span class='{{$image->spoof}} me-1'></span>
+                                                            <p class="m-0">{{__('ui.Medico')}}:</p> <span class='{{$image->medical}} me-1'></span>
+                                                            <p class="m-0">{{__('ui.Violenza')}}:</p> <span class='{{$image->violence}} me-1'></span>
+                                                            <p class="m-0">{{__('ui.Razzismo')}}:</p> <span class='{{$image->racy}}'></span>
                                                             
                                                         </div>
                                                     </div>
@@ -86,11 +86,11 @@
                                                 
                                                 @endforeach
                                             </div>
-                                            <button class="carousel-control-prev" type="button" data-bs-target="#{{$house->images->first()->id}}" data-bs-slide="prev">
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#{{$house->id}}" data-bs-slide="prev">
                                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                                 <span class="visually-hidden">Previous</span>
                                             </button>
-                                            <button class="carousel-control-next" type="button" data-bs-target="#{{$house->images->first()->id}}" data-bs-slide="next">
+                                            <button class="carousel-control-next" type="button" data-bs-target="#{{$house->id}}" data-bs-slide="next">
                                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                                 <span class="visually-hidden">Next</span>
                                             </button>
@@ -145,27 +145,24 @@
                                                     {{$house->description}}
                                                 </p>
                                                 <p class="pt-4">
-                                                    <span class="fw-semibold mainColor">{{__('ui.price')}}:</span> {{$house->price}}&euro;/notte
+                                                    <span class="fw-semibold mainColor">{{__('ui.price')}}:</span> {{$house->price}}&euro;/{{__('ui.night')}}
                                                 </p>
                                                 
                                                 {{-- mostra i tag/labels --}}
-                                                @if ($image->labels)
                                                 <p class="text-center fw-semibold text-uppercase mainColor mb-1">Tag</p>
+                                                @foreach ($house->images as $image)
+                                                @if ($image->labels)
                                                 @foreach ($image->labels as $key => $label)
-                                                @if($key < 6)
+                                                @if($key < 4)
                                                 <span class="p-1">
-                                                    {{ $label }}
-                                                    @if ($key < 5 && $key < count($image->labels) - 1)
-                                                    ,
-                                                    @else
-                                                    .
-                                                    @endif
+                                                  <span class="fst-italic m-0">#</span> {{ $label }}
+                                                    
                                                 </span>
                                                 @endif
                                                 @endforeach
-                                                
                                                 @endif
                                                 
+                                                @endforeach
                                             </td>
                                             
                                             {{-- <td class="text-center align-middle">{{$house->price}}&euro;/notte</td> --}}
@@ -181,13 +178,13 @@
                                             
                                             <td class="text-center align-middle">
                                                 
-                                                <a onclick="event.preventDefault();getElementById('form-accept').submit()" class="btn form-accept fs-6 fw-semibold" type='submit'><i class="fa-solid fa-square-check mainColor fs-5"></i> Accetta</a>
+                                                <a onclick="event.preventDefault();getElementById('form-accept').submit()" class="btn form-accept fs-6 fw-semibold" type='submit'><i class="fa-solid fa-square-check mainColor fs-5"></i> {{__('ui.Accetta')}}</a>
                                                 <form id="form-accept" class="d-none " method=POST action={{ route('revisor.accept', ['house_toCheck'=>$house->id] )}}>
                                                     @csrf
                                                     @method('patch')
                                                 </form>
                                                 
-                                                <a onclick="event.preventDefault();getElementById('form-reject').submit()" class="btn form-reject fs-6 fw-semibold" type='submit'><i class="fa-solid fa-square-xmark text-danger fs-5"></i> Rifiuta</a>
+                                                <a onclick="event.preventDefault();getElementById('form-reject').submit()" class="btn form-reject fs-6 fw-semibold" type='submit'><i class="fa-solid fa-square-xmark text-danger fs-5"></i>{{__('ui.Rifiuta')}}</a>
                                                 <form id="form-reject" class="d-none" method=POST action={{ route('revisor.reject', ['house_toCheck'=>$house->id]) }}>
                                                     @csrf
                                                     @method('patch')
@@ -212,11 +209,11 @@
                                         <div class="d-flex justify-content-around w-100">
                                             
                                             <div class="scale transition">
-                                                <span><i class="fa-solid fa-paperclip text-white"></i></span> <a href="{{route('revisor.history')}}" class="btn fs-5">Vai allo storico</a>
+                                                <span><i class="fa-solid fa-paperclip text-white"></i></span> <a href="{{route('revisor.history')}}" class="btn fs-5">{{__('ui.Vaiallostorico')}}</a>
                                                 
                                             </div>
                                             <div class="scale transition">
-                                                <span><i class="fa-solid fa-rotate-left text-white"></i></span><a href="{{route('revisorIndex')}}" class="btn fs-5">Refresh pagina</a>
+                                                <span><i class="fa-solid fa-rotate-left text-white"></i></span><a href="{{route('revisorIndex')}}" class="btn fs-5">{{__('ui.Refresh')}}</a>
                                             </div>
                                         </div>
                                         

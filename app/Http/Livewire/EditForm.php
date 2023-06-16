@@ -45,7 +45,10 @@ class EditForm extends Component
         'description.min'=> 'La descrizione dev\'essere almeno di 10 caratteri',
         'description.max'=> 'Massimo 1000 caratteri',
         'images.image' => 'Deve essere un\'immagine',
-        'images.max' => 'L\'immagine deve essere di massimo un 1mb'
+        'images.max' => 'L\'immagine deve essere di massimo un 1mb',
+        'temporary_images.max' => 'L\'immagine deve essere di massimo un 1mb',
+        'temporary_images.image' => 'Deve essere un\'immagine',
+
         // 'img.image' => 'File immagine richiesto'
     ];
 

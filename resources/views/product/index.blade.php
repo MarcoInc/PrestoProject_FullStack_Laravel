@@ -12,11 +12,13 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="row justify-content-md-center ">
+                    @forelse ($guest_houses as $house)
                     <div class="col-12">
-                        <h4 class="text-center p-4 borderIndexh3">{{__('ui.dreamWithUs')}}
+                        <h4 class="text-center p-4 borderIndexh3">
+                            
+                            {{__('ui.dreamWithUs')}}
                         </h4>
                     </div>
-                    @forelse ($guest_houses as $house)
                     <div class="col-11 hCard col-md-6 col-lg-3 mx-3 my-3">
                         <div class="card h-100 cardBorder">
                             {{-- @dd(Storage::url($house->images()->first()->path)) --}}
@@ -85,9 +87,14 @@
                         </div>
                     </div>
                     @empty
-                    <div class="col-12">
-                        <p>{{__('ui.noneArticle')}}</p>
+                    
+                    <div class="col-12 vhCustom d-flex justify-content-center align-items-center">
+                        <div class="borderCustom p-5 d-flex flex-column justify-content-center align-items-center">
+                            <h2 class="text-white p-5">{{__('ui.noneArticleCategory')}}:</h2>
+                            <i class="text-white fs-4 pb-2 bi bi-cloud-upload-fill"></i><a href="{{route('create')}}" class="btn opacity btnCustom p-2 fs-5">Carica un annuncio!</a>
+                        </div>
                     </div>
+                    
                     @endforelse
                 </div>
             </div>
@@ -98,23 +105,7 @@
     
     
     
-    <div class="modal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Modal body text goes here.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     
     
     
@@ -123,11 +114,11 @@
         <div class="modal-dialog ">
             <div class="modal-content rounded-1">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Elimina articolo <i class="fa-solid text-danger fa-triangle-exclamation"></i></h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">{{__('ui.deleteArticleModal')}} <i class="fa-solid text-danger fa-triangle-exclamation"></i></h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body modalCustom">
-                    <p class="fs-5">L'annuncio non potrà essere recuperato. Sei sicuro di volerlo eliminare?</p>
+                    <p class="fs-5">{{__('ui.areYouSure?')}}</p>
                 </div>
                 
                 <div class="modal-footer">

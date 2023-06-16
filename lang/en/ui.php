@@ -8,7 +8,23 @@
         'publishAt' => 'Published ',
         'publishBy' => 'Published by ',
         'deleteArticle' => 'Delete',
+        'deleteArticleModal' => 'Delete article',
         'editArticle' => 'Edit',
+        'modificatoIl' => 'Modified',
+        'areYouSure?' => "The article cannot be recovered. Are you sure you want to delete it?",
+        'uploadImg' => 'Upload Image',
+        "CaricaAnnuncio" => "Upload your article",
+        "Immagini" => "Images" ,
+        "Accetta" => "Accept",
+        "Rifiuta" => "Reject",
+        'close' => 'Close',
+
+        //Verifica Google
+        'Volgarità' => 'Spoof',
+        'Medico' => 'Medical',
+        'Violenza' => 'Violence',
+        'Razzismo' => 'Racy',
+        
 
         //Title Page
         'homeTitle' => 'Homepage',
@@ -20,7 +36,7 @@
         'loginTitle' => 'Login',
         'profileTitle' =>'Profile page ',
         'registerTitle'=>'Sign up page',
-        'categoriesTite'=>'Categories',
+        'categoriesTitle'=>'Categories',
         'revisorPageTitle'=>'Revisor\'s page',
         'privacyTitle'=>'Privacy',
         'termServiceTitle'=>'Terms of service',
@@ -33,7 +49,7 @@
         'searchBar'=> 'Find a B&B',
         'welcome' => 'Welcome ',
         'welcomeUser' => 'Welcome user',
-        'revisor'=>'revisor ',
+        'revisor'=>'Revisor ',
         'profile' => 'Profile',
         'register' => 'Sign up',
         'login' => 'Login',
@@ -56,7 +72,7 @@
         //History Revisor
         'viewArticleName'=> 'Title',
         'createDate'=> 'Created',
-        'editDate'=> 'Edited il',
+        'editDate'=> 'Edited',
         'statusRevision'=> 'Status',
         'revisionAccepted'=> 'Accepted',
         'revisionRejected'=>  'Rejected',
@@ -64,6 +80,8 @@
         'actionRevision' => 'Action',
         'toReview' => 'To review',
         'noneReview' => 'There are no announcements to review',
+        'Vaiallostorico' =>  'Go to history', 
+        'Refresh' => 'Refresh page',
 
         //Create-form ed Edit-form
         'place' => 'Place',

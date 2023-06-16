@@ -29,6 +29,10 @@ font-family: 'Syne', sans-serif;
     color:  rgb(0, 138, 172);
 }
 
+.bgMain{
+    background-color: #126e7693;
+}
+
 .logo {
     height: 100px;
     width: 100px;
@@ -72,6 +76,12 @@ font-family: 'Syne', sans-serif;
     border: solid 1px var(--primaryColor);
     
     transition: 0.5s;
+}
+
+.borderForm{
+
+    background: #126e769d;
+
 }
 
 .btnSearch:hover{
@@ -324,9 +334,6 @@ footer {
     
 }
 
-.hCard{
-    position:relative;
-}
 
 [data-image]{
     background-size:cover;
@@ -466,3 +473,11 @@ footer {
 
 }
 
+.formCustom{
+    background: linear-gradient(45deg, rgba(18, 110, 118, 0.82), rgba(18, 110, 118, 0.5), rgba(18, 110, 118, 0.792));
+
+}
+
+.vhCustom{
+    height: 80vh;
+}

@@ -20,8 +20,8 @@
     @enderror 
   </div>
   
-  {{-- <div class="mb-3">
-    <label for="images">Carica Immmagine</label>
+  <div class="mb-3">
+    <label for="images">{{__('ui.uploadImg')}}</label>
     <input id="images" wire:model='temporary_images' type="file" name='images' multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="IMMAGINI">
     @error('temporary_images.*')
     <p class="text-danger mt-2">{{$message}}</p>
@@ -42,7 +42,7 @@
       </div>
     </div>
   </div>
-  @endif --}}
+  @endif
   
   <div class="mb-3">
     <label for="price" class="form-label">{{__('ui.priceNight')}}</label>

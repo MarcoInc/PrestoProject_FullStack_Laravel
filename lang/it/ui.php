@@ -1,6 +1,9 @@
 <?php
 
     return [
+
+
+
         //Ricorrenti
         'price' => 'Prezzo',
         'night' => 'Notte',
@@ -8,9 +11,24 @@
         'publishAt' => 'Pubblicato il',
         'publishBy' => 'Pubblicato da',
         'deleteArticle' => 'Elimina',
+        'deleteArticleModal' => 'Elimina articolo',
         'editArticle' => 'Modifica',
+        'modificatoIl' => 'Modificato il',
         'close' => 'Chiudi',
         'categoriesTitle' => 'Articoli per categoria',
+        'areYouSure?' => "L'annuncio non potrà essere recuperato. Sei sicuro di volerlo eliminare?",
+        "CaricaAnnuncio" => "Carica il tuo annuncio",
+        'uploadImg' => 'Carica Immmagine',
+        "Immagini" => "Immagini" ,
+        "Accetta" => "Accetta",
+        "Rifiuta" => "Rifiuta",
+
+
+        //Verifica di Google
+        'Volgarità' => 'Falso',
+        'Medico' => 'Medico',
+        'Violenza' => 'Violenza',
+        'Razzismo' => 'Razzismo',
 
         //Title Page
         'homeTitle' => 'Pagina principale',
@@ -35,7 +53,7 @@
         'searchBar'=> 'Cerca il tuo b&b',
         'welcome' => 'Benvenuto',
         'welcomeUser' => 'Benvenuto utente',
-        'revisor'=>'revisore',
+        'revisor'=>'Revisore',
         'profile' => 'Profilo',
         'register' => 'Registrati',
         'login' => 'Login',
@@ -66,6 +84,8 @@
         'actionRevision' => 'Azione',
         'toReview' => 'Da revisionare',
         'noneReview' => 'Non ci sono annunci da revisionare',
+        'Vaiallostorico' => 'Vai allo storico',
+        'Refresh' => 'Refresh pagina',
 
         //Create-form ed Edit-form
         'place' => 'Luogo',

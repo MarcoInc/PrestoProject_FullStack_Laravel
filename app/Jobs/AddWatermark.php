@@ -46,7 +46,7 @@ class AddWatermark implements ShouldQueue{
 
         //TODO SISTEMARE
         //aggiunge un watermark
-        $image->watermark(base_path('resources/img/watermark.png'))
+        $image->watermark(base_path('resources/img/logo3.png'))
             ->watermarkHeight(31, Manipulations::UNIT_PIXELS) // Percentuale di altezza
             ->watermarkWidth(123, Manipulations::UNIT_PIXELS) // Percentuale di larghezza
             ->watermarkPosition(Manipulations::POSITION_BOTTOM_RIGHT) // Posiziona in basso a sinistra
