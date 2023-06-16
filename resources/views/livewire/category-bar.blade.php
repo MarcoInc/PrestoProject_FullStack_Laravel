@@ -56,7 +56,11 @@
                                     Nieve
                                     @endif
                                 @endif
-                        
+                                @php
+                                    $counter = 1;
+                                
+                                @endphp
+                                    @dd($counter);
             
                                 
                                 {{-- {{$location->name}}</p> --}}
