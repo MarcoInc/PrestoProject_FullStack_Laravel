@@ -25,6 +25,11 @@
         </div>
       </div>
       <!-- footer links column-->
+  
+
+
+
+
       
       <div class="col-12 col-md-2">
         <h5 class="text-uppercase borderBottom mt-3 text-md-start text-center">{{__('ui.usefulLinksFooter')}}</h5>
