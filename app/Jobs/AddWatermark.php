@@ -44,15 +44,16 @@ class AddWatermark implements ShouldQueue{
         
         $image=SpatieImage::load($srcPath);
 
-        // TODO SISTEMARE
-        // aggiunge un watermark
-        $image->watermark(base_path('resources/img/logo.png'))
-            ->watermarkPadding(5, 5, Manipulations::UNIT_PERCENT) // Padding dal bordo sinistro e inferiore
+        //TODO SISTEMARE
+        //aggiunge un watermark
+        $image->watermark(base_path('resources/img/watermark.png'))
+            ->watermarkHeight(31, Manipulations::UNIT_PIXELS) // Percentuale di altezza
+            ->watermarkWidth(123, Manipulations::UNIT_PIXELS) // Percentuale di larghezza
             ->watermarkPosition(Manipulations::POSITION_BOTTOM_RIGHT) // Posiziona in basso a sinistra
-            ->watermarkHeight(10, Manipulations::UNIT_PERCENT) // Percentuale di altezza
-            ->watermarkWidth(10, Manipulations::UNIT_PERCENT);// Percentuale di larghezza
+            ->watermarkPadding(10, 10, Manipulations::UNIT_PERCENT); // Padding dal bordo sinistro e inferiore
+            //->watermarkFit(Manipulations::FIT_CONTAIN) // Adatta il watermark all'immagine
             
-            
+
         $image->save($srcPath); //salva l'immagine editata con il watermark
 
 
