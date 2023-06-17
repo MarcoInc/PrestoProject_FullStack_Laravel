@@ -94,7 +94,7 @@ class EditForm extends Component
             }
         }
         
-        return redirect(route('index'))->with('editOk', 'Modifiche applicate! Attendi una revisione');
+        return redirect(route('show', ['id' => $this->house->id]))->with('editOk', 'Modifiche applicate! Attendi una revisione');
     }
 
 

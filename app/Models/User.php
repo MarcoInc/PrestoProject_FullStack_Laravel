@@ -48,4 +48,8 @@ class User extends Authenticatable
     public function guest_houses(){
         return $this->hasMany(GuestHouse::class);
     }
+
+    public function profile(){
+        return $this->hasOne(Profile::class);
+    }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GuestHouseController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\RevisorController;
@@ -52,10 +53,12 @@ Route::get('/contattaci', [PublicController::class, 'contactUs'])->name('contatt
 Route::get('/ricerca/house', [PublicController::class, 'searchHouse'])->name('product.search');
 
 //Profilo
-Route::get('/profilo', [PublicController::class, 'profilo'])->name('profilo');
+Route::get('/profilo', [ProfileController::class, 'profilo'])->name('profilo');
+Route::get('/modifica-profilo/{user}', [ProfileController::class, 'edit'])->name('edit_profile');
+
 
 //Utenti
-Route::get('/user/{id}', [PublicController::class, 'userProfile'])->name('userProfile');
+Route::get('/user/{id}', [ProfileController::class, 'userProfile'])->name('userProfile');
 
 //Lingua
 Route::post('/language/{lang}', [PublicController::class, 'setLanguage'])->name('setLanguage');

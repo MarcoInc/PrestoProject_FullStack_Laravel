@@ -481,3 +481,8 @@ footer {
 .vhCustom{
     height: 80vh;
 }
+
+/*Profilo revisore*/
+.borderProfilo{
+    border: double var(--primaryColor);
+}

@@ -62,7 +62,7 @@
         'requestRevisorButton' => 'Send request',
 
         //Category Show
-        'explorerCategory' => 'Explore chategory',
+        'explorerCategory' => 'Explore category',
         'noneArticleCategory'=> 'There are no advertisements for this category',
 
         //Index

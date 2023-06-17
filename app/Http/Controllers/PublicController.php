@@ -63,19 +63,7 @@ class PublicController extends Controller
         return view('mail.contact-us');
     }
     
-    public function profilo(){
-        //crea un array delle sole Song in cui user_id è uguale all'id dell'Utente e le ordina in base al titolo ascendente
-        $houses = GuestHouse::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
-        
-        return view('profilo', compact('houses'));
-    }
-    
-    public function userProfile($id)
-    {
-        $houses = GuestHouse::where('user_id', $id)->where('is_accepted', true)->orderBy('updated_at', 'desc')->get();
-        $name = User::findOrFail($id)->name;
-        return view('user', compact('houses', 'name'));
-    }
+
     
     public function setLanguage($lang)
     {

@@ -1,7 +1,11 @@
 <x-layout title="{{$house->place}}">
     <div class="container">
         @livewire('category-bar', compact('locations'))
-       
+        @if (session('editOk'))
+        <div>
+            <p class="alert alert-warning mt-3 text-center"> {{ session('editOk') }} </p>
+        </div>
+        @endif
        
         <div class="row justify-content-center justify-content-md-around align-items-center p-3 my-5 shadow">
             <div class="col-md-5 col-12">
