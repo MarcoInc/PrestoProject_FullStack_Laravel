@@ -11,9 +11,11 @@
                         <div class="row justify-content-center justify-content-md-between w-100">
 
                             @if ($profile->img)
-                                <div class="bRadius border border-3 p-2 ms-3">
-                                    <img class="img-fluid whImgProfile bRadius" src="{{ Storage::url($profile->img) }}"
-                                        alt="">
+                                <div class="col-md-2 col-12 ms-md-3 ms-0 text-center">
+
+                                    <img class=" whImgProfile border border-3 p-1 bRadius"
+                                        src="{{ Storage::url($profile->img) }}" alt="">
+
                                 </div>
                             @else
                                 <div class="display-1 text-center col-md-2 col-12 pt-4">

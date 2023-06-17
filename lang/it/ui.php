@@ -34,7 +34,7 @@
         'homeTitle' => 'Pagina principale',
         'requestRevisorTitle' => 'Richiesta revisor',
         'createArticleTitle' => 'Crea articolo',
-        'editArticleTitle' => 'Modifica prodotto',
+        'editArticleTitle' => 'Modifica annuncio',
         'allArticleTitle' => 'Tutti gli articoli',
         'historyIndexRevisorTitle' => 'Storico revisioni',
         'loginTitle' => 'Accedi',
