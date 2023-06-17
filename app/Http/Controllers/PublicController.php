@@ -34,8 +34,7 @@ class PublicController extends Controller
         return view('terms.services');
     }
     
-    public function index()
-    {
+    public function index(){
         $guest_houses = GuestHouse::where('is_accepted', true) //solo quelli is_accepted=true
         ->orderBy('created_at', 'desc') //ordine decrescente per data di creazione
         ->paginate(6); //La funzione paginate mi permette di mostrare nella pagina solo un tot di articoli
@@ -54,21 +53,17 @@ class PublicController extends Controller
         return view('product.category-show', compact('location', 'icons'));
     }
     
-    public function searchHouse(Request $request)
-    {
+    public function searchHouse(Request $request){
         $guest_houses = GuestHouse::search($request->searched)->where('is_accepted', true)->paginate(6);
         $locations = Location::all();
         return view('product.index', compact('guest_houses', 'locations'));
     }
     
-    public function contactUs()
-    {
-        
+    public function contactUs(){
         return view('mail.contact-us');
     }
     
-    public function profilo()
-    {
+    public function profilo(){
         //crea un array delle sole Song in cui user_id è uguale all'id dell'Utente e le ordina in base al titolo ascendente
         $houses = GuestHouse::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
         

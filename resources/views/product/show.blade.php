@@ -1,4 +1,4 @@
-<x-layout title="{{$house->place}} - {{$house->location->name}}">
+<x-layout title="{{$house->place}}">
     <div class="container">
         @livewire('category-bar', compact('locations'))
        
@@ -6,6 +6,59 @@
         <div class="row justify-content-center justify-content-md-around align-items-center p-3 my-5 shadow">
             <div class="col-md-5 col-12">
                 <h2 class="borderCardHome pb-0">{{$house->place}}</h2>
+                <p><strong>{{__('ui.location')}}:</strong> 
+                    {{-- {{$house->location->name}} --}}
+                    @if(App::getLocale()=='it')
+                        @if($house->location->name=='Mare')
+                            Mare
+                        @elseif($house->location->name=='Montagna')
+                            Montagna
+                        @elseif($house->location->name=='Lago')
+                            Lago
+                        @elseif($house->location->name=='Deserto')
+                            Deserto
+                        @elseif($house->location->name=='Campagna')
+                            Campagna
+                        @elseif($house->location->name=='Citta')
+                            Città
+                        @elseif($house->location->name=='Neve')
+                            Neve
+                        @endif
+                    @elseif(App::getLocale()=='en')
+                        @if($house->location->name=='Mare')
+                            Beach
+                        @elseif($house->location->name=='Montagna')
+                            Mountain
+                        @elseif($house->location->name=='Lago')
+                            Lake
+                        @elseif($house->location->name=='Deserto')
+                            Desert
+                        @elseif($house->location->name=='Campagna')
+                            Countryside
+                        @elseif($house->location->name=='Citta')
+                            City
+                        @elseif($house->location->name=='Neve')
+                            Snow
+                        @endif
+                    @elseif(App::getLocale()=='es')
+                        @if($house->location->name=='Mare')
+                            Mar
+                        @elseif($house->location->name=='Montagna')
+                            Montaña
+                        @elseif($house->location->name=='Lago')
+                            Lago
+                        @elseif($house->location->name=='Deserto')
+                            Desierto
+                        @elseif($house->location->name=='Campagna')
+                            Campo
+                        @elseif($house->location->name=='Citta')
+                            Ciudad
+                        @elseif($house->location->name=='Neve')
+                        Nieve
+                        @endif
+                    @endif
+                </p>
+
                 <p><strong>{{__('ui.bedsPlace')}}:</strong> {{$house->beds}}</p>
                 <p><strong>{{__('ui.price')}}:</strong> {{$house->price}}/{{__('ui.night')}}</p>
                 <p><strong>{{__('ui.description')}}:</strong> {{$house->description}}</p>
@@ -14,13 +67,8 @@
                         class="btn mainColor fw-semibold fs-6">
                         <i class="bi bi-person-lines-fill"></i> {{ $house->user->name }}
                     </a>
-                </p>
-                
-                
-                
-                
-                
-                
+                </p>       
+                              
                 @if(Auth::id()==$house->user_id)
                 <a href="{{ route('edit',compact('house')) }}" class="btn btnCard fs-6 mainColor">
                     <i class="bi bi-chevron-compact-right mainColor fs-6"></i> {{__('ui.editArticle')}}
