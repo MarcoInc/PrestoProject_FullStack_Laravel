@@ -1,8 +1,8 @@
 <x-layout docTitle="Register" title="{{__('ui.registerTitle')}}">
     
-    <div class="container-fluid formRegister">
-        <div class="row justify-content-center vh-100 align-items-center">
-            <div class="col-5 bgRegister">
+    <div class="container-fluid formRegister py-3">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-5 col-12 bgRegister">
                 <form method="POST" action={{ route('register') }}>
                     @csrf
                     <div class="w-100 text-center">

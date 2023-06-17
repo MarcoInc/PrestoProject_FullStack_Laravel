@@ -37,9 +37,9 @@
         </div>
     @endif
 
-    <div class="min-vh-100">
+   
         {{ $slot }}
-    </div>
+  
 
     <!--Swiper JS-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

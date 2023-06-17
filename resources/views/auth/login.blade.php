@@ -2,9 +2,9 @@
     {{-- icona login --}}
     
     <div class="container-fluid bgLogin  pb-5 ">
-        <div class="row justify-content-center mLogin p-5 vh-100">
+        <div class="row justify-content-center mLogin p-md-5 p-0 mb-3 mb-md-1 vh-100">
             
-            <div class="col-5 bg-dark shadow">
+            <div class="col-12 col-md-5 bg-dark shadow">
                 <div class="w-100 text-center pt-5">
                     <i class="bi bi-person-circle display-1 text-white"></i>
                 </div>
