@@ -50,7 +50,7 @@ class AddWatermark implements ShouldQueue{
             ->watermarkHeight(31, Manipulations::UNIT_PIXELS) // Percentuale di altezza
             ->watermarkWidth(123, Manipulations::UNIT_PIXELS) // Percentuale di larghezza
             ->watermarkPosition(Manipulations::POSITION_BOTTOM_RIGHT) // Posiziona in basso a sinistra
-            ->watermarkPadding(10, 10, Manipulations::UNIT_PERCENT); // Padding dal bordo sinistro e inferiore
+            ->watermarkPadding(10, 5, Manipulations::UNIT_PERCENT); // Padding dal bordo sinistro e inferiore
             //->watermarkFit(Manipulations::FIT_CONTAIN) // Adatta il watermark all'immagine
             
 

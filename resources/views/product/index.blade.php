@@ -12,13 +12,13 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="row justify-content-md-center ">
-                    @forelse ($guest_houses as $house)
-                    <div class="col-12">
+                    <div class="col-12 ">
                         <h4 class="text-center p-4 borderIndexh3">
                             
                             {{__('ui.dreamWithUs')}}
                         </h4>
                     </div>
+                    @forelse ($guest_houses as $house)
                     <div class="col-11 hCard col-md-6 col-lg-3 mx-3 my-3">
                         <div class="card h-100 cardBorder">
                             {{-- @dd(Storage::url($house->images()->first()->path)) --}}
