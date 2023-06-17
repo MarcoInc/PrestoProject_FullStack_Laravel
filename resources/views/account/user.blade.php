@@ -7,36 +7,40 @@
             <div class="col-12 borderProfilo">
                 <div class="row justify-content-evenly">
                     <div class="col-12 py-3  formCustomProfile d-flex align-items-center justify-content-between">
-                        @if ($profile->img)
-                            <div class="bRadius border border-3 p-2 ms-3">
-                                <img class="img-fluid whImgProfile bRadius" src="{{ Storage::url($profile->img) }}"
-                                    alt="">
-                            </div>
-                        @else
-                            <div class="display-1">
-                                <i class="text-white bi bi-person-circle ps-5 display-1"></i>
-                            </div>
-                        @endif
 
-                        <div class="pe-3">
-                            <h2 class="py-3 text-white">Profilo: {{ $user->name }}</h2>
-                            <a class="btn btnCustom mb-3"
-                                href="{{ route('edit_profile', ['user' => Auth::user()]) }}">Modifica profilo</a>
-                            @if (Auth::user()->is_revisor)
-                                <p class="text-white fs-5">Ruolo: {{ __('ui.revisor') }}
-                                    <i class="ps-2 bi bi-vector-pen"></i>
-                                </p>
-                            @elseif(Auth::user())
-                                <p class="text-white fs-5">Ruolo: Guest
+                        <div class="row justify-content-center justify-content-md-between w-100">
 
-                                </p>
+                            @if ($profile->img)
+                                <div class="bRadius border border-3 p-2 ms-3">
+                                    <img class="img-fluid whImgProfile bRadius" src="{{ Storage::url($profile->img) }}"
+                                        alt="">
+                                </div>
+                            @else
+                                <div class="display-1 text-center col-md-2 col-12 pt-4">
+                                    <i class="text-white bi bi-person-circle ps-md-5 ps-0 display-1"></i>
+                                </div>
                             @endif
+
+                            <div class="col-md-9 col-12 pe-md-5 pe-0 text-center text-md-end">
+                                <h2 class="py-3 text-white">Profilo: {{ $user->name }}</h2>
+                                <a class="btn btnCustom mb-3"
+                                    href="{{ route('edit_profile', ['user' => Auth::user()]) }}">Modifica profilo</a>
+                                @if (Auth::user()->is_revisor)
+                                    <p class="text-white fs-5">Ruolo: {{ __('ui.revisor') }}
+                                        <i class="ps-2 bi bi-vector-pen"></i>
+                                    </p>
+                                @elseif(Auth::user())
+                                    <p class="text-white fs-5">Ruolo: Guest
+
+                                    </p>
+                                @endif
+                            </div>
                         </div>
                     </div>
 
                     <div class="row px-0">
 
-                        <div class="col-4 borderBottom formCustomProfile2">
+                        <div class="col-md-4 col-12 borderBottom formCustomProfile2">
                             <h2 class="pt-3 text-white">Chi sono</h2>
                             <hr class="text-white">
                             <ul class="list-unstyled">
@@ -61,7 +65,8 @@
                             <p class="fs-5"><i
                                     class="bi bi-phone-vibrate text-white me-1"></i>{{ $profile->contact }}</p>
                         </div>
-                        <div class="col-8 borderBottom d-flex flex-column justify-content-center align-items-center">
+                        <div
+                            class="col-md-8 col-12 pb-2 borderBottom d-flex flex-column justify-content-center align-items-center">
                             @if (session('editProfileOk'))
                                 <div>
                                     <p class="alert alert-warning mt-3 text-center"> {{ session('editProfileOk') }}
@@ -87,7 +92,8 @@
 
 
                     <div id="articles" class="col-12">
-                        <h2 class="text-end pe-4 py-5"><i class="mainColor bi bi-house-heart me-1"></i>Case in affitto:
+                        <h2 class="text-md-end text-center pe-4 py-5"><i
+                                class="mainColor bi bi-house-heart me-1"></i>Case in affitto:
                             Esplora le Offerte nel Mio Profilo
 
                         </h2>
