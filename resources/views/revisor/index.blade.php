@@ -14,7 +14,6 @@
                         <h2>Descrizione: {{ $house_toCheck->description }}</h2>
                         
                         <img src="{{ Storage::url($house_toCheck->img) }}" alt="{{ $house_toCheck->name }}">  --}}
-                        
                         <table class="table">
                             <thead>
                                 <tr>
