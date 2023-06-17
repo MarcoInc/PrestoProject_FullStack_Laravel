@@ -10,8 +10,8 @@
       
     </div>
     <div class="mb-3">
-        <label for="age" class="form-label">Anni</label>
-        <input class="form-control" wire:model="age" type="number"  id="age">
+        <label for="age" class="form-label">Età</label>
+        <input class="form-control" wire:model="age" type="number" step="0.01"  id="age">
     </div>
  
 

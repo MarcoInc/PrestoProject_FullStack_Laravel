@@ -484,5 +484,27 @@ footer {
 
 /*Profilo revisore*/
 .borderProfilo{
-    border: double var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+}
+
+.formCustomProfile{
+    background: linear-gradient(to bottom, rgba(18, 110, 118, 0.82), rgba(18, 110, 118, 0.5));;
+}
+
+.formCustomProfile2{
+    background: linear-gradient(to top, rgba(18, 110, 118, 0.82), rgba(18, 110, 118, 0.5));;
+
+}
+
+.whImgProfile{
+    
+    width: 170px;
+    height: 150px;
+   
+    
+}
+
+.bRadius{
+    border-radius: 50%;
+    
 }

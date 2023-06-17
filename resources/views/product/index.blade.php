@@ -101,7 +101,7 @@
                                             <span class="fw-semibold fs-6">
                                                 <i class="fa-solid fs-6 fa-user me-0 pe-0 mainColor"></i>{{__('ui.publishBy')}}:
                                             </span>
-                                            <a href="{{ route('userProfile', ['id' => $house->user->id])}}"
+                                            <a href="{{ route('userProfile', ['id' => $house->user])}}"
                                                 class="btn mainColor ps-1 p-0  scale transition"></i>{{ $house->user->name }}
                                             </a>    
                                             
@@ -135,7 +135,7 @@
                                             action={{ route('delete', compact('house')) }}>
                                             @csrf
                                             @method('delete')
-                                        </form>
+                                             </form>
                                         @endif
                                     </span>
                                 </div>

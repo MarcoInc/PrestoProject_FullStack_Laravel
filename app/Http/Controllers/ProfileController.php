@@ -20,8 +20,11 @@ class ProfileController extends Controller
     public function userProfile($id)
     {
         $houses = GuestHouse::where('user_id', $id)->where('is_accepted', true)->orderBy('updated_at', 'desc')->get();
-        $name = User::findOrFail($id)->name;
-        return view('account.user', compact('houses', 'name'));
+        $profile = User::findOrFail($id)->profile;
+        $user = User::find($id);
+        
+        
+        return view('account.user', compact('houses', 'profile', 'user'));
     }
 
     public function edit(User $user){

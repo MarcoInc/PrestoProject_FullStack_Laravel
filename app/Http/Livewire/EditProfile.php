@@ -10,7 +10,7 @@ use Livewire\WithFileUploads;
 class EditProfile extends Component
 {
     public $profile, $user_id, $name, $age, $language, $work, $contact, $from, $info;
-    // public $img;
+    public $img;
 
     use WithFileUploads;
 
@@ -20,50 +20,47 @@ class EditProfile extends Component
 
     public function mount()
     {
+        $this->user_id = Profile::find($this->user_id);
         $this->name = $this->name;
         $this->age = $this->age;
         $this->language = $this->language;
         $this->work = $this->work;
         $this->contact = $this->contact;
         $this->from = $this->from;
-        // $this->img=$this->img;
+        $this->img = $this->img;
         $this->info = $this->info;
     }
 
 
     public function profileUpdate()
     {
-       
-        $this->user_id=Auth::user()->id;
+
+        $this->user_id = Auth::user()->id;
         $this->profile = Profile::updateOrCreate(
-        ['user_id' => $this->user_id],
-        [
-            'user_id' => $this->user_id,
-            'name' => $this->name,
-            'age' => $this->age,
-            'language' => $this->language,
-            'work' => $this->work,
-            'contact' => $this->contact,
-            'from' => $this->from,
-            // 'img' => $this->img,
-            'info' => $this->info
-        ]);
+            ['user_id' => $this->user_id],
+            [
+                'user_id' => $this->user_id,
+                'name' => $this->name,
+                'age' => $this->age,
+                'language' => $this->language,
+                'work' => $this->work,
+                'contact' => $this->contact,
+                'from' => $this->from,
+                'img' => optional($this->img)->store('public/media'),
+                'info' => $this->info
+            ]
+        );
 
-        
-
-        // if($this->profile->img){
-        //     $this->profile->update([
-        //     'img'=>$this->profile->file('img')->store('public/media')
-        //     ]);
+        // if ($this->img) {
+        //     $this->profile->img = $this->img->store('public/media');
         // }
 
-        // if(count($this->images)){
-        //     foreach ($this->images as $image) {
-        //         $this->house->images()->create(['path' => $image->store('images', 'public')]);
-        //     }
-        // }
 
-        return redirect(route('profilo'))->with('editProfileOk', 'Modifiche applicate!');
+
+
+
+
+        return redirect(route('userProfile', ['id' => $this->user_id]))->with('editProfileOk', 'Modifiche applicate!');
     }
 
 
