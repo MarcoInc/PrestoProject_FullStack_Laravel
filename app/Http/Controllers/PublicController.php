@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Location;
 use App\Models\GuestHouse;
+use App\Models\Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
@@ -70,6 +71,7 @@ class PublicController extends Controller
     {
         //crea un array delle sole Song in cui user_id è uguale all'id dell'Utente e le ordina in base al titolo ascendente
         $houses = GuestHouse::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
+        
         return view('profilo', compact('houses'));
     }
     

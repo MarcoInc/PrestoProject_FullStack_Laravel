@@ -9,7 +9,8 @@
 
                                 {{-- <img src="{{Storage::url($image->path)}}" class="card-img-top h-100" alt="Immagine annuncio">  --}}
                             {{-- togliere il commento --}}
-                                <div class="cardBg" data-image="{{Storage::url($house->images()->first()->path)}}"></div>
+                            <div class="cardBg" data-image="{{ Storage::url($house->images()->first()->path) }}"></div>
+
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between">
                                         <h5 class="card-title fw-bold">{{ $house->place }}</h5>
