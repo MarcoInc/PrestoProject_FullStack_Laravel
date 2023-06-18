@@ -22,6 +22,7 @@ return [
    'goToReview' => 'Articolo mandato in revisione',
    'waitForReview' => 'Modifiche applicate! Attendi una revisione.',
    'editProfileOk' => 'Modifiche profilo applicate.',
-   'sendMailOk' => 'Messaggio inviato correttamente.'
+   'sendMailOk' => 'Messaggio inviato correttamente.',
+   'messageProductCreate' => 'Prodotto caricato correttamente. Attendi la revisione per visualizzarlo!'
 
 ];

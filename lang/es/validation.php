@@ -65,7 +65,7 @@ return [
         'numeric' => 'The :attribute field must be greater than or equal to :value.',
         'string' => 'The :attribute field must be greater than or equal to :value characters.',
     ],
-    'image' => 'The :attribute field must be an image.',
+    'image' => 'Debe ser una imagen.',
     'in' => 'The selected :attribute is invalid.',
     'in_array' => 'The :attribute field must exist in :other.',
     'integer' => 'The :attribute field must be an integer.',
@@ -89,7 +89,7 @@ return [
     'mac_address' => 'The :attribute field must be a valid MAC address.',
     'max' => [
         'array' => 'The :attribute field must not have more than :max items.',
-        'file' => 'The :attribute field must not be greater than :max kilobytes.',
+        'file' => 'La imagen debe tener como máximo :max kilobytes.',
         'numeric' => 'The :attribute field must not be greater than :max.',
         'string' => 'The :attribute field must not be greater than :max characters.',
     ],
@@ -137,7 +137,7 @@ return [
     'same' => 'The :attribute field must match :other.',
     'size' => [
         'array' => 'The :attribute field must contain :size items.',
-        'file' => 'The :attribute field must be :size kilobytes.',
+        'file' =>  'Debe tener como máximo :size kilobytes.',
         'numeric' => 'The :attribute field must be :size.',
         'string' => 'The :attribute field must be :size characters.',
     ],
@@ -163,9 +163,77 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'required-password' => 'custom-message',
+
+        'name' => [
+            'required' => 'El nombre es obligatorio',
         ],
+
+        'email' => [
+            'required' => 'El correo electrónico es obligatorio',
+            'email' => 'El correo electrónico debe ser válido',
+            'unique' => 'El correo electrónico ya está registrado',
+        ],
+
+        'password' => [
+            'required' => 'La contraseña es obligatoria',
+            'confirmed' => 'La contraseña no coincide',
+            'password' => 'Contraseña incorrecta',
+        ],
+
+        'location_id' => [
+            'required' => 'Selecciona una ubicación',
+        ],
+
+        'place' => [
+            'required' => 'El lugar es obligatorio',
+            'min' => 'Mínimo 5 caracteres',
+            'max' => 'Máximo 30 caracteres',
+        ],
+
+        'price' => [
+            'required' => 'El precio es obligatorio',
+            'numeric' => 'Debe ser un número',
+        ],
+
+        'description' => [
+            'required' => 'La descripción es obligatoria',
+            'min' => 'Mínimo 10 caracteres',
+            'max' => 'Máximo 200 caracteres',
+        ],
+
+
+        'beds' => [
+            'required' => 'Ingrese la cantidad de camas',
+            'numeric' => 'Debe ser un número',
+        ],
+
+        'images' => [
+            'require' => 'Al menos una imagen es obligatoria',
+            'image' => 'Debe ser una imagen',
+            'max' => 'La imagen debe tener un máximo de 1024',
+        ],
+
+        'temporary_images' => [
+            'require' => 'Al menos una imagen es obligatoria',
+            'image' => 'Debe ser una imagen',
+            'max' => 'La imagen debe tener un máximo de 1024',
+        ],
+
+        'body' => [
+            'required' => 'El mensaje es obligatorio',
+            'min' => 'Mínimo 10 caracteres',
+            'max' => 'Máximo 300 caracteres',
+        ],
+
+        'user' => [
+            'required' => 'El nombre es obligatorio',
+            'min' => 'Mínimo 5 caracteres',
+            'max' => 'Máximo 30 caracteres',
+        ],
+
+
+
+
     ],
 
     /*

@@ -34,8 +34,8 @@ class CreateForm extends Component{
         'beds' => 'required|numeric',
         'user_id' => 'required',
         'location_id' => 'required',
-        'images.*' => 'image|max:1024',
-        'temporary_images.*' => 'image|max:1024'
+        'images.*' => 'required|image|max:1024',
+        'temporary_images.*' => 'required|image|max:1024'
         
     ];
     
@@ -60,7 +60,7 @@ class CreateForm extends Component{
     
     public function updatedTemporaryImages(){
         if($this->validate([
-            'temporary_images.*' => 'image|max:1024',
+            'temporary_images.*' => 'require|image|max:1024',
             ])) {
                 foreach ($this->temporary_images as $image){
                     $this->images[] = $image;
@@ -111,7 +111,7 @@ class CreateForm extends Component{
                     // $this->guest_houses->user()->associate(Auth::user());
                     // $this->guest_houses->save();
                     
-                    session()->flash('message', 'Prodotto caricato correttamente');
+                    session()->flash('messageProductCreate', __('messages.messageProductCreate'));
                     
                     
                     $this->reset(); 

@@ -1,7 +1,7 @@
 <form wire:submit.prevent="store" enctype="multipart/form-data">
-    @if (session('message'))
+    @if (session('messageProductCreate'))
         <div>
-            <p class="alert alert-warning">{{ session('message') }}</p>
+            <p class="alert alert-warning">{{ session('messageProductCreate') }}</p>
         </div>
     @endif
 
