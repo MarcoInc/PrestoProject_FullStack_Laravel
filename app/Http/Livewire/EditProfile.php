@@ -18,8 +18,7 @@ class EditProfile extends Component
         'user_id' => 'required'
     ];
 
-    public function mount()
-    {
+    public function mount(){
         $this->user_id = Profile::find($this->user_id);
         $this->name = $this->name;
         $this->age = $this->age;
@@ -30,6 +29,26 @@ class EditProfile extends Component
         $this->img = $this->img;
         $this->info = $this->info;
     }
+    // public function mount(){
+    //     $this->user_id = Profile::find($this->user_id);
+    //     $this->profile = Profile::find($this->user_id);
+    //     if (isset($this->profile->name)) 
+    //         $this->name = $this->profile->name;
+    //     if (isset($this->profile->age)) 
+    //         $this->age = $this->profile->age;
+    //     if (isset($this->profile->language)) 
+    //         $this->language = $this->profile->language;
+    //     if (isset($this->profile->work)) 
+    //         $this->work = $this->profile->work;
+    //     if (isset($this->profile->contact)) 
+    //         $this->contact = $this->profile->contact;
+    //     if (isset($this->profile->from)) 
+    //         $this->from = $this->profile->from;
+    //     if (isset($this->profile->img)) 
+    //         $this->img = $this->profile->img;
+    //     if (isset($this->profile->info)) 
+    //         $this->info = $this->profile->info;
+    // }
 
 
     public function profileUpdate()
@@ -54,12 +73,7 @@ class EditProfile extends Component
         // if ($this->img) {
         //     $this->profile->img = $this->img->store('public/media');
         // }
-
-
-
-
-
-
+        
         return redirect(route('userProfile', ['id' => $this->user_id]))->with('editProfileOk', 'Modifiche applicate!');
     }
 
