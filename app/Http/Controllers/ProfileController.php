@@ -28,8 +28,6 @@ class ProfileController extends Controller
     }
 
     public function edit(User $user){
-       
-        
         if(Auth::user() )
         // && Auth::user()->id==$user->profile->user_id        
              return view('account.edit_profile', compact('user'));
