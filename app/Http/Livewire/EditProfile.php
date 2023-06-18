@@ -7,9 +7,10 @@ use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
-class EditProfile extends Component
-{
-    public $profile, $user_id, $name, $age, $language, $work, $contact, $from, $info;
+class EditProfile extends Component{
+//user preso dalla vista
+//profile scritto dopo
+    public $profile, $user, $user_id, $name, $age, $language, $work, $contact, $from, $info, $profile_tmp;
     public $img;
 
     use WithFileUploads;
@@ -19,37 +20,17 @@ class EditProfile extends Component
     ];
 
     public function mount(){
-        $this->user_id = Profile::find($this->user_id);
-        $this->name = $this->name;
-        $this->age = $this->age;
-        $this->language = $this->language;
-        $this->work = $this->work;
-        $this->contact = $this->contact;
-        $this->from = $this->from;
-        $this->img = $this->img;
-        $this->info = $this->info;
+        $this->profile_tmp = Profile::find($this->user->id);
+        $this->name = $this->profile_tmp->name;
+        $this->age = $this->profile_tmp->age;
+        $this->language = $this->profile_tmp->language;
+        $this->work = $this->profile_tmp->work;
+        $this->contact = $this->profile_tmp->contact;
+        $this->from = $this->profile_tmp->from;
+        $this->img = $this->profile_tmp->img;
+        $this->info = $this->profile_tmp->info;
     }
-    // public function mount(){
-    //     $this->user_id = Profile::find($this->user_id);
-    //     $this->profile = Profile::find($this->user_id);
-    //     if (isset($this->profile->name)) 
-    //         $this->name = $this->profile->name;
-    //     if (isset($this->profile->age)) 
-    //         $this->age = $this->profile->age;
-    //     if (isset($this->profile->language)) 
-    //         $this->language = $this->profile->language;
-    //     if (isset($this->profile->work)) 
-    //         $this->work = $this->profile->work;
-    //     if (isset($this->profile->contact)) 
-    //         $this->contact = $this->profile->contact;
-    //     if (isset($this->profile->from)) 
-    //         $this->from = $this->profile->from;
-    //     if (isset($this->profile->img)) 
-    //         $this->img = $this->profile->img;
-    //     if (isset($this->profile->info)) 
-    //         $this->info = $this->profile->info;
-    // }
-
+    
 
     public function profileUpdate()
     {
