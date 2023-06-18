@@ -82,6 +82,9 @@
         'noneReview' => 'There are no announcements to review',
         'Vaiallostorico' =>  'Go to history', 
         'Refresh' => 'Refresh page',
+        'noHistory' => 'There are no ads in the revision history',
+        'goToReview' => 'Go to the ads for review',
+
 
         //Create-form ed Edit-form
         'place' => 'Place',

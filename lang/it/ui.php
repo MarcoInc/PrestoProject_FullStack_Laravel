@@ -86,6 +86,8 @@
         'noneReview' => 'Non ci sono annunci da revisionare',
         'Vaiallostorico' => 'Vai allo storico',
         'Refresh' => 'Refresh pagina',
+        'noHistory' => 'Nessun annuncio nello storico',
+        'goToReview' => 'Vai agli annunci da revisionare',
 
         //Create-form ed Edit-form
         'place' => 'Luogo',

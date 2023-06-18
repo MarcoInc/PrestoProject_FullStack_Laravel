@@ -129,9 +129,9 @@
                     </div>
                     @empty
                 </div>
-                <div class="col-12 vhCustom d-flex justify-content-center align-items-center">
+                <div class="col-12 my-3 d-flex justify-content-center align-items-center">
                     <div class="borderCustom p-5 d-flex flex-column justify-content-center align-items-center">
-                        <h2 class="text-white p-5">{{__('ui.noneArticleCategory')}}:</h2>
+                        <h2 class="text-white text-center p-5">{{__('ui.noneArticleCategory')}}:</h2>
                         <i class="text-white fs-4 pb-2 bi bi-cloud-upload-fill"></i><a href="{{route('create')}}" class="btn opacity btnCustom p-2 fs-5">{{__('ui.CaricaAnnuncio')}}!</a>
                     </div>
                 </div>

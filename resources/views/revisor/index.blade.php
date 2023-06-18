@@ -7,13 +7,7 @@
                     <div class="col-12 overflow-auto">
                         <h1 class="py-4">{{ $house_toCheck ? __('ui.toReview') : __('ui.noneReview') }}</h1>
                         @if (App\Models\GuestHouse::toBeRevisonedCounter() > 0)
-                            {{-- <h2>{{ $house_toCheck->place }}</h2>
-                        <h3>Posti letto : {{ $house_toCheck->beds }}</h3>
-                        <h2>Prezzo a notte : {{ $house_toCheck->price }}</h2>
-                        <h2>Creato il: {{ $house_toCheck->created_at }} da {{ $house_toCheck->user->name}} ({{$house_toCheck->user->email}})</h2>
-                        <h2>Descrizione: {{ $house_toCheck->description }}</h2>
-                        
-                        <img src="{{ Storage::url($house_toCheck->img) }}" alt="{{ $house_toCheck->name }}">  --}}
+                           
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -63,18 +57,16 @@
                                                     <div class="carousel-inner">
 
                                                         @foreach ($house->images as $image)
-                                                            <div
-                                                                class="carousel-item  @if ($loop->first) active @endif">
+                                                            <div class="carousel-item  @if ($loop->first) active @endif">
 
-                                                                <div class="row justify-content-between">
+                                                                <div class="row">
                                                                     <div class="col-12 py-2">
                                                                         <img src="{{ $image->getUrl(400, 300) }}"
-                                                                            class="" alt="Immagini">
+                                                                            class="img-fluid" alt="Immagini">
 
                                                                     </div>
                                                                 </div>
-                                                                <div
-                                                                    class="row align-items-center justify-content-center">
+                                                                <div class="row align-items-center justify-content-center">
                                                                     <div class="col-4 d-flex align-items-center  w-100">
                                                                         <p class="m-0">NSFW:</p> <span
                                                                             class="{{ $image->adult }} me-1"></span>
@@ -209,7 +201,7 @@
                                                         @endif
                                                     </span>
                                                 </p>
-                                               
+
                                                 <p>
                                                     {{ $house->description }}
                                                 </p>
@@ -276,19 +268,19 @@
                             </table>
                         @else
                             {{-- Se non ci sono articoli da revisionare --}}
-                            <div class="col-12 vhCustom d-flex justify-content-center align-items-center">
+                            <div class="col-12 mb-5 d-flex justify-content-center align-items-center">
                                 <div
                                     class="borderCustom p-5 d-flex flex-column justify-content-center align-items-center">
-                                    <h2 class="text-white p-5">{{ __('ui.noneReview') }}</h2>
-                                    <div class="d-flex justify-content-around w-100">
+                                    <h2 class="text-white text-center p-5">{{ __('ui.noneReview') }}</h2>
+                                    <div class="d-flex flex-md-row flex-column justify-content-md-around justify-content-center w-100">
 
-                                        <div class="scale transition">
+                                        <div class="scale transition text-center">
                                             <span><i class="fa-solid fa-paperclip text-white"></i></span> <a
                                                 href="{{ route('revisor.history') }}"
                                                 class="btn fs-5">{{ __('ui.Vaiallostorico') }}</a>
 
                                         </div>
-                                        <div class="scale transition">
+                                        <div class="scale transition text-center">
                                             <span><i class="fa-solid fa-rotate-left text-white"></i></span><a
                                                 href="{{ route('revisorIndex') }}"
                                                 class="btn fs-5">{{ __('ui.Refresh') }}</a>

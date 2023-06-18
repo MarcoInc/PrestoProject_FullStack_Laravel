@@ -37,8 +37,9 @@
         </div>
     @endif
 
-   
-        {{ $slot }}
+        <div class="paddignSlot">
+            {{ $slot }}
+        </div>
   
 
     <!--Swiper JS-->

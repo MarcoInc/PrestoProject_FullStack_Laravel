@@ -29,7 +29,7 @@
 
 
     <div class="container-fluid p-0">
-        <div class="row">
+        <div class="row p-0">
             <div class="col-12">
                 <x-carousel />
 
@@ -37,46 +37,20 @@
         </div>
 
 
-        <div id="scrollAnnunci" class="row me-0 mt-0 pt-0 position-sticky sticky-top borderRowHome">
+        <div id="scrollAnnunci" class="row transition me-0 mt-0 pt-0 position-sticky sticky-top borderRowHome">
             @livewire('category-bar')
         </div>
 
         <div class="row justify-content-center pt-5 pe-0 me-0">
 
             <!-- Swiper -->
-            <div class="col-10">
+            <div class="col-md-10 col-12 p-0">
                 <div class="swiper">
                     <div class="swiper-wrapper">
 
                         @foreach ($guest_houses as $house)
                             <div class="swiper-slide mb-2">
                                 <div class=" bg-light p-2 mx-2">
-
-
-                                    {{--                 
-                <div id="" class="carousel slide" data-bs-ride="carousel">
-                  <div class="carousel-inner">
-                    
-                    @foreach ($house->images as $image)
-                    <div class="carousel-item @if ($loop->first)active @endif" data-bs-interval="5000">
-                      <img src="{{$image->getUrl(400,300)}}" alt="Immagini">
-                    </div>
-                    
-                    @endforeach
-                    
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#pippo" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#pippo" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div> --}}
-
-
-
 
                                     <img src="{{ $house->images()->first()->getUrl(400, 300) }}" class="card-img-top"
                                         alt="">
@@ -88,8 +62,10 @@
                                         </div>
 
                                         <div class="d-flex">
-                                            <p class="card-text mainColor fs-5">{{ __('ui.location') }}:</p>
-                                            <p class="card-text fs-5">&nbsp;
+                                            <p class="card-text mainColor fs-6 fw-semibold"><i
+                                                    class="bi bi-house-heart-fill mainColor"></i>{{ __('ui.location') }}:
+                                            </p>
+                                            <p class="card-text fs-6">&nbsp;
                                                 {{-- {{$house->location->name}} --}}
                                                 @if (App::getLocale() == 'it')
                                                     @if ($house->location->name == 'Mare')
@@ -145,22 +121,23 @@
                                             </p>
                                         </div>
                                         <div class="d-flex">
-                                            <p class="fs-5 card-text mainColor">{{ __('ui.price') }}:</p>
-                                            <p class="card-text">{{ $house->price }}&euro;/{{ __('night') }}</p>
+                                            <p class="fs-6 card-text mainColor fw-semibold"><i
+                                                    class="bi bi-currency-euro mainColor"></i>{{ __('ui.price') }}:</p>
+                                            <p class="card-text fs-6">{{ $house->price }}&euro;/{{ __('night') }}</p>
                                         </div>
-                                        <div class=" d-flex justify-content-between align-items-center w-100">
-                                            <!--Detail-->
-                                            <a href="{{ route('show', ['id' => $house->id]) }}"
-                                                class="p-0 btn btnCard fs-5 text-center"><i
-                                                    class="bi bi-chevron-compact-right mainColor"></i>{{ __('ui.detail') }}</a>
-                                            <!--End Detail-->
-
-                                            <p class="card-footer fs-5 mb-0"><span class="me-1"><i
-                                                        class="bi bi-calendar-check mainColor"></i></span>{{ __('ui.publishAt') }}:
-                                                {{ $house->created_at->format('d/m/Y') }}</p>
-                                            <!--
-                      <p class="card-footer">Pubblicato da: {{ $house->user->name }}</p>
-                    -->
+                                        <div class=" d-flex flex-md-row flex-column justify-content-between w-100">
+                                          
+                                          <p class="card-footer fs-6 mb-0 text-start"><span class="me-1"><i
+                                            class="bi bi-calendar-check mainColor"></i></span>{{ __('ui.publishAt') }}:
+                                            {{ $house->created_at->format('d/m/Y') }}
+                                          </p>
+                                          
+                                          <!--Detail-->
+                                          <a href="{{ route('show', ['id' => $house->id]) }}"
+                                              class="p-md-0 pt-3 ps-0 btn btnCard fs-6 text-start"><i
+                                                  class="bi bi-chevron-compact-right mainColor"></i>{{ __('ui.detail') }}
+                                          </a>
+                                          <!--End Detail-->
                                         </div>
                                     </div>
                                 </div>

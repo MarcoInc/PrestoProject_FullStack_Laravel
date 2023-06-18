@@ -85,7 +85,7 @@ class GuestHouseController extends Controller{
         if(Auth::user() && Auth::user()->name==$house->user->name){
         
           $house->delete();
-          return redirect(route('index'))->with('message', 'prodotto eliminato correttamente');
+          return redirect(route('index'))->with('message', 'Prodotto eliminato correttamente');
         }
         // $guest_houses= GuestHouse::all();
         // return redirect(route('home'))->with(compact('guest_houses'));

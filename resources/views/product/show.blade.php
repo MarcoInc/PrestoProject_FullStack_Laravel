@@ -1,14 +1,14 @@
 <x-layout title="{{$house->place}}">
     <div class="container">
-        @livewire('category-bar', compact('locations'))
-        @if (session('editOk'))
-        <div>
-            <p class="alert alert-warning mt-3 text-center"> {{ session('editOk') }} </p>
-        </div>
-        @endif
-       
+      
         <div class="row justify-content-center justify-content-md-around align-items-center p-3 my-5 shadow">
             <div class="col-md-5 col-12">
+                @livewire('category-bar', compact('locations'))
+                @if (session('editOk'))
+                <div>
+                    <p class="alert alert-warning mt-3 text-center"> {{ session('editOk') }} </p>
+                </div>
+                @endif
                 <h2 class="borderCardHome pb-0">{{$house->place}}</h2>
                 <p><strong>{{__('ui.location')}}:</strong> 
                     {{-- {{$house->location->name}} --}}
@@ -86,11 +86,10 @@
                 </a>
                 
                 
-                {{-- <a onclick="event.preventDefault();getElementById('form-delete').submit();" class="btn btn-danger">{{__('ui.deleteArticle')}}</a>
                 <form id="form-delete" class="d-none" method=POST action={{route('delete',compact('house'))}}>
                     @csrf
                     @method('delete')
-                </form> --}}
+                </form> 
                 @endif
             </div>
             <div class="col-md-5 col-12">
@@ -101,7 +100,7 @@
                         @foreach ($house->images as $image)
                         
                         <div class="carousel-item @if($loop->first)active @endif" data-bs-interval="3000">
-                            <img src="{{Storage::url($image->path)}}" class="img-fluid imgCustom" alt="Immagini">
+                            <img src="{{Storage::url($image->path)}}" class="fotoCarousel aiuto imgCustom" alt="Immagini">
                         </div>
                         
                         @endforeach

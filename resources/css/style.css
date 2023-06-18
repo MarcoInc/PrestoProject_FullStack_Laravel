@@ -34,16 +34,48 @@ font-family: 'Syne', sans-serif;
 }
 
 .logo {
-    height: 100px;
-    width: 100px;
+    height: 72px;
+    width: 72px;
 
 }
+
+.paddignSlot{
+    padding-top: 98px;
+}
+
+
+#scrollAnnunci{
+    top: 98px;
+}
+
+
+@media (max-width: 767px) {
+    .logo {
+      height: 48px;
+      width: 48px;
+    }
+
+    .paddignSlot{
+        padding-top: 70px;
+    }
+
+    #scrollAnnunci{
+        top: 70px;
+        z-index: 99;
+    }
+
+  }
 
 
 .navbar {
     background-color: var(--black);
-
+    position: fixed;
+    z-index: 999;
 }
+
+
+
+
 
 .scale:hover {
     scale: 1.1;
@@ -90,6 +122,8 @@ font-family: 'Syne', sans-serif;
 
 }
 
+
+
 .fotoCarousel {
     object-fit: cover;
 }
@@ -97,6 +131,13 @@ font-family: 'Syne', sans-serif;
 .objectPositionfoto{
  object-position: bottom;
 }
+
+.aiuto{
+    object-position: right;
+
+}
+
+
 
 
 .vhCarousel {
@@ -230,6 +271,12 @@ footer {
     scale: 1.1;
     border-left: solid 1px #126d76;
     border-right: solid 1px rgb(18, 109, 118);
+
+}
+
+.borderLeftRight{
+    border-left: 1px solid var(--primaryColor);
+    border-right: 1px solid var(--primaryColor);
 
 }
 

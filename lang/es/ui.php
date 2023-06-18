@@ -84,7 +84,9 @@ return [
     'noneReview' => 'Non ci sono annunci da revisionare',
     'Vaiallostorico' => 'Ir a la historia',
     'Refresh' => 'Refresh página',
-    
+    'noHistory' => 'No hay anuncios en el historial de revisiones',
+    'goToReview' => 'Ir a los anuncios para revisar',
+
     //Create-form ed Edit-form
     'place' => 'Lugar',
     'description' => 'Descripción',
