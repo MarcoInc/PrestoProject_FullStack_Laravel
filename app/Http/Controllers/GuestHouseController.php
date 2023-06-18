@@ -52,7 +52,7 @@ class GuestHouseController extends Controller{
             $guest_houses = GuestHouse::where('is_accepted',true) 
             ->orderBy('created_at', 'desc')->take(5)->get();
             //dd($guest_houses);
-            return redirect(route('home'))->with('messageNotFound', 'Articolo non trovato')->with(compact('guest_houses'));
+            return redirect(route('home'))->with('messageNotFound', __('messages.ArticleNotFound'))->with(compact('guest_houses'));
         }
         
     }
@@ -85,7 +85,7 @@ class GuestHouseController extends Controller{
         if(Auth::user() && Auth::user()->name==$house->user->name){
         
           $house->delete();
-          return redirect(route('index'))->with('message', 'Prodotto eliminato correttamente');
+          return redirect(route('index'))->with('message', __('messages.correctDelete'));
         }
         // $guest_houses= GuestHouse::all();
         // return redirect(route('home'))->with(compact('guest_houses'));

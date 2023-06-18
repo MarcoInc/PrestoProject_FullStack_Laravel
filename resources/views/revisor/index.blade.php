@@ -6,8 +6,18 @@
                 <div class="row">
                     <div class="col-12 overflow-auto">
                         <h1 class="py-4">{{ $house_toCheck ? __('ui.toReview') : __('ui.noneReview') }}</h1>
+                        @if (session('messageApproved'))
+                            <div>
+                                <p class="alert alert-warning mt-3 text-center"> {{ session('messageApproved') }} </p>
+                            </div>
+                        @endif
+                        @if (session('messageNotApproved'))
+                            <div>
+                                <p class="alert alert-warning mt-3 text-center"> {{ session('messageNotApproved') }} </p>
+                            </div>
+                        @endif
                         @if (App\Models\GuestHouse::toBeRevisonedCounter() > 0)
-                           
+
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -57,7 +67,8 @@
                                                     <div class="carousel-inner">
 
                                                         @foreach ($house->images as $image)
-                                                            <div class="carousel-item  @if ($loop->first) active @endif">
+                                                            <div
+                                                                class="carousel-item  @if ($loop->first) active @endif">
 
                                                                 <div class="row">
                                                                     <div class="col-12 py-2">
@@ -66,7 +77,8 @@
 
                                                                     </div>
                                                                 </div>
-                                                                <div class="row align-items-center justify-content-center">
+                                                                <div
+                                                                    class="row align-items-center justify-content-center">
                                                                     <div class="col-4 d-flex align-items-center  w-100">
                                                                         <p class="m-0">NSFW:</p> <span
                                                                             class="{{ $image->adult }} me-1"></span>
@@ -272,7 +284,8 @@
                                 <div
                                     class="borderCustom p-5 d-flex flex-column justify-content-center align-items-center">
                                     <h2 class="text-white text-center p-5">{{ __('ui.noneReview') }}</h2>
-                                    <div class="d-flex flex-md-row flex-column justify-content-md-around justify-content-center w-100">
+                                    <div
+                                        class="d-flex flex-md-row flex-column justify-content-md-around justify-content-center w-100">
 
                                         <div class="scale transition text-center">
                                             <span><i class="fa-solid fa-paperclip text-white"></i></span> <a

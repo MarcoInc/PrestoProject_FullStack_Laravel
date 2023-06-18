@@ -18,16 +18,16 @@ class RevisorController extends Controller{
             $guest_houses = GuestHouse::where('is_accepted',true) 
             ->orderBy('created_at', 'desc')->take(5)->get();
             //dd($guest_houses);
-            return redirect(route('home'), compact('guest_houses'))->with('messageRevisor', 'Sei già un revisore');
+            return redirect(route('home'), compact('guest_houses'))->with('messageRevisor', __('messages.yetARevisor'));
         }
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
-        return redirect()->back()->with('messageBecomeRevisor','Candidatura inviata corettamente');
+        return redirect(route('home'))->with('messageBecomeRevisor', __('messages.correctApplication'));
         
     }
     
     public function makeRevisor(User $user){
         Artisan::call('presto:makeUserRevisor',["email"=>$user->email , "value"=>1]);
-        return redirect('/')->with('messageRevisorOK','Utente '.$user->name.' è stato reso revisore!');
+        return redirect('/')->with('messageRevisorOK', __('messages.youAreNowARevisor'));
     }
     
     public function revisorIndex(){
@@ -46,18 +46,18 @@ class RevisorController extends Controller{
     
     public function acceptAnnuncio(GuestHouse $house_toCheck){
         $house_toCheck->setAccepted(true);
-        return redirect()->back()->with('message','Articolo approvato');
+        return redirect()->back()->with('messageApproved',__('messages.articleApproved'));
     }
     public function rejectAnnuncio(GuestHouse $house_toCheck){
         $house_toCheck->setAccepted(false);
-        return redirect()->back()->with('message','Articolo non approvato');
+        return redirect()->back()->with('messageNotApproved',__('messages.articleNotApproved'));
     }
 
     public function resetRevision(GuestHouse $house){
         $house->is_accepted=null;
         $house->save();
 
-        return redirect()->back()->with('message','Mandato in revisione');
+        return redirect()->back()->with('message', __('messages.goToReview'));
     }
     
     // public function findLast(){

@@ -1,37 +1,42 @@
 <x-layout title="{{ __('ui.homeTitle') }}">
-    {{-- midlleware revisore --}}
-    @if (session('access.denied'))
-        <div>
-            <p class="alert alert-warning mt-3 text-center"> {{ session('access.denied') }} </p>
-        </div>
-    @endif
-
-    @if (session('messageRevisorOK'))
-        <div>
-            <p class="alert alert-warning mt-3 text-center"> {{ session('messageRevisorOK') }} </p>
-        </div>
-    @endif
-
-    @if (session('messageNotFound'))
-        <div>
-            <p class="alert alert-warning mt-3 text-center"> {{ session('messageNotFound') }} </p>
-        </div>
-    @endif
-
-    @if (session('messageRevisor'))
-        <div>
-            <p class="alert alert-warning mt-3 text-center"> {{ session('messageRevisor') }} </p>
-        </div>
-    @endif
-
-
-    <!-- carosel -->
 
 
     <div class="container-fluid p-0">
+
         <div class="row p-0">
             <div class="col-12">
+                <!-- carosel -->
                 <x-carousel />
+                {{-- midlleware revisore --}}
+                @if (session('access.denied'))
+                    <div>
+                        <p class="alert alert-warning mt-3 text-center"> {{ __('ui.accessDenied') }} </p>
+                    </div>
+                @endif
+
+                @if (session('messageRevisorOK'))
+                    <div>
+                        <p class="alert alert-warning mt-3 text-center"> {{ session('messageRevisorOK') }} </p>
+                    </div>
+                @endif
+
+                @if (session('messageNotFound'))
+                    <div>
+                        <p class="alert alert-warning mt-3 text-center"> {{ session('messageNotFound') }} </p>
+                    </div>
+                @endif
+
+                @if (session('messageRevisor'))
+                    <div>
+                        <p class="alert alert-warning mt-3 text-center"> {{ session('messageRevisor') }} </p>
+                    </div>
+                @endif
+
+                @if (session('messageBecomeRevisor'))
+                    <div>
+                        <p class="alert alert-warning mt-3 text-center"> {{ session('messageBecomeRevisor') }} </p>
+                    </div>
+                @endif
 
             </div>
         </div>
@@ -123,21 +128,22 @@
                                         <div class="d-flex">
                                             <p class="fs-6 card-text mainColor fw-semibold"><i
                                                     class="bi bi-currency-euro mainColor"></i>{{ __('ui.price') }}:</p>
-                                            <p class="card-text fs-6">{{ $house->price }}&euro;/{{ __('night') }}</p>
+                                            <p class="card-text fs-6">{{ $house->price }}&euro;/{{ __('night') }}
+                                            </p>
                                         </div>
                                         <div class=" d-flex flex-md-row flex-column justify-content-between w-100">
-                                          
-                                          <p class="card-footer fs-6 mb-0 text-start"><span class="me-1"><i
-                                            class="bi bi-calendar-check mainColor"></i></span>{{ __('ui.publishAt') }}:
-                                            {{ $house->created_at->format('d/m/Y') }}
-                                          </p>
-                                          
-                                          <!--Detail-->
-                                          <a href="{{ route('show', ['id' => $house->id]) }}"
-                                              class="p-md-0 pt-3 ps-0 btn btnCard fs-6 text-start"><i
-                                                  class="bi bi-chevron-compact-right mainColor"></i>{{ __('ui.detail') }}
-                                          </a>
-                                          <!--End Detail-->
+
+                                            <p class="card-footer fs-6 mb-0 text-start"><span class="me-1"><i
+                                                        class="bi bi-calendar-check mainColor"></i></span>{{ __('ui.publishAt') }}:
+                                                {{ $house->created_at->format('d/m/Y') }}
+                                            </p>
+
+                                            <!--Detail-->
+                                            <a href="{{ route('show', ['id' => $house->id]) }}"
+                                                class="p-md-0 pt-3 ps-0 btn btnCard fs-6 text-start"><i
+                                                    class="bi bi-chevron-compact-right mainColor"></i>{{ __('ui.detail') }}
+                                            </a>
+                                            <!--End Detail-->
                                         </div>
                                     </div>
                                 </div>

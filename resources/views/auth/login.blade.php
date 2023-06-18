@@ -1,7 +1,7 @@
 <x-layout docTitle="Login" title="{{__('ui.loginTitle')}}">
     {{-- icona login --}}
     
-    <div class="container-fluid bgLogin  pb-5 ">
+    <div class="container-fluid bgLogin pt-5 pb-5 ">
         <div class="row justify-content-center mLogin p-md-5 p-0 mb-3 mb-md-1 vh-100">
             
             <div class="col-12 col-md-5 bg-dark shadow">

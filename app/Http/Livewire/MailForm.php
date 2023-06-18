@@ -11,23 +11,23 @@ class MailForm extends Component{
 
 
     protected $rules = [
-        'user' => 'required|min:1|max:30',
+        'user' => 'required|min:5|max:30',
         'email' => 'required|email',
-        'body' => 'required|min:10|max:1000'
+        'body' => 'required|min:10|max:300'
     ];
 
-    protected $messages = [
-        // :attribute per richiamare il nome dell'attributo
-        '*.required' => 'Il campo è obbligatorio',
+    // protected $messages = [
+    //     // :attribute per richiamare il nome dell'attributo
+    //     '*.required' => 'Il campo è obbligatorio',
 
-        'user.min' => 'Inserisci almeno un carattere',
-        'user.max' => 'Massimo 30 caratteri',
+    //     'user.min' => 'Inserisci almeno un carattere',
+    //     'user.max' => 'Massimo 30 caratteri',
 
-        'email.email' => 'Devi inserire un \'email valida',
+    //     'email.email' => 'Devi inserire un \'email valida',
 
-        'body.min' => 'Il messaggio deve avere almeno di 10 caratteri',
-        'body.max' => 'Massimo 1000 caratteri',
-    ];
+    //     'body.min' => 'Il messaggio deve avere almeno di 10 caratteri',
+    //     'body.max' => 'Massimo 1000 caratteri',
+    // ];
     public function send(){
         $this->validate();
 
@@ -39,7 +39,7 @@ class MailForm extends Component{
         Mail::to($email)->send($finalEmail);
         $this->reset();
 
-        return redirect('contattaci')->with("sendEmail",'Messaggio inviato corettamente');
+        return redirect('contattaci')->with("sendEmail", __('messages.sendMailOk'));
     
     }
 

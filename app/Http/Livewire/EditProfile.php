@@ -55,7 +55,7 @@ class EditProfile extends Component{
         //     $this->profile->img = $this->img->store('public/media');
         // }
         
-        return redirect(route('userProfile', ['id' => $this->user_id]))->with('editProfileOk', 'Modifiche applicate!');
+        return redirect(route('userProfile', ['id' => $this->user_id]))->with('editProfileOk', __('messages.editProfileOk'));
     }
 
 

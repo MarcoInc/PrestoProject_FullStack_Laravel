@@ -9,7 +9,7 @@
             <div class="col-8">
                 @if (session('message'))
                     <div class="container">
-                        <p class="alert alert-warning">{{ session('message') }}</p>
+                        <p class="alert alert-warning">{{__('messages.AnnuncioEliminato')}}</p>
                     </div>
                 @endif
             </div>

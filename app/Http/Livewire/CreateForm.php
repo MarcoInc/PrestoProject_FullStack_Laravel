@@ -28,9 +28,9 @@ class CreateForm extends Component{
     use WithFileUploads;
     
     protected $rules = [
-        'place' => 'required|min:1|max:30',
+        'place' => 'required|min:5|max:30',
         'price' => 'required|numeric',
-        'description' => 'required|min:10|max:1000',
+        'description' => 'required|min:10|max:200',
         'beds' => 'required|numeric',
         'user_id' => 'required',
         'location_id' => 'required',
@@ -41,19 +41,19 @@ class CreateForm extends Component{
     
     
     
-    protected $messages = [
-        // :attribute per richiamare il nome dell'attributo
+    // protected $messages = [
+    //     // :attribute per richiamare il nome dell'attributo
         
-        '*.required' => 'Il campo è obbligatorio',
-        'place.max' => 'Il campo dev\'essere al massimo di 30 caratteri',
-        '*.number' => 'Solo numeri consentiti',
-        'description.min' => 'La descrizione dev\'essere almeno di 10 caratteri',
-        'description.max' => 'Massimo 1000 caratteri',
-        'images.image' => 'Deve essere un\'immagine',
-        'images.max' => 'L\'immagine deve essere di massimo un 1mb',
-        'temporary_images.image' => 'Deve essere un\'immagine',
-        'temporary_images.max' => 'L\'immagine deve essere di massimo un 1mb'
-    ];
+    //     '*.required' => 'Il campo è obbligatorio',
+    //     'place.max' => 'Il campo dev\'essere al massimo di 30 caratteri',
+    //     '*.number' => 'Solo numeri consentiti',
+    //     'description.min' => 'La descrizione dev\'essere almeno di 10 caratteri',
+    //     'description.max' => 'Massimo 1000 caratteri',
+    //     'images.image' => 'Deve essere un\'immagine',
+    //     'images.max' => 'L\'immagine deve essere di massimo un 1mb',
+    //     'temporary_images.image' => 'Deve essere un\'immagine',
+    //     'temporary_images.max' => 'L\'immagine deve essere di massimo un 1mb'
+    // ];
     
     
     
