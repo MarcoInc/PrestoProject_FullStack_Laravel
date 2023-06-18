@@ -1,5 +1,5 @@
 <section class="position-relative">
-    <div class="overShadow d-none d-md-flex justify-content-center align-items-center">
+    <div class="overShadow d-flex justify-content-center align-items-center">
         <div class="chevronHome text-white position-absolute text-center">
             <p class="fs-3">{{__('ui.latestArticles')}}  </p>
             <a class="text-white" href="#scrollAnnunci">
@@ -7,17 +7,17 @@
             </a>
         </div>
     </div>
-    <div id="carouselExampleIndicators" class="carousel slide carosel-custom" data-bs-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide vhCarousel" data-bs-ride="carousel">
         
-        <div class="carousel-inner vh-100">
-            <div class="carousel-item active vh-100" data-bs-interval="5000">
-                <img class="foto1 img-fluid d-block w-100" src="/media/foto1.jpg"  alt="foto1">
+        <div class="carousel-inner position-relative">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img  src="/media/foto1.jpg" class="d-block w-100 fotoCarousel objectPositionfoto" alt="foto1">
             </div>
-            <div class="carousel-item vh-100" data-bs-interval="2000">
-                <img src="/media/foto2.jpg" class="d-block w-100" alt="foto2">
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="/media/foto2.jpg" class="d-block w-100 fotoCarousel " alt="foto2">
             </div>
-            <div class="carousel-item vh-100">
-                <img src="/media/foto3.jpg" class="d-block w-100 foto3" alt="foto3">
+            <div class="carousel-item">
+                <img src="/media/foto3.jpg" class="d-block w-100 fotoCarousel objectPositionfoto" alt="foto3">
             </div>
         </div>
         <div class="carousel-indicators btnCarousel d-flex align-items-center position-absolute bottom-0">

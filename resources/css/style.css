@@ -9,9 +9,9 @@ font-family: 'Syne', sans-serif;
 */
 
 :root {
-    --primaryColor: rgb(18,109,118);
+    --primaryColor: rgb(18, 109, 118);
     --secondaryColor: rgb(0, 138, 172);
-    
+
     --white: rgb(238, 237, 237);
     --black: rgb(28, 28, 28);
     --mainFont: 'Syne', sans-serif;
@@ -21,28 +21,28 @@ font-family: 'Syne', sans-serif;
     font-family: 'Syne', sans-serif;
 }
 
-.mainColor{
-    color: rgb(18,109,118);
+.mainColor {
+    color: rgb(18, 109, 118);
 }
 
-.secColor{
-    color:  rgb(0, 138, 172);
+.secColor {
+    color: rgb(0, 138, 172);
 }
 
-.bgMain{
+.bgMain {
     background-color: #126e7693;
 }
 
 .logo {
     height: 100px;
     width: 100px;
-    
+
 }
 
 
 .navbar {
     background-color: var(--black);
-    
+
 }
 
 .scale:hover {
@@ -52,7 +52,7 @@ font-family: 'Syne', sans-serif;
 
 /* carosello */
 
-.carosel-custom{
+.carosel-custom {
     position: relative;
     inset: 0;
     overflow: hidden;
@@ -62,9 +62,9 @@ font-family: 'Syne', sans-serif;
 
 
 
-.overShadow{
+.overShadow {
     position: absolute;
-    width: 100% ;
+    width: 100%;
     height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.329), rgba(0, 0, 0, 0.336));
     z-index: 2;
@@ -72,121 +72,127 @@ font-family: 'Syne', sans-serif;
 
 /*Fine carosello*/
 
-.btnSearch{
+.btnSearch {
     border: solid 1px var(--primaryColor);
-    
+
     transition: 0.5s;
 }
 
-.borderForm{
+.borderForm {
 
     background: #126e769d;
 
 }
 
-.btnSearch:hover{
+.btnSearch:hover {
     border: solid 1px var(--primaryColor);
     scale: 1.1;
-    
+
+}
+
+.fotoCarousel {
+    object-fit: cover;
+}
+
+.objectPositionfoto{
+ object-position: bottom;
 }
 
 
-.foto1, .foto3{
-    width: 100%;
-    position: absolute;
-    bottom: 1px;
-    
+.vhCarousel {
+    height: 90vh;
 }
 
-.formRegister{
+.formRegister {
     background-image: url('/public/media/bgReg4.jpg');
     background-position: bottom;
     background-size: cover;
-    
-    
+
+
 }
 
-.bgRegister{
+.bgRegister {
     background: rgba(0, 0, 0, 0.532);
     padding: 15px;
 }
 
-.btnForm{
+.btnForm {
     background-color: var(--primaryColor);
     transition: 0.4s;
-    color:white;
+    color: white;
 }
 
-.btnForm:hover{
+.btnForm:hover {
     background-color: white;
-    color:var(--primaryColor);
-}
-
-
-
-.hoverLog:hover{
     color: var(--primaryColor);
 }
 
-input{
+
+
+.hoverLog:hover {
+    color: var(--primaryColor);
+}
+
+input {
     box-shadow: 2px 0px 6px rgba(170, 9, 9, 0.2);
 }
 
 
 
-.bgLogin{
+.bgLogin {
     /* background-image: url('/public/media/bgLogin.jpg'); */
-    background:rgba(18, 110, 118, 0.612);
+    background: rgba(18, 110, 118, 0.612);
 
-    
+
 }
 
-.btnLogin{
+.btnLogin {
     border: #126d76 2px solid;
     color: white;
     transition: 0.4s;
 }
 
-.btnLogin:hover{
+.btnLogin:hover {
     background-color: var(--primaryColor);
-    color:white;
+    color: white;
 }
 
-.register{
-    color:var(--primaryColor);
+.register {
+    color: var(--primaryColor);
 }
 
 /* footer */
-.textColor{
+.textColor {
     color: var(--white);
     transition: 0.5;
-    
-    
+
+
 }
 
-.copyright, .credits{
+.copyright,
+.credits {
     letter-spacing: 0.1rem;
 }
 
-.textColor:hover{
+.textColor:hover {
     color: var(--primaryColor);
-    
+
 }
 
-.borderBottom{
+.borderBottom {
     border-bottom: 1px solid var(--primaryColor);
 }
 
-.borderRight{
+.borderRight {
     border-right: 1px solid var(--primaryColor);
 
 }
 
 footer {
-    color: white;    
+    color: white;
 }
 
-.btnNav{
+.btnNav {
     transition: 0.4s;
 }
 
@@ -195,78 +201,82 @@ footer {
     text-decoration: none;
 }
 
-.btnNav:hover{
-    color:var(--primaryColor);
+.btnNav:hover {
+    color: var(--primaryColor);
 }
 
-.icons-footer{
+.icons-footer {
     transition: 0.4s;
 }
 
-.icons-footer:hover{
-    color:var(--primaryColor);
+.icons-footer:hover {
+    color: var(--primaryColor);
 }
 
-.hr{
+.hr {
     border-bottom: 2px solid var(--primaryColor);
-    width:200px;
+    width: 200px;
 }
-.borderCategory{
+
+.borderCategory {
     transition: 0.4s;
-    color: rgb(18,109,118);
+    color: rgb(18, 109, 118);
     border: 0;
     border-radius: 1;
 }
 
-.borderCategory:hover{
-    
+.borderCategory:hover {
+
     scale: 1.1;
     border-left: solid 1px #126d76;
-    border-right: solid 1px rgb(18,109,118);
-    
+    border-right: solid 1px rgb(18, 109, 118);
+
 }
 
-.btnCard{
+.btnCard {
     border-radius: 0;
     transition: 0.4s;
 }
 
-.btnCard:hover{
-    
-    color: rgb(18,109,118);
+.btnCard:hover {
+
+    color: rgb(18, 109, 118);
     scale: 1.1;
-    
+
 }
 
 
-.cardSize{
-    
+.cardSize {
+
     height: 100px !important;
     width: 100px !important;
-    
+
 }
 
 .pagination {
     --bs-pagination-padding-x: 0.75rem;
     --bs-pagination-padding-y: 0.375rem;
     --bs-pagination-font-size: 1rem;
-    --bs-pagination-color: rgb(18,109,118);;
+    --bs-pagination-color: rgb(18, 109, 118);
+    ;
     --bs-pagination-bg: var(--bs-body-bg);
     --bs-pagination-border-width: var(--bs-border-width);
-    --bs-pagination-border-color: rgb(18,109,118);
+    --bs-pagination-border-color: rgb(18, 109, 118);
     --bs-pagination-border-radius: var(--bs-border-radius);
     --bs-pagination-hover-color: white;
     --bs-pagination-hover-bg: rgba(18, 110, 118, 0.747);
     --bs-pagination-hover-border-color: rgba(18, 110, 118, 0.872);
-    --bs-pagination-focus-color: rgb(18,109,118);;
-    
+    --bs-pagination-focus-color: rgb(18, 109, 118);
+    ;
+
     --bs-pagination-focus-box-shadow: 0 0 0 0.10rem rgba(18, 110, 118, 0.562);
     --bs-pagination-active-color: #fff;
     --bs-pagination-active-bg: rgba(18, 110, 118, 0.735);
-    --bs-pagination-active-border-color: rgb(18,109,118);
+    --bs-pagination-active-border-color: rgb(18, 109, 118);
     --bs-pagination-disabled-color: var(--bs-secondary-color);
     --bs-pagination-disabled-bg: rgb(225, 225, 225);
-    --bs-pagination-disabled-border-color: rgb(18,109,118);;
+    --bs-pagination-disabled-border-color: rgb(18, 109, 118);
+    ;
     display: flex;
     justify-content: center;
     padding-top: 10px;
@@ -279,7 +289,7 @@ footer {
 .swiper {
     width: 100%;
     height: 100%;
-    
+
 }
 
 .swiper-slide {
@@ -287,21 +297,22 @@ footer {
     font-size: 18px;
     background: #fff;
     height: 60%;
-    
+
 }
 
-.swiper-slide  {
+.swiper-slide {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.swiper-pagination{
+.swiper-pagination {
     display: none;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
     color: var(--primaryColor);
 }
 
@@ -311,48 +322,49 @@ footer {
 /Homepage/ */
 
 
-.borderRowHome{
+.borderRowHome {
     border-top: solid 2px var(--primaryColor);
     border-bottom: solid 2px var(--primaryColor);
     transition: 1s;
-    
+
 }
 
 /*Fine Swiper carousel - Homepage*/
 
 /*Homepage*/
-.borderCardHome{
+.borderCardHome {
     border-bottom: 1px solid var(--primaryColor);
     padding-bottom: 20px;
 }
 
-.borderRowHome{
+.borderRowHome {
     border-top: solid 2px var(--primaryColor);
     border-bottom: solid 2px var(--primaryColor);
     transition: 1s;
-    
-    
+
+
 }
 
 
-[data-image]{
-    background-size:cover;
+[data-image] {
+    background-size: cover;
     background-position: center;
 }
 
-.cardBg{
+.cardBg {
     height: 200px;
     border-bottom: 1px solid var(--primaryColor);
-    
+
 }
 
-.cardBorder{
+.cardBorder {
     border: 1px solid var(--primaryColor);
-    
+
 }
 
 /*Btn accetta e rifiuta articolo*/
-.form-accept, .form-reject{
+.form-accept,
+.form-reject {
     transition: 0.4s;
 }
 
@@ -363,23 +375,23 @@ footer {
 
 .form-reject:hover {
     scale: 1.1;
-    border: 1px solid rgb(220,53,69);
+    border: 1px solid rgb(220, 53, 69);
 }
 
 /*Pagina revisore*/
-.borderRevisor{
+.borderRevisor {
     border-bottom: 1px solid #126d76;
 }
 
-.transition{
+.transition {
     transition: 0.4s;
 }
 
-.btnRevisor:hover{
+.btnRevisor:hover {
     scale: 1.1;
 }
 
-.imgCustom{
+.imgCustom {
     height: 400px;
     width: 100%;
 }
@@ -388,17 +400,17 @@ footer {
 
 
 @media only screen and (max-width: 720px) {
-    
-   
 
-    .rowScrollX{
-        overflow-x: scroll ;
-        white-space: nowrap ;
+
+
+    .rowScrollX {
+        overflow-x: scroll;
+        white-space: nowrap;
         width: 300px;
-        
+
     }
-    
-    .colScrollX{
+
+    .colScrollX {
         display: inline-block;
         width: 100px;
     }
@@ -406,22 +418,22 @@ footer {
     /* .cardCarousel{
         width: 600px !important;
     } */
-    
+
 }
 
-.rowScrollX{
+.rowScrollX {
     overflow-x: none;
-     white-space: nowrap ;
+    white-space: nowrap;
     width: 100%;
- 
+
 }
 
-.colScrollX{
+.colScrollX {
     width: 100px;
-} 
+}
 
 /*CLASSE CUSTOM CREATE-FORM*/
-.img-preview{
+.img-preview {
     height: 200px;
     width: 200px;
     background-position: center;
@@ -429,82 +441,84 @@ footer {
 }
 
 
-.vhCustom{
+.vhCustom {
     height: 70vh;
 }
 
-.borderCustom{
+.borderCustom {
     border: 2px solid rgb(0, 138, 172);
     background-color: rgba(18, 110, 118, 0.591);
 }
 
-.btnCustom{
-   transition: 0.4s;
-   background-color:rgb(255, 255, 255) ;  
-   color: var(--primaryColor);
+.btnCustom {
+    transition: 0.4s;
+    background-color: rgb(255, 255, 255);
+    color: var(--primaryColor);
 }
 
-.btnCustom:hover{
+.btnCustom:hover {
     scale: 1.1;
     color: white;
     border-bottom: 2px solid white;
     border-radius: 0;
 }
 
-.sizeTd{
+.sizeTd {
     width: 400px;
     height: 300px;
 }
 
-.sizeTd2{
+.sizeTd2 {
     width: 100px;
-   
+
 }
 
-.modalCustom{
+.modalCustom {
     background-color: #ff0000a0;
     color: white;
 }
 
 /*Dropdown delle lingue*/
 .dropdown-toggle::after {
- 
+
     color: white;
 
 }
 
-.formCustom{
+.formCustom {
     background: linear-gradient(45deg, rgba(18, 110, 118, 0.82), rgba(18, 110, 118, 0.5), rgba(18, 110, 118, 0.792));
 
 }
 
-.vhCustom{
+.vhCustom {
     height: 80vh;
 }
 
 /*Profilo revisore*/
-.borderProfilo{
+.borderProfilo {
     border: 1px solid var(--primaryColor);
 }
 
-.formCustomProfile{
-    background: linear-gradient(to bottom, rgba(18, 110, 118, 0.82), rgba(18, 110, 118, 0.5));;
+.formCustomProfile {
+    background: linear-gradient(to bottom, rgba(18, 110, 118, 0.82), rgba(18, 110, 118, 0.5));
+    ;
 }
 
-.formCustomProfile2{
-    background: linear-gradient(to top, rgba(18, 110, 118, 0.82), rgba(18, 110, 118, 0.5));;
+.formCustomProfile2 {
+    background: linear-gradient(to top, rgba(18, 110, 118, 0.82), rgba(18, 110, 118, 0.5));
+    ;
 
 }
 
-.whImgProfile{
-    
+.whImgProfile {
+
     width: 170px;
     height: 150px;
-   
-    
+
+
 }
 
-.bRadius{
+.bRadius {
     border-radius: 50%;
-    
+
 }
