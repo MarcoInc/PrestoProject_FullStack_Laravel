@@ -8,7 +8,7 @@
         <div class="row justify-content-center">
             <div class="col-8">
                 @if (session('message'))
-                    <div class="container">
+                    <div class="container mt-2">
                         <p class="alert alert-warning">{{__('messages.AnnuncioEliminato')}}</p>
                     </div>
                 @endif

@@ -10,7 +10,7 @@ return [
     'deleteArticle' => 'Borrar',
     'deleteArticleModal' => 'Borrar anuncio',
     'editArticle' => 'Editar anuncio',
-    'modificatoIl' => 'Modificar il',
+    'modificatoIl' => 'Modificar',
     'areYouSure?' => 'El artículo no se puede recuperar. ¿Estás seguro/a de que deseas eliminarlo?',
     'uploadImg' => 'Cargar Imagen',
     "CaricaAnnuncio" => "Carga tu anuncio aquí",
@@ -18,6 +18,8 @@ return [
     "Accetta" => "Aceptar",
     "Rifiuta" => "Niega",
     'close' => 'Cierra',
+    'viewArticleName' => 'Titolo',
+
     
     
     
@@ -74,14 +76,14 @@ return [
     //History Revisor
     'viewArticleRevisor'=> 'Título',
     'createDate'=> 'Creado en ',
-    'editDate'=> 'Cambiado el ',
+    'editDate'=> 'Cambiado',
     'statusRevision'=> 'Estado',
     'revisionAccepted'=> 'Aprobado',
     'revisionRejected'=>  'No aprovado',
     'revisionReset'=> 'Enviar para revisión',
     'actionRevision' => 'Acción',
     'toReview' => 'Para ser revisado',
-    'noneReview' => 'Non ci sono annunci da revisionare',
+    'noneReview' => 'No hay anuncios para revisar',
     'Vaiallostorico' => 'Ir a la historia',
     'Refresh' => 'Refresh página',
     'noHistory' => 'No hay anuncios en el historial de revisiones',

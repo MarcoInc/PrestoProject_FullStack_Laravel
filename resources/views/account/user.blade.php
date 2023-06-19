@@ -81,7 +81,7 @@
 
                             <a class="mainColor pb-4 fs-1 btn" href="#articles"><i
                                     class="bi bi-chevron-double-down"></i></a>
-                            <h2 class="list-item pb-5">{{__('ui.aboutMe')}}:</h2>
+                            <h2 class="list-item pb-5 text-center">{{__('ui.aboutMe')}}:</h2>
                             <div class="row formCustomProfile2 mx-5  rounded-1">
                                 @if ($profile && $profile->info)
                                     <p class="fs-5 text-white p-3 text-center">{{ $profile->info }}</p>

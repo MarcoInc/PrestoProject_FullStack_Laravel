@@ -85,7 +85,7 @@
                                         style="background-image: url({{ $image->temporaryUrl() }});"></div>
                                     <button type="button"
                                         class="btn btn-danger btn-small d-block text-center mt-2 mx-auto "
-                                        wire:click="removeImage({{ $key }})">Cancella</button>
+                                        wire:click="removeImage({{ $key }})">{{__('ui.deleteArticle')}}</button>
                                 </div>
                             @endforeach
 

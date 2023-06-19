@@ -19,6 +19,7 @@
         "Rifiuta" => "Reject",
         'close' => 'Close',
 
+
         //Verifica Google
         'Volgarità' => 'Spoof',
         'Medico' => 'Medical',

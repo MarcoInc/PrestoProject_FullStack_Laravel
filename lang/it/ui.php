@@ -13,7 +13,7 @@
         'deleteArticle' => 'Elimina',
         'deleteArticleModal' => 'Elimina articolo',
         'editArticle' => 'Modifica',
-        'modificatoIl' => 'Modificato il',
+        'modificatoIl' => 'Modificato',
         'close' => 'Chiudi',
         'categoriesTitle' => 'Articoli per categoria',
         'areYouSure?' => "L'annuncio non potrà essere recuperato. Sei sicuro di volerlo eliminare?",
@@ -22,6 +22,8 @@
         "Immagini" => "Immagini" ,
         "Accetta" => "Accetta",
         "Rifiuta" => "Rifiuta",
+        'viewArticleName' => 'Titolo',
+ 
         
 
 
@@ -77,7 +79,7 @@
         //History Revisor
         'viewArticleRevisor'=> 'Titolo articolo',
         'createDate'=> 'Creato il ',
-        'editDate'=> 'Modificato il ',
+        'editDate'=> 'Modificato',
         'statusRevision'=> 'Stato',
         'revisionAccepted'=> 'Approvato',
         'revisionRejected'=>  'Non approvato',
