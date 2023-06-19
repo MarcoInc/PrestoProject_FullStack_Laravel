@@ -25,7 +25,7 @@
 
                             <div class="col-md-9 col-12 pe-md-5 pe-0 text-center text-md-end">
                                 <h2 class="py-3 text-white">{{ __('ui.titlePageUser') }} {{ $user->name }}</h2>
-                                @if (Auth::user() && Auth::user()->name == $user->name)
+                                @if (Auth::user() && Auth::user()->id == $user->id)
                                     <a class="btn btnCustom mb-3"
                                         href="{{ route('edit_profile', ['user' => Auth::user()]) }}">{{ __('ui.profileModifie') }}</a>
                                 @endif
@@ -93,9 +93,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
 
                     <div id="articles" class="col-12">
                         <h2 class="text-md-end text-center pe-4 py-5"><i
