@@ -128,7 +128,7 @@
                                         <div class="d-flex">
                                             <p class="fs-6 card-text mainColor fw-semibold"><i
                                                     class="bi bi-currency-euro mainColor"></i>{{ __('ui.price') }}:</p>
-                                            <p class="card-text fs-6">{{ $house->price }}&euro;/{{ __('night') }}
+                                            <p class="card-text fs-6">{{ $house->price }}&euro;/{{ __('ui.night') }}
                                             </p>
                                         </div>
                                         <div class=" d-flex flex-md-row flex-column justify-content-between w-100">
