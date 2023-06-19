@@ -78,7 +78,7 @@
         <div class="credits">
           Designed by <a class="text-decoration-none secColor" href="https://github.com/Manumi93">Minenna M. Emanuela</a><span class="text-white">,</span> <a class="text-decoration-none secColor" href="https://github.com/alessandraScotto">
             Scotto di Luzio Ida Alessandra</a><span class="text-white">,</span> <a class="text-decoration-none secColor" href="https://github.com/SabrinaCherubini"> Cherubini Sabrina</a><span class="text-white">,</span> 
-            <a class="text-decoration-none secColor" href="https://github.com/MarcoInc">Sotera Marco</a><span class="text-white">,</span> <a class="text-decoration-none secColor" href="https://github.com/RiccardoDipietro?tab=repositories">Dipietro Riccardo</a>.{{__('ui.distributed')}} by Codevenegers.</a>
+            <a class="text-decoration-none secColor" href="https://github.com/MarcoInc">Sotera Marco</a><span class="text-white">,</span> <a class="text-decoration-none secColor" href="https://github.com/RiccardoDipietro?tab=repositories">Dipietro Riccardo</a>.{{__('ui.distributed')}}  <img class='logoCodevengers' src='logo.png'></a>
           </div>
         </div>
       </div>
