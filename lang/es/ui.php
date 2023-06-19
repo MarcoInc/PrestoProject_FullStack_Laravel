@@ -142,6 +142,8 @@ return [
     'titlePageUser' => 'Vitrina de anuncios',
     'yourArticles' => 'Tus Anuncios',
     'profiloPubblico' => 'Perfil público',
+    'imageUploaded' => 'Imagen cargada con éxito',
+
 
 
 
