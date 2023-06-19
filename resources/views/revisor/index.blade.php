@@ -69,6 +69,9 @@
                                                         {{ $house->updated_at->format('d/m/Y H:i') }}
                                                     </p>
                                                 @endif
+                                                <div class="d-md-none d-block pt-5">
+                                                    <i class="fa-solid fa-circle-chevron-right fs-4 mainColor"></i>
+                                                </div>
 
                                             </th>
                                             <td class="text-center align-middle sizeTd">
