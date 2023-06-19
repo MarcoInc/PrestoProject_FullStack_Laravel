@@ -37,8 +37,8 @@ Route::get('/category-show/{location}', [PublicController::class, 'categoryShow'
 
 //Revisore
 Route::get('/revisor/index', [RevisorController::class, 'revisorIndex'])->middleware('isRevisor')->name('revisorIndex');
-Route::patch('/revisor/accept/{house_toCheck}', [RevisorController::class, 'acceptAnnuncio'])->middleware('isRevisor')->name('revisor.accept');
-Route::patch('/revisor/reject/{house_toCheck}', [RevisorController::class, 'rejectAnnuncio'])->middleware('isRevisor')->name('revisor.reject');
+Route::patch('/revisor/accept/{house}', [RevisorController::class, 'acceptAnnuncio'])->middleware('isRevisor')->name('revisor.accept');
+Route::patch('/revisor/reject/{house}', [RevisorController::class, 'rejectAnnuncio'])->middleware('isRevisor')->name('revisor.reject');
 
 Route::get('/revisor/history/', [RevisorController::class, 'history'])->middleware('isRevisor')->name('revisor.history');
 Route::patch('/revisor/history/reset/{house}', [RevisorController::class, 'resetRevision'])->middleware('isRevisor')->name('revisor.resetRevision');

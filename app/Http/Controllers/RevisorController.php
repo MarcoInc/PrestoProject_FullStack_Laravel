@@ -35,7 +35,6 @@ class RevisorController extends Controller{
         $house_toCheck=GuestHouse::where('is_accepted',null)->orderBy('created_at', 'asc')->get();
 
         // $house_toCheck->push($this->findLast());
-
         return view('revisor.index', compact('house_toCheck'));
     }
 
@@ -45,6 +44,7 @@ class RevisorController extends Controller{
     }
     
     public function acceptAnnuncio(GuestHouse $house){
+        
         $house->setAccepted(true);
         return redirect()->back()->with('messageApproved',__('messages.articleApproved'));
     }

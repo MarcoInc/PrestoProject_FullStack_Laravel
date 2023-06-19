@@ -28,7 +28,7 @@ class CreateForm extends Component{
     use WithFileUploads;
     
     protected $rules = [
-        'place' => 'required|min:5|max:30',
+        'place' => 'required|min:2|max:30',
         'price' => 'required|numeric',
         'description' => 'required|min:10|max:200',
         'beds' => 'required|numeric',
@@ -103,11 +103,19 @@ class CreateForm extends Component{
                         //     ])->dispatch($newImage->id);       
                         // }
 
+                        // GoogleVisionSafeSearch::withChain([
+                        //     new GoogleVisionLabelImage($newImage->id),
+                        //     new RemoveFaces($newImage->id),
+                        //     new ResizeImage($newImage->path, 400, 300),
+                        //     new AddWatermark($newImage->id),
+                        //     ])->dispatch($newImage->id);       
+                        // }
+
                         GoogleVisionSafeSearch::withChain([
                             new GoogleVisionLabelImage($newImage->id),
                             new RemoveFaces($newImage->id),
                             new ResizeImage($newImage->path, 400, 300),
-                            new AddWatermark($newImage->id),
+                            // new AddWatermark($newImage->id),
                             ])->dispatch($newImage->id);       
                         }
                         
@@ -123,6 +131,9 @@ class CreateForm extends Component{
                     
                     $this->reset(); 
                 }
+
+
+
                 
                 
                 

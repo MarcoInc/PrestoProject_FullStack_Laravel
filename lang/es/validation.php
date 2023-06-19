@@ -186,7 +186,7 @@ return [
 
         'place' => [
             'required' => 'El lugar es obligatorio',
-            'min' => 'Mínimo 5 caracteres',
+            'min' => 'Mínimo 2 caracteres',
             'max' => 'Máximo 30 caracteres',
         ],
 
