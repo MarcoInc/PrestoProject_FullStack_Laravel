@@ -10,17 +10,17 @@
                     </div>
                 @endif
                 <h2 class="borderCardHome pb-0">{{ $house->place }}</h2>
-                <p><strong>{{ __('ui.location') }}:</strong>
+                <p><strong class="mainColor"><i class="bi bi-house-heart-fill me-1"></i>{{ __('ui.location') }}:</strong>
                     {{-- {{$house->location->name}} --}}
                     
                     <x-locationTranslate :house="$house"/>         
 
                 </p>
 
-                <p><strong>{{ __('ui.bedsPlace') }}:</strong> {{ $house->beds }}</p>
-                <p><strong>{{ __('ui.price') }}:</strong> {{ $house->price }}/{{ __('ui.night') }}</p>
-                <p><strong>{{ __('ui.description') }}:</strong> {{ $house->description }}</p>
-                <p><strong>{{ __('ui.publishBy') }}:</strong>
+                <p><strong class="mainColor"><i class="fa-solid fa-bed me-1"></i>{{ __('ui.bedsPlace') }}:</strong> {{ $house->beds }}</p>
+                <p><strong class="mainColor"><i class="bi bi-currency-euro me-1"></i>{{ __('ui.price') }}:</strong> {{ $house->price }}/{{ __('ui.night') }}</p>
+                <p><strong class="mainColor"><i class="bi bi-book me-1"></i>{{ __('ui.description') }}:</strong> {{ $house->description }}</p>
+                <p><strong class="mainColor">{{ __('ui.publishBy') }}:</strong>
                     <a href="{{ route('userProfile', ['id' => $house->user->id]) }}"
                         class="btn mainColor fw-semibold fs-6">
                         <i class="bi bi-person-lines-fill"></i> {{ $house->user->name }}
