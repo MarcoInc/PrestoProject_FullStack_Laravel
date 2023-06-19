@@ -41,8 +41,10 @@
                     class="form-control @error('location_id') is-invalid  @enderror">
                     <option value="">{{ __('ui.locationChoice') }}</option>
                     @foreach ($locations as $location)
-                        <option value="{{ $location->id }}">{{ $location->name }}</option>
-
+                        <option value="{{ $location->id }}">
+                            {{ __(sprintf('locations.%s', $location->id)) }}
+                        </option>
+                       
                     @endforeach
                 </select>
                 @error('location_id')
