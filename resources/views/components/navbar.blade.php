@@ -81,7 +81,7 @@
             </ul>
             <ul class="nav-item list-unstyled dropdown">
                 <li class="nav-item dropdown me-3">
-                    <a class="nav-link dropdown-toggle text-white fs-5" href="#" id="navbarDropdown"
+                    <a class="nav-link dropdown-toggle pt-3 text-white fs-5" href="#" id="navbarDropdown"
                         role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         @auth
 
@@ -112,7 +112,7 @@
 
                                 <a
                                     href="{{ route('userProfile', ['id' => Auth::user()]) }}"class="dropdown-item fs-5 mainColor hoverLog">
-                                    {{ __('ui.profile') }} <i class="bi bi-person-check-fill"></i>
+                                    {{ __('ui.profiloPubblico') }} <i class="bi bi-person-check-fill"></i>
 
                                 </a>
                             </li>
@@ -122,7 +122,8 @@
                             <li>
 
                                 <a href="{{ route('profilo') }}"class="dropdown-item fs-5 mainColor hoverLog">
-                                    {{ __('ui.yourArticles') }}<i class="ms-2 fs-6 fa-solid fa-list fa-flip-horizontal"></i>
+                                    {{ __('ui.yourArticles') }}<i
+                                        class="ms-2 fs-6 fa-solid fa-list fa-flip-horizontal"></i>
 
                                 </a>
                             </li>
@@ -163,7 +164,6 @@
                                         href="{{ route('revisorIndex') }}">{{ __('ui.toRevisor') }}
                                         {{-- contatore annunci non revisionati definito nel Model --}}
                                         ({{ App\Models\GuestHouse::toBeRevisonedCounter() }})
-                                        <i class="bi bi-pencil-square"></i>
                                     </a>
                                 </li>
                     </li>

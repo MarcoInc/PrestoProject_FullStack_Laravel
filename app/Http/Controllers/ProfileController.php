@@ -27,15 +27,7 @@ class ProfileController extends Controller
     public function edit(User $user){
         // if(Auth::user() && Auth::user()->id==$user->profile->user_id)
         // && Auth::user()->id==$user->profile->user_id     
-<<<<<<< HEAD
-        $profile = Profile::where('user_id', Auth::user()->id) ;   
-       
-        // if( isset($profile))    
-        // $user = User::where('id', $profile->user_id);
-        return view('account.edit_profile', compact('user'));
-=======
         // $profile = Profile::where('user_id', Auth::user()->id) ;
->>>>>>> c5600f5ad0fd1230d1290d21aafc783e2f6150c4
 
         if($user->profile() && Auth::user()->id ==$user->id){
             // $user = User::where('id', $profile->user_id);

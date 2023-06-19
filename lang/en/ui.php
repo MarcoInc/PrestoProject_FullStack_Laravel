@@ -139,6 +139,7 @@
         'titlePersonalProfile' => 'Ad Management: Approval Status Check',
         'titlePageUser' => 'Ad showcase',
         'yourArticles' => 'Your articles',
+        'profiloPubblico' => 'Public profile',
 
 
 

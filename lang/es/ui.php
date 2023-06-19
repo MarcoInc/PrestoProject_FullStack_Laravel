@@ -141,6 +141,8 @@ return [
     'titlePersonalProfile' => 'Gestión de Anuncios: Verificación del Estado de Aprobación',
     'titlePageUser' => 'Vitrina de anuncios',
     'yourArticles' => 'Tus Anuncios',
+    'profiloPubblico' => 'Perfil público',
+
 
 
 

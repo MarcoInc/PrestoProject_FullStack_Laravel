@@ -143,7 +143,8 @@
         'registratoIl' => 'Registrato il',
         'titlePersonalProfile' => 'Gestione degli Annunci: Verifica dello Stato di Approvazione',
         'titlePageUser' => 'Vetrina annunci di',
-        'yourArticles' => 'I tuoi annunci',
+        'yourArticles' => 'Stato annunci',
+        'profiloPubblico' => 'Profilo pubblico',
 
         //Footer
         'contacts'=>'Contattaci',
