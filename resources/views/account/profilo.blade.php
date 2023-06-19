@@ -57,7 +57,7 @@
 
 
                         
-                            @if (Auth::user()->guest_houses)
+                            @if (count(Auth::user()->guest_houses) > 0)
                                 <div class="table-responsive">
 
                                     <table class="table shadow borderRevisor">
