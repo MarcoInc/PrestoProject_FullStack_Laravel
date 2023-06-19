@@ -59,20 +59,20 @@
             </form>
             </li> --}}
 
-            <ul class="nav-item  list-unstyled dropend d-flex align-items-center me-2 mb-0">
+            <ul class="nav-item  list-unstyled dropdown transition d-flex align-items-center me-2 mb-0">
                 <li class="nav-item  dropdown py-3 py-md-0 me-3">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <i class="fa-solid fa-earth-americas mainColor text-center align-middle fs-5"></i>
                     </a>
-                    <ul class="dropdown-menu  bg-transparent border-0">
-                        <li class="dropdown-item zIndex bg-transparent p-0 m-0">
+                    <ul class="dropdown-menu  bg-dark border-0">
+                        <li class="dropdown-item zIndex  p-0 m-0">
                             <x-_locale lang='it' />
                         </li>
-                        <li class="dropdown-item zIndex bg-transparent p-0 m-0">
+                        <li class="dropdown-item zIndex  p-0 m-0">
                             <x-_locale lang='en' />
                         </li>
-                        <li class="dropdown-item zIndex bg-transparent p-0 m-0">
+                        <li class="dropdown-item zIndex  p-0 m-0">
                             <x-_locale lang='es' />
                         </li>
                     </ul>

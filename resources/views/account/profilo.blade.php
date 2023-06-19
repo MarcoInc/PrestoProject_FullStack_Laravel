@@ -5,11 +5,11 @@
             <p class="alert alert-warning mt-3 text-center"> {{ session('editProfileOk') }} </p>
         </div>
     @endif
-    <div class="container">
-        <div class="row justify-content-center">
+    <div class="container ">
+        <div class="row justify-content-center ">
             <div class="col-12 borderProfilo">
                 <div class="row justify-content-center ">
-                    <div class="col-12 py-3  formCustomProfile mt-1 d-flex align-items-center justify-content-between">
+                    <div class="col-12 py-3   formCustomProfile mt-1 d-flex align-items-center justify-content-between">
 
                         <i class="text-white bi bi-person-circle ps-3 display-1 me-3 md-md-0"></i>
 
@@ -17,7 +17,7 @@
 
                     </div>
 
-                    <div class="row px-0 ">
+                    <div class="row px-0 min-vh-100">
 
                         <div class="col-md-4 col-12 borderBottom formCustomProfile2">
 

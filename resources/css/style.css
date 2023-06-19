@@ -29,6 +29,10 @@ font-family: 'Syne', sans-serif;
     color: rgb(0, 138, 172);
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .bgMain {
     background-color: #126e7693;
 }
@@ -61,9 +65,15 @@ font-family: 'Syne', sans-serif;
 
     #scrollAnnunci {
         top: 70px;
-        z-index: 10 !important;
+       
     }
 
+}
+
+
+#scrollAnnunci {
+    z-index: 2;
+   
 }
 
 

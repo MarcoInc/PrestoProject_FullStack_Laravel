@@ -33,8 +33,8 @@ class ProfileController extends Controller
         // && Auth::user()->id==$user->profile->user_id     
         $profile = Profile::where('user_id', Auth::user()->id) ;   
        
-        if( isset($profile))    
-        $user = User::where('id', $profile->user_id);
+        // if( isset($profile))    
+        // $user = User::where('id', $profile->user_id);
         return view('account.edit_profile', compact('user'));
 
         $guest_houses= GuestHouse::all();
