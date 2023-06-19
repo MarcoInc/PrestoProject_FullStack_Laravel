@@ -55,7 +55,7 @@
                         @foreach ($house->images as $image)
                             <div class="carousel-item @if ($loop->first) active @endif"
                                 data-bs-interval="3000">
-                                <img src="{{ Storage::url($image->path) }}" class="fotoCarousel aiuto imgCustom"
+                                <img src="{{ $image->getUrl(400, 300) }}" class="fotoCarousel aiuto imgCustom"
                                     alt="Immagini">
                             </div>
                         @endforeach
