@@ -42,6 +42,7 @@
                     <option value="">{{ __('ui.locationChoice') }}</option>
                     @foreach ($locations as $location)
                         <option value="{{ $location->id }}">{{ $location->name }}</option>
+
                     @endforeach
                 </select>
                 @error('location_id')
