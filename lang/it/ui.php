@@ -133,6 +133,7 @@
         'aboutMe' => 'Vi parlo di me',
         'profileEditNot' => 'Il profio non è stato ancora aggionrato.',
         'titleProfileCard' => 'Case in affitto: Esplora le Offerte nel Mio Profilo',
+        'occupation' => 'Attività lavorativa',
 
         //Footer
         'contacts'=>'Contattaci',

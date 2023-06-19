@@ -50,7 +50,7 @@
                             <hr class="text-white">
                             <ul class="list-unstyled">
                                 <li class="list-item pt-4 fs-5"><span class="text-white"><i
-                                            class="bi bi-person-check-fill me-1"></i>{{__('uinameAndSurname')}}:</span>
+                                            class="bi bi-person-check-fill me-1"></i>{{__('ui.nameAndSurname')}}:</span>
                                     {{$profile ? $profile->name : ''}} </li>
                                 <li class="list-item py-4 fs-5"><span class="text-white"><i
                                             class="bi bi-hash me-1"></i>{{__('ui.age')}}:</span> {{$profile ? $profile->age : '' }}</li>

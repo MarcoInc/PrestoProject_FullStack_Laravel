@@ -131,6 +131,8 @@ return [
     'aboutMe' => 'Les hablaré de mí mismo/misma',
     'profileEditNot' => 'El perfil aún no ha sido actualizado.',
     'titleProfileCard' => 'Alquileres: Explora las Ofertas en Mi Perfil',
+    'occupation' => 'Actividad laboral',
+
 
 
 
