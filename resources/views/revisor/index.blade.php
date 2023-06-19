@@ -129,41 +129,7 @@
                                                 {{-- <img class="img-fluid" src="{{Storage::url($house->images()->first()->path)}}" alt="{{ $house->name }}"> --}}
                                             </td>
 
-                                            {{-- <td class="align-middle text-start sizeTd2"> --}}
-                                            {{-- mostra safe search --}}
-
-
-                                            {{-- <div id="{{$house->images->first()->id}}" class="carousel slide" data-bs-ride="carousel"> --}}
-                                            {{-- <div class="carousel-inner">
-                                                
-                                                @foreach ($house->images as $image)
-                                                <div class="carousel-item @if ($loop->first)active @endif" >
-                                                    <p class="m-0">NSFW:</p> <span class="{{$image->adult}}"></span>
-                                                    <p class="m-0 mt-2">Volgarità:</p> <span class='{{$image->spoof}}'></span>
-                                                    <p class="m-0 mt-2">Medicina:</p> <span class='{{$image->medical}}'></span>
-                                                    <p class="m-0 mt-2">Violenza:</p> <span class='{{$image->violence}}'></span>
-                                                    <p class="m-0 mt-2">Razzismo:</p> <span class='{{$image->racy}}'></span>
-                                                    
-                                                </div>
-                                                
-                                                @endforeach
-                                            </div> --}}
-                                            {{-- <button class="carousel-control-prev" type="button" data-bs-target="#{{$house->id}}" data-bs-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Previous</span>
-                                            </button>
-                                            <button class="carousel-control-next" type="button" data-bs-target="#{{$house->id}}" data-bs-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Next</span>
-                                            </button> --}}
-
-                                            {{-- </div> --}}
-
-
-                                            {{-- </td> --}}
-
-
-
+                            
                                             <td class=" align-middle text-center p-5">
                                                 <p class="text-center fw-semibold text-uppercase mainColor">
                                                     {{ $house->place }}
@@ -221,7 +187,7 @@
                                                         class="fa-solid fa-square-check mainColor fs-5"></i>
                                                     {{ __('ui.Accetta') }}</a>
                                                 <form id="form-accept" class="d-none " method=POST
-                                                    action={{ route('revisor.accept', ['house_toCheck' => $house->id]) }}>
+                                                    action={{ route('revisor.accept', ['house' => $house]) }}>
                                                     @csrf
                                                     @method('patch')
                                                 </form>
@@ -230,12 +196,10 @@
                                                     class="btn form-reject fs-6 fw-semibold" type='submit'><i
                                                         class="fa-solid fa-square-xmark text-danger fs-5"></i>{{ __('ui.Rifiuta') }}</a>
                                                 <form id="form-reject" class="d-none" method=POST
-                                                    action={{ route('revisor.reject', ['house_toCheck' => $house->id]) }}>
+                                                    action={{ route('revisor.reject', ['house' => $house]) }}>
                                                     @csrf
                                                     @method('patch')
                                                 </form>
-
-
 
                                             </td>
                                         </tr>

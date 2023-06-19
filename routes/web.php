@@ -59,7 +59,6 @@ Route::get('/modifica-profilo/{user}', [ProfileController::class, 'edit'])->name
 
 //Utenti
 Route::get('/user/{id}', [ProfileController::class, 'userProfile'])->name('userProfile');
-Route::delete('/delete/profile/{house}', [ProfileController::class, 'destroy'])->name('deleteInProfile');
 
 //Lingua
 Route::post('/language/{lang}', [PublicController::class, 'setLanguage'])->name('setLanguage');
