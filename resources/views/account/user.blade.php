@@ -1,4 +1,4 @@
-<x-layout title="Profilo: {{ Auth::user()->name }}">
+<x-layout title="{{__('ui.profile')}}: {{ $user->name }}">
 
 
 

@@ -107,12 +107,22 @@
 
                     <ul class="dropdown-menu w-100 align-middle rounded-1" aria-labelledby="navbarDropdown">
                         @auth
-                            <li>
+                            {{-- <li>
 
                                 <a href="{{ route('profilo') }}"class="dropdown-item fs-5 mainColor hoverLog">{{ __('ui.profile') }}
                                     <i class="bi bi-person-check-fill"></i>
                                 </a>
+                            </li> --}}
+
+                            <li>
+
+                                <a
+                                    href="{{ route('userProfile', ['id' => Auth::user()]) }}"class="dropdown-item fs-5 mainColor hoverLog">{{ __('ui.profile') }}
+                                    <i class="bi bi-person-check-fill"></i>
+
+                                </a>
                             </li>
+
                             <li>
                                 <a href="" onclick="event.preventDefault();getElementById('form-logout').submit();"
                                     class="dropdown-item fs-5 hoverLog mainColor">Logout
@@ -132,7 +142,7 @@
                                     href="{{ route('login') }}">{{ __('ui.login') }}
                                     <i class="bi bi-box-arrow-in-right"></i>
                                 </a>
-                                    
+
                             </li>
                         @endauth
 
@@ -155,7 +165,6 @@
                     <li class="nav-link text-white fs-5">
                     <li>
                         <a class="dropdown-item fs-5 hoverLog mainColor"
-                            
                             href="{{ route('revisor.history') }}">{{ __('ui.history') }}
                             <i class="bi bi-book"></i>
                         </a>

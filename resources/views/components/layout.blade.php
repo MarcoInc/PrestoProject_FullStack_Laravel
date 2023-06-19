@@ -31,11 +31,7 @@
     </div>
     {{ $slot }}
  
-    @if (session('message'))
-        <div class="container">
-            <p class="alert alert-warning">{{ session('message') }}</p>
-        </div>
-    @endif
+  
 
        
 

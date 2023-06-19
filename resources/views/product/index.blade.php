@@ -161,7 +161,7 @@
         <div class="borderCustom p-5 d-flex flex-column justify-content-center align-items-center">
             <h2 class="text-white p-5">{{ __('ui.noneArticleCategory') }}:</h2>
             <i class="text-white fs-4 pb-2 bi bi-cloud-upload-fill"></i><a href="{{ route('create') }}"
-                class="btn opacity btnCustom p-2 fs-5">Carica un annuncio!</a>
+                class="btn opacity btnCustom p-2 fs-5">{{__('ui.CaricaAnnuncio')}}</a>
         </div>
     </div>
 

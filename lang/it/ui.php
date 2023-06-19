@@ -18,10 +18,11 @@
         'categoriesTitle' => 'Articoli per categoria',
         'areYouSure?' => "L'annuncio non potrà essere recuperato. Sei sicuro di volerlo eliminare?",
         "CaricaAnnuncio" => "Carica il tuo annuncio",
-        'uploadImg' => 'Carica Immmagine',
+        'uploadImg' => 'Carica Immagine',
         "Immagini" => "Immagini" ,
         "Accetta" => "Accetta",
         "Rifiuta" => "Rifiuta",
+        
 
 
         //Verifica di Google
@@ -131,9 +132,10 @@
         'residenza' => 'Luogo di residenza',
         'contactMe' => 'Contatti',
         'aboutMe' => 'Vi parlo di me',
-        'profileEditNot' => 'Il profio non è stato ancora aggionrato.',
+        'profileEditNot' => 'Il profio non è stato ancora aggiornato.',
         'titleProfileCard' => 'Case in affitto: Esplora le Offerte nel Mio Profilo',
         'occupation' => 'Attività lavorativa',
+        'publicProfile' => 'Profilo pubblico',
 
         //Footer
         'contacts'=>'Contattaci',

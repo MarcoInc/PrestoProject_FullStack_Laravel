@@ -5,15 +5,23 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col-10">
+
                         <h2 class="py-4">{{ __('ui.historyIndexRevisorTitle') }}</h2>
+                        @if (session('message'))
+                            <div class="container">
+                                <p class="alert alert-warning">{{ session('message') }}</p>
+                            </div>
+                        @endif
                     </div>
                     @if ($houses->isEmpty())
 
                         {{-- Se non ci sono articoli da revisionare --}}
                         <div class="col-12 vhCustom d-flex justify-content-center align-items-center">
-                            <div class="borderCustom p-md-5 p-2 pt-0 text-center d-flex flex-column justify-content-center align-items-center">
+                            <div
+                                class="borderCustom p-md-5 p-2 pt-0 text-center d-flex flex-column justify-content-center align-items-center">
                                 <h2 class="text-white p-md-5 p-4">{{ __('ui.noHistory') }}</h2>
-                                <div class="d-flex flex-md-row flex-column justify-content-md-around justify-content-center w-100">
+                                <div
+                                    class="d-flex flex-md-row flex-column justify-content-md-around justify-content-center w-100">
 
                                     <div class="scale transition">
                                         <span><i class="fa-solid fa-paperclip text-white"></i></span> <a

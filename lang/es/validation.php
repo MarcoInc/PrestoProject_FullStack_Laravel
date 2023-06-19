@@ -208,13 +208,13 @@ return [
         ],
 
         'images' => [
-            'require' => 'Al menos una imagen es obligatoria',
+            'required' => 'Al menos una imagen es obligatoria',
             'image' => 'Debe ser una imagen',
             'max' => 'La imagen debe tener un máximo de 1024',
         ],
 
         'temporary_images' => [
-            'require' => 'Al menos una imagen es obligatoria',
+            'required' => 'Al menos una imagen es obligatoria',
             'image' => 'Debe ser una imagen',
             'max' => 'La imagen debe tener un máximo de 1024',
         ],

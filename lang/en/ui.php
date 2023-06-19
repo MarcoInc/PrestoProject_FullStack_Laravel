@@ -131,6 +131,8 @@
         'profileEditNot' => 'The profile has not been updated yet.',
         'titleProfileCard' => 'Rentals: Explore the Offers in My Profile',
         'occupation' => 'Occupation',
+        'publicProfile' => 'Public profile',
+
 
 
 
