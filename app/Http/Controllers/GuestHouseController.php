@@ -47,6 +47,12 @@ class GuestHouseController extends Controller{
             $icons = ['fa-water', 'fa-mountain','fa-fish-fins', 'fa-tree-city', 'fa-snowflake','fa-sun-plant-wilt', 'fa-horse-head'];
             return view('product.show', compact('house', 'locations', 'icons'));
         }
+        else if($house->is_accepted==0){
+            $guest_houses = GuestHouse::where('is_accepted',true) 
+            ->orderBy('created_at', 'desc')->take(5)->get();
+            //dd($guest_houses);
+            return redirect(route('home'))->with('messageNotFound', __('messages.ArticleNotFound'))->with(compact('guest_houses'));
+        }
         //se accedo ad un non accettato e non sono ne il proprietario ne un revisore
         else{
             $guest_houses = GuestHouse::where('is_accepted',true) 

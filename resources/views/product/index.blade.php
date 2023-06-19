@@ -9,7 +9,7 @@
             <div class="col-8">
                 @if (session('message'))
                     <div class="container mt-2">
-                        <p class="alert alert-warning">{{__('messages.AnnuncioEliminato')}}</p>
+                        <p class="alert alert-warning">{{ __('messages.AnnuncioEliminato') }}</p>
                     </div>
                 @endif
             </div>
@@ -25,7 +25,6 @@
                     @endif
 
                     @forelse ($guest_houses as $house)
-
                         <div class="col-11 hCard col-md-6 col-lg-3 mx-3 my-3">
                             <div class="card h-100 cardBorder">
                                 {{-- @dd(Storage::url($house->images()->first()->path)) --}}
@@ -45,11 +44,11 @@
                                             <i
                                                 class="bi bi-house-heart-fill me-1 mainColor"></i>{{ __('ui.location') }}:
 
-                                                <x-locationTranslate :house="$house"/>         
+                                            <x-locationTranslate :house="$house" />
 
                                         </span>
                                         {{-- {{ $house->location->name }} --}}
-                                        
+
 
 
                                     </p>
@@ -57,7 +56,7 @@
                                         <span class="fw-semibold fs-6">
                                             <i class="bi bi-currency-euro me-0 pe-0 mainColor"></i>
                                             {{ __('ui.price') }}:
-                                        </span>{{ $house->price }}/{{ __('ui.night') }}
+                                        </span>{{ $house->price }}/&euro;{{ __('ui.night') }}
                                     </p>
                                     <p class="card-text fs-6">
                                         <span class="fw-semibold fs-6">
@@ -83,25 +82,6 @@
                                                         class="bi bi-chevron-compact-right mainColor fs-6"></i>{{ __('ui.editArticle') }}
                                                 </a>
                                         </span>
-                                        <span class="d-flex align-items-center">
-
-                                            <!-- Button trigger modal -->
-                                            <a type="button" class="btn btnCard" data-bs-toggle="modal"
-                                                data-bs-target="#exampleModal">
-                                                <i class="bi bi-trash3 mainColor fs-4"></i>
-                                            </a>
-
-
-                                            {{-- <a onclick="event.preventDefault();getElementById('form-delete').submit();"
-                                                class="btn btnCard fs-5 fw-semibold">
-                                                <span><i class="bi bi-trash3 mainColor fs-4"></i>
-                                                </a> --}}
-                                        </span>
-                                        <form id="form-delete" class="d-none" method=POST
-                                            action={{ route('delete', compact('house')) }}>
-                                            @csrf
-                                            @method('delete')
-                                        </form>
                     @endif
                     </span>
                 </div>
@@ -114,10 +94,9 @@
         <div class="borderCustom p-5 d-flex flex-column justify-content-center align-items-center">
             <h2 class="text-white p-5">{{ __('ui.noneArticleCategory') }}:</h2>
             <i class="text-white fs-4 pb-2 bi bi-cloud-upload-fill"></i><a href="{{ route('create') }}"
-                class="btn opacity btnCustom p-2 fs-5">{{__('ui.CaricaAnnuncio')}}</a>
+                class="btn opacity btnCustom p-2 fs-5">{{ __('ui.CaricaAnnuncio') }}</a>
         </div>
     </div>
-
     @endforelse
     </div>
     </div>
@@ -132,29 +111,6 @@
 
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog ">
-            <div class="modal-content rounded-1">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">{{ __('ui.deleteArticleModal') }} <i
-                            class="fa-solid text-danger fa-triangle-exclamation"></i></h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body modalCustom">
-                    <p class="fs-5">{{ __('ui.areYouSure?') }}</p>
-                </div>
 
-                <div class="modal-footer">
-                    <a type="button" class="btn btnCard mainColor fs-6 text-uppercase fw-semibold"
-                        data-bs-dismiss="modal">{{ __('ui.close') }}</a>
-                    <a onclick="event.preventDefault();getElementById('form-delete').submit();"
-                        class="btn btnCard text-danger rounded-1 fs-6 text-uppercase fw-semibold">
-                        <span>{{ __('ui.deleteArticle') }}
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
     <x-script-card />
 </x-layout>

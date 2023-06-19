@@ -118,7 +118,7 @@
                                         {{-- <p class="btnLike" href=""><i
                                             class=" bi bi-suit-heart fs-5 mainColor"></i></p> --}}
                                     </div>
-                                  
+
 
                                     <p class="card-text fs-6">
                                         <span class="fw-semibold">
@@ -154,13 +154,16 @@
                                             @endif
                                         </span>
                                         <span class="d-flex align-items-center">
+
+
+
                                             <!-- Button trigger modal -->
                                             @if (Auth::id() == $house->user_id)
                                                 <a type="button" class="btn btnCard" data-bs-toggle="modal"
-                                                    data-bs-target="#exampleModal">
+                                                    data-bs-target="#{{ $house->id }}">
                                                     <i class="bi bi-trash3 mainColor fs-4"></i>
                                                 </a>
-                                                <form id="form-delete" class="d-none" method=POST
+                                                <form id="#{{$house->id}}" class="d-none" method=POST
                                                     action={{ route('deleteInProfile', compact('house')) }}>
                                                     @csrf
                                                     @method('delete')
@@ -175,8 +178,9 @@
                     @empty
                         <div class="col-12 my-3 d-flex justify-content-center align-items-center">
                             <div class="p-2 d-flex flex-column justify-content-center align-items-center">
-                                <h2 class="mainColor text-center p-5"><i class="bi bi-tag-fill me-1"></i>{{ __('ui.noArticleinProfile') }}</h2>
-                    
+                                <h2 class="mainColor text-center p-5"><i
+                                        class="bi bi-tag-fill me-1"></i>{{ __('ui.noArticleinProfile') }}</h2>
+
                             </div>
                         </div>
                     @endforelse
@@ -188,31 +192,33 @@
     </div>
 
 
+    @foreach ($houses as $house)
+        <!-- Modal -->
+        <div class="modal fade" id="{{$house->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog ">
+                <div class="modal-content rounded-1">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">{{ __('ui.deleteArticleModal') }} <i
+                                class="fa-solid text-danger fa-triangle-exclamation"></i></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modalCustom">
+                        <p class="fs-5">{{ __('ui.areYouSure?') }}</p>
+                    </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog ">
-            <div class="modal-content rounded-1">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">{{ __('ui.deleteArticleModal') }} <i
-                            class="fa-solid text-danger fa-triangle-exclamation"></i></h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body modalCustom">
-                    <p class="fs-5">{{ __('ui.areYouSure?') }}</p>
-                </div>
-
-                <div class="modal-footer">
-                    <a type="button" class="btn btnCard mainColor fs-6 text-uppercase fw-semibold"
-                        data-bs-dismiss="modal">{{ __('ui.close') }}</a>
-                    <a onclick="event.preventDefault();getElementById('form-delete').submit();"
-                        class="btn btnCard text-danger rounded-1 fs-6 text-uppercase fw-semibold">
-                        <span>{{ __('ui.deleteArticle') }}
-                    </a>
+                    <div class="modal-footer">
+                        <a type="button" class="btn btnCard mainColor fs-6 text-uppercase fw-semibold"
+                            data-bs-dismiss="modal">{{ __('ui.close') }}</a>
+                        <a onclick="event.preventDefault();getElementById('#{{$house->id}}').submit();"
+                            class="btn btnCard text-danger rounded-1 fs-6 text-uppercase fw-semibold">
+                            <span>{{ __('ui.deleteArticle') }}
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    @endforeach
     <x-script-card />
 
 </x-layout>

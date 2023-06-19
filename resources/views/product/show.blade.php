@@ -1,6 +1,6 @@
 <x-layout title="{{ $house->place }}">
     <div class="container">
-
+          
         @livewire('category-bar', compact('locations'))
         <div class="row justify-content-center justify-content-md-around align-items-center p-3 mb-5 mt-3 shadow">
             <div class="col-md-5 col-12">
@@ -18,7 +18,7 @@
                 </p>
 
                 <p><strong class="mainColor"><i class="fa-solid fa-bed me-1"></i>{{ __('ui.bedsPlace') }}:</strong> {{ $house->beds }}</p>
-                <p><strong class="mainColor"><i class="bi bi-currency-euro me-1"></i>{{ __('ui.price') }}:</strong> {{ $house->price }}/{{ __('ui.night') }}</p>
+                <p><strong class="mainColor"><i class="bi bi-currency-euro me-1"></i>{{ __('ui.price') }}:</strong> {{ $house->price }}/&euro;{{ __('ui.night') }}</p>
                 <p><strong class="mainColor"><i class="bi bi-book me-1"></i>{{ __('ui.description') }}:</strong> {{ $house->description }}</p>
                 <p><strong class="mainColor">{{ __('ui.publishBy') }}:</strong>
                     <a href="{{ route('userProfile', ['id' => $house->user->id]) }}"
