@@ -17,28 +17,29 @@ class ProfileController extends Controller
         return view('account.profilo', compact('houses'));
     }
     
-    public function userProfile($id)
-    {
+    public function userProfile($id){
         $houses = GuestHouse::where('user_id', $id)->where('is_accepted', true)->orderBy('updated_at', 'desc')->get();
         $profile = User::findOrFail($id)->profile;
-        
-        $user = User::find($id);
-        
-        
+        $user = User::find($id);        
         return view('account.user', compact('houses', 'profile', 'user'));
     }
 
     public function edit(User $user){
         // if(Auth::user() && Auth::user()->id==$user->profile->user_id)
         // && Auth::user()->id==$user->profile->user_id     
-        $profile = Profile::where('user_id', Auth::user()->id) ;   
-       
-        if( isset($profile))    
-        $user = User::where('id', $profile->user_id);
-        return view('account.edit_profile', compact('user'));
+        // $profile = Profile::where('user_id', Auth::user()->id) ;
 
+        if($user->profile() && Auth::user()->id ==$user->id){
+            // $user = User::where('id', $profile->user_id);
+            return view('account.edit_profile', compact('user'));
+        }
+        else if(Auth::user()->id ==$user->id){
+            return view('account.edit_profile');
+        }
+            
         $guest_houses= GuestHouse::all();
         return redirect(route('home'))->with(compact('guest_houses'));
+        
     }
     
 
