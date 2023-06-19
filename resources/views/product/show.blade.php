@@ -1,6 +1,6 @@
 <x-layout title="{{ $house->place }}">
     <div class="container">
-
+          
         @livewire('category-bar', compact('locations'))
         <div class="row justify-content-center justify-content-md-around align-items-center p-3 mb-5 mt-3 shadow">
             <div class="col-md-5 col-12">
