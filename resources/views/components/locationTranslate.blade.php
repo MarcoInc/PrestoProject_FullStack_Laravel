@@ -1,4 +1,3 @@
-<p class="card-text fs-6">&nbsp;
     {{-- {{$house->location->name}} --}}
     @if (App::getLocale() == 'it')
 
@@ -51,4 +50,3 @@
     @endif
     @endif
 
-</p>

@@ -135,6 +135,15 @@ return [
     'titleProfileCard' => 'Alquileres: Explora las Ofertas en Mi Perfil',
     'occupation' => 'Actividad laboral',
     'publicProfile' => 'Perfil público',
+    'noArticleinProfile' => 'El usuario aún no ha cargado ningún anuncio',
+    'articleApprovation' => 'Resumen de Anuncios y Estado:',
+    'registratoIl' => 'Registrado el',
+    'titlePersonalProfile' => 'Gestión de Anuncios: Verificación del Estado de Aprobación',
+    'titlePageUser' => 'Vitrina de anuncios',
+    'yourArticles' => 'Tus Anuncios',
+
+
+
 
 
 

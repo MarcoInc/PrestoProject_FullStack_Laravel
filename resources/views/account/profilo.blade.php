@@ -8,119 +8,155 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 borderProfilo">
-                <div class="row justify-content-md-center ">
-                    <div class="col-12 py-3  formCustom mt-1 d-flex align-items-center justify-content-between">
-                        <h2 class="display-1"><i class="text-white bi bi-person-circle ps-3 display-1"></i></h2>
-                        <div class="pe-3">
-                            <h2 class="py-3 text-white">Profilo: {{ Auth::user()->name }}</h2>
-                            <a href="{{ route('edit_profile', ['user' => Auth::user()]) }}">EDIT</a>
-                            @if (Auth::user()->is_revisor)
-                                <p class="text-white fs-5">Ruolo: {{ __('ui.revisor') }}<i
-                                        class="ps-2 bi bi-vector-pen"></i></p>
-                            @endif
-                        </div>
+                <div class="row justify-content-center ">
+                    <div class="col-12 py-3  formCustomProfile mt-1 d-flex align-items-center justify-content-between">
+
+                        <i class="text-white bi bi-person-circle ps-3 display-1 me-3 md-md-0"></i>
+
+                        <h2 class="text-white">{{ __('ui.titlePersonalProfile') }}</h2>
+
                     </div>
 
-                    <div class="row vh-100">
+                    <div class="row px-0 ">
 
-                        <div class="col-4 bg-danger">
-                            <h2>Chi sono</h2>
-                            <ul class="list-unstyled">
-                                <li class="list-item">Nome e cognome</li>
-                                <li class="list-item">Nata il:</li>
-                                <li class="list-item">Il mio lavoro: </li>
-                                <li class="list-item">Lingue parlate:</li>
-                                <li class="list-item">Luogo di residenza:</li>
+                        <div class="col-md-4 col-12 borderBottom formCustomProfile2">
+
+                            <ul class="list-unstyled pt-5">
+
+                                <li class="pe-3">
+                                    <h2 class="py-3 text-white">{{ Auth::user()->name }}</h2>
+
+                                </li>
+
+                                <li class="list-item pt-4 fs-5">
+                                    <span class="text-white">
+                                        <i class="bi bi-person-check-fill me-1"></i>
+                                        {{ __('ui.userName') }}:
+                                    </span>
+                                    {{ Auth::user()->name }}
+                                </li>
+                                <li class="list-item pt-4 fs-5"><span class="text-white">
+                                        <i class="bi bi-envelope-heart-fill"></i>
+                                        {{ __('ui.email') }}:</span>
+                                    {{ Auth::user()->email }}
+                                </li>
+                                <li class="list-item pt-4 fs-5"><span class="text-white">
+                                        <i class="bi bi-calendar-check"></i>
+                                        {{ __('ui.registratoIl') }}:</span>
+                                    {{ Auth::user()->created_at->format('d/m/Y') }}
+                                </li>
+
                             </ul>
-                            <h2>Contatti</h2>
-                            <p>3333</p>
+
                         </div>
-                        <div class="col-8 bg-info">
-                            <h3 class="list-item">Vi parlo di me:</h3>
-                        </div>
-                    </div>
+                        <div class="col-md-8 col-12 mb-3">
 
 
+                            <h3 class="list-item py-5 text-center">{{ __('ui.articleApprovation') }}
+                            </h3>
 
 
+                        
+                            @if (Auth::user()->guest_houses)
+                                <div class="table-responsive">
 
-                    @forelse ($houses as $house)
-                        <div class="col-12 hCard col-md-6 col-lg-3 mx-3 my-3">
-                            <div class="card h-100 cardBorder">
+                                    <table class="table shadow borderRevisor">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"></th>
+                                                <th scope="col">{{ __('ui.place') }}</th>
+                                                <th scope="col">{{ __('ui.location') }}</th>
+                                                <th scope="col">{{ __('ui.price') }}</th>
+                                                <th scope="col">{{ __('ui.statusRevision') }}</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @forelse ($houses as $house)
+                                                <tr class="table-column">
+                                                    <th scope="row"><i class="bi bi-house-fill mainColor"></i></th>
+                                                    <td><a class="text-decoration-none btn mainColor fw-semibold scale transition"
+                                                            href="{{ route('show', ['id' => $house->id]) }}">{{ $house->place }}</a>
+                                                    </td>
+                                                    <td>{{ $house->location->name }}</td>
+                                                    <td>{{ $house->price }}/{{ __('ui.night') }}</td>
+                                                    <td>
+                                                        @if ($house->is_accepted === 0)
+                                                            <span
+                                                                class="badge bg-danger">{{ __('ui.notApproved') }}</span>
+                                                        @elseif($house->is_accepted === null)
+                                                            <span
+                                                                class="badge bg-warning">{{ __('ui.inApprovation') }}</span>
+                                                        @else
+                                                            <span
+                                                                class="badge bg-success">{{ __('ui.revisionAccepted') }}</span>
+                                                        @endif
 
-                                {{-- <img src="{{Storage::url($image->path)}}" class="card-img-top h-100" alt="Immagine annuncio">  --}}
-                                {{-- togliere il commento --}}
-                                <div class="cardBg" data-image="{{ Storage::url($house->images()->first()->path) }}">
+                                                    </td>
+                                                </tr>
+                                            @empty
+                                            @endforelse
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            @else
+                                <div class="text-center vhCustom">
+
+                                    <div class="borderCustom p-5 d-flex flex-column justify-content-center align-items-center">
+                                        <h3>{{ __('ui.notYetAnnouncements') }}</h3>
+                                        <i class="text-white fs-4 pb-2 bi bi-cloud-upload-fill"></i>
+                                        <a href="{{ route('create') }}"
+                                            class="btn opacity btnCustom p-2 fs-5">{{ __('ui.CaricaAnnuncio') }}!
+                                        </a>
+                                    </div>
                                 </div>
 
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between">
-                                        <h5 class="card-title fw-bold">{{ $house->place }}</h5>
-                                        {{-- <p class="btnLike" href=""><i
-                                        class=" bi bi-suit-heart fs-5 mainColor"></i></p> --}}
-                                    </div>
-                                    @if ($house->is_accepted === 0)
-                                        <h5> <span class="badge bg-danger">{{ __('ui.notApproved') }}</span></h5>
-                                    @elseif($house->is_accepted === null)
-                                        <h5> <span class="badge bg-warning">{{ __('ui.inApprovation') }}</span></h5>
-                                    @endif
-
-                                    <p class="card-text fs-5">
-                                        <span class="fw-semibold">
-                                            <i class="bi bi-house-heart-fill me-1 mainColor"></i>Location:
-                                        </span>
-                                        {{-- {{ $house->location->name }} --}}
-
-                                    
-                                        <x-locationTranslate :house="$house"/>         
+                            @endif
 
 
-                                    </p>
-                                    <p class="card-text fs-5"><span class="fw-semibold fs-5">
-                                            <i class="bi bi-currency-euro me-0 pe-0 mainColor"></i>{{ __('ui.price') }}:
-                                        </span>{{ $house->price }}/{{ __('ui.night') }}
-                                    </p>
 
-                                    <div class="d-flex justify-content-between">
-                                        <span class="d-flex align-items-center flex-md-row flex-column">
-                                            <a href="{{ route('show', ['id' => $house->id]) }}"
-                                                class="p-0 btn btnCard fs-5 text-center">
-                                                <i
-                                                    class="bi bi-chevron-compact-right mainColor"></i>{{ __('ui.detail') }}
-                                            </a>
-                                            @if (Auth::id() == $house->user_id)
-                                                <a href="{{ route('edit', compact('house')) }}"
-                                                    class="ms-1 p-0 btn btnCard fs-5 text-center">
-                                                    <i
-                                                        class="bi bi-chevron-compact-right mainColor"></i>{{ __('ui.editArticle') }}
-                                                </a>
-                                        </span>
-                                        <span class="d-flex align-items-center">
-                                            <a onclick="event.preventDefault();getElementById('form-delete').submit();"
-                                                class="btn btnCard fs-5 fw-semibold">
-                                                <span><i
-                                                        class="bi bi-trash3 fs-3"></i>{{ __('ui.deleteArticle') }}</span>
-                                            </a>
-                                            <form id="form-delete" class="d-none" method=POST
-                                                action={{ route('delete', compact('house')) }}>
-                                                @csrf
-                                                @method('delete')
-                                            </form>
-                    @endif
-                    </span>
+
+
+
+
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {{-- row --}}
         </div>
-    </div>
-@empty
-    <div class="col-12">
-        <p>{{ __('ui.notYetAnnouncements') }}</p>
-    </div>
-    @endforelse
-    </div>
-    </div>
-    </div>
-    </div>
+
+
+
+
+
+
+
+
+
+        {{-- container --}}
     </div>
 
     <x-script-card />

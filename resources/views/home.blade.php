@@ -71,7 +71,10 @@
                                                     class="bi bi-house-heart-fill mainColor"></i>{{ __('ui.location') }}:
                                             </p>
                                             
-                                            <x-locationTranslate :house="$house"/>         
+                                            <p class="card-text fs-6">&nbsp;
+                                                <x-locationTranslate :house="$house"/>         
+
+                                            </p>
 
 
                                         </div>

@@ -6,7 +6,7 @@
 
         //Ricorrenti
         'price' => 'Prezzo',
-        'night' => 'Notte',
+        'night' => 'notte',
         'detail' => 'Dettaglio',
         'publishAt' => 'Pubblicato il',
         'publishBy' => 'Pubblicato da',
@@ -119,7 +119,7 @@
 
         //Cards User
         'notApproved' => 'Non approvato',
-        'inApprovation' => 'In corso di approvazione',
+        'inApprovation' => 'In revisione',
 
         //Profile
         'notYetAnnouncements' => 'Non sono ancora presenti annunci',
@@ -138,6 +138,12 @@
         'titleProfileCard' => 'Case in affitto: Esplora le Offerte nel Mio Profilo',
         'occupation' => 'Attività lavorativa',
         'publicProfile' => 'Profilo pubblico',
+        'noArticleinProfile' => 'L\'utente non ha ancora caricato annunci',
+        'articleApprovation' => 'Sintesi annunci e stato:',
+        'registratoIl' => 'Registrato il',
+        'titlePersonalProfile' => 'Gestione degli Annunci: Verifica dello Stato di Approvazione',
+        'titlePageUser' => 'Vetrina annunci di',
+        'yourArticles' => 'I tuoi annunci',
 
         //Footer
         'contacts'=>'Contattaci',

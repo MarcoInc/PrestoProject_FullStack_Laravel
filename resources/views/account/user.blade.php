@@ -1,4 +1,4 @@
-<x-layout title="{{__('ui.profile')}}: {{ $user->name }}">
+<x-layout title="{{ __('ui.titlePageUser') }}: {{ $user->name }}">
 
 
 
@@ -24,18 +24,17 @@
                             @endif
 
                             <div class="col-md-9 col-12 pe-md-5 pe-0 text-center text-md-end">
-                                <h2 class="py-3 text-white">{{__('ui.profile')}}: {{ $user->name }}</h2>
-                                @if(Auth::user() && Auth::user()->name == $user->name)
-                                <a class="btn btnCustom mb-3"
-                
-                                    href="{{ route('edit_profile', ['user' => Auth::user()]) }}">{{__('ui.profileModifie')}}</a>
-                                @endif    
+                                <h2 class="py-3 text-white">{{ __('ui.titlePageUser') }} {{ $user->name }}</h2>
+                                @if (Auth::user() && Auth::user()->name == $user->name)
+                                    <a class="btn btnCustom mb-3"
+                                        href="{{ route('edit_profile', ['user' => Auth::user()]) }}">{{ __('ui.profileModifie') }}</a>
+                                @endif
                                 @if ($user->is_revisor)
-                                    <p class="text-white fs-5">{{__('ui.rule')}}: {{ __('ui.revisor') }}
+                                    <p class="text-white fs-5">{{ __('ui.rule') }}: {{ __('ui.revisor') }}
                                         <i class="ps-2 bi bi-vector-pen"></i>
                                     </p>
                                 @elseif($user)
-                                    <p class="text-white fs-5">{{__('ui.rule')}}: Guest
+                                    <p class="text-white fs-5">{{ __('ui.rule') }}: Guest
 
                                     </p>
                                 @endif
@@ -46,29 +45,31 @@
                     <div class="row px-0">
 
                         <div class="col-md-4 col-12 borderBottom formCustomProfile2">
-                            <h2 class="pt-3 text-white">{{__('ui.whoIam')}}</h2>
+                            <h2 class="pt-3 text-white">{{ __('ui.whoIam') }}</h2>
                             <hr class="text-white">
                             <ul class="list-unstyled">
                                 <li class="list-item pt-4 fs-5"><span class="text-white"><i
-                                            class="bi bi-person-check-fill me-1"></i>{{__('ui.nameAndSurname')}}:</span>
-                                    {{$profile ? $profile->name : ''}} </li>
+                                            class="bi bi-person-check-fill me-1"></i>{{ __('ui.nameAndSurname') }}:</span>
+                                    {{ $profile ? $profile->name : '' }} </li>
                                 <li class="list-item py-4 fs-5"><span class="text-white"><i
-                                            class="bi bi-hash me-1"></i>{{__('ui.age')}}:</span> {{$profile ? $profile->age : '' }}</li>
+                                            class="bi bi-hash me-1"></i>{{ __('ui.age') }}:</span>
+                                    {{ $profile ? $profile->age : '' }}</li>
                                 <li class="list-item pb-4 fs-5"><span class="text-white"><i
-                                            class="bi bi-reception-3 me-1"></i>{{__('ui.myJob')}}:</span>
-                                    {{$profile ? $profile->work : '' }}</li>
+                                            class="bi bi-reception-3 me-1"></i>{{ __('ui.myJob') }}:</span>
+                                    {{ $profile ? $profile->work : '' }}</li>
                                 <li class="list-item pb-4 fs-5"><span class="text-white"><i
-                                            class="bi bi-globe me-1"></i>{{__('ui.language')}}:</span>{{$profile ? $profile->language : '' }}
+                                            class="bi bi-globe me-1"></i>{{ __('ui.language') }}:</span>{{ $profile ? $profile->language : '' }}
                                 </li>
                                 <li class="list-item pb-4 fs-5"><span class="text-white"><i
-                                            class="bi bi-house-heart-fill me-1"></i>{{__('ui.residenza')}}:</span>
-                                    {{$profile ? $profile->from : '' }}</li>
+                                            class="bi bi-house-heart-fill me-1"></i>{{ __('ui.residenza') }}:</span>
+                                    {{ $profile ? $profile->from : '' }}</li>
                             </ul>
-                            <h2 class="text-white">{{__('ui.contactMe')}}</h2>
+                            <h2 class="text-white">{{ __('ui.contactMe') }}</h2>
                             <hr class="text-white">
 
                             <p class="fs-5"><i
-                                    class="bi bi-phone-vibrate text-white me-1"></i>{{$profile ? $profile->contact : '' }}</p>
+                                    class="bi bi-phone-vibrate text-white me-1"></i>{{ $profile ? $profile->contact : '' }}
+                            </p>
                         </div>
                         <div
                             class="col-md-8 col-12 pb-2 borderBottom d-flex flex-column justify-content-center align-items-center">
@@ -81,12 +82,12 @@
 
                             <a class="mainColor pb-4 fs-1 btn" href="#articles"><i
                                     class="bi bi-chevron-double-down"></i></a>
-                            <h2 class="list-item pb-5 text-center">{{__('ui.aboutMe')}}:</h2>
+                            <h2 class="list-item pb-5 text-center">{{ __('ui.aboutMe') }}:</h2>
                             <div class="row formCustomProfile2 mx-5  rounded-1">
                                 @if ($profile && $profile->info)
                                     <p class="fs-5 text-white p-3 text-center">{{ $profile->info }}</p>
                                 @else
-                                    <p class="fs-5 text-white p-3 text-center">{{__('ui.profileEditNot')}}
+                                    <p class="fs-5 text-white p-3 text-center">{{ __('ui.profileEditNot') }}
                                     </p>
                                 @endif
                             </div>
@@ -98,7 +99,7 @@
 
                     <div id="articles" class="col-12">
                         <h2 class="text-md-end text-center pe-4 py-5"><i
-                                class="mainColor bi bi-house-heart me-1"></i>{{__('ui.titleProfileCard')}}
+                                class="mainColor bi bi-house-heart me-1"></i>{{ __('ui.titleProfileCard') }}
 
                         </h2>
 
@@ -106,7 +107,6 @@
 
 
                     @forelse ($houses as $house)
-
                         <div class="col-12 hCard col-md-5 col-lg-3 mx-3 my-3">
                             <div class="card cardBorder">
 
@@ -121,25 +121,21 @@
                                         {{-- <p class="btnLike" href=""><i
                                             class=" bi bi-suit-heart fs-5 mainColor"></i></p> --}}
                                     </div>
-                                    @if ($house->is_accepted === 0)
-                                        <h5> <span class="badge bg-danger">{{ __('ui.notApproved') }}</span></h5>
-                                    @elseif($house->is_accepted === null)
-                                        <h5> <span class="badge bg-warning">{{ __('ui.inApprovation') }}</span></h5>
-                                    @endif
+                                  
 
-                                    <p class="card-text fs-5">
+                                    <p class="card-text fs-6">
                                         <span class="fw-semibold">
                                             <i class="bi bi-house-heart-fill me-1 mainColor"></i>Location:
-                                            
-                                            <x-locationTranslate :house="$house"/>         
+
 
                                         </span>
                                         {{-- {{ $house->location->name }} --}}
+                                        <x-locationTranslate :house="$house" />
 
 
 
                                     </p>
-                                    <p class="card-text fs-5"><span class="fw-semibold fs-5">
+                                    <p class="card-text fs-6"><span class="fw-semibold fs-6">
                                             <i
                                                 class="bi bi-currency-euro me-0 pe-0 mainColor"></i>{{ __('ui.price') }}:
                                         </span>{{ $house->price }}/{{ __('ui.night') }}
@@ -148,13 +144,13 @@
                                     <div class="d-flex justify-content-between">
                                         <span class="d-flex align-items-center flex-md-row flex-column">
                                             <a href="{{ route('show', ['id' => $house->id]) }}"
-                                                class="p-0 btn btnCard fs-5 text-center">
+                                                class="p-0 btn btnCard fs-6 text-center">
                                                 <i
                                                     class="bi bi-chevron-compact-right mainColor"></i>{{ __('ui.detail') }}
                                             </a>
                                             @if (Auth::id() == $house->user_id)
                                                 <a href="{{ route('edit', compact('house')) }}"
-                                                    class="ms-1 p-0 btn btnCard fs-5 text-center">
+                                                    class="ms-1 p-0 btn btnCard fs-6 text-center">
                                                     <i
                                                         class="bi bi-chevron-compact-right mainColor"></i>{{ __('ui.editArticle') }}
                                                 </a>
@@ -168,7 +164,7 @@
                                                     <i class="bi bi-trash3 mainColor fs-4"></i>
                                                 </a>
                                                 <form id="form-delete" class="d-none" method=POST
-                                                    action={{ route('delete', compact('house')) }}>
+                                                    action={{ route('deleteInProfile', compact('house')) }}>
                                                     @csrf
                                                     @method('delete')
                                                 </form>
@@ -180,8 +176,11 @@
                         </div>
 
                     @empty
-                        <div class="col-12">
-                            <p>{{ __('ui.notYetAnnouncements') }}</p>
+                        <div class="col-12 my-3 d-flex justify-content-center align-items-center">
+                            <div class="p-2 d-flex flex-column justify-content-center align-items-center">
+                                <h2 class="mainColor text-center p-5"><i class="bi bi-tag-fill me-1"></i>{{ __('ui.noArticleinProfile') }}</h2>
+                    
+                            </div>
                         </div>
                     @endforelse
                 </div>

@@ -107,21 +107,27 @@
 
                     <ul class="dropdown-menu w-100 align-middle rounded-1" aria-labelledby="navbarDropdown">
                         @auth
-                            {{-- <li>
-
-                                <a href="{{ route('profilo') }}"class="dropdown-item fs-5 mainColor hoverLog">{{ __('ui.profile') }}
-                                    <i class="bi bi-person-check-fill"></i>
-                                </a>
-                            </li> --}}
 
                             <li>
 
                                 <a
-                                    href="{{ route('userProfile', ['id' => Auth::user()]) }}"class="dropdown-item fs-5 mainColor hoverLog">{{ __('ui.profile') }}
-                                    <i class="bi bi-person-check-fill"></i>
+                                    href="{{ route('userProfile', ['id' => Auth::user()]) }}"class="dropdown-item fs-5 mainColor hoverLog">
+                                    {{ __('ui.profile') }} <i class="bi bi-person-check-fill"></i>
 
                                 </a>
                             </li>
+
+
+
+                            <li>
+
+                                <a href="{{ route('profilo') }}"class="dropdown-item fs-5 mainColor hoverLog">
+                                    {{ __('ui.yourArticles') }}<i class="ms-2 fs-6 fa-solid fa-list fa-flip-horizontal"></i>
+
+                                </a>
+                            </li>
+
+
 
                             <li>
                                 <a href="" onclick="event.preventDefault();getElementById('form-logout').submit();"

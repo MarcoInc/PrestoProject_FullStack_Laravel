@@ -3,7 +3,7 @@
     return [
         //Ricorrenti
         'price' => 'Price',
-        'night' => 'Night',
+        'night' => 'night',
         'detail' => 'Detail',
         'publishAt' => 'Published ',
         'publishBy' => 'Published by ',
@@ -133,6 +133,12 @@
         'titleProfileCard' => 'Rentals: Explore the Offers in My Profile',
         'occupation' => 'Occupation',
         'publicProfile' => 'Public profile',
+        'noArticleinProfile' => 'The user has not uploaded any ads yet',
+        'articleApprovation' => 'Ads Summary and Status:',
+        'registratoIl' => 'Registered on',
+        'titlePersonalProfile' => 'Ad Management: Approval Status Check',
+        'titlePageUser' => 'Ad showcase',
+        'yourArticles' => 'Your articles',
 
 
 

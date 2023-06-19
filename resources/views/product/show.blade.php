@@ -85,7 +85,7 @@
         <div class="modal-dialog ">
             <div class="modal-content rounded-1">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Elimina articolo <i
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">{{__('ui.deleteArticleModal')}}<i
                             class="fa-solid text-danger fa-triangle-exclamation"></i></h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
