@@ -120,6 +120,23 @@ return [
     'notYetAnnouncements' => 'Todavía no hay anuncios',
     'notYetAnnouncementsPublished' => 'Aún no ha publicado ningún anuncio.',
     'pageOf'=>'Página de ',
+    'whoIam' => '¿Quién soy?',
+    'profileModifie' => 'Editar perfil',
+    'rule' => 'Rol',
+    'age' => 'Edad',
+    'myJob' => 'Mi trabajo',
+    'language' => 'Idiomas hablados',
+    'residenza' => 'Lugar de residencia',
+    'contactMe' => 'Contáctame',
+    'aboutMe' => 'Les hablaré de mí mismo/misma',
+    'profileEditNot' => 'El perfil aún no ha sido actualizado.',
+    'titleProfileCard' => 'Alquileres: Explora las Ofertas en Mi Perfil',
+
+
+
+
+
+
     
     //Footer
     'contacts'=>'Contáctenos',

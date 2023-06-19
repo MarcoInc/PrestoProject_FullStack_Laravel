@@ -122,6 +122,17 @@
         'notYetAnnouncements' => 'Non sono ancora presenti annunci',
         'notYetAnnouncementsPublished' => 'Non ha ancora pubblicato annunci',
         'pageOf'=>'Pagina di ',
+        'whoIam' => 'Chi sono',
+        'profileModifie' => 'Modifica profilo',
+        'rule' => 'Ruolo',
+        'age' => 'Età',
+        'myJob' => 'Il mio lavoro',
+        'language' => 'Lingue parlate',
+        'residenza' => 'Luogo di residenza',
+        'contactMe' => 'Contatti',
+        'aboutMe' => 'Vi parlo di me',
+        'profileEditNot' => 'Il profio non è stato ancora aggionrato.',
+        'titleProfileCard' => 'Case in affitto: Esplora le Offerte nel Mio Profilo',
 
         //Footer
         'contacts'=>'Contattaci',

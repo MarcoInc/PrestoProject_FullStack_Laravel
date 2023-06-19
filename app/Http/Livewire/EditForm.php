@@ -33,7 +33,8 @@ class EditForm extends Component
         'user_id'=> 'required',
         'location_id' => 'required',
         'images.*' => 'required|image|max:1024',
-        'temporary_images.*' => 'image|max:1024'
+        'temporary_images.*' => 'image|max:1024',
+        'images' => 'required'
         // 'img' => 'image'
     ];
 

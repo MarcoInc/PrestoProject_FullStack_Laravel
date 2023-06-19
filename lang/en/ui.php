@@ -119,6 +119,23 @@
         'notYetAnnouncements' => 'There are no announcements yet',
         'notYetAnnouncementsPublished' => 'It hasn\'t posted any announcements yet',
         'pageOf'=>'Profile page : ',
+        'whoIam' => 'Who am I?',
+        'profileModifie' => 'Edit profile',
+        'rule' => 'Role',
+        'age' => 'Age',
+        'myJob' => 'My occupation',
+        'language' => 'Languages spoken',
+        'residenza' => 'Residence',
+        'contactMe' => 'Contact me',
+        'aboutMe' => 'About me',
+        'profileEditNot' => 'The profile has not been updated yet.',
+        'titleProfileCard' => 'Rentals: Explore the Offers in My Profile',
+
+
+
+
+
+
 
         //Footer
         'contacts'=>'Contact us',

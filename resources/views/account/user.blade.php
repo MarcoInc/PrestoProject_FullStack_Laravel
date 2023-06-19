@@ -24,18 +24,18 @@
                             @endif
 
                             <div class="col-md-9 col-12 pe-md-5 pe-0 text-center text-md-end">
-                                <h2 class="py-3 text-white">Profilo: {{ $user->name }}</h2>
+                                <h2 class="py-3 text-white">{{__('ui.profile')}}: {{ $user->name }}</h2>
                                 @if(Auth::user() && Auth::user()->name == $user->name)
                                 <a class="btn btnCustom mb-3"
                 
-                                    href="{{ route('edit_profile', ['user' => Auth::user()]) }}">Modifica profilo</a>
+                                    href="{{ route('edit_profile', ['user' => Auth::user()]) }}">{{__('ui.profileModifie')}}</a>
                                 @endif    
                                 @if ($user->is_revisor)
-                                    <p class="text-white fs-5">Ruolo: {{ __('ui.revisor') }}
+                                    <p class="text-white fs-5">{{__('ui.rule')}}: {{ __('ui.revisor') }}
                                         <i class="ps-2 bi bi-vector-pen"></i>
                                     </p>
                                 @elseif($user)
-                                    <p class="text-white fs-5">Ruolo: Guest
+                                    <p class="text-white fs-5">{{__('ui.rule')}}: Guest
 
                                     </p>
                                 @endif
@@ -46,25 +46,25 @@
                     <div class="row px-0">
 
                         <div class="col-md-4 col-12 borderBottom formCustomProfile2">
-                            <h2 class="pt-3 text-white">Chi sono</h2>
+                            <h2 class="pt-3 text-white">{{__('ui.whoIam')}}</h2>
                             <hr class="text-white">
                             <ul class="list-unstyled">
                                 <li class="list-item pt-4 fs-5"><span class="text-white"><i
-                                            class="bi bi-person-check-fill me-1"></i>Nome e cognome:</span>
+                                            class="bi bi-person-check-fill me-1"></i>{{__('uinameAndSurname')}}:</span>
                                     {{$profile ? $profile->name : ''}} </li>
                                 <li class="list-item py-4 fs-5"><span class="text-white"><i
-                                            class="bi bi-hash me-1"></i>Età:</span> {{$profile ? $profile->age : '' }}</li>
+                                            class="bi bi-hash me-1"></i>{{__('ui.age')}}:</span> {{$profile ? $profile->age : '' }}</li>
                                 <li class="list-item pb-4 fs-5"><span class="text-white"><i
-                                            class="bi bi-reception-3 me-1"></i>Il mio lavoro:</span>
+                                            class="bi bi-reception-3 me-1"></i>{{__('ui.myJob')}}:</span>
                                     {{$profile ? $profile->work : '' }}</li>
                                 <li class="list-item pb-4 fs-5"><span class="text-white"><i
-                                            class="bi bi-globe me-1"></i>Lingue parlate:</span>{{$profile ? $profile->language : '' }}
+                                            class="bi bi-globe me-1"></i>{{__('ui.language')}}:</span>{{$profile ? $profile->language : '' }}
                                 </li>
                                 <li class="list-item pb-4 fs-5"><span class="text-white"><i
-                                            class="bi bi-house-heart-fill me-1"></i>Luogo di residenza:</span>
+                                            class="bi bi-house-heart-fill me-1"></i>{{__('ui.residenza')}}:</span>
                                     {{$profile ? $profile->from : '' }}</li>
                             </ul>
-                            <h2 class="text-white">Contatti</h2>
+                            <h2 class="text-white">{{__('ui.contactMe')}}</h2>
                             <hr class="text-white">
 
                             <p class="fs-5"><i
@@ -81,12 +81,12 @@
 
                             <a class="mainColor pb-4 fs-1 btn" href="#articles"><i
                                     class="bi bi-chevron-double-down"></i></a>
-                            <h2 class="list-item pb-5">Vi parlo di me:</h2>
+                            <h2 class="list-item pb-5">{{__('ui.aboutMe')}}:</h2>
                             <div class="row formCustomProfile2 mx-5  rounded-1">
                                 @if ($profile && $profile->info)
                                     <p class="fs-5 text-white p-3 text-center">{{ $profile->info }}</p>
                                 @else
-                                    <p class="fs-5 text-white p-3 text-center">Il profio non è stato ancora aggionrato.
+                                    <p class="fs-5 text-white p-3 text-center">{{__('ui.profileEditNot')}}
                                     </p>
                                 @endif
                             </div>
@@ -98,8 +98,7 @@
 
                     <div id="articles" class="col-12">
                         <h2 class="text-md-end text-center pe-4 py-5"><i
-                                class="mainColor bi bi-house-heart me-1"></i>Case in affitto:
-                            Esplora le Offerte nel Mio Profilo
+                                class="mainColor bi bi-house-heart me-1"></i>{{__('ui.titleProfileCard')}}
 
                         </h2>
 
