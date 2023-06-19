@@ -21,6 +21,7 @@ class ProfileController extends Controller
     {
         $houses = GuestHouse::where('user_id', $id)->where('is_accepted', true)->orderBy('updated_at', 'desc')->get();
         $profile = User::findOrFail($id)->profile;
+        
         $user = User::find($id);
         
         

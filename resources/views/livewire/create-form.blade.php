@@ -64,9 +64,13 @@
             <div class="mb-3">
                 <label for="images" class="text-white fw-bold fs-5 pt-4">{{ __('ui.uploadImg') }}</label>
                 <input id="images" wire:model='temporary_images' type="file" name='images' multiple
-                    class="d-none form-control shadow @error('temporary_images.*') is-invalid @enderror">
+                    class="d-none form-control shadow">
 
                 @error('temporary_images.*')
+                    <p class="text-danger mt-2">{{ $message }}</p>
+                @enderror
+              
+                @error('images')
                     <p class="text-danger mt-2">{{ $message }}</p>
                 @enderror
             </div>
@@ -94,7 +98,7 @@
                         <button class="btn border border-white display-1"
                             onclick="event.preventDefault();document.getElementById('images').click()">
 
-                            <i class="fa-regular display-1 fa-images text-white"></i>
+                            <i class="bi bi-file-earmark-plus-fill display-1 text-white"></i>
                         </button>
 
                     </div>

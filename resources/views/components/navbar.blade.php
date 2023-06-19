@@ -59,20 +59,20 @@
             </form>
             </li> --}}
 
-            <ul class="nav-item list-unstyled dropend d-flex align-items-center me-2 mb-0">
-                <li class="nav-item dropdown py-3 py-md-0 me-3">
+            <ul class="nav-item  list-unstyled dropend d-flex align-items-center me-2 mb-0">
+                <li class="nav-item  dropdown py-3 py-md-0 me-3">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <i class="fa-solid fa-earth-americas mainColor text-center align-middle fs-5"></i>
                     </a>
-                    <ul class="dropdown-menu bg-transparent border-0">
-                        <li class="dropdown-item bg-transparent p-0 m-0">
+                    <ul class="dropdown-menu  bg-transparent border-0">
+                        <li class="dropdown-item zIndex bg-transparent p-0 m-0">
                             <x-_locale lang='it' />
                         </li>
-                        <li class="dropdown-item bg-transparent p-0 m-0">
+                        <li class="dropdown-item zIndex bg-transparent p-0 m-0">
                             <x-_locale lang='en' />
                         </li>
-                        <li class="dropdown-item bg-transparent p-0 m-0">
+                        <li class="dropdown-item zIndex bg-transparent p-0 m-0">
                             <x-_locale lang='es' />
                         </li>
                     </ul>
@@ -89,7 +89,8 @@
                             {{ __('ui.welcome') }} {{ Auth::user()->name }}
 
                             @if (Auth::user()->is_revisor)
-                                ({{ __('ui.revisor') }})
+                                {{-- ({{ __('ui.revisor') }}) --}}
+                                <i class="bi bi-star-fill fs-6"></i>
                                 {{-- ({{route('product.revisor')}})  --}}
                                 @if (App\Models\GuestHouse::toBeRevisonedCounter() > 0)
                                     <span
@@ -107,12 +108,16 @@
                     <ul class="dropdown-menu w-100 align-middle rounded-1" aria-labelledby="navbarDropdown">
                         @auth
                             <li>
+
                                 <a href="{{ route('profilo') }}"class="dropdown-item fs-5 mainColor hoverLog">{{ __('ui.profile') }}
+                                    <i class="bi bi-person-check-fill"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="" onclick="event.preventDefault();getElementById('form-logout').submit();"
-                                    class="dropdown-item fs-5 hoverLog mainColor">Logout</a>
+                                    class="dropdown-item fs-5 hoverLog mainColor">Logout
+                                    <i class="bi bi-box-arrow-left"></i>
+                                </a>
                             </li>
                             <form id="form-logout" class="d-none mainColor" method='POST' action="{{ route('logout') }}">
                                 @csrf
@@ -122,8 +127,12 @@
                                     href="{{ route('register') }}">{{ __('ui.register') }}
                                 </a>
                             </li>
-                            <li><a class="dropdown-item fs-5 hoverLog mainColor"
-                                    href="{{ route('login') }}">{{ __('ui.login') }}</a>
+                            <li>
+                                <a class="dropdown-item fs-5 hoverLog mainColor"
+                                    href="{{ route('login') }}">{{ __('ui.login') }}
+                                    <i class="bi bi-box-arrow-in-right"></i>
+                                </a>
+                                    
                             </li>
                         @endauth
 
@@ -138,6 +147,7 @@
                                         href="{{ route('revisorIndex') }}">{{ __('ui.toRevisor') }}
                                         {{-- contatore annunci non revisionati definito nel Model --}}
                                         ({{ App\Models\GuestHouse::toBeRevisonedCounter() }})
+                                        <i class="bi bi-pencil-square"></i>
                                     </a>
                                 </li>
                     </li>
@@ -145,7 +155,9 @@
                     <li class="nav-link text-white fs-5">
                     <li>
                         <a class="dropdown-item fs-5 hoverLog mainColor"
+                            
                             href="{{ route('revisor.history') }}">{{ __('ui.history') }}
+                            <i class="bi bi-book"></i>
                         </a>
                     </li>
                     </li>

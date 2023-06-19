@@ -35,8 +35,8 @@ class CreateForm extends Component{
         'user_id' => 'required',
         'location_id' => 'required',
         'images.*' => 'required|image|max:1024',
-        'temporary_images.*' => 'required|image|max:1024'
-        
+        'temporary_images.*' => 'required|image|max:1024',
+        'images' => 'required'
     ];
     
     
@@ -60,7 +60,7 @@ class CreateForm extends Component{
     
     public function updatedTemporaryImages(){
         if($this->validate([
-            'temporary_images.*' => 'require|image|max:1024',
+            'temporary_images.*' => 'required|image|max:1024',
             ])) {
                 foreach ($this->temporary_images as $image){
                     $this->images[] = $image;

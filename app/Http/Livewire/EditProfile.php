@@ -21,6 +21,7 @@ class EditProfile extends Component{
 
     public function mount(){
         $this->profile_tmp = Profile::find($this->user->id);
+        if($this->profile_tmp){
         $this->name = $this->profile_tmp->name;
         $this->age = $this->profile_tmp->age;
         $this->language = $this->profile_tmp->language;
@@ -29,6 +30,7 @@ class EditProfile extends Component{
         $this->from = $this->profile_tmp->from;
         $this->img = $this->profile_tmp->img;
         $this->info = $this->profile_tmp->info;
+        }
     }
     
 

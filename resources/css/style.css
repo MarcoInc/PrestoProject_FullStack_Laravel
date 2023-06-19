@@ -61,7 +61,7 @@ font-family: 'Syne', sans-serif;
 
     #scrollAnnunci {
         top: 70px;
-        z-index: 99;
+        z-index: 10 !important;
     }
 
 }
@@ -70,7 +70,12 @@ font-family: 'Syne', sans-serif;
 .navbar {
     background-color: var(--black);
     position: fixed;
-    z-index: 999;
+    z-index: 1000;
+}
+
+.zIndex{
+    z-index: 999 !important;
+
 }
 
 

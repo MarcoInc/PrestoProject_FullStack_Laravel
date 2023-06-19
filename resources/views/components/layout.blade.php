@@ -26,21 +26,20 @@
 
 <body>
     <x-navbar />
-    @if (session('messageBecomeRevisor'))
-        <div>
-            <p class="alert alert-warning">{{ session('messageBecomeRevisor') }}</p>
-        </div>
-    @endif
+    <div class="paddignSlot">
+
+    </div>
+    {{ $slot }}
+ 
     @if (session('message'))
         <div class="container">
             <p class="alert alert-warning">{{ session('message') }}</p>
         </div>
     @endif
 
-        <div class="paddignSlot">
-            {{ $slot }}
-        </div>
-  
+       
+
+
 
     <!--Swiper JS-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

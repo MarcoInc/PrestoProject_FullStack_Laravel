@@ -1,7 +1,7 @@
 <x-layout title="{{ __('ui.homeTitle') }}">
 
 
-    <div class="container-fluid p-0">
+    <div class="container-fluid px-0">
 
         <div class="row p-0">
             <div class="col-12">

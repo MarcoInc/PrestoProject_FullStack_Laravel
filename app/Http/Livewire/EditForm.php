@@ -32,7 +32,7 @@ class EditForm extends Component
         'beds'=> 'required|numeric',
         'user_id'=> 'required',
         'location_id' => 'required',
-        'images.*' => 'image|max:1024',
+        'images.*' => 'required|image|max:1024',
         'temporary_images.*' => 'image|max:1024'
         // 'img' => 'image'
     ];

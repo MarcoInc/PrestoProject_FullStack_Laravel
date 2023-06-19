@@ -4,8 +4,12 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="row">
-                    <div class="col-12 overflow-auto">
-                        <h1 class="py-4">{{ $house_toCheck ? __('ui.toReview') : __('ui.noneReview') }}</h1>
+                    <div class="col-12">
+                        <h1 class="py-4 text-md-start text-center">
+                            {{ $house_toCheck ? __('ui.toReview') : __('ui.noneReview') }}
+                        </h1>
+                    </div>
+                    <div class="col-12">
                         @if (session('messageApproved'))
                             <div>
                                 <p class="alert alert-warning mt-3 text-center"> {{ session('messageApproved') }} </p>
@@ -17,8 +21,14 @@
                             </div>
                         @endif
                         @if (App\Models\GuestHouse::toBeRevisonedCounter() > 0)
+                            
 
-                            <table class="table">
+
+
+                            <div class="table-responsive">
+                              
+                                
+                            <table class="table   table-bordered borderRevisor shadow">
                                 <thead>
                                     <tr>
                                         {{-- <th scope="col">ID</th> --}}
@@ -32,7 +42,7 @@
                                             {{ __('ui.Accetta') }}/{{ __('ui.Rifiuta') }}</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class="table-group-divider mainColor">
                                     @foreach ($house_toCheck as $house)
                                         <tr>
                                             {{-- <td>{{$house->id}}</td> --}}
@@ -278,6 +288,12 @@
                                     @endforeach
                                 </tbody>
                             </table>
+
+                            </div>
+
+
+
+
                         @else
                             {{-- Se non ci sono articoli da revisionare --}}
                             <div class="col-12 mb-5 d-flex justify-content-center align-items-center">

@@ -10,11 +10,11 @@
 
                         <div class="row justify-content-center justify-content-md-between w-100">
 
-                            @if ($profile->img)
+                            @if ($profile && $profile->img)
                                 <div class="col-md-2 col-12 ms-md-3 ms-0 text-center">
 
                                     <img class=" whImgProfile border border-3 p-1 bRadius"
-                                        src="{{ Storage::url($profile->img) }}" alt="">
+                                        src="{{ Storage::url($profile->img) }}" alt="Immagine profilo">
 
                                 </div>
                             @else
@@ -25,13 +25,16 @@
 
                             <div class="col-md-9 col-12 pe-md-5 pe-0 text-center text-md-end">
                                 <h2 class="py-3 text-white">Profilo: {{ $user->name }}</h2>
+                                @if(Auth::user() && Auth::user()->name == $user->name)
                                 <a class="btn btnCustom mb-3"
+                
                                     href="{{ route('edit_profile', ['user' => Auth::user()]) }}">Modifica profilo</a>
-                                @if (Auth::user()->is_revisor)
+                                @endif    
+                                @if ($user->is_revisor)
                                     <p class="text-white fs-5">Ruolo: {{ __('ui.revisor') }}
                                         <i class="ps-2 bi bi-vector-pen"></i>
                                     </p>
-                                @elseif(Auth::user())
+                                @elseif($user)
                                     <p class="text-white fs-5">Ruolo: Guest
 
                                     </p>
@@ -48,24 +51,24 @@
                             <ul class="list-unstyled">
                                 <li class="list-item pt-4 fs-5"><span class="text-white"><i
                                             class="bi bi-person-check-fill me-1"></i>Nome e cognome:</span>
-                                    {{ $profile->name }} </li>
+                                    {{$profile ? $profile->name : ''}} </li>
                                 <li class="list-item py-4 fs-5"><span class="text-white"><i
-                                            class="bi bi-hash me-1"></i>Età:</span> {{ $profile->age }}</li>
+                                            class="bi bi-hash me-1"></i>Età:</span> {{$profile ? $profile->age : '' }}</li>
                                 <li class="list-item pb-4 fs-5"><span class="text-white"><i
                                             class="bi bi-reception-3 me-1"></i>Il mio lavoro:</span>
-                                    {{ $profile->work }}</li>
+                                    {{$profile ? $profile->work : '' }}</li>
                                 <li class="list-item pb-4 fs-5"><span class="text-white"><i
-                                            class="bi bi-globe me-1"></i>Lingue parlate:</span>{{ $profile->language }}
+                                            class="bi bi-globe me-1"></i>Lingue parlate:</span>{{$profile ? $profile->language : '' }}
                                 </li>
                                 <li class="list-item pb-4 fs-5"><span class="text-white"><i
                                             class="bi bi-house-heart-fill me-1"></i>Luogo di residenza:</span>
-                                    {{ $profile->from }}</li>
+                                    {{$profile ? $profile->from : '' }}</li>
                             </ul>
                             <h2 class="text-white">Contatti</h2>
                             <hr class="text-white">
 
                             <p class="fs-5"><i
-                                    class="bi bi-phone-vibrate text-white me-1"></i>{{ $profile->contact }}</p>
+                                    class="bi bi-phone-vibrate text-white me-1"></i>{{$profile ? $profile->contact : '' }}</p>
                         </div>
                         <div
                             class="col-md-8 col-12 pb-2 borderBottom d-flex flex-column justify-content-center align-items-center">
@@ -80,7 +83,7 @@
                                     class="bi bi-chevron-double-down"></i></a>
                             <h2 class="list-item pb-5">Vi parlo di me:</h2>
                             <div class="row formCustomProfile2 mx-5  rounded-1">
-                                @if ($profile->info)
+                                @if ($profile && $profile->info)
                                     <p class="fs-5 text-white p-3 text-center">{{ $profile->info }}</p>
                                 @else
                                     <p class="fs-5 text-white p-3 text-center">Il profio non è stato ancora aggionrato.
