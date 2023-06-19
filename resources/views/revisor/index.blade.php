@@ -44,6 +44,7 @@
                                 </thead>
                                 <tbody class="table-group-divider mainColor">
                                     @foreach ($house_toCheck as $house)
+                                    
                                         <tr>
                                             {{-- <td>{{$house->id}}</td> --}}
                                             <th class="text-center align-middle" scope="row">
@@ -77,8 +78,7 @@
                                                     <div class="carousel-inner">
 
                                                         @foreach ($house->images as $image)
-                                                            <div
-                                                                class="carousel-item  @if ($loop->first) active @endif">
+                                                            <div class="carousel-item  @if ($loop->first) active @endif">
 
                                                                 <div class="row">
                                                                     <div class="col-12 py-2">
@@ -216,21 +216,22 @@
 
                                             <td class="text-center align-middle">
 
-                                                <a onclick="event.preventDefault();getElementById('form-accept').submit()"
+                                                <a onclick="event.preventDefault();getElementById('#{{$house->id}}').submit()"
                                                     class="btn form-accept fs-6 fw-semibold" type='submit'><i
                                                         class="fa-solid fa-square-check mainColor fs-5"></i>
                                                     {{ __('ui.Accetta') }}</a>
-                                                <form id="form-accept" class="d-none " method=POST
-                                                    action={{ route('revisor.accept', ['house_toCheck' => $house->id]) }}>
+                                                    
+                                                <form id="#{{$house->id}}" class="d-none " method=POST
+                                                    action={{ route('revisor.accept', compact('house')) }}>
                                                     @csrf
                                                     @method('patch')
                                                 </form>
 
-                                                <a onclick="event.preventDefault();getElementById('form-reject').submit()"
+                                                <a onclick="event.preventDefault();getElementById('#{{$house->id}}').submit()"
                                                     class="btn form-reject fs-6 fw-semibold" type='submit'><i
                                                         class="fa-solid fa-square-xmark text-danger fs-5"></i>{{ __('ui.Rifiuta') }}</a>
-                                                <form id="form-reject" class="d-none" method=POST
-                                                    action={{ route('revisor.reject', ['house_toCheck' => $house->id]) }}>
+                                                <form id="#{{$house->id}}" class="d-none" method=POST
+                                                    action={{ route('revisor.reject',  compact('house')) }}>
                                                     @csrf
                                                     @method('patch')
                                                 </form>

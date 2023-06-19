@@ -112,11 +112,11 @@
 
                                             <td class="text-center borderRevisor">
 
-                                                <a onclick="event.preventDefault();getElementById('form-resetRevision').submit()"
+                                                <a onclick="event.preventDefault();getElementById('#{{$house->id}}').submit()"
                                                     class="btn form-reject fs-6" type='submit'>
                                                     <i
                                                         class="fa-solid fa-arrow-rotate-left mainColor"></i>{{ __('ui.revisionReset') }}</a>
-                                                <form id="form-resetRevision" class="d-none" method=POST
+                                                <form id="#{{$house->id}}" class="d-none" method=POST
                                                     action={{ route('revisor.resetRevision', compact('house')) }}>
                                                     @csrf
                                                     @method('patch')
