@@ -29,8 +29,8 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between">
                                     <h5 class="card-title fw-bold">{{$house->place}}</h5>
-                                    <p class="btnLike" href=""><i class=" bi bi-suit-heart fs-5 mainColor"></i>
-                                    </p>
+                                    {{-- <p class="btnLike" href=""><i class=" bi bi-suit-heart fs-5 mainColor"></i>
+                                    </p> --}}
                                 </div>
                                 <p class="card-text fs-6">
                                     <span class="fw-semibold">
@@ -40,7 +40,7 @@
                                 <p class="card-text fs-6">
                                     <span class="fw-semibold fs-6">
                                         <i class="bi bi-currency-euro me-0 pe-0 mainColor"></i>{{__('ui.price')}}: 
-                                    </span>{{$house->price}}/{{__('ui.night')}}
+                                    </span>{{$house->price}}/&euro;{{__('ui.night')}}
                                 </p>
                                 <p class="card-text fs-6"><span class="fw-semibold fs-6">
                                     <i class="fa-solid fs-6 fa-user me-0 pe-0 mainColor"></i>{{__('ui.publishBy')}}:
@@ -59,22 +59,7 @@
                                             <i class="bi bi-chevron-compact-right mainColor"></i>{{__('ui.editArticle')}}
                                         </a>
                                     </div>
-                                    <span class="d-flex align-items-center">
-                                        
-                                        <!-- Button trigger modal -->
-                                        <a type="button" class="btn btnCard" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="bi bi-trash3 mainColor fs-4"></i>
-                                        </a>
-                                        
-                                        
-                                        
-                                        <form id="form-delete" class="d-none" method=POST action={{route('delete',compact('house'))}}>
-                                            @csrf
-                                            @method('delete')
-                                        </form>
-                                        
-                                        
-                                    </span>
+                                    
                                     @endif
                                     
                                 </div>
@@ -93,28 +78,7 @@
             </div>
         </div>
         
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog ">
-                <div class="modal-content rounded-1">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">{{__('ui.deleteArticleModal')}} <i class="fa-solid text-danger fa-triangle-exclamation"></i></h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body modalCustom">
-                        <p class="fs-5">{{__('ui.areYouSure?')}}</p>
-                    </div>
-                    
-                    <div class="modal-footer">
-                        <a type="button" class="btn btnCard mainColor fs-6 text-uppercase fw-semibold" data-bs-dismiss="modal">{{__('ui.close')}}
-                        </a>
-                        <a onclick="event.preventDefault();getElementById('form-delete').submit();"
-                        class="btn btnCard text-danger rounded-1 fs-6 text-uppercase fw-semibold">
-                        {{__('ui.deleteArticle')}}
-                    </a>
-                </div>
-            </div>
-        </div>
+       
     </div>
     
     {{-- {{ $guest_houses->links() }} --}}

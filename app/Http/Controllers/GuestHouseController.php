@@ -7,98 +7,99 @@ use App\Models\GuestHouse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class GuestHouseController extends Controller
-{
-    public function __construct()
-    {
+class GuestHouseController extends Controller{
+    public function __construct(){
         $this->middleware('auth')->except('index', 'show');
     }
-
-    public function create()
-    {
+    
+    public function create() {
         return view('product.create');
     }
-
+    
     /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
+    * Store a newly created resource in storage.
+    */
+    public function store(Request $request){
+        
+        
     }
-
+    
     /**
-     * Display the specified resource.
-     */
-    public function show($id)
-    {
+    * Display the specified resource.
+    */
+    public function show($id){
         $house = GuestHouse::findOrFail($id);
         //utente proprietario vede i propri non accettati
-        if (Auth::user() && Auth::user()->name == $house->user->name && $house->is_accepted == null) {
-            $locations = Location::all();
-            $icons = ['fa-water', 'fa-mountain', 'fa-fish-fins', 'fa-tree-city', 'fa-snowflake', 'fa-sun-plant-wilt', 'fa-horse-head'];
+        if(Auth::user() && Auth::user()->name==$house->user->name && $house->is_accepted==null){
+            $locations=Location::all();
+            $icons = ['fa-water', 'fa-mountain','fa-fish-fins', 'fa-tree-city', 'fa-snowflake','fa-sun-plant-wilt', 'fa-horse-head'];
             return view('product.show', compact('house', 'locations', 'icons'));
         }
         //revisore vede tutto
-        else if (Auth::user() && Auth::user()->is_revisor == 1) {
-            $locations = Location::all();
-            $icons = ['fa-water', 'fa-mountain', 'fa-fish-fins', 'fa-tree-city', 'fa-snowflake', 'fa-sun-plant-wilt', 'fa-horse-head'];
+        else if(Auth::user() && Auth::user()->is_revisor==1){
+            $locations=Location::all();
+            $icons = ['fa-water', 'fa-mountain','fa-fish-fins', 'fa-tree-city', 'fa-snowflake','fa-sun-plant-wilt', 'fa-horse-head'];
             return view('product.show', compact('house', 'locations', 'icons'));
         }
         //tutti possono vedere gli accettati
-        else if ($house->is_accepted == 1) {
-            $locations = Location::all();
-            $icons = ['fa-water', 'fa-mountain', 'fa-fish-fins', 'fa-tree-city', 'fa-snowflake', 'fa-sun-plant-wilt', 'fa-horse-head'];
+        else if($house->is_accepted==1){
+            $locations=Location::all();
+            $icons = ['fa-water', 'fa-mountain','fa-fish-fins', 'fa-tree-city', 'fa-snowflake','fa-sun-plant-wilt', 'fa-horse-head'];
             return view('product.show', compact('house', 'locations', 'icons'));
-        } else if ($house->is_accepted == 0) {
-            $guest_houses = GuestHouse::where('is_accepted', true)
-                ->orderBy('created_at', 'desc')->take(5)->get();
+        }
+        else if($house->is_accepted==0){
+            $guest_houses = GuestHouse::where('is_accepted',true) 
+            ->orderBy('created_at', 'desc')->take(5)->get();
             //dd($guest_houses);
             return redirect(route('home'))->with('messageNotFound', __('messages.ArticleNotFound'))->with(compact('guest_houses'));
         }
-
         //se accedo ad un non accettato e non sono ne il proprietario ne un revisore
-        else {
-            $guest_houses = GuestHouse::where('is_accepted', true)
-                ->orderBy('created_at', 'desc')->take(5)->get();
+        else{
+            $guest_houses = GuestHouse::where('is_accepted',true) 
+            ->orderBy('created_at', 'desc')->take(5)->get();
             //dd($guest_houses);
             return redirect(route('home'))->with('messageNotFound', __('messages.ArticleNotFound'))->with(compact('guest_houses'));
         }
+        
     }
-
-    public function edit(GuestHouse $house)
-    {
+    
+    public function edit(GuestHouse $house){
         $locations = Location::all();
-
-        if (Auth::user() && Auth::user()->name == $house->user->name)
-
-            return view('product.edit', compact('house', 'locations'));
-        $guest_houses = GuestHouse::all();
+        
+        if(Auth::user() && Auth::user()->name==$house->user->name)
+        
+        return view('product.edit', compact('house','locations'));
+        $guest_houses= GuestHouse::all();
         return redirect(route('home'))->with(compact('guest_houses'));
     }
-
+    
     /**
-     * Update the specified resource in storage.
-     */
+    * Update the specified resource in storage.
+    */
     public function update(Request $request, GuestHouse $guestHouse)
     {
         //
     }
-
+    
     /**
-     * Remove the specified resource from storage.
-     */
+    * Remove the specified resource from storage.
+    */
     public function destroy(GuestHouse $house)
     {
         // $locations = Location::all();
-
-        if (Auth::user() && Auth::user()->name == $house->user->name) {
-
-            $house->delete();
-            return redirect(route('index'))->with('message', __('messages.correctDelete'));
+        
+        if(Auth::user() && Auth::user()->name==$house->user->name){
+        
+          $house->delete();
+          return redirect(route('index'))->with('message', __('messages.correctDelete'));
         }
         // $guest_houses= GuestHouse::all();
         // return redirect(route('home'))->with(compact('guest_houses'));
 
-
+       
     }
+    
+    
+    
+    
 }

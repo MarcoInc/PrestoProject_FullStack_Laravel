@@ -18,7 +18,7 @@
                 </p>
 
                 <p><strong class="mainColor"><i class="fa-solid fa-bed me-1"></i>{{ __('ui.bedsPlace') }}:</strong> {{ $house->beds }}</p>
-                <p><strong class="mainColor"><i class="bi bi-currency-euro me-1"></i>{{ __('ui.price') }}:</strong> {{ $house->price }}/{{ __('ui.night') }}</p>
+                <p><strong class="mainColor"><i class="bi bi-currency-euro me-1"></i>{{ __('ui.price') }}:</strong> {{ $house->price }}/&euro;{{ __('ui.night') }}</p>
                 <p><strong class="mainColor"><i class="bi bi-book me-1"></i>{{ __('ui.description') }}:</strong> {{ $house->description }}</p>
                 <p><strong class="mainColor">{{ __('ui.publishBy') }}:</strong>
                     <a href="{{ route('userProfile', ['id' => $house->user->id]) }}"
