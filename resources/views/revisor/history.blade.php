@@ -4,7 +4,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="row">
-                    <div class="col-10">
+                    <div class="col-10 w-100">
 
                         <h2 class="py-4">{{ __('ui.historyIndexRevisorTitle') }}</h2>
                         @if (session('message'))
