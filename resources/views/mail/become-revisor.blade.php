@@ -8,10 +8,10 @@
 </head>
 <body>
     <h1>({{__('ui.requestRevisor')}})</h1>
-    <h2>({{__('ui.userNameRevisor')}}): {{$user->name}}</h2>
-    <h3>({{__('ui.emailRevisor')}}): {{$user->email}}</h3>
+    <h2><strong class="emailCustom">Email:</strong>  {{$user->email}}</h2>
+    <h3><strong class="emailCustom">Name:</strong>   {{$user->name}}</h3>
 
-    <a href='{{route('make.revisor', compact('user'))}}'>({{__('ui.requestRevisorButton')}})</a>
+    <a class="emailCustom" href='{{route('make.revisor', compact('user'))}}'>({{__('ui.requestRevisorButton')}})</a>
 
     
 </body>

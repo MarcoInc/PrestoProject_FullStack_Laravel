@@ -51,8 +51,12 @@
 
             <i class="bi bi-cloud-plus-fill text-white fs-3 "></i>
         </button>
+    
+        @if($img)
+            <p class="text-white fs-6">{{__('ui.imageUploaded')}}<i class="ms-1 fa-solid fa-circle-check"></i></p>
+        @endif
     </div>
-
+    
 
 
 
@@ -60,4 +64,9 @@
 
         <button type="submit" class="btn btnCustom">{{ __('ui.editArticle') }}</button>
     </div>
+
+
+ 
+
+    
 </form>

@@ -615,3 +615,9 @@ footer {
 .logoCodevengers{
     width: 150px;
 }
+
+.emailCustom{
+    text-decoration: none;
+    font-size: medium;
+    border:#126d76 1px solid;
+}

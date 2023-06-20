@@ -50,17 +50,20 @@
                                 </p>
                                 
                                 <div class="d-flex justify-content-between">
-                                    @if(Auth::id()==$house->user_id)
                                     <div class="d-flex align-items-center flex-md-row flex-column">
-                                        <a href="{{route('show', ['id'=>$house->id])}}" class="p-0 btn btnCard fs-5 text-center">
+                                        <a href="{{ route('show', ['id' => $house->id]) }}"
+                                            class="p-0 btn btnCard fs-6 text-center">
+                                            <i
+                                                class="bi bi-chevron-compact-right mainColor fs-6"></i>{{ __('ui.detail') }}
                                         </a>
                                         
-                                        <a href="{{ route('edit',compact('house')) }}" class="ms-1 p-0 btn btnCard fs-5 text-center">
+                                        @if(Auth::id()==$house->user_id)
+                                        <a href="{{ route('edit',compact('house')) }}" class="ms-1 p-0 btn btnCard fs-6 text-center">
                                             <i class="bi bi-chevron-compact-right mainColor"></i>{{__('ui.editArticle')}}
                                         </a>
+                                        @endif
                                     </div>
                                     
-                                    @endif
                                     
                                 </div>
                             </div>

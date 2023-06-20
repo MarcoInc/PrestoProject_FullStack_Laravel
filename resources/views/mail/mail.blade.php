@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>email</title>
+    <title>Email</title>
 </head>
 <body>  
-    <p>Messaggio da {{$user}}</p>
-    <p>Email: {{$email}}</p>
-    <p>Messaggio: {{$body}}</p>
+    <h2>Messaggio da {{$user}}</h2>
+    <p> <strong> Email:</strong> {{$email}}</p>
+    <p> <strong >Messaggio:</strong><br> {{$body}}</p>
     
 </body>
 </html>

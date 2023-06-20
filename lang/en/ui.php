@@ -140,6 +140,8 @@
         'titlePageUser' => 'Ad showcase',
         'yourArticles' => 'Your articles',
         'profiloPubblico' => 'Public profile',
+        'imageUploaded' => 'Image uploaded successfully',
+
 
 
 

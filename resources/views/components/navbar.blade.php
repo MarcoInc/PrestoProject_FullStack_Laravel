@@ -105,7 +105,7 @@
                     </a>
 
 
-                    <ul class="dropdown-menu p-1 w-100 align-middle rounded-1" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu p-1 align-middle rounded-1" aria-labelledby="navbarDropdown">
                         @auth
 
                             <li>

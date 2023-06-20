@@ -104,6 +104,7 @@
         'whereIsIt' => 'Dove si trova?',
         'smallDescription' => 'Breve descrizione dell\'abitazione..',
         'howManyPeople' => 'Quante persone potrà ospitare?',
+
        
         //Mail
         'nameAndSurname' => 'Nome e Cognome',
@@ -145,6 +146,7 @@
         'titlePageUser' => 'Vetrina annunci di',
         'yourArticles' => 'Stato annunci',
         'profiloPubblico' => 'Profilo pubblico',
+        'imageUploaded' => 'Immagine caricata con successo',
 
         //Footer
         'contacts'=>'Contattaci',
