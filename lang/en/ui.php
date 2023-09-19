@@ -9,7 +9,7 @@
         'publishBy' => 'Published by ',
         'deleteArticle' => 'Delete',
         'deleteArticleModal' => 'Delete article',
-        'editArticle' => 'Edit',
+        'editArticle' => 'Edit article',
         'modificatoIl' => 'Modified',
         'areYouSure?' => "The article cannot be recovered. Are you sure you want to delete it?",
         'uploadImg' => 'Upload Image',

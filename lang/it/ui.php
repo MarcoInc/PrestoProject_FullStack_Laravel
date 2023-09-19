@@ -12,7 +12,7 @@
         'publishBy' => 'Pubblicato da',
         'deleteArticle' => 'Elimina',
         'deleteArticleModal' => 'Elimina articolo',
-        'editArticle' => 'Modifica',
+        'editArticle' => 'Modifica annuncio',
         'modificatoIl' => 'Modificato',
         'close' => 'Chiudi',
         'categoriesTitle' => 'Articoli per categoria',

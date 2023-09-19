@@ -111,7 +111,7 @@
         </div>
 
         <div class="col-12 text-center m-1">
-            <button type="submit" class="btn btnCustom">{{ __('ui.createArticle') }}</button>
+            <button type="submit" class="btn btnCustom">{{ __('ui.editArticle') }}</button>
         </div>
 
     </div>

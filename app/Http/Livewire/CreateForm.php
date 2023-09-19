@@ -111,16 +111,18 @@ class CreateForm extends Component{
                         //     ])->dispatch($newImage->id);       
                         // }
 
-                        GoogleVisionSafeSearch::withChain([
-                            new GoogleVisionLabelImage($newImage->id),
-                            new RemoveFaces($newImage->id),
-                            new ResizeImage($newImage->path, 400, 300),
-                            // new AddWatermark($newImage->id),
-                            ])->dispatch($newImage->id);       
-                        }
-                        
-                        File::deleteDirectory(storage_path('/app/livewire-tmp'));
+                        //TODO MANCANO LE API KEY DI GOOGLE -> SOLO RESIZE/CROP
+                        // GoogleVisionSafeSearch::withChain([
+                        //     new GoogleVisionLabelImage($newImage->id),
+                        //     new RemoveFaces($newImage->id),
+                        //     new ResizeImage($newImage->path, 400, 300),
+                        //     // new AddWatermark($newImage->id),
+                        //     ])->dispatch($newImage->id);      
+                        dispatch(new ResizeImage($newImage->path, 400, 300)); 
                     }
+                        
+                    File::deleteDirectory(storage_path('/app/livewire-tmp'));
+                }
                     
                     //Alternativa per associazione user_id ad articolo 
                     // $this->guest_houses->user()->associate(Auth::user());
