@@ -164,7 +164,7 @@
                                                     <i class="bi bi-trash3 mainColor fs-4"></i>
                                                 </a>
                                                 <form id="#{{$house->id}}" class="d-none" method=POST
-                                                    action={{ route('deleteInProfile', compact('house')) }}>
+                                                    action={{ route('delete', compact('house')) }}>
                                                     @csrf
                                                     @method('delete')
                                                 </form>
