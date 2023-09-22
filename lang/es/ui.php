@@ -144,18 +144,13 @@ return [
     'profiloPubblico' => 'Perfil público',
     'imageUploaded' => 'Imagen cargada con éxito',
 
-
-
-
-
-
-
-
-
-
-
-
-    
+    //Wishlist
+    'wishlist' => 'Lista de deseos',
+    'anyWishlist'=>'Lista de deseos vacía',
+    'noneWishlist'=>'Tu lista de deseos',
+    'createdBy'=>'Creado por:',
+    'addedWish'=>'Añadido el',
+        
     //Footer
     'contacts'=>'Contáctenos',
     'phone'=> 'Teléfono',

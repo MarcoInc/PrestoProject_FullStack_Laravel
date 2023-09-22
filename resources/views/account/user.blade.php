@@ -115,8 +115,10 @@
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between">
                                         <h5 class="card-title fw-bold">{{ $house->place }}</h5>
-                                        {{-- <p class="btnLike" href=""><i
-                                            class=" bi bi-suit-heart fs-5 mainColor"></i></p> --}}
+                                        
+                                        {{-- TASTO WISHLIST CUORE --}}
+                                        <p class="btnLike" href=""><i
+                                            class=" bi bi-suit-heart fs-5 mainColor"></i></p>
                                     </div>
 
 

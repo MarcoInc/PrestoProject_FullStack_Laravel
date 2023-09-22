@@ -148,6 +148,16 @@
         'profiloPubblico' => 'Profilo pubblico',
         'imageUploaded' => 'Immagine caricata con successo',
 
+        //Wishlist
+        'wishlist' => 'Lista desideri',
+        'anyWishlist'=>'La tua lista desideri',
+        'noneWishlist'=>'Non hai oggetti nella tua lista desideri',
+        'createdBy'=>'Creato da:',
+        'addedWish'=>'Aggiunto il',
+
+
+
+
         //Footer
         'contacts'=>'Contattaci',
         'phone'=> 'Telefono',

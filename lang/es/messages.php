@@ -23,7 +23,9 @@ return [
     'waitForReview' => '¡Cambios aplicados! Espera una revisión.',
     'editProfileOk' =>  'Cambios de perfil aplicados.',
     'sendMailOk' => 'Mensaje enviado correctamente.',
-    'messageProductCreate' => '¡Producto cargado correctamente! ¡Por favor, espera la revisión para verlo!'
+    'messageProductCreate' => '¡Producto cargado correctamente! ¡Por favor, espera la revisión para verlo!',
+
+    'flushOK' => 'Lista de deseos limpia'
 
  
  ];

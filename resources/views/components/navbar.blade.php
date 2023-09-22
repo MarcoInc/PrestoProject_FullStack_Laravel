@@ -117,6 +117,13 @@
                                 </a>
                             </li>
 
+                            <li>
+                                <a href="{{ route('wishlist') }}"class="dropdown-item fs-5 mainColor hoverLog">
+                                    {{ __('ui.wishlist') }}<i
+                                        class="ms-2 fs-6 fa-solid fa-heart fa-flip-horizontal"></i>
+
+                                </a>
+                            </li>
 
 
                             <li>

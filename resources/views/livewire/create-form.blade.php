@@ -113,7 +113,7 @@
         </div>
 
         <div class="col-12 text-center m-1">
-            <button id="scrollUpBtn" type="submit" class="btn btnCustom">{{ __('ui.creatArticle') }}</button>
+            <button id="scrollUpBtn" type="submit" class="btn btnCustom">{{ __('ui.createArticle') }}</button>
         </div>
 
     </div>

@@ -73,8 +73,10 @@
                                             
                                             <p class="card-text fs-6">&nbsp;
                                                 <x-locationTranslate :house="$house"/>         
+                                                
 
                                             </p>
+                                            
 
 
                                         </div>
@@ -91,6 +93,11 @@
                                                 {{ $house->created_at->format('d/m/Y') }}
                                             </p>
 
+                                            {{-- TASTO WISHLIST CUORE --}}
+                                            @if(Auth::user())
+                                                <x-wishlistHeart :house="$house" :wishedItems="$wishedItems"/>
+                                            @endif
+                    
                                             <!--Detail-->
                                             <a href="{{ route('show', ['id' => $house->id]) }}"
                                                 class="p-md-0 pt-3 ps-0 btn btnCard fs-6 text-start"><i
@@ -100,7 +107,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         @endforeach
 
@@ -112,7 +118,7 @@
                     <div class="swiper-pagination"></div>
 
 
-                </div>
+                </div> 
 
             </div>
 

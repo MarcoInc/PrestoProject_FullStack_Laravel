@@ -23,6 +23,8 @@ return [
    'waitForReview' => 'Modifiche applicate! Attendi una revisione.',
    'editProfileOk' => 'Modifiche profilo applicate.',
    'sendMailOk' => 'Messaggio inviato correttamente.',
-   'messageProductCreate' => 'Prodotto caricato correttamente. Attendi la revisione per visualizzarlo!'
+   'messageProductCreate' => 'Prodotto caricato correttamente. Attendi la revisione per visualizzarlo!',
+
+   'flushOK' => 'Lista desideri svuotata!'
 
 ];

@@ -1,11 +1,14 @@
 <?php
 
-use App\Http\Controllers\GuestHouseController;
-use App\Http\Controllers\ProfileController;
+use App\Models\Wishlist;
+use App\Models\GuestHouse;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RevisorController;
-use App\Models\GuestHouse;
+use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\GuestHouseController;
+use App\Http\Controllers\WishlistItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,7 +59,6 @@ Route::get('/ricerca/house', [PublicController::class, 'searchHouse'])->name('pr
 Route::get('/profilo', [ProfileController::class, 'profilo'])->name('profilo');
 Route::get('/modifica-profilo/{user}', [ProfileController::class, 'edit'])->name('edit_profile');
 
-
 //Utenti
 Route::get('/user/{id}', [ProfileController::class, 'userProfile'])->name('userProfile');
 
@@ -64,6 +66,11 @@ Route::get('/user/{id}', [ProfileController::class, 'userProfile'])->name('userP
 Route::post('/language/{lang}', [PublicController::class, 'setLanguage'])->name('setLanguage');
 
 
+//Wishlist
+Route::get('/wishlist', [WishlistController::class , 'wishlist'])->name('wishlist');
+
+Route::patch('/wishlist/add/{house}', [WishlistItemController::class, 'add'])->name('addWishlist');
+Route::delete('/wishlist/remove/{house}', [WishlistItemController::class, 'remove'])->name('removeWishlist');
 
 
 //DISTRUGGI

@@ -23,7 +23,9 @@ return [
     'waitForReview' => 'Changes applied! Please wait for a review.',
     'editProfileOk' => 'Profile changes applied.',
     'sendMailOk' => 'Message sent successfully.',
-    'messageProductCreate' => 'Product uploaded successfully. Please wait for review to view it!'
+    'messageProductCreate' => 'Product uploaded successfully. Please wait for review to view it!',
+    
+    'flushOK' => 'Wishlist flushed!'
 
  
  ];

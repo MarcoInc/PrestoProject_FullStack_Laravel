@@ -141,9 +141,12 @@
         'yourArticles' => 'Your articles',
         'profiloPubblico' => 'Public profile',
         'imageUploaded' => 'Image uploaded successfully',
-
-
-
+        //Wishlist
+        'wishlist' => 'Wishlist',
+        'anyWishlist'=>'Your wishlist',
+        'noneWishlist'=>'Empty wishlist',
+        'createdBy'=>'Created by:',
+        'addedWish'=>'Added on',
 
 
 

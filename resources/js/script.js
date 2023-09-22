@@ -29,8 +29,8 @@ let swiper = new Swiper(".swiper", {
 let hearts = document.querySelectorAll('.bi-suit-heart');
 hearts.forEach((el) => {
     el.addEventListener('click', () => {
-     el.classList.toggle('bi-suit-heart');
-     el.classList.toggle('bi-suit-heart-fill');
+    el.classList.toggle('bi-suit-heart');
+    el.classList.toggle('bi-suit-heart-fill');
     })
 })
 

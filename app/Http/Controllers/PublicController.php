@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Location;
 use App\Models\GuestHouse;
 use App\Models\Image;
+use App\Models\WishlistItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
@@ -17,7 +18,14 @@ class PublicController extends Controller
         $guest_houses = GuestHouse::where('is_accepted', true)
         ->orderBy('created_at', 'desc')->take(5)->get();
         
-        return view('home', compact('guest_houses'));
+        if(Auth::user()){
+            $wishedItems=WishlistItem::where('wishlist_id',Auth::user()->id)
+            ->orderBy('created_at', 'desc')->get();
+            return view('home', compact('guest_houses','wishedItems'));
+        }
+        else{
+            return view('home', compact('guest_houses'));
+        }
     }
     
     
