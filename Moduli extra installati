@@ -1,0 +1,10 @@
+npm install -> Node.js
+npm install bootstrap -> Bootstrap per Laravel
+composer require laravel/fortify -> Fortify per l'autenticazione + configurazione manuale
+composer require laravel/scout -> Scout per la ricerca + configurazione manuale
+composer require livewire/livewire -> Livewire
+composer require outhbox/blade-flags -> Bandiere lingue + configurazione manuale
+composer require spatie/image:* -> Spatie per il crop delle immagini + configurazione manuale + jobs
+composer require google/cloud-vision -w -> Google Vision API
+
+composer require shayanys/lara-reserve -> Gestire le prenotazioni

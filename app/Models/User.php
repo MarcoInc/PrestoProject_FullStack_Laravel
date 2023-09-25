@@ -10,9 +10,13 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+//Tratti per le prenotazioni
+use ShayanYS\LaraReserve\Interfaces\CustomerInterface;
+use ShayanYS\LaraReserve\Traits\Customer;
+
+class User extends Authenticatable implements CustomerInterface
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, customer;
 
     /**
      * The attributes that are mass assignable.

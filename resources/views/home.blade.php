@@ -95,8 +95,14 @@
 
                                             {{-- TASTO WISHLIST CUORE --}}
                                             @if(Auth::user())
-                                                <x-wishlistHeart :house="$house" :wishedItems="$wishedItems"/>
+
+                                            {{-- TODO Da aggiungere nelle card delle altre pagine --}}
+                                            @livewire('heartwish', ['house' => $house, 'wishedItems' => $wishedItems])
+                                            
+                                                {{-- <x-wishlistHeart :house="$house" :wishedItems="$wishedItems"/> --}}
+                                                
                                             @endif
+
                     
                                             <!--Detail-->
                                             <a href="{{ route('show', ['id' => $house->id]) }}"

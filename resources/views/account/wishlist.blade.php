@@ -83,6 +83,8 @@
                                                 </div>
                                             </td>    
                                             <td>
+                                                {{-- TODO Implementare con livewire --}}
+
                                                 <a onclick="event.preventDefault();getElementById('#{{$item->id}}').submit()"
                                                     class="btn form-reject fs-6" type='submit'>
                                                 <h2 class="text-danger bi bi-x-lg mainColor"></h2>
@@ -91,6 +93,7 @@
                                                     @csrf
                                                     @method('delete')
                                                 </form>
+
                                             </td>
                                                           
                                         </tr>
